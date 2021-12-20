@@ -6,8 +6,8 @@
 </head>
 <body>    
 <h1>
-<<<<<<< HEAD
-	Hello world!!!!!!      
+<<<<<<< HEAD 
+	Hello world!!!!!!!!!!!!!!!!!!!!!!!!!!      
 =======
 	Hello world!  현명
 >>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
