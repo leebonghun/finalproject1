@@ -9,7 +9,7 @@
 <<<<<<< HEAD 
 	Hello world!!!!!!!!!!!!!!!!!!!!!!!!!!      
 =======
-	Hello world!  현명
+	Hello world! 한글
 >>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 </h1>
 
