@@ -6,6 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 
 
+
 jsp, body{
     font-size: 100%;
 	background: black;
@@ -143,10 +144,15 @@ input[type="submit"],.agileinfo_chat a,.w3ls_footer_grid1_left p a,.w3l_sign_in_
 .navbar-left {
     float: none !important;
 }
+
 .navbar-right {
+
+	
+
     float: none !important;
     margin-right: 0;
 }
+
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus,.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: #fff;
     background-color: #212121;
@@ -155,8 +161,10 @@ input[type="submit"],.agileinfo_chat a,.w3ls_footer_grid1_left p a,.w3l_sign_in_
     padding: 0;
 }
 .movies_nav {
+	
     background: black;
 }
+
 .navbar-default .navbar-nav > li > a {
     color: #fff;
     text-transform: uppercase;

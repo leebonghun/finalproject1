@@ -8,7 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<div>
+	<ul>
+		<li><a href="selectSeat">예매하기</a></li>
+	</ul>
+</div>
 </body>
 </html>
 <%@include file="../includes/footer.jsp"%>

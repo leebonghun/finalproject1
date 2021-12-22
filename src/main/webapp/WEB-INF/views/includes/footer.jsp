@@ -1,6 +1,7 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <div class="Latest-tv-series">
-		<h4 class="latest-text w3_latest_text w3_home_popular">Most Popular Movies</h4>
+		<h4 class="latest-text w3_latest_text w3_home_popular">공지사항 & 이벤트</h4>
 		<div class="container">
 			<section class="slider">
 				<div class="flexslider">
@@ -9,7 +10,7 @@
 							<div class="agile_tv_series_grid">
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="images/h1-1.jpg" alt=" " class="img-responsive" />
+										<img src="/resources/images/h1-1.jpg" alt=" " class="img-responsive" />
 										<a class="w3_play_icon" href="#small-dialog">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
@@ -36,7 +37,7 @@
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m22.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m22.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -62,7 +63,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m2.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m2.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -88,7 +89,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m9.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m9.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -114,7 +115,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m7.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m7.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -140,7 +141,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m11.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m11.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -166,7 +167,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m17.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m17.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -199,7 +200,7 @@
 							<div class="agile_tv_series_grid">
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="images/h2-1.jpg" alt=" " class="img-responsive" />
+										<img src="/resources/images/h2-1.jpg" alt=" " class="img-responsive" />
 										<a class="w3_play_icon1" href="#small-dialog1">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
@@ -225,7 +226,7 @@
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m2.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m2.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -251,7 +252,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m9.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m9.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -277,7 +278,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m7.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m7.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -303,7 +304,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m11.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m11.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -329,7 +330,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m17.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m17.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -355,7 +356,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m21.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m21.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -388,7 +389,7 @@
 							<div class="agile_tv_series_grid">
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="images/h3-1.jpg" alt=" " class="img-responsive" />
+										<img src="/resources/images/h3-1.jpg" alt=" " class="img-responsive" />
 										<a class="w3_play_icon2" href="#small-dialog2">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
@@ -414,7 +415,7 @@
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m2.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m2.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -440,7 +441,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m9.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m9.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -466,7 +467,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m7.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m7.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -492,7 +493,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m11.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m11.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -518,7 +519,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m17.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m17.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -544,7 +545,7 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="images/m20.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m20.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
