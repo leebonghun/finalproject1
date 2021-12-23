@@ -33,10 +33,11 @@ public class RootConfig {
 	}
 	@Bean
 	public DataSource dataSource() {
+		
 		HikariConfig hikariConfig = new HikariConfig();
 		hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");
-		hikariConfig.setJdbcUrl("jdbc:oracle:thin:@localhost:1521:xe");
-		hikariConfig.setUsername("c##java");
+		hikariConfig.setJdbcUrl("jdbc:oracle:thin:@118.220.120.43:1521:xe");
+		hikariConfig.setUsername("system");
 		hikariConfig.setPassword("12345");
 		
 		HikariDataSource dataSource = new HikariDataSource(hikariConfig);
