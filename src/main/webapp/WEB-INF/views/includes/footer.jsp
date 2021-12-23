@@ -197,18 +197,13 @@
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
 									<p class="fexi_header">카드 할인 행사</p>
-									<p class="fexi_header_para"><span class="conjuring_w3">이벤트 내용<label>:</label></span> 신한, 우리, 국민카드로 영화 예매 결제 시 영화 티켓 가격의 5% 할인혜택</p>
+									<p class="fexi_header_para"><span class="conjuring_w3">이벤트 내용<label>:</label></span> 신한, 우리, 국민카드로 영화 예매 결제 시 </br> 영화 티켓 가격의 5% 할인혜택</p>
+									</br>
 									<p class="fexi_header_para"><span>이벤트 기간<label>:</label></span> 2022년 1월 1일 ~ 2022년 12월 31일 </p>
+									</br>
 									<p class="fexi_header_para">
 										<span>이벤트 대상<label>:</label></span>
 										<a href="genres.html">신한,우리,국민 카드 사용자</a>							
-									</p>
-									<p class="fexi_header_para fexi_header_para1"><span>Star Rating<label>:</label></span>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
 									</p>
 								</div>
 								<div class="clearfix"> </div>
@@ -377,27 +372,20 @@
 							<div class="agile_tv_series_grid">
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="/resources/images/h3-1.jpg" alt=" " class="img-responsive" />
+										<img src="/resources/images/login3.png" alt=" " class="img-responsive" />
 										<a class="w3_play_icon2" href="#small-dialog2">
-											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
-									<p class="fexi_header">civil war captain America</p>
-									<p class="fexi_header_para"><span class="conjuring_w3">Story Line<label>:</label></span> After the Avengers leaves some&nbsp;collateral damage, political pressure mounts to install a system of accountability.&nbsp;The new status quo deeply divides ...</p>
-									<p class="fexi_header_para"><span>Date of Release<label>:</label></span> May 06, 2016 </p>
+									<p class="fexi_header">신규 회원 이벤트</p>
+									<p class="fexi_header_para"><span class="conjuring_w3">이벤트 내용<label>:</label></span>신규 회원가입하신 고객님들을 대상으로 </br> 무료 영화티켓을 증정합니다.</p>
+									</br>
+									<p class="fexi_header_para"><span>이벤트 기간<label>:</label></span> 2022년 1월 1일 ~ 2022년 12월 31일  </p>
+									</br>
 									<p class="fexi_header_para">
-										<span>Genres<label>:</label> </span>
-										<a href="genres.html">Action</a> | 
-										<a href="genres.html">Adventure</a>								
-									</p>
-									<p class="fexi_header_para fexi_header_para1"><span>Star Rating<label>:</label></span>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+										<span>이벤트 대상<label>:</label> </span>
+										<a href="genres.html">신규로 회원가입한 고객</a> 
 									</p>
 								</div>
 								<div class="clearfix"> </div>
@@ -455,67 +443,15 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m7.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m3.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
 											<div class="w3l-movie-text">
-												<h6><a href="single.html">Light B/t Oceans</a></h6>							
+												<h6><a href="single.html">연애 빠진 로맨스</a></h6>							
 											</div>
 											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m11.jpg" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">X-Men</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m17.jpg" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Peter</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
+												<p>2021</p>
 												<div class="block-stars">
 													<ul class="w3l-ratings">
 														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
@@ -533,21 +469,73 @@
 										</div>
 									</div>
 									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m20.jpg" title="album-name" class="img-responsive" alt=" " />
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m4.jpg" title="album-name" class="img-responsive" alt=" " />
 											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 										</a>
 										<div class="mid-1 agileits_w3layouts_mid_1_home">
 											<div class="w3l-movie-text">
-												<h6><a href="single.html">The Secret Life of Pets</a></h6>							
+												<h6><a href="single.html">유체이탈자</a></h6>							
 											</div>
 											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
+												<p>2021</p>
 												<div class="block-stars">
 													<ul class="w3l-ratings">
 														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+													</ul>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+										<div class="ribben">
+											<p>NEW</p>
+										</div>
+									</div>
+									<div class="col-md-2 w3l-movie-gride-agile">
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m5.jpg" title="album-name" class="img-responsive" alt=" " />
+											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+										</a>
+										<div class="mid-1 agileits_w3layouts_mid_1_home">
+											<div class="w3l-movie-text">
+												<h6><a href="single.html">극장판 소드 아트 온라인-프로그레시브</a></h6>							
+											</div>
+											<div class="mid-2 agile_mid_2_home">
+												<p>2021</p>
+												<div class="block-stars">
+													<ul class="w3l-ratings">
+														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+													</ul>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+										<div class="ribben">
+											<p>NEW</p>
+										</div>
+									</div>
+									<div class="col-md-2 w3l-movie-gride-agile">
+										<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m6.jpg" title="album-name" class="img-responsive" alt=" " />
+											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+										</a>
+										<div class="mid-1 agileits_w3layouts_mid_1_home">
+											<div class="w3l-movie-text">
+												<h6><a href="single.html">돈룩업</a></h6>							
+											</div>
+											<div class="mid-2 agile_mid_2_home">
+												<p>2021</p>
+												<div class="block-stars">
+													<ul class="w3l-ratings">
+														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
 														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
 														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
 													</ul>
 												</div>
