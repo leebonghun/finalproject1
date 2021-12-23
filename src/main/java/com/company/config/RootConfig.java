@@ -20,31 +20,31 @@ import com.zaxxer.hikari.HikariDataSource;
 @MapperScan("com.company.mapper")
 @Configuration
 public class RootConfig {
-	/*<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-	<property name="dataSource" ref="ds"></property>
-	</bean>*/
-	
-	@Bean
-	public SqlSessionFactory sqlSessionFactory() throws Exception {
-		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
-		sqlSessionFactoryBean.setDataSource(dataSource());
-		return sqlSessionFactoryBean.getObject();
-		
-	}
-	@Bean
-	public DataSource dataSource() {
-		HikariConfig hikariConfig = new HikariConfig();
-		hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");
-		hikariConfig.setJdbcUrl("jdbc:oracle:thin:@localhost:1521:xe");
-		hikariConfig.setUsername("c##java");
-		hikariConfig.setPassword("12345");
-		
-		HikariDataSource dataSource = new HikariDataSource(hikariConfig);
-		return dataSource;
-		
-	}
-	@Bean
-	public DataSourceTransactionManager txManager() {
-		return new DataSourceTransactionManager(dataSource());		
-	}
+   /*<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+   <property name="dataSource" ref="ds"></property>
+   </bean>*/
+   
+   @Bean
+   public SqlSessionFactory sqlSessionFactory() throws Exception {
+      SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+      sqlSessionFactoryBean.setDataSource(dataSource());
+      return sqlSessionFactoryBean.getObject();
+      
+   }
+   @Bean
+   public DataSource dataSource() {
+      HikariConfig hikariConfig = new HikariConfig();
+      hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");
+      hikariConfig.setJdbcUrl("jdbc:oracle:thin:@localhost:1521:xe");
+      hikariConfig.setUsername("c##java");
+      hikariConfig.setPassword("12345");
+      
+      HikariDataSource dataSource = new HikariDataSource(hikariConfig);
+      return dataSource;
+      
+   }
+   @Bean
+   public DataSourceTransactionManager txManager() {
+      return new DataSourceTransactionManager(dataSource());      
+   }
 }
