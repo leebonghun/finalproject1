@@ -392,9 +392,11 @@ p.fexi_header_para1 a i {
 .footer{
 	background:#212121;
 	padding:4em 0;
+	position: relative;
+	
 }
 .w3ls_footer_grid_left1{
-	position:relative;
+	position:fixed;
 }
 .w3ls_footer_grid_left1 h2{
 	font-size: 2em;
