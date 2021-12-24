@@ -19,11 +19,11 @@
 			 <div class="form-group" style="margin-left: 25px; margin-top:25px  ">
       <label for="exampleSelect1" class="form-label mt-4">문의사항 선택</label>
       <select class="form-select" id="exampleSelect1">
-        <option>분실물</option>
-        <option>단채관람 및 문의</option>
+        <option>기타</option>
+        <option>단체관람 및 문의</option>
         <option>예매 환불 및 취소</option>
         <option>계정관련 문의</option>
-        <option>기타</option>
+        <option>분실물</option>
       </select>
     </div>
 			<!-- /.panel-heading -->

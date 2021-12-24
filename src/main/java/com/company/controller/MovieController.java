@@ -1,8 +1,16 @@
 package com.company.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+
+import com.company.domain.CscDTO;
+import com.company.service.CscService;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -10,6 +18,11 @@ import lombok.extern.log4j.Log4j2;
 @Controller
 @RequestMapping("/movie/*")
 public class MovieController {
+	
+	@Autowired
+	private CscService cscService;
+	
+	
 	@GetMapping("index")
 	public void index() {
 		log.info("메인 홈페이지 입니다");
@@ -32,9 +45,17 @@ public class MovieController {
 	public void notice() {
 		log.info("공지사항으로 이동중입니다.");
 	}
+	
+	@GetMapping("selectSeat")
+	public void selectSeat() {
+		log.info("좌석선택 중..");
+	}
 	@GetMapping("csclist")
-	public void csc() {
+	public void csclist(Model model) {
 		log.info("고객센터으로 이동중입니다.");
+		
+		List<CscDTO> list = cscService.getList();
+		model.addAttribute("list", list);
 	}
 	@GetMapping("cscinsert")
 	public void cscinsert() {
@@ -43,10 +64,7 @@ public class MovieController {
 	@GetMapping("cscread")
 	public void cscread() {
 		log.info("고객센터글으로 이동중입니다.");
-	}
-	@GetMapping("selectSeat")
-	public void selectSeat() {
-		log.info("좌석선택 중..");
+		
 	}
 	
 }

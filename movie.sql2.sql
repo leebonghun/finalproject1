@@ -95,6 +95,7 @@ CREATE TABLE CSC_TBL
 	CSC_TITLE varchar2(100) NOT NULL,
 	CSC_CONTENT varchar2(1000) NOT NULL,
 	CSC_REGDATE date DEFAULT SYSDATE,
+	CSC_RFI varchar2(1000) not null,
 	CSC_ANSWER varchar2(1000),
 	USER_ID varchar2(50) NOT NULL UNIQUE,
 	PRIMARY KEY (CSC_BNO)
@@ -207,7 +208,7 @@ CREATE TABLE USER_TBL
 (
 	USER_ID varchar2(50) NOT NULL,
 	USER_NAME varchar2(50) NOT NULL,
-	USER_PASSWORD varchar2(50) NOT NULL UNIQUE,
+	USER_PASSWORD varchar2(50) NOT NULL,
 	USER_BIRTH date NOT NULL,
 	USER_EMAIL varchar2(60) NOT NULL UNIQUE,
 	USER_TEL varchar2(60) NOT NULL,
@@ -287,6 +288,8 @@ ALTER TABLE RESERVE_TBL
 
 
 
+----------------------------------------밑은 사용하지마시오.. 안쓰는 코드..----------------------------
+
 /* Create Triggers */
 
 CREATE OR REPLACE TRIGGER TRI_GOODS_TBL_GOODS_NUM BEFORE INSERT ON GOODS_TBL
@@ -309,6 +312,23 @@ END;
 
 /
 
+insert into user_tbl
+values('id1','name1','12345','1997/10/14','id1naver.com','010-1234-5678',sysdate,'1');
+
+insert into user_tbl
+values('id2','name2','12345','1997/10/14','id2@naver.com','010-1234-5678',sysdate,'1');
+
+select * from user_tbl;	
+select * from csc_TBL;	
+		select Csc_Bno,Csc_Title,Csc_Content,Csc_Regdate,Csc_Rfi,Csc_Answer,user_id
+ from csc_tbl;
+---
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
+values(1,'고객센터1','고객센터내용1',sysdate,'기타','처리내용1','id1');
 
 
 
+
+ALTER USER c##team DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
+
+​
