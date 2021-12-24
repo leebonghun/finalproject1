@@ -160,7 +160,10 @@ CREATE TABLE MOVIE_TBL
 	openDt varchar2(60),
 	PRIMARY KEY (movieCD)
 );
+select * from movie_tbl;
 
+insert into MOVIE_TBL values(20210028,'스파이더맨: 노 웨이 홈','톰 홀랜드,베네딕트 컴버배치','148',
+'이이이','액션','12','미국','Sony Pictures','2021-12-15');
 
 CREATE TABLE REPLY_TBL
 (

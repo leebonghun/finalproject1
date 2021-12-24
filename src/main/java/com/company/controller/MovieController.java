@@ -1,8 +1,14 @@
 package com.company.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.company.domain.movieDTO;
+import com.company.service.MovieService;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -10,6 +16,10 @@ import lombok.extern.log4j.Log4j2;
 @Controller
 @RequestMapping("/movie/*")
 public class MovieController {
+	
+	@Autowired
+	private MovieService service;
+	
 	@GetMapping("index")
 	public void index() {
 		log.info("메인 홈페이지 입니다");
@@ -48,5 +58,18 @@ public class MovieController {
 	public void selectSeat() {
 		log.info("좌석선택 중..");
 	}
+	
+	@GetMapping("movieRead")
+	public void movieRead(int movieCD,Model model) {
+		log.info("상세정보 페이지로 이동중입니다.");
+		
+		movieDTO movieDto = service.read(movieCD);
+		
+		model.addAttribute("movieDto", movieDto);
+		
+			
+	}
+	
+	
 	
 }

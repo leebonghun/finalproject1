@@ -985,6 +985,24 @@ h3.agileits-icons-title {
     font-size: 24px;
 	color: #282a2b;
 }
+.row {
+   margin: 0px auto;
+   width:800px;
+}
+#goBack{
+	background-color: black;
+	color: white;
+	border-color: white;
+}
+.text-right{
+	
+	font-weight: bold;
+}
+.text-left{
+	color: black;
+	font-weight: bold;
+}
+
 .icons .glyphicon {
     position: relative;
     top: 1px;
