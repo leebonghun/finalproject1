@@ -133,6 +133,10 @@ a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
 }
+#live{
+	font-weight: bold;	
+	color: red;
+}
 p, ul li, ol li {
     margin: 0;
     font-size: 14px;
