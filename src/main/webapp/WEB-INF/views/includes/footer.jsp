@@ -10,7 +10,7 @@
 							<div class="agile_tv_series_grid">
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="/resources/images/2022-calendar.jpg" alt=" " class="img-responsive" />
+										<img src="/resources/images/2022-calendar.jpg" alt=" " class="img-responsive" style="height: 312px; width: 570px;"/>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
@@ -24,7 +24,7 @@
 										<a href="genres.html">영화 관람객 누구나(선착순 100명)</a> 
 																		
 									</p>
-									<p><a href="genres.html">재고 소진 시 이벤트가 조기 종료됩니다.</a></p>
+									<p style="color: red;"> - 재고 소진 시 이벤트가 조기 종료됩니다. - </p>
 								</div>
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
@@ -192,7 +192,7 @@
 							<div class="agile_tv_series_grid">
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="/resources/images/card1.jpg" alt=" " class="img-responsive" />
+										<img src="/resources/images/card1.jpg" alt=" " class="img-responsive" style="height: 312px; width: 570px;"/>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
@@ -372,14 +372,14 @@
 							<div class="agile_tv_series_grid">
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="/resources/images/login3.png" alt=" " class="img-responsive" />
+										<img src="/resources/images/signup.png" alt=" " class="img-responsive" style="height: 312px; width: 570px;" />
 										<a class="w3_play_icon2" href="#small-dialog2">
 										</a>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
 									<p class="fexi_header">신규 회원 이벤트</p>
-									<p class="fexi_header_para"><span class="conjuring_w3">이벤트 내용<label>:</label></span>신규 회원가입하신 고객님들을 대상으로 </br> 무료 영화티켓을 증정합니다.</p>
+									<p class="fexi_header_para"><span class="conjuring_w3">이벤트 내용<label>:</label></span>신규 회원가입하신 고객분들 중에 선착순 100명에게 </br> 비타 500 1BOX를 증정합니다.</p>
 									</br>
 									<p class="fexi_header_para"><span>이벤트 기간<label>:</label></span> 2022년 1월 1일 ~ 2022년 12월 31일  </p>
 									</br>
