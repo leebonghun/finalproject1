@@ -64,7 +64,22 @@ public class MovieController {
 	public void notice() {
 		log.info("공지사항으로 이동중입니다.");
 	}
-	
+	@GetMapping("event")
+	public void event() {
+		log.info("이벤트로 이동중입니다.");
+	}
+	@GetMapping("csclist")
+	public void csc() {
+		log.info("고객센터으로 이동중입니다.");
+	}
+	@GetMapping("cscinsert")
+	public void cscinsert() {
+		log.info("고객센터글작성으로 이동중입니다.");
+	}
+	@GetMapping("cscread")
+	public void cscread() {
+		log.info("고객센터글으로 이동중입니다.");
+	}
 	@GetMapping("selectSeat")
 	public void selectSeat() {
 		log.info("좌석선택 중..");
@@ -77,11 +92,6 @@ public class MovieController {
 		log.info(""+list);
 		
 		model.addAttribute("list", list);
-	}
-	@GetMapping("cscinsert")
-	public void cscinsert() {
-		log.info("고객센터글작성으로 이동중입니다.");
-		
 	}
 	
 	@PostMapping("/cscinsert")
@@ -100,11 +110,6 @@ public class MovieController {
 		return "redirect:/movie/csclist";
 	}
 	
-	@GetMapping("cscread")
-	public void cscread() {
-		log.info("고객센터글으로 이동중입니다.");
-		
-	}
 	
 	@GetMapping("movieRead")
 	public void movieRead(int movieCD,Model model) {

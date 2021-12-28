@@ -13,7 +13,7 @@
 <body>
 	<div style="margin-left: 100px;">
 		<h2 class="h1" style="color: black;">
-			<img src="/resources/images/cscicon.png" style="height: 50px;" />고객
+			<img src="/resources/images/cscicon.png" style="height: 50px;" /> 고객
 			센터
 		</h2>
 		<!-- faq-banner -->
