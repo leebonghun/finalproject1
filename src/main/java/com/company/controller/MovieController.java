@@ -93,11 +93,6 @@ public class MovieController {
 		
 		model.addAttribute("list", list);
 	}
-	@GetMapping("cscinsert")
-	public void cscinsert() {
-		log.info("고객센터글작성으로 이동중입니다.");
-		
-	}
 	
 	@PostMapping("/cscinsert")
 	public String registerPost(CscDTO insertDto, RedirectAttributes rttr) {
@@ -115,11 +110,6 @@ public class MovieController {
 		return "redirect:/movie/csclist";
 	}
 	
-	@GetMapping("cscread")
-	public void cscread() {
-		log.info("고객센터글으로 이동중입니다.");
-		
-	}
 	
 	@GetMapping("movieRead")
 	public void movieRead(int movieCD,Model model) {
