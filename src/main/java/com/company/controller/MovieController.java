@@ -63,12 +63,23 @@ public class MovieController {
 	public void notice() {
 		log.info("공지사항으로 이동중입니다.");
 	}
+	@GetMapping("event")
+	public void event() {
+		log.info("이벤트로 이동중입니다.");
+	}
+	
 	
 	@GetMapping("selectSeat")
 	public void selectSeat() {
 		log.info("좌석선택 중..");
 	}
+
 	
+
+	
+
+
+
 	
 	
 	@GetMapping("movieRead")

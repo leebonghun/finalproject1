@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <div class="Latest-tv-series">
-		<h4 class="latest-text w3_latest_text w3_home_popular">공지사항 & 이벤트</h4>
+		<h4 class="latest-text w3_latest_text w3_home_popular">이벤트</h4>
 		<div class="container">
 			<section class="slider">
 				<div class="flexslider">
@@ -606,22 +606,21 @@
 					
 				</div>
 				<div class="col-md-6 w3ls_footer_grid_right">
-					<a href="index.html"><h2>BBM</h2></a>
+					<a href="index.html"><h1>BBM</h1></a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
+			<div class="footer-info">
 			<div class="col-md-5 w3ls_footer_grid1_left">
 				<p>&copy; 2021 BBM. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 			</div>
 			<div class="col-md-7 w3ls_footer_grid1_right">
-				<ul>
-					
-				
-				</ul>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
+	</div>
+
 <!-- //footer -->
 <!-- Bootstrap Core JavaScript -->
 <script src="/resources/js/bootstrap.min.js"></script>

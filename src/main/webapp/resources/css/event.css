@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* 이벤트 그림, 글 배너
+*/
+.event-list ul li a .img {
+    width: 100%;
+    height: 244px;
+    font-size: 0;
+    line-height: 0;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #eee;
+}
+
+.event-list p {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
