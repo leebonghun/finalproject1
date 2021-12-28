@@ -17,7 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //for-mobile-apps -->
 
 
-
+<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />
 <link href="/resources/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="/resources/css/contactstyle.css" type="text/css" media="all" />
@@ -80,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			<div class="w3l_sign_in_register">
 				<ul>
-					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054</li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054 </li> 
 					<li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
 				</ul>
 			</div>
@@ -163,6 +163,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="reserve">예매</a></li>
 							<li><a href="store">스토어</a></li>
 							<li><a href="noticeList">공지사항</a></li>
+							<li><a href="event">이벤트</a></li>
+							<li><a href="csclist">고객센터</a></li>
 						</ul>
 					</nav>
 				</div>

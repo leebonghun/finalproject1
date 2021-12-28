@@ -448,13 +448,26 @@ p.fexi_header_para1 a i {
 }
 /*-- //Latest-tv-series --*/
 /*-- footer --*/
+<<<<<<< HEAD
 .footer {
 	background: #212121;
 	padding: 4em 0;
+=======
+.footer{
+	background:#212121;
+	padding:4em 0;
+	position: relative;
+	
+>>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 }
+<<<<<<< HEAD
 
 .w3ls_footer_grid_left1 {
 	position: relative;
+=======
+.w3ls_footer_grid_left1{
+	position:fixed;
+>>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 }
 
 .w3ls_footer_grid_left1 h2 {
@@ -1150,6 +1163,26 @@ h3.agileits-icons-title {
 	font-size: 24px;
 	color: #282a2b;
 }
+<<<<<<< HEAD
+=======
+.row {
+   margin: 0px auto;
+   width:800px;
+}
+#goBack{
+	background-color: black;
+	color: white;
+	border-color: white;
+}
+.text-right{
+	
+	font-weight: bold;
+}
+.text-left{
+	color: black;
+	font-weight: bold;
+}
+>>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 
 .icons .glyphicon {
 	position: relative;
