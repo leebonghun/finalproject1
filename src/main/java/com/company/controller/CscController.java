@@ -12,9 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 
 import com.company.domain.CscDTO;
 import com.company.service.CscService;
@@ -49,6 +51,9 @@ public class CscController {
 		
 		model.addAttribute("list", list);
 	}
+	
+	
+		
 	@GetMapping("cscinsert")
 	public void cscinsert() {
 		log.info("고객센터글작성으로 이동중입니다.");
@@ -72,11 +77,13 @@ public class CscController {
 	}
 	
 	@GetMapping("cscread")
-	public void cscread() {
+	public void cscread(int Csc_Bno, Model model) {
 		log.info("고객센터글으로 이동중입니다.");
+		CscDTO readdto = cscService.getRow(Csc_Bno);
+
+		model.addAttribute("readdto", readdto);
 		
 	}
-	
 	
 	
 	

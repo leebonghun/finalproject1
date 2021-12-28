@@ -17,7 +17,7 @@
 	<select id="read" resultType="com.company.domain.CscDTO">
 		select Csc_Bno,user_id,Csc_Rfi,Csc_Title,csc_content,csc_answer
 		from csc_tbl
-		where Csc_Bno=#{Csc_Bno}
+		where Csc_Bno=#{CSC_BNO}
 	</select>
 
 <!-- 게시글 작성 -->

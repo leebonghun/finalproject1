@@ -24,4 +24,10 @@ public class CscServiceImpl implements CscService {
 		return result;
 	}
 
+	@Override
+	public CscDTO getRow(int Csc_Bno) {
+		return cscMapper.read(Csc_Bno);
+	
+	}
+
 }

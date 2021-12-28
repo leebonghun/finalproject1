@@ -10,5 +10,5 @@ import com.company.domain.CscDTO;
 public interface CscMapper {
 	public List<CscDTO> listAll();
 	public int insert1(CscDTO insertDto);
-	
+	public CscDTO read(int Csc_Bno);
 }
