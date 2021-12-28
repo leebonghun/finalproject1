@@ -14,8 +14,11 @@ $(function() {
         required: true,
         validId: true,
         remote:{
-					url:"/register/checkId",
-					type:"post",
+					url:"/movie/index",
+					type:"get",
+					beforeSend:function(xhr){
+						xhr.setRequestHeader(csrfHeaderName,csrfTokenValue);
+					 },
 					data:{
 						userid:function(){
 							return $('#userid').val();
@@ -36,13 +39,16 @@ $(function() {
         required: true,
         minlength: 2
       },
-      gender: {
-        required: true
-      },
+	  birth: {
+		required: true
+	  },
       email: {
         required: true,
         email: true
-      }
+      },
+	  tel: {
+		required: true
+	  }
     },
     messages: {
       userid: {
@@ -60,12 +66,15 @@ $(function() {
         required: "이름은 필수 입력 요소입니다.",
         minlength: "이름은 최소 2자리는 입력해야 합니다"
       },
-      gender: {
-        required: "성별은 필수 입력 요소입니다."
-      },
+	  birth: {
+		required: "생년월일은 필수 요소입니다."
+	  },
       email: {
         required: "이메일은 필수 입력 요소입니다."
-      }
+      },
+	  tel: {
+		required: "전화번호는 필수 입력 요소입니다."
+	  } 
     }
   });
 });

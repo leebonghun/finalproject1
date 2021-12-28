@@ -19,7 +19,7 @@ pageEncoding="UTF-8"%>
   </head>
   <body style="background-color:#F5F5F5;">
     <div class="container" style="margin-top:40px">
-      <form id="regist" method="post" action="/register/step3">
+      <form id="regist" method="post" action="/movie/index">
         <div class="form-group row justify-content-center">
           <label for="userid" class="col-sm-2 col-form-label">아이디</label>
           <div class="col-sm-6">
@@ -62,7 +62,7 @@ pageEncoding="UTF-8"%>
           </div>
         </div>
         <div class="form-group row justify-content-center">
-          <label for="name" class="col-sm-2 col-form-label">이름 </label>
+          <label for="name" class="col-sm-2 col-form-label">이름</label>
           <div class="col-sm-6">
             <input
               type="text"
@@ -74,41 +74,19 @@ pageEncoding="UTF-8"%>
             <small id=name class="text-info"></small>
           </div>
         </div>
-               
         <div class="form-group row justify-content-center">
           <label for="birth" class="col-sm-2 col-form-label">생년월일</label>
-          <div class="bir-yy">
-          	<span class="ps_box">
-          		<input type="text" id="yy" placeholder="년(4자)" aria-label="년(4자)" class="int" maxlength="4" />          	
-          	</span>     
+          <div class="col-sm-6">
+            <input
+              type="text"
+              name="birth"
+              id="birth"
+              class="form-control"
+              placeholder="ex) 20210101"
+            />
+            <small id=name class="text-info"></small>
           </div>
-          <div class="bir_mm">
-          	<span class="ps_box">
-          		<select id="mm" class="sel" aria-label="월">
-          			<option value>월</option>
-          			<option value="01">" 1 "</option>
-          			<option value="02">" 2 "</option>
-          			<option value="03">" 3 "</option>
-          			<option value="04">" 4 "</option>
-          			<option value="05">" 5 "</option>
-          			<option value="06">" 6 "</option>
-          			<option value="07">" 7 "</option>
-          			<option value="08">" 8 "</option>
-          			<option value="09">" 9 "</option>
-          			<option value="10">" 10 "</option>
-          			<option value="11">" 11 "</option>
-          			<option value="12">" 12 "</option>   			
-          		</select>      	
-          	</span>
-          </div>
-          <div class="bir_dd">
-          	<span class="ps_box">
-          		<input type="text" id="yy" placeholder="일" aria-label="일" class="int" maxlength="2" />
-          		<label for ="dd" class="lbl"></labe>
-          	</span>
-          </div>
-        </div>
-        <span class="erroe_next_box" id="birthdayMsg" style="display: block;" aria-live="assertive">정말이세요?</span>
+        </div>      
         
         <div class="form-group row justify-content-center">
           <label for="email" class="col-sm-2 col-form-label">이메일</label>
@@ -118,7 +96,7 @@ pageEncoding="UTF-8"%>
               name="email"
               id="email"
               class="form-control"
-              placeholder="example@gmail.com"
+              placeholder="ex) example@gmail.com"
             />
             <small id="email" class="text-info"></small>
           </div>
@@ -126,12 +104,12 @@ pageEncoding="UTF-8"%>
         <div class="form-group text-center">
         
         <div class="form-group row justify-content-center">
-          <label for="name" class="col-sm-2 col-form-label">휴대전화 </label>
+          <label for="tel" class="col-sm-2 col-form-label">휴대전화</label>
           <div class="col-sm-6">
             <input
               type="text"
-              name="name"
-              id="name"
+              name="tel"
+              id="tel"
               class="form-control"
               placeholder="전화번호를 입력하세요('-'제외)"
             />
@@ -139,8 +117,14 @@ pageEncoding="UTF-8"%>
           </div>
         </div>
           <button type="submit" class="btn btn-primary">가입하기</button>
+          <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
         </div>
       </form>
     </div>
+<script>
+//ajax 동작시 헤더 값에 포함해서 보낼 csrf 토큰 값 설정
+let csrfHeaderName = "${_csrf.headerName}";
+let csrfTokenValue = "${_csrf.token}";
+</script>
   </body>
 </html>
