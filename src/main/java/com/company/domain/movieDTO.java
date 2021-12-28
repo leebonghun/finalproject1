@@ -12,6 +12,9 @@ import lombok.ToString;
 @Setter
 @ToString	
 public class movieDTO {
+	private String rank;
+	private String poster;
+	private String key;
 	private int movieCD;
 	private String movieNM;
 	private String peopleNm;

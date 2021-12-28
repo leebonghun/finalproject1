@@ -3,8 +3,14 @@
 <mapper namespace="com.company.mapper.MovieMapper">
 
 <select  id="read" resultType="com.company.domain.movieDTO">
-	select movieNM,peopleNm,showTM,genreNm,watchGradeNm,nationNm,companys,openDt from movie_tbl where movieCD = #{moviecd}
+	select rank,poster,key,movieNM,peopleNm,showTM,genreNm,watchGradeNm,nationNm,companys,openDt from movie_tbl where movieCD = #{moviecd}
+	
+	
+	
 </select>
 
+<select  id="list" resultType="com.company.domain.movieDTO">
+	select  * from movie_tbl
+</select>
 
 </mapper>

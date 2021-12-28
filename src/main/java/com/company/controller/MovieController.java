@@ -1,5 +1,7 @@
 package com.company.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,8 +29,13 @@ public class MovieController {
 	}
 	
 	@GetMapping("movieList")
-	public void movieList() {
+	public void movieList(Model model) {
 		log.info("영화 리스트 페이지로 이동중입니다.");
+		
+		List<movieDTO> listDto = service.list();
+		
+		model.addAttribute("list",listDto);
+		
 	}
 	@GetMapping("reserve")
 	public void reserve() {
