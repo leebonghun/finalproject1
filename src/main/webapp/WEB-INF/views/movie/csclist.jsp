@@ -171,11 +171,11 @@
 			<tbody>
 				<c:forEach var="cscDto" items="${list }">
 				<tr class="table-active">
-					<th scope="row">${cscDto.CscBno}</th>
-					<td>${cscDto.CscWriter}</td>
-					<td>${cscDto.CscRfi}</td>
-					<td>${cscDto.CscTitle}</td>
-					<td>${cscDto.CscRegdate}</td>
+					<th scope="row">${cscDto.Csc_Bno}</th>
+					<td>${cscDto.user_id}</td>
+					<td>${cscDto.Csc_Rfi}</td>
+					<td>${cscDto.Csc_Title}</td>
+					<td>${cscDto.Csc_Regdate}</td>
 					
 				</tr>
 				</c:forEach>
