@@ -20,7 +20,7 @@ public class CscServiceImpl implements CscService {
 
 	@Override
 	public boolean register(CscDTO insertDto) {
-		 boolean result= cscMapper.insert(insertDto)>0?true:false;
+		 boolean result= cscMapper.insert1(insertDto)>0?true:false;
 		return result;
 	}
 

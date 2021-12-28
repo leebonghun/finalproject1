@@ -4,6 +4,10 @@ package com.company.controller;
 import java.util.List;
 
 
+
+
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,8 +30,7 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping("/movie/*")
 public class MovieController {
 	
-	@Autowired
-	private CscService cscService;
+
 	
 	@Autowired
 	private MovieService service;
@@ -40,8 +43,13 @@ public class MovieController {
 	}
 	
 	@GetMapping("movieList")
-	public void movieList() {
+	public void movieList(Model model) {
 		log.info("영화 리스트 페이지로 이동중입니다.");
+		
+		List<movieDTO> listDto = service.list();
+		
+		model.addAttribute("list",listDto);
+		
 	}
 	@GetMapping("reserve")
 	public void reserve() {
@@ -60,42 +68,8 @@ public class MovieController {
 	public void selectSeat() {
 		log.info("좌석선택 중..");
 	}
-	@GetMapping("csclist")
-	public void csclist(Model model) {
-		log.info("고객센터으로 이동중입니다.");
-		
-		List<CscDTO> list = cscService.getList();
-		log.info(""+list);
-		
-		model.addAttribute("list", list);
-	}
-	@GetMapping("cscinsert")
-	public void cscinsert() {
-		log.info("고객센터글작성으로 이동중입니다.");
-		
-	}
 	
-	@PostMapping("/cscinsert")
-	public String registerPost(CscDTO insertDto, RedirectAttributes rttr) {
-		log.info("register 가져오기" + insertDto);
-
-		// 첨부파일 확인하기
-//		if(insertDto.getAttachList()!=null) {
-//			insertDto.getAttachList().forEach(attach ->log.info(attach+""));
-//		}
-
-		cscService.register(insertDto);
-
-		// log.info("bno"+insertDto.getBno());
-		rttr.addFlashAttribute("result", insertDto.getCsc_Bno());
-		return "redirect:/movie/csclist";
-	}
 	
-	@GetMapping("cscread")
-	public void cscread() {
-		log.info("고객센터글으로 이동중입니다.");
-		
-	}
 	
 	@GetMapping("movieRead")
 	public void movieRead(int movieCD,Model model) {

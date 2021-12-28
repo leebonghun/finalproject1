@@ -282,6 +282,12 @@ html {
 }
 strong{
 	font-weight: 500;
+	
+}
+#strong{
+	background-color: #9b9aa5;
+	color: white;
+	border-radius: 10px;
 }
 .tit-heading-wrap {
     position: relative;

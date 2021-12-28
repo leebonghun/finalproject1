@@ -1,5 +1,7 @@
 package com.company.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,12 @@ public class MovieServiceImpl implements MovieService {
 	public movieDTO read(int movieCD) {
 		// TODO Auto-generated method stub
 		return mapper.read(movieCD);
+	}
+
+	@Override
+	public List<movieDTO> list() {
+		// TODO Auto-generated method stub
+		return mapper.list();
 	}
 
 }

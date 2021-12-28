@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@include file="../includes/header.jsp" %>
+   <script src="/resources/js/movieList.js"></script>
 <div class="bg-bricks" id="container">
 		<div class="" id="contents">
 			<div class="wrap-movie-chart">
@@ -20,16 +21,16 @@
       <table class="table">
        <tr>
         <td>
-          <iframe src="https://www.youtube.com/embed/JfVOs4VSpmA" width=750 height=350></iframe>
+          <iframe src="https://www.youtube.com/embed/${movieDto.key}" width=750 height=350></iframe>
         </td>
        </tr>
       </table>
       <table class="table">
         <tr>
          <td width=30% class="text-center" rowspan="7">
-           <img src="/resources/images/m1.jpg" width=100%>
+           <img src="/resources/images/${movieDto.poster}" width=100%>
          </td>
-         <td colspan="2">${vo.title }</td>
+        
         </tr>
         <tr>
           <td width=20% class="text-right" >영화이름</td>
@@ -45,11 +46,11 @@
         </tr>
         <tr>
           <td width=20% class="text-right">등급</td>
-          <td width=50% class="text-left">${movieDto.watchGradeNm }세이상 관람가</td>
+          <td width=50% class="text-left">${movieDto.watchGradeNm }</td>
         </tr>
         <tr>
           <td width=20% class="text-right">상영시간</td>
-          <td width=50% class="text-left">${movieDto.showTm}</td>
+          <td width=50% class="text-left">${movieDto.showTm}분</td>
         </tr>
         <tr>
           <td width=20% class="text-right">개봉일</td>
@@ -61,7 +62,10 @@
         </tr>
         <tr>
           <td colspan="3" class="text-right">
-            <a href="list.do" class="btn btn-sm btn-primary" id="goBack">목록</a>
+            <button type="submit" id="goBack">목록</button>
+            
+            
+            
           </td>
         </tr>
       </table>
