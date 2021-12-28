@@ -161,7 +161,10 @@ CREATE TABLE MOVIE_TBL
 	openDt varchar2(60),
 	PRIMARY KEY (movieCD)
 );
+select * from movie_tbl;
 
+insert into MOVIE_TBL values(20210028,'스파이더맨: 노 웨이 홈','톰 홀랜드,베네딕트 컴버배치','148',
+'이이이','액션','12','미국','Sony Pictures','2021-12-15');
 
 CREATE TABLE REPLY_TBL
 (
@@ -290,6 +293,8 @@ ALTER TABLE RESERVE_TBL
 
 ----------------------------------------밑은 사용하지마시오.. 안쓰는 코드..----------------------------
 
+
+
 /* Create Triggers */
 
 CREATE OR REPLACE TRIGGER TRI_GOODS_TBL_GOODS_NUM BEFORE INSERT ON GOODS_TBL
@@ -327,7 +332,8 @@ insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answe
 values(1,'고객센터1','고객센터내용1',sysdate,'기타','처리내용1','id1');
 
 
-
+select Csc_Bno,Csc_Title,Csc_Regdate,Csc_Rfi,user_id
+ from csc_tbl
 
 ALTER USER c##team DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
 

@@ -13,6 +13,16 @@
  
 </select>
 
+<!-- 게시글 작성 -->
+	<insert id="insert">
+		
+
+		<!-- <selectKey keyProperty="Csc_bno" order="BEFORE" resultType="int">
+			select seq_board.nextval from dual
+		</selectKey> -->
+		insert into csc_tbl(Csc_Bno,Csc_Title,csc_content,csc_regdate,csc_rfi,user_id)
+		values(#{Csc_Bno},#{Csc_Title},#{csc_content},#{csc_regdate},#{csc_rfi},#{user_id})
+	</insert>
 
 
 </mapper>

@@ -227,11 +227,28 @@ ul.w3l-ratings li i ,.w3l-ratings a i{
 .w3l-movie-gride-agile {
       text-align: center;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
-    margin-right: 0%;
+    margin-right: 0;
     margin-bottom:3%;
     position: relative;
     padding-left: 0;
 }
+.w3l-movie-gride-agile-list {
+      text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
+    margin-right: 4%;
+    margin-bottom:3%;
+    position: relative;
+    padding-left: 0;
+}
+.w3l-movie-gride-agile {
+      text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
+    margin-right: 0;
+    margin-bottom:3%;
+    position: relative;
+    padding-left: 0;
+}
+
 .w3l-movie-gride-agile:nth-child(6),.w3l-movie-gride-agile:nth-child(12) {
     margin-left: 0%;
 }
@@ -257,9 +274,9 @@ i.glyphicon.glyphicon-play-circle {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-	-webkit- border-radius: 50%;
-	-0- border-radius: 50%;
-	-moz- border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
 }
 .ribben p {
     font-size:0.9em;
@@ -285,7 +302,7 @@ i.glyphicon.glyphicon-play-circle {
     box-shadow: 0px 0px 1px #999;
 }
 h4.latest-text {
-      border-left: 5px solid #ff8d1b;
+    
     font-size: 2em;
     color: #212121;
     text-transform: uppercase;
@@ -376,7 +393,7 @@ ol.breadcrumb li a {
 	.w3l-movie-gride-agile {
 		text-align: center;
 		box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
-		margin-right: 0%;
+		margin-right: 0;
 		margin-bottom: 3%;
 		position: relative;
 		padding-left: 0;

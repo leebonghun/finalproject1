@@ -15,12 +15,12 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CscDTO {
-  private int CscBno;
-  private String CscTitle;
-  private String CscContent;
-  private Date CscRegdate;
-  private String CscRfi;
-  private String CscAnswer;
-  private String CscWriter;
+  private int Csc_Bno;
+  private String Csc_Title;
+  private String Csc_Content;
+  private Date Csc_Regdate;
+  private String Csc_Rfi;
+  private String Csc_Answer;
+  private String user_id;
   
 }

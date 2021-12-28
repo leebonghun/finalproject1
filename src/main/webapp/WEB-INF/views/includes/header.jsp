@@ -17,7 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //for-mobile-apps -->
 
 
-
+<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />
 <link href="/resources/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="/resources/css/contactstyle.css" type="text/css" media="all" />
