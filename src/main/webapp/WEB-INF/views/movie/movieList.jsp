@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="../includes/header.jsp"%>
+
 <div class="bg-bricks" id="container">
 	<div class="" id="contents">
 		<div class="wrap-movie-chart">
@@ -25,9 +26,9 @@
 								<div class="w3_agile_featured_movies">
 									<div class="clearfix">
 										<c:forEach var="list" items="${list}">
-											<div class="col-md-2 w3l-movie-gride-agile-list"
-												id="movieListBody">
-												<strong class="rank" id="strong">${list.rank}</strong> 
+											<div class="col-md-2 w3l-movie-gride-agile-list movieListBody">
+												<strong class="rank">${list.rank}</strong>
+												
 												<a href="movieRead?movieCD=${list.movieCD}"
 													class="hvr-shutter-out-horizontal"><img
 													src="/resources/images/${list.poster}" title="album-name"
