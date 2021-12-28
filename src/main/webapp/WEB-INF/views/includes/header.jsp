@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					Sign In & Sign Up
+					BBM
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
 				</div>
 				<section>
@@ -104,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="tooltip">Click Me</div>
 							  </div>
 							  <div class="form">
-								<h3>Login to your account</h3>
+								<h3>로그인</h3>
 								<form action="#" method="post">
 								  <input type="text" name="Username" placeholder="Username" required="">
 								  <input type="password" name="Password" placeholder="Password" required="">
