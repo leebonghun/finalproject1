@@ -284,6 +284,7 @@ strong{
 	font-weight: 500;
 	
 }
+strong[class]
 #strong{
 	background-color: #9b9aa5;
 	color: white;

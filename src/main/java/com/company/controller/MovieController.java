@@ -96,7 +96,7 @@ public class MovieController {
 		cscService.register(insertDto);
 
 		// log.info("bno"+insertDto.getBno());
-		rttr.addFlashAttribute("result", insertDto.getCsc_Bno());
+		rttr.addFlashAttribute("result", insertDto.getCSC_BNO());
 		return "redirect:/movie/csclist";
 	}
 	
