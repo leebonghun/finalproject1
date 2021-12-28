@@ -19,18 +19,18 @@ pageEncoding="UTF-8"%>
   </head>
   <body style="background-color:#F5F5F5;">
     <div class="container" style="margin-top:40px">
-      <form id="regist" method="post" action="/movie/index">
+      <form id="regist" method="post" action="step3">
         <div class="form-group row justify-content-center">
           <label for="userid" class="col-sm-2 col-form-label">아이디</label>
           <div class="col-sm-6">
             <input
               type="text"
-              name="userid"
-              id="userid"
+              name="user_id"
+              id="user_id"
               class="form-control"
               placeholder="아이디를 입력하세요"
             />
-            <small id="userid" class="text-info"></small>
+            <small id="user_id" class="text-info"></small>
           </div>
         </div>
         <div class="form-group row justify-content-center">
@@ -38,12 +38,12 @@ pageEncoding="UTF-8"%>
           <div class="col-sm-6">
             <input
               type="password"
-              name="password"
-              id="password"
+              name="user_password"
+              id="user_password"
               class="form-control"
               placeholder="비밀번호를 입력하세요"
             />
-            <small id="password" class="text-info"></small>
+            <small id="user_password" class="text-info"></small>
           </div>
         </div>
         <div class="form-group row justify-content-center">
@@ -66,12 +66,12 @@ pageEncoding="UTF-8"%>
           <div class="col-sm-6">
             <input
               type="text"
-              name="name"
-              id="name"
+              name="user_name"
+              id="user_name"
               class="form-control"
               placeholder="이름을 입력하세요"
             />
-            <small id=name class="text-info"></small>
+            <small id=user_name class="text-info"></small>
           </div>
         </div>
         <div class="form-group row justify-content-center">
@@ -79,12 +79,12 @@ pageEncoding="UTF-8"%>
           <div class="col-sm-6">
             <input
               type="text"
-              name="birth"
-              id="birth"
+              name="user_birth"
+              id="user_birth"
               class="form-control"
               placeholder="ex) 20210101"
             />
-            <small id=name class="text-info"></small>
+            <small id=user_birth class="text-info"></small>
           </div>
         </div>      
         
@@ -93,12 +93,12 @@ pageEncoding="UTF-8"%>
           <div class="col-sm-6">
             <input
               type="email"
-              name="email"
-              id="email"
+              name="user_email"
+              id="user_email"
               class="form-control"
               placeholder="ex) example@gmail.com"
             />
-            <small id="email" class="text-info"></small>
+            <small id="user_email" class="text-info"></small>
           </div>
         </div>
         <div class="form-group text-center">
@@ -108,12 +108,12 @@ pageEncoding="UTF-8"%>
           <div class="col-sm-6">
             <input
               type="text"
-              name="tel"
-              id="tel"
+              name="user_tel"
+              id="user_tel"
               class="form-control"
               placeholder="전화번호를 입력하세요('-'제외)"
             />
-            <small id=name class="text-info"></small>
+            <small id=user_tel class="text-info"></small>
           </div>
         </div>
           <button type="submit" class="btn btn-primary">가입하기</button>

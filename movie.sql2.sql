@@ -392,6 +392,7 @@ alter table movie_board add(rank varchar(100));
 insert into MOVIE_board values(20211111,'티탄','2021-12-09','120',
 '아가트 루셀, 뱅상 랭동','드라마','프랑스','(주)영화특별시SMC','청소년관람불가','vjnNkaFsdMA','m11.jpg','No.11');
 
+select * from user_tbl;
 
 insert into MOVIE_board values(20211112,'해피 뉴 이어','2021-12-29','138',
 '한지민, 이동욱, 강하늘, 윤아','멜로/로맨스','한국','CJ ENM','12세이상관람가','tAhLvuK7hb0','m12.jpg','No.12');
