@@ -28,7 +28,7 @@ pageEncoding="UTF-8"%>
               name="userid"
               id="userid"
               class="form-control"
-              placeholder="아이디를 입력하세요"
+              placeholder="아이디를 입력하세요."
             />
             <small id="userid" class="text-info"></small>
           </div>
@@ -41,7 +41,7 @@ pageEncoding="UTF-8"%>
               name="password"
               id="password"
               class="form-control"
-              placeholder="비밀번호를 입력하세요"
+              placeholder="비밀번호를 입력하세요."
             />
             <small id="password" class="text-info"></small>
           </div>
@@ -56,7 +56,7 @@ pageEncoding="UTF-8"%>
               name="confirm_password"
               id="confirm_password"
               class="form-control"
-              placeholder="비밀번호를 다시 입력하세요"
+              placeholder="비밀번호를 다시 입력하세요."
             />
             <small id="confirm_password" class="text-info"></small>
           </div>
@@ -69,7 +69,7 @@ pageEncoding="UTF-8"%>
               name="name"
               id="name"
               class="form-control"
-              placeholder="이름을 입력하세요"
+              placeholder="이름을 입력하세요."
             />
             <small id=name class="text-info"></small>
           </div>
@@ -84,7 +84,7 @@ pageEncoding="UTF-8"%>
               class="form-control"
               placeholder="ex) 20210101"
             />
-            <small id=name class="text-info"></small>
+            <small id=birth class="text-info"></small>
           </div>
         </div>      
         
@@ -113,7 +113,7 @@ pageEncoding="UTF-8"%>
               class="form-control"
               placeholder="전화번호를 입력하세요('-'제외)"
             />
-            <small id=name class="text-info"></small>
+            <small id=tel class="text-info"></small>
           </div>
         </div>
           <button type="submit" class="btn btn-primary">가입하기</button>
