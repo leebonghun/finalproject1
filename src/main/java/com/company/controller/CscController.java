@@ -60,8 +60,24 @@ public class CscController {
 		
 	}
 	
+//	@PostMapping("/cscinsert")
+//	public String cscinsertPost(CscDTO insertDto, RedirectAttributes rttr) {
+//		log.info("register 가져오기" + insertDto);
+//
+//		// 첨부파일 확인하기
+////		if(insertDto.getAttachList()!=null) {
+////			insertDto.getAttachList().forEach(attach ->log.info(attach+""));
+////		}
+//
+//		cscService.register(insertDto);
+//
+//		// log.info("bno"+insertDto.getBno());
+//		rttr.addFlashAttribute("result", insertDto.getCSC_BNO());
+//		return "redirect:/movie/csclist";
+//	}
+	
 	@PostMapping("/cscinsert")
-	public String registerPost(CscDTO insertDto, RedirectAttributes rttr) {
+	public String cscinsertPost(CscDTO insertDto) {
 		log.info("register 가져오기" + insertDto);
 
 		// 첨부파일 확인하기
@@ -72,14 +88,14 @@ public class CscController {
 		cscService.register(insertDto);
 
 		// log.info("bno"+insertDto.getBno());
-		rttr.addFlashAttribute("result", insertDto.getCSC_BNO());
+		
 		return "redirect:/movie/csclist";
 	}
 	
 	@GetMapping("cscread")
-	public void cscread(int Csc_Bno, Model model) {
+	public void cscread(int CSC_BNO, Model model) {
 		log.info("고객센터글으로 이동중입니다.");
-		CscDTO readdto = cscService.getRow(Csc_Bno);
+		CscDTO readdto = cscService.getRow(CSC_BNO);
 
 		model.addAttribute("readdto", readdto);
 		

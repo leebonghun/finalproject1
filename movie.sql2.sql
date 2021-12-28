@@ -426,22 +426,30 @@ select * from csc_TBL;
 		select Csc_Bno,Csc_Title,Csc_Content,Csc_Regdate,Csc_Rfi,Csc_Answer,user_id
  from csc_tbl;
 ---
+
+ delete from csc_tbl where user_id='id2';
+ 
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(1,'고객센터1','고객센터내용1',sysdate,'기타','처리내용1','id1');
+values(CSC_bno_seq.nextval,'고객센터1','고객센터내용1',sysdate,'기타','처리내용1','id1');
 
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(2,'고객센터2','고객센터내용2',sysdate,'기타','처리내용2','id2');
+values(CSC_bno_seq.nextval,'고객센터2','고객센터내용2',sysdate,'기타','처리내용2','id2');
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(3,'고객센터3','고객센터내용3',sysdate,'기타','처리내용3','id2');
+values(CSC_bno_seq.nextval,'고객센터3','고객센터내용3',sysdate,'기타','처리내용3','id2');
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(4,'고객센터4','고객센터내용4',sysdate,'분실물','처리내용4','id2');
+values(CSC_bno_seq.nextval,'고객센터4','고객센터내용4',sysdate,'분실물','처리내용4','id2');
 
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(5,'고객센터5','고객센터내용5',sysdate,'분실물','처리내용5','id1');
+values(CSC_bno_seq.nextval,'고객센터5','고객센터내용5',sysdate,'분실물','처리내용5','id1');
+
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
+values(CSC_bno_seq.nextval,'고객센터6','고객센터내용66',sysdate,'분실물','처리내용6','id1');
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
+values(CSC_bno_seq.nextval,'고객센터7','고객센터내용7',sysdate,'분실물','처리내용7','id2');
 
 create sequence CSC_bno_seq;
 
-
+  select CSC_bno_seq.nextval from dual;   
 
 delete csc_TBL;
 select * from csc_tbl;
