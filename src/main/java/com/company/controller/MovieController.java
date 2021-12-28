@@ -68,10 +68,7 @@ public class MovieController {
 	public void event() {
 		log.info("이벤트로 이동중입니다.");
 	}
-	@GetMapping("csclist")
-	public void csc() {
-		log.info("고객센터으로 이동중입니다.");
-	}
+	
 	@GetMapping("cscinsert")
 	public void cscinsert() {
 		log.info("고객센터글작성으로 이동중입니다.");
