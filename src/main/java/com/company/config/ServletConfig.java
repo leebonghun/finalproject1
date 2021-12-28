@@ -18,25 +18,25 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @Configuration
 public class ServletConfig implements WebMvcConfigurer {
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/resources/**")
-				.addResourceLocations("/resources/");
-	}
-	
-	@Override
-		public void configureViewResolvers(ViewResolverRegistry registry) {
-			InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
-			internalResourceViewResolver.setViewClass(JstlView.class);
-			internalResourceViewResolver.setPrefix("/WEB-INF/views/");
-			internalResourceViewResolver.setSuffix(".jsp");
-			
-			registry.viewResolver(internalResourceViewResolver);
-			
-		}
-	@Bean
-	public MultipartResolver multipartResolver() {
-		CommonsMultipartResolver resolver= new CommonsMultipartResolver();
-		return resolver;
-	}
+   @Override
+   public void addResourceHandlers(ResourceHandlerRegistry registry) {
+      registry.addResourceHandler("/resources/**")
+            .addResourceLocations("/resources/");
+   }
+   
+   @Override
+      public void configureViewResolvers(ViewResolverRegistry registry) {
+         InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
+         internalResourceViewResolver.setViewClass(JstlView.class);
+         internalResourceViewResolver.setPrefix("/WEB-INF/views/");
+         internalResourceViewResolver.setSuffix(".jsp");
+         
+         registry.viewResolver(internalResourceViewResolver);
+         
+      }
+   @Bean
+   public MultipartResolver multipartResolver() {
+      CommonsMultipartResolver resolver= new CommonsMultipartResolver();
+      return resolver;
+   }
 }

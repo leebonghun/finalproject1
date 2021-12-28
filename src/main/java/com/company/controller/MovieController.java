@@ -30,8 +30,7 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping("/movie/*")
 public class MovieController {
 	
-	@Autowired
-	private CscService cscService;
+
 	
 	@Autowired
 	private MovieService service;
@@ -69,43 +68,18 @@ public class MovieController {
 		log.info("이벤트로 이동중입니다.");
 	}
 	
-	@GetMapping("cscinsert")
-	public void cscinsert() {
-		log.info("고객센터글작성으로 이동중입니다.");
-	}
-	@GetMapping("cscread")
-	public void cscread() {
-		log.info("고객센터글으로 이동중입니다.");
-	}
+	
 	@GetMapping("selectSeat")
 	public void selectSeat() {
 		log.info("좌석선택 중..");
 	}
-	@GetMapping("csclist")
-	public void csclist(Model model) {
-		log.info("고객센터으로 이동중입니다.");
-		
-		List<CscDTO> list = cscService.getList();
-		log.info(""+list);
-		
-		model.addAttribute("list", list);
-	}
+
 	
-	@PostMapping("/cscinsert")
-	public String registerPost(CscDTO insertDto, RedirectAttributes rttr) {
-		log.info("register 가져오기" + insertDto);
 
-		// 첨부파일 확인하기
-//		if(insertDto.getAttachList()!=null) {
-//			insertDto.getAttachList().forEach(attach ->log.info(attach+""));
-//		}
+	
 
-		cscService.register(insertDto);
 
-		// log.info("bno"+insertDto.getBno());
-		rttr.addFlashAttribute("result", insertDto.getCSC_BNO());
-		return "redirect:/movie/csclist";
-	}
+
 	
 	
 	@GetMapping("movieRead")

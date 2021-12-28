@@ -98,9 +98,10 @@ CREATE TABLE CSC_TBL
 	CSC_REGDATE date DEFAULT SYSDATE,
 	CSC_RFI varchar2(1000) not null,
 	CSC_ANSWER varchar2(1000),
-	USER_ID varchar2(50) NOT NULL UNIQUE,
+	USER_ID varchar2(50) NOT NULL ,
 	PRIMARY KEY (CSC_BNO)
 );
+
 alter table csc_tbl add(CSC_WRITER varchar2(200))
 update csc_tbl set CSC_WRITER = 'USER1' WHERE CSC_BNO =1
 
@@ -164,7 +165,7 @@ CREATE TABLE MOVIE_TBL
 	openDt varchar2(60),
 	PRIMARY KEY (movieCD)
 );
-select * from movie_tbl;
+select * from user_tbl;
 
 
 
@@ -269,6 +270,8 @@ CREATE TABLE USER_TBL
 	PRIMARY KEY (USER_ID)
 );
 
+delete from CSC_TBL where user_password = 12345;
+
 select * from USER_TBL;
 
 select * from csc_tbl;
@@ -360,7 +363,22 @@ select * from csc_TBL;
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
 values(1,'고객센터1','고객센터내용1',sysdate,'기타','처리내용1','id1');
 
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
+values(2,'고객센터2','고객센터내용2',sysdate,'기타','처리내용2','id2');
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
+values(3,'고객센터3','고객센터내용3',sysdate,'기타','처리내용3','id2');
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
+values(4,'고객센터4','고객센터내용4',sysdate,'분실물','처리내용4','id2');
 
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
+values(5,'고객센터5','고객센터내용5',sysdate,'분실물','처리내용5','id1');
+
+create sequence CSC_bno_seq;
+
+
+
+delete csc_TBL;
+select * from csc_tbl;
 select Csc_Bno,Csc_Title,Csc_Regdate,Csc_Rfi,user_id
  from csc_tbl
 
