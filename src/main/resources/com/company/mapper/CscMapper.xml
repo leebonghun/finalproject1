@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.mapper.CscMapper">
+
+<!-- 고객센터글 select all -->
+ <select id="listAll" resultType="com.company.domain.CscDTO">
+	<!-- select CscBno,CscTitle,CscContent,CscRegdate,CscRfi,CscAnswer,CscWriter
+ from csc_tbl -->
+ 
+ 
+ select Csc_Bno,Csc_Title,Csc_Regdate,Csc_Rfi,user_id,Csc_Writer
+ from csc_tbl
+ 
+</select>
+
+<!-- 게시글 작성 -->
+	<insert id="insert">
+		
+
+		<!-- <selectKey keyProperty="Csc_bno" order="BEFORE" resultType="int">
+			select seq_board.nextval from dual
+		</selectKey> -->
+		insert into csc_tbl(Csc_Bno,Csc_Title,csc_content,csc_regdate,csc_rfi,user_id)
+		values(#{Csc_Bno},#{Csc_Title},#{csc_content},#{csc_regdate},#{csc_rfi},#{user_id})
+	</insert>
+
+
+</mapper>

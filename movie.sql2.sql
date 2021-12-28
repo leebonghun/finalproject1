@@ -91,16 +91,20 @@ CREATE TABLE AUTH_TBL
 
 CREATE TABLE CSC_TBL
 (
+	
 	CSC_BNO number NOT NULL,
 	CSC_TITLE varchar2(100) NOT NULL,
 	CSC_CONTENT varchar2(1000) NOT NULL,
 	CSC_REGDATE date DEFAULT SYSDATE,
+	CSC_RFI varchar2(1000) not null,
 	CSC_ANSWER varchar2(1000),
 	USER_ID varchar2(50) NOT NULL UNIQUE,
 	PRIMARY KEY (CSC_BNO)
 );
+alter table csc_tbl add(CSC_WRITER varchar2(200))
+update csc_tbl set CSC_WRITER = 'USER1' WHERE CSC_BNO =1
 
-
+select * from csc_tbl;
 CREATE TABLE EVENT_TBL
 (
 	EVENT_BNO number NOT NULL,
@@ -160,7 +164,104 @@ CREATE TABLE MOVIE_TBL
 	openDt varchar2(60),
 	PRIMARY KEY (movieCD)
 );
+select * from movie_tbl;
 
+alter table movie_tbl add(key varchar(100))
+alter table movie_tbl add(poster varchar(100))
+alter table movie_tbl add(rank varchar(100))
+
+alter table movie_tbl modify(watchGradeNm varchar2(200));
+alter table movie_tbl modify(peopleNm varchar2(200));
+alter table movie_tbl modify(movieNM varchar2(300));
+
+delete from MOVIE_TBL where movieCD = 20210028;
+
+--포스터
+UPDATE MOVIE_TBL SET poster ='m1.jpg' where movieCD=20210028;
+UPDATE MOVIE_TBL SET poster ='m2.jpg' where movieCD=20210864;
+UPDATE MOVIE_TBL SET poster ='m3.jpg' where movieCD=20205986;
+UPDATE MOVIE_TBL SET poster ='m4.jpg' where movieCD=20196264;
+UPDATE MOVIE_TBL SET poster ='m5.jpg' where movieCD=20211831;
+UPDATE MOVIE_TBL SET poster ='m6.jpg' where movieCD=20212015;
+UPDATE MOVIE_TBL SET poster ='m7.jpg' where movieCD=20212217;
+UPDATE MOVIE_TBL SET poster ='m8.jpg' where movieCD=20010264;
+UPDATE MOVIE_TBL SET poster ='m9.jpg' where movieCD=20210600;
+UPDATE MOVIE_TBL SET poster ='m10.jpg' where movieCD=20210752;
+UPDATE MOVIE_TBL SET poster ='m11.jpg' where movieCD=20211111;
+UPDATE MOVIE_TBL SET poster ='m12.jpg' where movieCD=20211112;
+
+--에고편
+UPDATE MOVIE_TBL SET key ='zZaH7ENAkoY' where movieCD=20212015;
+UPDATE MOVIE_TBL SET key ='ojm9Q30Z6_M' where movieCD=20212217;
+UPDATE MOVIE_TBL SET key ='JSmz_o2q_wo' where movieCD=20010264;
+UPDATE MOVIE_TBL SET key ='Y1_Ujpsn1Jc' where movieCD=20210600;
+UPDATE MOVIE_TBL SET key ='rs8YZgpoYRM' where movieCD=20210752;
+UPDATE MOVIE_TBL SET key ='vjnNkaFsdMA' where movieCD=20211111;
+UPDATE MOVIE_TBL SET key ='tAhLvuK7hb0' where movieCD=20211112;
+
+--순위 
+UPDATE MOVIE_TBL SET rank ='No.1' where movieCD=20210028;
+UPDATE MOVIE_TBL SET rank ='No.2' where movieCD=20210864;
+UPDATE MOVIE_TBL SET rank ='No.3' where movieCD=20205986;
+UPDATE MOVIE_TBL SET rank ='No.4' where movieCD=20196264;
+UPDATE MOVIE_TBL SET rank ='No.5' where movieCD=20211831;
+UPDATE MOVIE_TBL SET rank ='No.6' where movieCD=20212015;
+UPDATE MOVIE_TBL SET rank ='No.7' where movieCD=20212217;
+UPDATE MOVIE_TBL SET rank ='No.8' where movieCD=20010264;
+UPDATE MOVIE_TBL SET rank ='No.9' where movieCD=20210600;
+UPDATE MOVIE_TBL SET rank ='No.10' where movieCD=20210752;
+UPDATE MOVIE_TBL SET rank ='No.11' where movieCD=20211111;
+UPDATE MOVIE_TBL SET rank ='No.12' where movieCD=20211112;
+
+update MOVIE_TBL set key = '' where movieCD=20210028
+update MOVIE_TBL set key = '' where movieCD=20205986
+update MOVIE_TBL set key = '' where movieCD=20196264
+update MOVIE_TBL set key = '' where movieCD=20211831
+update MOVIE_TBL set key = '' where movieCD=20212015
+update MOVIE_TBL set key = '' where movieCD=20212217
+update MOVIE_TBL set key = '' where movieCD=20010264
+update MOVIE_TBL set key = '' where movieCD=20210600
+update MOVIE_TBL set key = '' where movieCD=20210752
+update MOVIE_TBL set key = '' where movieCD=20211111
+update MOVIE_TBL set key = '' where movieCD=20211112
+
+update MOVIE_TBL set movieNM ='라라와크리스마스요정' where movieCD = 20212217
+
+insert into MOVIE_TBL values(20210028,'스파이더맨: 노 웨이 홈','톰 홀랜드,베네딕트 컴버배치','148',
+'이이이','액션','12세이상 관람가','미국','Sony Pictures','2021-12-15');
+
+insert into MOVIE_TBL values(20210864,'엔칸토 : 마법의 시계','스태파니 비트리즈, 마리아 세실리아 보테로','109',
+'내용','애니메이션','전체관람가','미국','월트디즈니컴퍼니코리아','2021-11-24');
+
+insert into MOVIE_TBL values(20205986,'연애 빠진 로맨스','정가영,전종서,손석구','94',
+'이이이','로맨스','12세이상 관람가','한국','(주)씨제이이엔엠','2021-11-24');
+
+insert into MOVIE_TBL values(20196264,'유체이탈자','윤계상,박용우,임지연','108',
+'이이이','판타지','15이상 관람가','한국','(주)비에이엔터테인먼트','2021-11-24');
+
+insert into MOVIE_TBL values(20211831,'소드 아트 온라인','카와노 아야코','97',
+'이이이','애니메이션','전체관람가','일본','(주)애니플러스','2021-12-09');
+
+insert into MOVIE_TBL values(20212015,'돈 룩 업','아담 맥케이, 레오나르도 디카프리오','138',
+'이이이','코미디','15세이상 관람가','미국','CJ CGV','2021-12-08');
+
+insert into MOVIE_TBL values(20212217,'라라와 크리스마스 요정','라라','68',
+'이이이','애니메이션','전체관람가','미국','(주)트리플픽쳐스','2021-12-15');
+
+insert into MOVIE_TBL values(20010264,'아멜리에','장 피에르 주네','121',
+'이이이','코미디','15세이상 관람가','프랑스','(주)영화사 안다미로','2001-10-19');
+
+insert into MOVIE_TBL values(20210600,'프렌치 디스패치','웨스 앤더슨, 틸다 스윈튼','107',
+'이이이','코미디','15세이상 관람가','미국','월트디즈니컴퍼니코리아','2021-11-18');
+
+insert into MOVIE_TBL values(20210752,'뱅드림! 필름 라이브 세컨드 스테이지','아이미,사쿠라 아야네','84',
+'이이이','애니메이션','전체이상 관람가','일본','(주)애니플러스','2021-11-18');
+
+insert into MOVIE_TBL values(20211111,'티탄','아가트 루셀, 뱅상 랭동','120',
+'이이이','드라마','청소년 관람불가','프랑스','(주)영화특별시SMC','2021-12-09');
+
+insert into MOVIE_TBL values(20211112,'해피 뉴 이어','한지민, 이동욱, 강하늘, 윤아','138',
+'이이이','멜로/로맨스','12세이상 관람가','한국','CJ ENM','2021-12-29');
 
 CREATE TABLE REPLY_TBL
 (
@@ -207,7 +308,7 @@ CREATE TABLE USER_TBL
 (
 	USER_ID varchar2(50) NOT NULL,
 	USER_NAME varchar2(50) NOT NULL,
-	USER_PASSWORD varchar2(50) NOT NULL UNIQUE,
+	USER_PASSWORD varchar2(50) NOT NULL,
 	USER_BIRTH date NOT NULL,
 	USER_EMAIL varchar2(60) NOT NULL UNIQUE,
 	USER_TEL varchar2(60) NOT NULL,
@@ -287,6 +388,10 @@ ALTER TABLE RESERVE_TBL
 
 
 
+----------------------------------------밑은 사용하지마시오.. 안쓰는 코드..----------------------------
+
+
+
 /* Create Triggers */
 
 CREATE OR REPLACE TRIGGER TRI_GOODS_TBL_GOODS_NUM BEFORE INSERT ON GOODS_TBL
@@ -309,6 +414,24 @@ END;
 
 /
 
+insert into user_tbl
+values('id1','name1','12345','1997/10/14','id1naver.com','010-1234-5678',sysdate,'1');
+
+insert into user_tbl
+values('id2','name2','12345','1997/10/14','id2@naver.com','010-1234-5678',sysdate,'1');
+
+select * from user_tbl;	
+select * from csc_TBL;	
+		select Csc_Bno,Csc_Title,Csc_Content,Csc_Regdate,Csc_Rfi,Csc_Answer,user_id
+ from csc_tbl;
+---
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
+values(1,'고객센터1','고객센터내용1',sysdate,'기타','처리내용1','id1');
 
 
+select Csc_Bno,Csc_Title,Csc_Regdate,Csc_Rfi,user_id
+ from csc_tbl
 
+ALTER USER c##team DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
+
+​
