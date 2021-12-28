@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp"%>
 <!DOCTYPE html>
 <html>
@@ -7,9 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<script>
-	
-</script>
+
 </head>
 <body>
 	<div style="margin-left: 100px;">
@@ -53,7 +52,7 @@
 									aria-controls="collapseTwo"> <span
 									class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
 									class="glyphicon glyphicon-minus" aria-hidden="true"></i>대관 및
-									단채관람
+									단체관람
 								</a>
 							</h4>
 						</div>
@@ -148,16 +147,17 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>			
 		</div>
 		<!-- //faq-banner -->
+			<div class="panel-body">
+		<div>
 		<div>
 			<button type="button" class="btn btn-info"
-				style="margin-left: 1250px"
 				onclick="location.href='/movie/cscinsert'">글쓰기</button>
 		</div>
+		
 	</div>
-	<div style="margin-left: 100px; margin-right: 100px;">
 		<table class="table table-hover" id=csctbl>
 			<thead>
 				<tr>
@@ -169,16 +169,19 @@
 				</tr>
 			</thead>
 			<tbody>
+				<c:forEach var="cscDto" items="${list}">
 				<tr class="table-active">
-					<th scope="row">Active</th>
-					<td>Column content</td>
-					<td>Column content</td>
-					<td>Column content</td>
-					<td>Column content</td>
+					<th scope="row">${cscDto.CSC_BNO}</th>
+					<td>${cscDto.CSC_WRITER}</td>
+					<td>${cscDto.CSC_RFI}</td>
+					<td>${cscDto.CSC_TITLE}</td>
+					<td>${cscDto.CSC_REGDATE}</td>
+					
 				</tr>
+				</c:forEach>
 			</tbody>
 		</table>
-		<div style="margin-left: 500px">
+			
 			<ul class="pagination pagination-lg">
 				<li class="disabled"><a href="#"><i
 						class="fa fa-angle-left">«</i></a></li>
@@ -187,7 +190,7 @@
 				<li><a href="#">3</a></li>
 				<li><a href="#">4</a></li>
 				<li><a href="#">5</a></li>
-				<li><a href="#"><i class="fa fa-angle-right">»</i></a></li>
+				<li><a href="#"><i class="fa fa-angle-right">»</i></a></li>	
 			</ul>
 		</div>
 	</div>
