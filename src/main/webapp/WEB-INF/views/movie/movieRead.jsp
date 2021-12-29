@@ -66,8 +66,58 @@
         </tr>
       </table>
     </div>
+    <!-- 댓글 리스트  -->
+<div class="container">
+    <form id="commentForm" name="commentForm" method="post">
+    <br><br>
+        <div>
+            <div>
+                <span><strong>Comments</strong></span> <span id="cCnt"></span>
+            </div>
+            <div>
+                <table class="table">                    
+                    <tr>
+                        <td>
+                            <textarea style="width: 1100px" rows="3" cols="30" id="comment" name="comment" placeholder="댓글을 입력하세요"></textarea>
+                            <br>
+                            <div>
+                                <a href='#' onClick="fn_comment('${movieDto.movieCD }')" class="btn pull-right btn-success">등록</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <input type="hidden" id="movie_CD" name="movie_CD" value="${movieDto.movieCD }" />        
+    </form>
+</div>
+<div class="container">
+    <form id="commentListForm" name="commentListForm" method="post">
+        <div id="commentList">
+        </div>
+    </form>
+</div>
+
+
+
+
+<!-- 페이지 나누기를 위한 form -->            
+<form action="" id="actionForm">
+	<input type="hidden" name="pageNum" value="${cri.pageNum}" />
+	<input type="hidden" name="amount" value="${cri.amount}" />
+	<input type="hidden" name="type" value="${cri.type}" />
+	<input type="hidden" name="keyword" value="${cri.keyword}" />
+	<input type="hidden" name="bno" value="${read.bno}" />
+</form>  
+<script>
+	//현재 글번호 가져오기
+	let movieCD = ${movieDto.movieCD};	
+</script>   
+ 
+	
+    
   </div>
-			
-			
 		</div>
+<script src="/resources/js/movieRead.js"></script>		
+<script src="/resources/js/movieReply.js"></script>		
 <%@include file="../includes/footer.jsp"%>

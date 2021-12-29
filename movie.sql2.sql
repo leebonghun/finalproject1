@@ -218,7 +218,7 @@ insert into MOVIE_TBL values(20211112,'해피 뉴 이어','한지민, 이동욱,
 
 CREATE TABLE REPLY_TBL
 (
-	replyCd number NOT NULL,
+	replyCd number NOT NULL, -- movieCD
 	replyer varchar2(60) NOT NULL,
 	replyDate date DEFAULT SYSDATE NOT NULL,
 	replyContent varchar2(300) NOT NULL,
@@ -226,7 +226,9 @@ CREATE TABLE REPLY_TBL
 	movieCD number NOT NULL,
 	PRIMARY KEY (replyCd)
 );
+alter table reply_tbl add(key_code varchar2(100));
 
+select * from reply_tbl;
 
 CREATE TABLE RESERVE_TBL
 (
@@ -453,3 +455,30 @@ SELECT * FROM MOVIE_BOARD;
 alter table movie_board ADD primary key(movieCD);
 
 commit;
+
+create table cmtboard(
+	cmt_num number not null,
+	cmt_writer varchar2(100) not null,
+	cmt_star number not null,
+	cmt_content varchar2(300) not null,
+	cmt_movie varchar2(100) not null,
+	cmt_regdate date DEFAULT sysdate
+);
+
+create table movie_reply(
+   rno number(10,0) constraint pk_reply primary key, -- 댓글 글번호
+   bno number(10,0) not null,   -- 원본 글번호
+   user_id varchar2(50) not null,
+   reply varchar2(1000) not null,   --댓글 내용
+   replyer varchar2(50) not null,   --댓글 작성자
+   replaydate date default sysdate,   --댓글 작성일
+   updatedate date default sysdate,   --댓글 수정일
+   constraint fk_movie_board foreign key(user_id) references user_tbl(user_id)
+);
+
+create sequence seq_reply;
+
+create index idx_reply on movie_reply(bno desc, rno asc);
+
+alter table user_tbl add(replyCnt number default 0);
+
