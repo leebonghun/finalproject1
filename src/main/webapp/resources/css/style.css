@@ -35,7 +35,7 @@ body a:hover {
 
 input[type="submit"], .agileinfo_chat a, .w3ls_footer_grid1_left p a,
 	.w3l_sign_in_register ul li a, .w3ls_footer_grid1_right ul li a,
-	.w3_customer_email_right a, ul.dropdown-menu.multi-column ul li a {
+	.w3_customer_email_right a, ul.dropdown-menu.multi-column ul li a , #signup , #login{
 	transition: .5s ease-in;
 	-webkit-transition: .5s ease-in;
 	-moz-transition: .5s ease-in;
@@ -49,6 +49,27 @@ input[type="submit"], .agileinfo_chat a, .w3ls_footer_grid1_left p a,
 	border-top: #212121;
 }
 
+#signup{
+	color: white;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: red;
+	text-align: center;
+	padding: 6px 30px;
+	font-weight: bold;
+	
+}
+#login{
+color: white;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: red;
+	text-align: center;
+	padding: 6px 30px;
+	font-weight: bold;
+}
 .w3layouts_logo {
 	text-align: center;
 }
