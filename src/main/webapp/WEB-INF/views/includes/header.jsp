@@ -110,6 +110,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 								  <input type="text" name="Username" placeholder="Username" required="">
 								  <input type="password" name="Password" placeholder="Password" required="">
+								   <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
 								  <input type="submit" value="Login">
 								</form>
 							  </div>

@@ -40,8 +40,6 @@ public class CscController {
 	
 	
 	
-	
-	
 	@GetMapping("csclist")
 	public void csclist(Model model) {
 		log.info("고객센터으로 이동중입니다.");
@@ -77,9 +75,12 @@ public class CscController {
 	}
 	
 	@GetMapping("cscread")
-	public void cscread(int Csc_Bno, Model model) {
+	public void cscread(int CSC_BNO, Model model) {
 		log.info("고객센터글으로 이동중입니다.");
-		CscDTO readdto = cscService.getRow(Csc_Bno);
+		
+		
+		
+		CscDTO readdto = cscService.getRow(CSC_BNO);
 
 		model.addAttribute("readdto", readdto);
 		

@@ -166,7 +166,9 @@
 				<c:forEach var="cscDto" items="${list}">
 				<tr class="table-active">				
 					<th scope="row">${cscDto.CSC_BNO}</th>
+					<td>${cscDto.user_id}</td>
 					<td><a href="cscread?CSC_BNO=${cscDto.CSC_BNO}">${cscDto.CSC_TITLE}</a></td>				
+
 					<td>${cscDto.CSC_RFI}</td>
 					<td>${cscDto.user_id}</td>
 					<td>${cscDto.CSC_REGDATE}</td>

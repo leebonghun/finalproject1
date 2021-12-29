@@ -1,7 +1,5 @@
 package com.company.domain;
 
-import java.util.Date;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,16 +8,12 @@ import lombok.ToString;
 
 @Getter
 @Setter
+@AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@AllArgsConstructor
-public class UserDTO {
+public class LoginDTO {
+
 	private String user_id;
-	private String user_name;
 	private String user_password;
-	private String user_confirmPassword;
-	private String user_birth;
-	private String user_email;
-	private String user_tel;
-	private Date user_regdate;
+
 }
