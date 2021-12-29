@@ -4,7 +4,7 @@
 DROP TRIGGER TRI_GOODS_TBL_GOODS_NUM;
 DROP TRIGGER TRI_MOVIE_TBL_ MOVIE_NUM;
 
-
+select * from user_tbl;
 
 
 /* Drop Tables */

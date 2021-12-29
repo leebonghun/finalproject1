@@ -57,15 +57,11 @@
           <td width=50% class="text-left">${movieDto.openDt}</td>
         </tr>
         
-        <tr>
-          <td colspan="3">${vo.story }</td>
-        </tr>
+       
         <tr>
           <td colspan="3" class="text-right">
+          	<button type="submit" id="goBack">예매</button>
             <button type="submit" id="goBack">목록</button>
-            
-            
-            
           </td>
         </tr>
       </table>

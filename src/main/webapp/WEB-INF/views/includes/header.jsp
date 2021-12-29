@@ -82,8 +82,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			<div class="w3l_sign_in_register">
 				<ul>
-					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054 </li> 
-					<li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054     </li> 
+					<li><button type="submit" id="login">로그인</button>
+						<button type="submit" id="signup">회원가입</button>
+					</li>
+					
 				</ul>
 			</div>
 			<div class="clearfix"> </div>
