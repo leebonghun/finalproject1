@@ -110,11 +110,6 @@ public class MovieController {
 		log.info("로그인 페이지 요청");
 	}
 	
-	@PostMapping("/logout")
-	public void logoutPost(){
-		log.info("로그아웃");
-		
-	}
 
 	
 
