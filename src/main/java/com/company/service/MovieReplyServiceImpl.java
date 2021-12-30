@@ -38,6 +38,9 @@ public class MovieReplyServiceImpl implements MovieReplyService{
 		// TODO Auto-generated method stub
 		return new ReplyPageDTO(mapper.getCountByBno(movieCD),mapper.list(cri, movieCD));
 	}
+
+
+
 	
 	
 	

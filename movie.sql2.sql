@@ -286,6 +286,12 @@ CREATE TABLE USER_TBL
 	PRIMARY KEY (USER_ID)
 );
 
+select replyCd,movieCD,replyContent,replyer,replyDate 
+from(select /*+INDEX(reply_tbl idx_replys)*/rownum rn,replyCd,movieCD,replyContent,replyer,replyDate from reply_tbl where movieCD =20210028 and replyCd>0 and rownum<=10)
+where rn >1;
+
+
+
 alter table user_tbl modify(USER_PASSWORD varchar2(100));
 
 delete from CSC_TBL where user_password = 12345;

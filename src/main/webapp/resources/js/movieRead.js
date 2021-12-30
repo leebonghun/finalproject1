@@ -177,10 +177,10 @@ $(function(){
 		//있는 요소에 이벤트를 걸고 나중에 위임하는 형태로 작성
 		replyUl.on("click","li",function(){
 			
-			var rno = $(this).data("rno");
+			var replyCd = $(this).data("replyCd");
 			
-			console.log("rno"+rno);
-		replyService.get(rno,function(data){
+			console.log("rno"+replyCd);
+		replyService.get(replyCd,function(data){
 				console.log(data);
 				
 				modalReply.val(data.reply);

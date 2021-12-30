@@ -25,11 +25,11 @@ let replyService = (function(){
 	}//add end
 	function getList(param,callback){
 		
-		let bno = param.bno;
+		let movieCD = param.movieCD;
 		let page = param.page || 1;
 		
 		$.getJSON({
-			url:'/replies/pages/'+bno+'/'+page,
+			url:'/replies/pages/'+movieCD+'/'+page,
 			success:function(data){
 				callback(data.replyCnt,data.list);
 			}
@@ -84,11 +84,11 @@ let replyService = (function(){
 		})
 	}//update end
 	
-	function get(rno,callback){
+	function get(replyCd,callback){
 		
 		$.getJSON({
 			
-			url:'/replies/'+rno,
+			url:'/replies/'+replyCd,
 			success:function(data){
 				if(callback){
 					callback(data);
