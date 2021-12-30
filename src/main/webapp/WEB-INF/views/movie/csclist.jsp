@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<script src="/resources/js/csclist.js"></script>
 
 </head>
 <body>

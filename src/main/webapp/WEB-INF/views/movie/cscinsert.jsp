@@ -6,7 +6,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<style>
+    .test_obj input[type="radio"] {
+        display: none;
+    }
+ 
+    .test_obj input[type="radio"] + span {
+        display: inline-block;
+        padding: 15px 10px;
+        border: 1px solid #dfdfdf;
+        background-color: #ffffff;
+        text-align: center;
+        cursor: pointer;
+    }
+ 
+    .test_obj input[type="radio"]:checked + span {
+        background-color: #113a6b;
+        color: #ffffff;
+    }
+</style>
 </head>
 <body>
 <div style="margin-left: 100px;">
@@ -17,11 +35,14 @@
 	<div class="col-lg-12">
 		<div class="panel panel-default">
 		<form action="" method="post" role="form">
+		<div class="form-group" style="margin-left: 25px; margin-top:25px  ">
+			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
+			</div>
 			 <div class="form-group" style="margin-left: 25px; margin-top:25px  ">
-		 	<label><input type="radio" name="CSC_RFI" checked="checked" value="기타">기타</label>
-			<label><input type="radio" name="CSC_RFI" value="예매 환불 및 취소">예매 환불 및 취소</label>
-			<label><input type="radio" name="CSC_RFI" value="계정관련 문의">계정관련 문의</label>
-			<label><input type="radio" name="CSC_RFI" value="분실물">분실물</label> 			
+		 	<label class="test_obj"><input type="radio" name="CSC_RFI" checked="checked" value="기타"><span>기타</span></label>
+			<label class="test_obj"><input type="radio" name="CSC_RFI" value="예매 환불 및 취소"><span>예매 환불 및 취소</span></label>
+			<label class="test_obj"><input type="radio" name="CSC_RFI" value="계정관련 문의"><span>계정관련 문의</span></label>
+			<label class="test_obj"><input type="radio" name="CSC_RFI" value="분실물"><span>분실물</span></label> 			
     </div>
 			<!-- /.panel-heading -->
 			<div class="panel-body">
