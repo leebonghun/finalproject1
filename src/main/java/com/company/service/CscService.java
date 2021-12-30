@@ -11,4 +11,6 @@ public interface CscService {
 	public List<CscDTO> getList();
 	public boolean register(CscDTO insertDto);
 	public CscDTO getRow(int Csc_Bno);
+	public boolean remove(int Csc_Bno);
+	public boolean update(CscDTO updateDto);
 }

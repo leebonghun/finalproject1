@@ -12,14 +12,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+
 import com.company.domain.CscDTO;
 
 import com.company.domain.InfoDTO;
+
 
 import com.company.domain.MovieReplyDTO;
 import com.company.domain.UserDTO;
 
 import com.company.service.CscService;
+
 
 import com.company.service.MovieReplyService;
 import com.company.domain.movieDTO;
@@ -35,13 +38,18 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping("/movie/*")
 public class MovieController {
 
+	
 	@Autowired
 	private MovieReplyService replyService;
 
-
 	@Autowired
 	private NoticeService noticeService;
+	
+	@Autowired
+	private CscService cscService;
 
+	
+	
 	@Autowired
 	private MovieService service;
 	
@@ -83,7 +91,7 @@ public class MovieController {
 	public void selectSeat() {
 		log.info("좌석선택 중..");
 	}
-	
+
 	
 	@GetMapping("movieRead")
 	public void movieRead(int movieCD,Model model) {
@@ -107,5 +115,8 @@ public class MovieController {
 		log.info("로그아웃");
 		
 	}
+
+	
+
 	
 }
