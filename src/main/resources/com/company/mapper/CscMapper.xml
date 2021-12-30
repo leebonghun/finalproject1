@@ -8,16 +8,16 @@
  from csc_tbl -->
  
  
- select Csc_Bno,Csc_Title,Csc_Regdate,Csc_Rfi,user_id
- from csc_tbl order by Csc_Bno
+ select Csc_Bno,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
+ from csc_tbl order by Csc_Bno desc
  
 </select>
 
 <!-- 게시글 하나 가져오기 -->
 	<select id="read" resultType="com.company.domain.CscDTO">
-		select Csc_Bno,user_id,Csc_Rfi,Csc_Title,csc_content,csc_answer
+		select CSC_BNO,user_id,Csc_Rfi,CSC_TITLE,csc_content,csc_answer
 		from csc_tbl
-		where Csc_Bno=#{CSC_BNO}
+		where CSC_BNO=#{CSC_BNO}
 	</select>
 
 <!-- 게시글 작성 -->
@@ -32,9 +32,21 @@
 		<!-- insert into csc_tbl(Csc_Bno,Csc_Title,csc_content,csc_regdate,csc_rfi,user_id)
 		values(CSC_bno_seq.nextval,#{Csc_Title},#{csc_content},sysdate,#{csc_rfi},#{user_id}) -->
 		
-		insert into csc_tbl(CSC_BNO,Csc_Title,csc_content,csc_regdate,CSC_RFI,user_id)
-		values(#{CSC_BNO},#{CSC_TITLE},#{CSC_CONTENT},sysdate,#{CSC_RFI},#{user_id})
+		insert into csc_tbl(CSC_BNO,CSC_TITLE,CSC_CONTENT,csc_regdate,CSC_RFI,user_id,CSC_CHECK)
+		values(#{CSC_BNO},#{CSC_TITLE},#{CSC_CONTENT},sysdate,#{CSC_RFI},#{user_id},#{CSC_CHECK})
 	</insert>
+<!-- 게시글 삭제 -->
 
+	<delete id="delete">
+		delete from csc_tbl where CSC_BNO=#{CSC_BNO}
+	</delete>
+	
+<!-- 게시글 수정 -->
+	<update id="update">
+		update csc_tbl
+		set
+		CSC_TITLE=#{CSC_TITLE},CSC_CONTENT=#{CSC_CONTENT},CSC_RFI=#{CSC_RFI}
+		where CSC_BNO=#{CSC_BNO}
+	</update>	
 
 </mapper>

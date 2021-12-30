@@ -2,6 +2,13 @@
  * step2.jsp 검증하기
  */
 $(function() {
+	
+/*	$(".btn-primary").click(function(){
+		location.href = '/movie/index';
+		
+		
+	})*/
+	
   $("#regist").validate({
     errorPlacement: function(error, element) {
       $(element)
@@ -10,12 +17,15 @@ $(function() {
         .append(error);
     },
     rules: {
-      userid: {
+      user_id: {
         required: true,
         validId: true,
         remote:{
-					url:"/register/checkId",
+					url:"/signup/checkId",
 					type:"post",
+					beforeSend:function(xhr){
+						xhr.setRequestHeader(csrfHeaderName,csrfTokenValue);
+					 },
 					data:{
 						userid:function(){
 							return $('#userid').val();
@@ -23,49 +33,55 @@ $(function() {
 					}
 				}		
       },
-      password: {
+      user_password: {
         required: true,
         validPwd: true
       },
       confirm_password: {
         required: true,
         validPwd: true,
-        equalTo:"#password"
+        equalTo:"#user_password"
       },
-      name: {
+      user_name: {
         required: true,
         minlength: 2
       },
-      gender: {
-        required: true
-      },
-      email: {
+	  user_birth: {
+		required: true
+	  },
+      user_email: {
         required: true,
         email: true
-      }
+      },
+	  user_tel: {
+		required: true
+	  }
     },
     messages: {
-      userid: {
+      user_id: {
         remote: "아이디가 중복되었습니다.",
         required: "아이디는 필수 입력 요소입니다."
       },
-      password: {
+      user_password: {
         required: "비밀번호는 필수 입력 요소입니다."
       },
       confirm_password: {
         required: "비밀번호는 필수 입력 요소입니다.",
         equalTo:"이전 비밀번호와 다릅니다."
       },
-      name: {
+      user_name: {
         required: "이름은 필수 입력 요소입니다.",
         minlength: "이름은 최소 2자리는 입력해야 합니다"
       },
-      gender: {
-        required: "성별은 필수 입력 요소입니다."
-      },
-      email: {
+	  user_birth: {
+		required: "생년월일은 필수 요소입니다."
+	  },
+      user_email: {
         required: "이메일은 필수 입력 요소입니다."
-      }
+      },
+	  user_tel: {
+		required: "전화번호는 필수 입력 요소입니다."
+	  } 
     }
   });
 });

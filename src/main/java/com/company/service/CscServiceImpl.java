@@ -30,4 +30,22 @@ public class CscServiceImpl implements CscService {
 	
 	}
 
+	@Override
+	public boolean remove(int Csc_Bno) {
+		return cscMapper.delete(Csc_Bno)>0?true:false;
+		
+	}
+
+	@Override
+	public boolean update(CscDTO updateDto) {
+		
+		
+		//게시물 수정
+		boolean modifyResult = cscMapper.update(updateDto) == 1;
+		
+		
+		
+		return modifyResult;
+	}
+
 }

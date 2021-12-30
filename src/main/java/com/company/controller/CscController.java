@@ -18,11 +18,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
+import com.company.domain.Criteria;
 import com.company.domain.CscDTO;
 import com.company.service.CscService;
 
-import com.company.domain.movieDTO;
-import com.company.service.MovieService;
 
 
 import lombok.extern.log4j.Log4j2;
@@ -36,8 +35,6 @@ public class CscController {
 	private CscService cscService;
 	
 		
-	
-	
 	
 	
 	
@@ -92,15 +89,65 @@ public class CscController {
 		return "redirect:/movie/csclist";
 	}
 	
-	@GetMapping("cscread")
+	@GetMapping({ "cscread", "cscmodify" })
 	public void cscread(int CSC_BNO, Model model) {
 		log.info("고객센터글으로 이동중입니다.");
+
+
 		CscDTO readdto = cscService.getRow(CSC_BNO);
 
 		model.addAttribute("readdto", readdto);
 		
 	}
 	
+	
+	@PostMapping("cscmodify")
+	public String modify(CscDTO modifyDto) {
+		log.info("게시글 수정" + modifyDto );
+
+		
+		
+		
+		
+		// 수정완료후 list로 이동
+		cscService.update(modifyDto);
+
+		
+		
+
+		
+		return"redirect:/movie/csclist";
+	}
+
+	
+	
+	
+	
+	@PostMapping("remove")
+	public String removePost(int CSC_BNO ) {
+		log.info("게시글 삭제" + CSC_BNO);
+
+//		// 첨부파일 목록 얻어오기
+//		List<AttachFileDTO> attachList = service.findByBno(bno);
+		
+		cscService.remove(CSC_BNO);
+		// 수정삭제 후 리스트로 이동
+//		if (cscService.remove(CSC_BNO)) {
+			//첨부 폴더 파일 삭제
+//			deleteFiles(attachList);
+//			// 페이지 나누기 값
+//			rttr.addAttribute("pageNum", cri.getPageNum());
+//			rttr.addAttribute("amount", cri.getAmount());
+//
+//			// 검색 값
+//			rttr.addAttribute("type", cri.getType());
+//			rttr.addAttribute("keyword", cri.getKeyword());
+//
+//			rttr.addFlashAttribute("result", "success");
+//		}
+
+		return "redirect:/movie/csclist";
+	}
 	
 	
 	

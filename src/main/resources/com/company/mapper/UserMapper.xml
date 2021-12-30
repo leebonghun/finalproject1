@@ -4,8 +4,8 @@
 
 <!-- 회원 가입 -->
 <insert id="insert">
-	insert into user_tbl(user_id,user_name,user_password,ser_birth,user_email,user_tel,user_regdate)
-	values(#{user_id},#{user_password},#{user_name},#{user_birth},#{user_email},#{user_tel},#{sysdate})
+	insert into user_tbl(user_id,user_name,user_password,user_birth,user_email,user_tel,user_regdate)
+	values(#{user_id},#{user_password},#{user_name},#{user_birth},#{user_email},#{user_tel},sysdate)
 </insert>
 
 <!-- 중복 아이디 검사 -->

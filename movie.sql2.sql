@@ -98,11 +98,12 @@ CREATE TABLE CSC_TBL
 	CSC_REGDATE date DEFAULT SYSDATE,
 	CSC_RFI varchar2(1000) not null,
 	CSC_ANSWER varchar2(1000),
+	CSC_CHECK varchar2(1000),
 	USER_ID varchar2(50) NOT NULL ,
 	PRIMARY KEY (CSC_BNO)
 );
-
-alter table csc_tbl add(CSC_WRITER varchar2(200))
+alter table csc_tbl add(CSC_CHECK varchar2(1000))
+alter table csc_tbl delete(CSC_WRITER varchar2(200))
 update csc_tbl set CSC_WRITER = 'USER1' WHERE CSC_BNO =1
 
 select * from csc_tbl;
@@ -165,11 +166,10 @@ CREATE TABLE MOVIE_TBL
 	openDt varchar2(60),
 	PRIMARY KEY (movieCD)
 );
-select * from movie_tbl;
+select * from user_tbl;
 
-alter table movie_tbl add(key varchar(100))
-alter table movie_tbl add(poster varchar(100))
-alter table movie_tbl add(rank varchar(100))
+
+
 
 alter table movie_tbl modify(watchGradeNm varchar2(200));
 alter table movie_tbl modify(peopleNm varchar2(200));
@@ -177,54 +177,7 @@ alter table movie_tbl modify(movieNM varchar2(300));
 
 delete from MOVIE_TBL where movieCD = 20210028;
 
---포스터
-UPDATE MOVIE_TBL SET poster ='m1.jpg' where movieCD=20210028;
-UPDATE MOVIE_TBL SET poster ='m2.jpg' where movieCD=20210864;
-UPDATE MOVIE_TBL SET poster ='m3.jpg' where movieCD=20205986;
-UPDATE MOVIE_TBL SET poster ='m4.jpg' where movieCD=20196264;
-UPDATE MOVIE_TBL SET poster ='m5.jpg' where movieCD=20211831;
-UPDATE MOVIE_TBL SET poster ='m6.jpg' where movieCD=20212015;
-UPDATE MOVIE_TBL SET poster ='m7.jpg' where movieCD=20212217;
-UPDATE MOVIE_TBL SET poster ='m8.jpg' where movieCD=20010264;
-UPDATE MOVIE_TBL SET poster ='m9.jpg' where movieCD=20210600;
-UPDATE MOVIE_TBL SET poster ='m10.jpg' where movieCD=20210752;
-UPDATE MOVIE_TBL SET poster ='m11.jpg' where movieCD=20211111;
-UPDATE MOVIE_TBL SET poster ='m12.jpg' where movieCD=20211112;
 
---에고편
-UPDATE MOVIE_TBL SET key ='zZaH7ENAkoY' where movieCD=20212015;
-UPDATE MOVIE_TBL SET key ='ojm9Q30Z6_M' where movieCD=20212217;
-UPDATE MOVIE_TBL SET key ='JSmz_o2q_wo' where movieCD=20010264;
-UPDATE MOVIE_TBL SET key ='Y1_Ujpsn1Jc' where movieCD=20210600;
-UPDATE MOVIE_TBL SET key ='rs8YZgpoYRM' where movieCD=20210752;
-UPDATE MOVIE_TBL SET key ='vjnNkaFsdMA' where movieCD=20211111;
-UPDATE MOVIE_TBL SET key ='tAhLvuK7hb0' where movieCD=20211112;
-
---순위 
-UPDATE MOVIE_TBL SET rank ='No.1' where movieCD=20210028;
-UPDATE MOVIE_TBL SET rank ='No.2' where movieCD=20210864;
-UPDATE MOVIE_TBL SET rank ='No.3' where movieCD=20205986;
-UPDATE MOVIE_TBL SET rank ='No.4' where movieCD=20196264;
-UPDATE MOVIE_TBL SET rank ='No.5' where movieCD=20211831;
-UPDATE MOVIE_TBL SET rank ='No.6' where movieCD=20212015;
-UPDATE MOVIE_TBL SET rank ='No.7' where movieCD=20212217;
-UPDATE MOVIE_TBL SET rank ='No.8' where movieCD=20010264;
-UPDATE MOVIE_TBL SET rank ='No.9' where movieCD=20210600;
-UPDATE MOVIE_TBL SET rank ='No.10' where movieCD=20210752;
-UPDATE MOVIE_TBL SET rank ='No.11' where movieCD=20211111;
-UPDATE MOVIE_TBL SET rank ='No.12' where movieCD=20211112;
-
-update MOVIE_TBL set key = '' where movieCD=20210028
-update MOVIE_TBL set key = '' where movieCD=20205986
-update MOVIE_TBL set key = '' where movieCD=20196264
-update MOVIE_TBL set key = '' where movieCD=20211831
-update MOVIE_TBL set key = '' where movieCD=20212015
-update MOVIE_TBL set key = '' where movieCD=20212217
-update MOVIE_TBL set key = '' where movieCD=20010264
-update MOVIE_TBL set key = '' where movieCD=20210600
-update MOVIE_TBL set key = '' where movieCD=20210752
-update MOVIE_TBL set key = '' where movieCD=20211111
-update MOVIE_TBL set key = '' where movieCD=20211112
 
 update MOVIE_TBL set movieNM ='라라와크리스마스요정' where movieCD = 20212217
 
@@ -318,8 +271,11 @@ CREATE TABLE USER_TBL
 	PRIMARY KEY (USER_ID)
 );
 
+delete from CSC_TBL where user_password = 12345;
 
+select * from USER_TBL;
 
+select * from csc_tbl;
 /* Create Foreign Keys */
 
 ALTER TABLE ATTACH_EVENT_TBL
@@ -348,19 +304,19 @@ ALTER TABLE ATTACH_INFO_TBL
 
 ALTER TABLE ATTACH_MOVIE_TBL
 	ADD FOREIGN KEY (movieCD)
-	REFERENCES MOVIE_TBL (movieCD)
+	REFERENCES MOVIE_board (movieCD)
 ;
 
 
 ALTER TABLE REPLY_TBL
 	ADD FOREIGN KEY (movieCD)
-	REFERENCES MOVIE_TBL (movieCD)
+	REFERENCES MOVIE_BOARD (movieCD)
 ;
 
 
 ALTER TABLE RESERVE_TBL
 	ADD FOREIGN KEY (movieCD)
-	REFERENCES MOVIE_TBL (movieCD)
+	REFERENCES MOVIE_board (movieCD)
 ;
 
 
@@ -393,27 +349,6 @@ ALTER TABLE RESERVE_TBL
 
 
 
-/* Create Triggers */
-
-CREATE OR REPLACE TRIGGER TRI_GOODS_TBL_GOODS_NUM BEFORE INSERT ON GOODS_TBL
-FOR EACH ROW
-BEGIN
-	SELECT SEQ_GOODS_TBL_GOODS_NUM.nextval
-	INTO :new.GOODS_NUM
-	FROM dual;
-END;
-
-/
-
-CREATE OR REPLACE TRIGGER TRI_MOVIE_TBL_ MOVIE_NUM BEFORE INSERT ON MOVIE_TBL
-FOR EACH ROW
-BEGIN
-	SELECT SEQ_MOVIE_TBL_ MOVIE_NUM.nextval
-	INTO :new. MOVIE_NUM
-	FROM dual;
-END;
-
-/
 
 insert into user_tbl
 values('id1','name1','12345','1997/10/14','id1naver.com','010-1234-5678',sysdate,'1');
@@ -444,8 +379,8 @@ values(CSC_bno_seq.nextval,'고객센터5','고객센터내용5',sysdate,'분실
 
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
 values(CSC_bno_seq.nextval,'고객센터6','고객센터내용66',sysdate,'분실물','처리내용6','id1');
-insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(CSC_bno_seq.nextval,'고객센터7','고객센터내용7',sysdate,'분실물','처리내용7','id2');
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id,CSC_CHECK)
+values(CSC_bno_seq.nextval,'고객센터7','고객센터내용7',sysdate,'분실물','처리내용7','id2','[답변완료]');
 
 create sequence CSC_bno_seq;
 
@@ -458,4 +393,72 @@ select Csc_Bno,Csc_Title,Csc_Regdate,Csc_Rfi,user_id
 
 ALTER USER c##team DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
 
-​
+select * from movie_board;
+alter table movie_board add(key varchar(100));
+alter table movie_board add(poster varchar(100));
+alter table movie_board add(rank varchar(100));
+
+insert into MOVIE_board values(20211111,'티탄','2021-12-09','120',
+'아가트 루셀, 뱅상 랭동','드라마','프랑스','(주)영화특별시SMC','청소년관람불가','vjnNkaFsdMA','m11.jpg','No.11');
+
+select * from user_tbl;
+
+insert into MOVIE_board values(20211112,'해피 뉴 이어','2021-12-29','138',
+'한지민, 이동욱, 강하늘, 윤아','멜로/로맨스','한국','CJ ENM','12세이상관람가','tAhLvuK7hb0','m12.jpg','No.12');
+insert into MOVIE_board values(20211112,'해피 뉴 이어','한지민, 이동욱, 강하늘, 윤아','138',
+,'멜로/로맨스','12세이상관람가','한국','CJ ENM','2021-12-29');
+
+--포스터
+UPDATE movie_board SET poster ='m1.jpg' where movieCD=20210028;
+UPDATE movie_board SET poster ='m2.jpg' where movieCD=20210864;
+UPDATE movie_board SET poster ='m3.jpg' where movieCD=20205986;
+UPDATE movie_board SET poster ='m4.jpg' where movieCD=20196264;
+UPDATE movie_board SET poster ='m5.jpg' where movieCD=20211831;
+UPDATE movie_board SET poster ='m6.jpg' where movieCD=20212015;
+UPDATE movie_board SET poster ='m7.jpg' where movieCD=20212217;
+UPDATE movie_board SET poster ='m8.jpg' where movieCD=20010264;
+UPDATE movie_board SET poster ='m9.jpg' where movieCD=20210600;
+UPDATE movie_board SET poster ='m10.jpg' where movieCD=20210752;
+UPDATE movie_board SET poster ='m11.jpg' where movieCD=20211111;
+UPDATE movie_board SET poster ='m12.jpg' where movieCD=20211112;
+
+--에고편
+UPDATE movie_board SET key ='JfVOs4VSpmA' where movieCD=20210028;
+UPDATE movie_board SET key ='DJs_ihmMZfg' where movieCD=20210864;
+UPDATE movie_board SET key ='dWEQjU3GCE0' where movieCD=20205986;
+UPDATE movie_board SET key ='egg3dUdD_Js' where movieCD=20196264;
+UPDATE movie_board SET key ='blAzIwXB9zo' where movieCD=20211831;
+UPDATE movie_board SET key ='zZaH7ENAkoY' where movieCD=20212015;
+UPDATE movie_board SET key ='ojm9Q30Z6_M' where movieCD=20212217;
+UPDATE movie_board SET key ='JSmz_o2q_wo' where movieCD=20010264;
+UPDATE movie_board SET key ='Y1_Ujpsn1Jc' where movieCD=20210600;
+UPDATE movie_board SET key ='rs8YZgpoYRM' where movieCD=20210752;
+UPDATE movie_board SET key ='vjnNkaFsdMA' where movieCD=20211111;
+UPDATE movie_board SET key ='tAhLvuK7hb0' where movieCD=20211112;
+
+--순위 
+UPDATE movie_board SET rank ='No.1' where movieCD=20210028;
+UPDATE movie_board SET rank ='No.2' where movieCD=20210864;
+UPDATE movie_board SET rank ='No.3' where movieCD=20205986;
+UPDATE movie_board SET rank ='No.4' where movieCD=20196264;
+UPDATE movie_board SET rank ='No.5' where movieCD=20211831;
+UPDATE movie_board SET rank ='No.6' where movieCD=20212015;
+UPDATE movie_board SET rank ='No.7' where movieCD=20212217;
+UPDATE movie_board SET rank ='No.8' where movieCD=20010264;
+UPDATE movie_board SET rank ='No.9' where movieCD=20210600;
+UPDATE movie_board SET rank ='No.10' where movieCD=20210752;
+UPDATE movie_board SET rank ='No.11' where movieCD=20211111;
+UPDATE movie_board SET rank ='No.12' where movieCD=20211112;
+
+select * from csc_tbl;
+
+alter table csc_tbl add(CSC_WRITER varchar(200));
+
+UPDATE MOVIE_BOARD SET movieNM = '소드 아트 온라인' WHERE MOVIECD=20211831;
+UPDATE MOVIE_BOARD SET movieNM = '라라와크리스마스요정' WHERE MOVIECD=20212217;
+UPDATE MOVIE_BOARD SET movieNM = '뱅드림!' WHERE MOVIECD=20210752;
+
+SELECT * FROM MOVIE_BOARD;
+alter table movie_board ADD primary key(movieCD);
+
+commit;

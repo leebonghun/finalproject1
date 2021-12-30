@@ -123,6 +123,9 @@ input[type="text"], input[type="password"] {
     background-color: #063863;
 }
 
+.page{
+	text-align: center;
+}
 .btn.sch {
     border: 0;
     padding: 0;

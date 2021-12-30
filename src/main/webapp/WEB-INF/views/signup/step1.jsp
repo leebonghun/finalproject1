@@ -151,11 +151,13 @@
 </div>
 <label id="textarea1" style="font-size:16px;">
 <input type="checkbox" name="agree" value="true"> 약관동의
+<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
 </label>
 <input type="submit" class="btn btn-primary btn-sm" value="다음단계">
 </form>	
 </div>
-<script src="/resources/js/jquery-3.3.1.js"></script>
+<script src="/resources/sign-js/jquery-3.3.1.js"></script>
+
 <script>
 	$(function() {
 		//check 값이 false 이면 alert() 띄우기
