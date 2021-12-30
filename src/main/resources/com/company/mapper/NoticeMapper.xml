@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.mapper.NoticeMapper">
+
+<!-- 고객센터글 select all -->
+ <select id="listAll" resultType="com.company.domain.InfoDTO">
+	<!-- select InfoBno,InfoTitle,InfoContent,InfoRegdate,InfoUpdatedate,Info
+ from Info_tbl -->
+ 
+ 
+ select INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE,INFO_UPDATEDATE,INFO_CNT
+ from info_tbl
+ 
+</select>
+
+<!-- 게시글 작성 -->
+	<insert id="insert">
+		
+
+		<!-- <selectKey keyProperty="Csc_bno" order="BEFORE" resultType="int">
+			select seq_board.nextval from dual
+		</selectKey> -->
+		insert into Info_tbl(Info_Bno,Info_Title,Info_Content,Info_Regdate,Info_Updatedate,Info_Cnt)
+		values(#{Info_Bno},#{Info_Title},#{Info_Content},#{Info_Regdate},#{Info_Updatedate},#{Info_Cnt})
+	</insert>
+	
+	
+</mapper>
