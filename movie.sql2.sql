@@ -4,6 +4,7 @@
 DROP TRIGGER TRI_GOODS_TBL_GOODS_NUM;
 DROP TRIGGER TRI_MOVIE_TBL_ MOVIE_NUM;
 
+select * from auth_tbl;
 select * from user_tbl;
 
 
@@ -84,7 +85,7 @@ CREATE TABLE ATTACH_MOVIE_TBL
 
 CREATE TABLE AUTH_TBL
 (
-	AUTHORIY varchar2(50),
+	AUTHORITY varchar2(50),
 	USER_ID varchar2(50) NOT NULL UNIQUE
 );
 
@@ -285,6 +286,8 @@ CREATE TABLE USER_TBL
 	PRIMARY KEY (USER_ID)
 );
 
+alter table user_tbl modify(USER_PASSWORD varchar2(100));
+
 delete from CSC_TBL where user_password = 12345;
 
 select * from USER_TBL;
@@ -357,7 +360,7 @@ ALTER TABLE RESERVE_TBL
 	REFERENCES USER_TBL (USER_ID)
 ;
 
-
+alter table auth_tbl rename column authoriy to authority;
 
 ----------------------------------------밑은 사용하지마시오.. 안쓰는 코드..----------------------------
 

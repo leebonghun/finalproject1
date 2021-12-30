@@ -59,6 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="/resources/js/move-top.js"></script>
 <script type="text/javascript" src="/resources/js/easing.js"></script>
 <script src="/resources/js/csclist.js"></script>
+<script src="/resources/sign-js/login.js">
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -83,7 +84,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="w3l_sign_in_register">
 				<ul>
 					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054     </li> 
-					<li><button type="submit" id="login">로그인</button>
+					<li>
+						<button type="submit" id="login">로그인</button>
 						<button type="submit" id="signup">회원가입</button>
 					</li>
 					
@@ -113,6 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 								  <input type="text" name="Username" placeholder="Username" required="">
 								  <input type="password" name="Password" placeholder="Password" required="">
+								   <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
 								  <input type="submit" value="Login">
 								</form>
 							  </div>
