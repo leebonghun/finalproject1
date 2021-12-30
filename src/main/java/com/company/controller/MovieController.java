@@ -15,12 +15,12 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.company.domain.Criteria;
 import com.company.domain.CscDTO;
 
-
 import com.company.domain.InfoDTO;
 
 
 import com.company.domain.MovieReplyDTO;
 import com.company.domain.UserDTO;
+
 import com.company.service.CscService;
 
 
@@ -37,6 +37,7 @@ import lombok.extern.log4j.Log4j2;
 @Controller
 @RequestMapping("/movie/*")
 public class MovieController {
+
 	
 	@Autowired
 	private MovieReplyService replyService;
@@ -94,9 +95,6 @@ public class MovieController {
 		log.info("좌석선택 중..");
 	}
 
-
-
-	
 	
 	@GetMapping("movieRead")
 	public void movieRead(int movieCD,Model model) {
@@ -110,16 +108,18 @@ public class MovieController {
 		
 			
 	}
-
-	
 	
 	//로그인
-	// 가입후 띄어주는 페이지
 	@GetMapping("/signin")
 	public void signin() {
 		log.info("로그인 페이지 요청");
 	}
 	
+	@PostMapping("/logout")
+	public void logoutPost(){
+		log.info("로그아웃");
+		
+	}
 
 	
 
