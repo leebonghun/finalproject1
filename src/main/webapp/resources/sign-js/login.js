@@ -11,6 +11,12 @@ $(function(){
 	$("#signup").click(function(){
 		location.href="/signup/step1";
 	})
+	
 })
 
-
+$(function(){	
+	$("#logout").click(function(){
+		location.href="/movie/signin";
+	})
+	
+})

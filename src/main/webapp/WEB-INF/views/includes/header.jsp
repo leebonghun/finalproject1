@@ -88,14 +88,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			<div class="w3l_sign_in_register">
 				<ul>
-					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054     </li> 
-					<li>
-						
-						<button type="submit" id="login">로그인</button>
-						<button type="submit" id="signup">회원가입</button>
-					</li>
-					
-				</ul>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054     </li>
+					<sec:authorize access="isAnonymous()"> 
+						<li>
+							<button type="submit" id="login">로그인</button>
+							<button type="submit" id="signup">회원가입</button>
+						</li>
+					</sec:authorize>
+					<sec:authorize access="isAuthenticated()">
+	                    <li>
+	                    	<p><sec:authentication property="principal.username"/>님, 반갑습니다.</p>
+	                      	<button type="submit" id="logout">로그아웃</button>
+							<button type="submit" id="mypage">마이페이지</button>
+	                    </li>
+                    </sec:authorize>
+                 </ul>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
