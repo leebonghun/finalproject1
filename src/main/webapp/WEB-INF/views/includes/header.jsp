@@ -120,7 +120,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<sec:authorize access="isAuthenticated()">
 	                    <li>
 	                    	<p><sec:authentication property="principal.username"/>님, 반갑습니다.</p>
-	                      	<button type="submit" id="logout">로그아웃</button>
+	                      	<button type="button" id="logout">로그아웃</button>
 							<button type="submit" id="mypage">마이페이지</button>
 	                    </li>
                     </sec:authorize>
@@ -215,3 +215,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 </div>
+<form action="/logout" method="post" id="logoutForm">
+	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
+</form>
+<script>
+	$("#logout").click(function(){
+		$("#logoutForm").submit();
+	})
+</script>
