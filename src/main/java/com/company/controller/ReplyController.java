@@ -33,7 +33,7 @@ public class ReplyController {
 	@Autowired
 	private MovieReplyService service;
 	
-	//@PreAuthorize("isAuthenticated()")
+	@PreAuthorize("isAuthenticated()")
 	@PostMapping("/new")
 	public ResponseEntity<String> create(@RequestBody MovieReplyDTO insertDto) {
 		log.info("댓글 입력..");
