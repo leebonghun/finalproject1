@@ -7,4 +7,5 @@ import com.company.domain.InfoDTO;
 public interface NoticeService {
 	public List<InfoDTO> getList();
 	public boolean register(InfoDTO insertDto);
+	public InfoDTO getRow(int Info_Bno);
 }

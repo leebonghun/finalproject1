@@ -7,6 +7,31 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<!-- /.panel-heading -->
+			<div class="panel-body">
+				<form action="" role="form">
+				<div class="form-group">
+						<label>글번호</label> <input class="form-control" name="INFO_BNO"
+							readonly="readonly" value="${readdto.INFO_BNO }">
+					</div>
+					<div class="form-group">
+						<label>제목</label> <input class="form-control" name="INFO_TITLE"
+							readonly="readonly"value="${readdto.INFO_TITLE }" >
+					</div>
+					<div class="form-group">
+						<label>내용</label>
+						<textarea class="form-control" rows="3" name="INFO_CONTENT"
+							readonly="readonly">${readdto.INFO_CONTENT }</textarea>
+					</div>
+					
+					<button type="button" class="btn btn-default" onclick="location.href='/movie/noticelist'">뒤로가기</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

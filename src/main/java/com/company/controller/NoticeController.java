@@ -50,8 +50,13 @@ public class NoticeController {
 		return "redirect:/movie/noticelist";  
 	}
 	@GetMapping("noticeread")
-	public void noticeread() {
-		log.info("공지사항으로 이동중입니다.");
+	public void noticeread(int INFO_BNO, Model model) {
+		log.info("공지사항 게시판 글을 읽으러 이동중입니다.");
+	
+		InfoDTO readdto = noticeService.getRow(INFO_BNO);
+		
+		model.addAttribute("readdto", readdto);
+	
 	}
 	@GetMapping("noticelist")
 	public void noticelist(Model model) {
