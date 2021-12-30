@@ -32,4 +32,17 @@ public class NoticeServiceImpl implements NoticeService {
 		return noticeMapper.read(Info_Bno);
 	}
 
+
+//	@Override
+//	public boolean update(InfoDTO updateDto) {
+//		boolean modifyResult = noticeMapper.update(updateDto) == 1;
+//		return modifyResult;
+//	}
+//
+//
+//	@Override
+//	public boolean remove(int Info_Bno) {
+//		return noticeMapper.delete(Info_Bno)>0?true:false;
+//	}
+
 }

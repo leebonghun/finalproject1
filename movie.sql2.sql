@@ -428,6 +428,7 @@ values(INFO_bno_seq.nextval,'공지사항4','공지 내용4',sysdate);
 insert into info_TBL(INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
 values(INFO_bno_seq.nextval,'공지사항5','공지 내용5',sysdate);
  
+select INFO_bno_seq.nextval from dual;
 
 create sequence INFO_bno_seq;
 
