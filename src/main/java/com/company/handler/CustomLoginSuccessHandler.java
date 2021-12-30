@@ -21,7 +21,7 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler  
          });
          
          if(roleNames.contains("ROLE_USER") || roleNames.contains("ROLE_MEMBER")) {
-            response.sendRedirect("/board/list");
+            response.sendRedirect("/movie/index");
             return;
          }
          

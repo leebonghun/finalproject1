@@ -12,15 +12,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+
 import com.company.domain.CscDTO;
 
 
 import com.company.domain.InfoDTO;
 
 
+import com.company.domain.MovieReplyDTO;
+import com.company.domain.UserDTO;
 import com.company.service.CscService;
-
-
 
 
 import com.company.service.MovieReplyService;
@@ -46,6 +47,8 @@ public class MovieController {
 	@Autowired
 	private CscService cscService;
 
+	
+	
 	@Autowired
 	private MovieService service;
 	
@@ -112,18 +115,7 @@ public class MovieController {
 		log.info("로그인 페이지 요청");
 	}
 	
-		
-	//loginPost(
-//	@PostMapping("/signin")
-//	public String loginPost(LoginDTO loginDto, HttpSession session) {
-//		log.info("로그인 요청" + loginDto);
-//		
-//		loginDto = Uservice.login(loginDto);
-//		
-//		session.setAttribute("loginDto", loginDto);
-//	
-//		return "redirect:/"; //index로 보낼거얌
-//	}
+
 	
 
 	
