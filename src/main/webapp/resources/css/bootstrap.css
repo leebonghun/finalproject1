@@ -117,13 +117,15 @@ textarea {
   margin: 0;
   font: inherit;
   color: inherit;
+	
 }
 button {
   overflow: visible;
-}
-button,
-select {
   text-transform: none;
+}
+select {
+	height: 33px;
+	width: 97px;
 }
 button,
 html input[type="button"],
@@ -143,6 +145,7 @@ input::-moz-focus-inner {
 }
 input {
   line-height: normal;
+  height: 30px;
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -3006,6 +3009,25 @@ select[multiple].form-group-lg .form-control {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+}
+
+.btn.sch {
+    right: 0;
+    top: 0;
+    border-radius: 3px;
+    border: 0;
+    padding: 0;
+    width: 63px;
+    height: 34px;
+    line-height: 24px;
+    color: #fff;
+    font-size: 15px;
+    background: #063863;
+    text-align: center;
+}
+
+.btn.sch:hover{
+    background-color: #508c28;
 }
 .btn:focus,
 .btn:active:focus,

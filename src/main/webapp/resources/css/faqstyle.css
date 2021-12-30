@@ -65,6 +65,7 @@ input[type="submit"],.agileinfo_chat a,.w3_customer_email_right a,ul.dropdown-me
 .panel-default {
     border-color: #FFF;
 	background: #f5f5f5;
+	
 }
 .panel-default > .panel-heading {
     border-color: #FFF;
@@ -72,10 +73,13 @@ input[type="submit"],.agileinfo_chat a,.w3_customer_email_right a,ul.dropdown-me
     background-color: #fff;
 }
 .panel-body {
-    padding: 2em;
     font-size: 14px;
-    line-height: 2em;
-    color: #999;
+    color: #999; 
+    width: 1170px;  
+    padding-right: 174px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 a.pa_italic label {
     cursor: pointer;
