@@ -3,47 +3,32 @@ package com.company.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.company.domain.CscDTO;
-<<<<<<< HEAD
-=======
+
 
 import com.company.domain.InfoDTO;
 
-import com.company.domain.LoginDTO;
 
 import com.company.service.CscService;
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 
-import com.company.domain.MovieReplyDTO;
-import com.company.domain.UserDTO;
 
-import com.company.domain.LoginDTO;
 
-import com.company.service.CscService;
+
 import com.company.service.MovieReplyService;
 import com.company.domain.movieDTO;
 import com.company.service.MovieService;
 
 import com.company.service.NoticeService;
 
-import com.company.service.UserService;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -52,17 +37,6 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping("/movie/*")
 public class MovieController {
 	
-<<<<<<< HEAD
-	@Autowired
-	private MovieReplyService replyService;
-=======
-
-	@Autowired
-	private NoticeService noticeService;
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
-	
-	@Autowired
-	private CscService cscService;
 
 	@Autowired
 	private MovieService service;
@@ -95,38 +69,6 @@ public class MovieController {
 	}
 	
 	
-	@GetMapping("/noticeinsert")
-	public void registerGet() {
-		//return "/movie/noticeinsert";
-	}
-	
-	@PostMapping("/noticeinsert")
-	public String registerPost(InfoDTO insertDto, RedirectAttributes rttr) {
-		log.info("register 가져오기" + insertDto);
-
-		// 첨부파일 확인하기
-//		if(insertDto.getAttachList()!=null) {
-//			insertDto.getAttachList().forEach(attach ->log.info(attach+""));
-//		}
-		noticeService.register(insertDto);
-
-		// log.info("bno"+insertDto.getBno());
-		rttr.addFlashAttribute("result", insertDto.getINFO_BNO());
-		return "redirect:/movie/noticelist";  
-	}
-	@GetMapping("noticeread")
-	public void noticeread() {
-		log.info("공지사항으로 이동중입니다.");
-	}
-	@GetMapping("noticelist")
-	public void noticelist(Model model) {
-		log.info("공지사항으로 이동중입니다.");
-		
-		List<InfoDTO> list = noticeService.getList();
-		log.info(""+list);
-		
-		model.addAttribute("list", list);
-	}
 	@GetMapping("event")
 	public void event() {
 		log.info("이벤트로 이동중입니다.");
@@ -138,32 +80,9 @@ public class MovieController {
 		log.info("좌석선택 중..");
 	}
 
-	
-
-<<<<<<< HEAD
-
-=======
-	@PostMapping("/cscinsert")
-	public String registerPost(CscDTO insertDto, RedirectAttributes rttr) {
-		log.info("register 가져오기" + insertDto);
-   
-		// 첨부파일 확인하기
-//		if(insertDto.getAttachList()!=null) {
-//			insertDto.getAttachList().forEach(attach ->log.info(attach+""));
-//		}
-
-		cscService.register(insertDto);
-
-		// log.info("bno"+insertDto.getBno());
-		rttr.addFlashAttribute("result", insertDto.getCSC_BNO());
-		return "redirect:/movie/csclist";
-	}
-
-
 
 	
 	
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 	@GetMapping("movieRead")
 	public void movieRead(int movieCD,Model model) {
 		log.info("상세정보 페이지로 이동중입니다.");
