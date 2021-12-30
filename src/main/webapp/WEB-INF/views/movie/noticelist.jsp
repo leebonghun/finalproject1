@@ -57,41 +57,7 @@
 	                		<td>2021-12-29</td>
 	                		<td>2021-12-29</td>              	
 	                	</tr>
-	                	<tr class="table-active">
-	                		<th scope="row">2</th>
-	                		<td>공지사항</td>
-	                		<td>기타</td>
-	                		<td>2021-12-29</td>
-	                		<td>2021-12-29</td>              	
-	                	</tr>
-	                	<tr class="table-active">
-	                		<th scope="row">3</th>
-	                		<td>공지사항</td>
-	                		<td>기타</td>
-	                		<td>2021-12-29</td>
-	                		<td>2021-12-29</td>              	
-	                	</tr>
-	                	<tr class="table-active">
-	                		<th scope="row">4</th>
-	                		<td>공지사항</td>
-	                		<td>기타</td>
-	                		<td>2021-12-29</td>
-	                		<td>2021-12-29</td>              	
-	                	</tr>
-	                	<tr class="table-active">
-	                		<th scope="row">5</th>
-	                		<td>공지사항</td>
-	                		<td>기타</td>
-	                		<td>2021-12-29</td>
-	                		<td>2021-12-29</td>              	
-	                	</tr>
-	                	<tr class="table-active">
-	                		<th scope="row">6</th>
-	                		<td>공지사항</td>
-	                		<td>기타</td>
-	                		<td>2021-12-29</td>
-	                		<td>2021-12-29</td>              	
-	                	</tr>
+	                	
 	                </tbody>
 				<!-- 게시판 리스트 반복문 -->
 				<tbody>
