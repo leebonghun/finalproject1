@@ -27,6 +27,7 @@
 							readonly="readonly">${readdto.INFO_CONTENT }</textarea>
 					</div>
 					
+					<button type="button" class="btn btn-warning" id="modalModifyBtn" onclick="location.href='infomodify?INFO_BNO=${readdto.INFO_BNO}'">수정</button>						
 					<button type="button" class="btn btn-default" onclick="location.href='/movie/noticelist'">뒤로가기</button>
 				</form>
 			</div>
