@@ -14,9 +14,3 @@ $(function(){
 	
 })
 
-$(function(){	
-	$("#logout").click(function(){
-		location.href="/movie/signin";
-	})
-	
-})

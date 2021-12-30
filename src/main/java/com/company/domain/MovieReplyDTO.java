@@ -14,8 +14,8 @@ import lombok.ToString;
 @ToString
 public class MovieReplyDTO {
 	private int replyCd;
-	private int movieCD;
-	private String replyContent;
 	private String replyer;
 	private Date replyDate;
+	private String replyContent;
+	private int movieCD;
 }

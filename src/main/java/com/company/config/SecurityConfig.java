@@ -58,13 +58,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
       http.addFilterBefore(filter, CsrfFilter.class);
       
       
-      http
-      		.formLogin()
-      		.loginPage("/movie/signin")
-      		.successHandler(loginSuccessHandler())
-      		.failureUrl("/movie/signin");
-      http.logout().logoutUrl("/logout").invalidateHttpSession(true).deleteCookies("remember-me","JSESSION_ID").logoutSuccessUrl("/movie/signin");
-      http.rememberMe().tokenRepository(persistentTokenRepository()).tokenValiditySeconds(604800);
+      http.formLogin()
+      	  .loginPage("/movie/signin")
+      	  .successHandler(loginSuccessHandler())
+      	  .failureUrl("/movie/signin");
+      
+      http.logout()      	 
+      	  .invalidateHttpSession(true)
+      	  .deleteCookies("JSESSION_ID")
+      	  .logoutSuccessUrl("/movie/signin");
+      
+//      http.rememberMe()
+//      	  .tokenRepository(persistentTokenRepository())
+//      	  .tokenValiditySeconds(604800);
+      
    }
    @Override
    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
