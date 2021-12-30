@@ -5,6 +5,6 @@ import com.company.domain.UserDTO;
 
 public interface UserService {
 	public boolean register(UserDTO userDto);
-	public UserDTO dupId(String userid);
+	public UserDTO dupId(String user_id);
 	public LoginDTO login(LoginDTO loginDto);
 }

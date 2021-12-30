@@ -33,8 +33,6 @@ public class MovieController {
 	@Autowired
 	private MovieService service;
 	
-	@Autowired
-	private UserService Uservice;
 	
 
 	
@@ -79,10 +77,6 @@ public class MovieController {
 	
 
 	
-
-
-
-	
 	
 	@GetMapping("movieRead")
 	public void movieRead(int movieCD,Model model) {
@@ -105,16 +99,16 @@ public class MovieController {
 	
 		
 	//loginPost(
-	@PostMapping("/signin")
-	public String loginPost(LoginDTO loginDto, HttpSession session) {
-		log.info("로그인 요청" + loginDto);
-		
-		loginDto = Uservice.login(loginDto);
-		
-		session.setAttribute("loginDto", loginDto);
-	
-		return "redirect:/"; //index로 보낼거얌
-	}
+//	@PostMapping("/signin")
+//	public String loginPost(LoginDTO loginDto, HttpSession session) {
+//		log.info("로그인 요청" + loginDto);
+//		
+//		loginDto = Uservice.login(loginDto);
+//		
+//		session.setAttribute("loginDto", loginDto);
+//	
+//		return "redirect:/"; //index로 보낼거얌
+//	}
 	
 	
 }

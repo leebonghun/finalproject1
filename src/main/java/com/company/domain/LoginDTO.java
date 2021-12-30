@@ -13,7 +13,6 @@ import lombok.ToString;
 @ToString
 public class LoginDTO {
 
-	private String user_id;
-	private String user_password;
-
+	private String username;
+	private String password;
 }

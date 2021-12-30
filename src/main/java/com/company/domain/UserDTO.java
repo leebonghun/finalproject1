@@ -1,6 +1,7 @@
 package com.company.domain;
 
 import java.util.Date;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,4 +23,7 @@ public class UserDTO {
 	private String user_email;
 	private String user_tel;
 	private Date user_regdate;
+	
+	
+	private List<AuthDTO> authList;
 }

@@ -76,12 +76,10 @@ public class UserContorller {
 	
 	
 	@GetMapping(value= {"/step2", "/step3"}) 
-	//여러 개의 경로를 처리하고 싶으면 중괄호 안에 이렇게 처리하면 돼
 	public String handleGet() {
 		log.info("/step2, /step3 직접 요청..." );
 		
 		return "redirect:/movie/index";
-		//들어오면 안되는 경로들이 들어오면 대표페이지나 원하는 페이지로 빼면 돼
 	}
 	 
 	 

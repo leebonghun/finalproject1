@@ -19,23 +19,23 @@
     <link href="/resources/css/signin.css" rel="stylesheet" />
   </head>
   <body class="text-center">
-    <form class="form-signin" method="post">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="user_id" class="sr-only">아이디</label>
+    <form class="form-signin" method="post" action="/movie/signin">
+      <h1 class="h3 mb-3 font-weight-normal">BBM</h1>
+      <label for="username" class="sr-only">아이디</label>
       <input
         type="text"
-        id="user_id"
-        name="user_id"
+        id="username"
+        name="username"
         class="form-control"
         placeholder="아이디"
         required
         autofocus
       />
-      <label for="user_password" class="sr-only">비밀번호</label>
+      <label for="password" class="sr-only">비밀번호</label>
       <input
         type="password"
-        id="user_password"
-        name="user_password"
+        id="password"
+        name="password"
         class="form-control"
         placeholder="비밀번호"
         required
@@ -49,7 +49,7 @@
         <p style="color: red;">${error}</p>
       </div>
       <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">
+      <button class="btn btn-lg btn-primary btn-block" type="submit"> 
         로그인
       </button>
     </form>
