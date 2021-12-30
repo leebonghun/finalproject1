@@ -23,7 +23,7 @@
 	<div class="col-lg-12">
 		<div class="panel panel-default">
 			<!-- /.panel-heading -->
-			<div class="panel-body">
+			
 				<form action="" role="form">
 				<div class="form-group">
 						<label>글번호</label> <input class="form-control" name="CSC_BNO"
@@ -71,7 +71,7 @@
 		</div>
 	</div>
 </div>
-</div>
+
 </body>
 </html>
 <%@include file="../includes/footer.jsp"%>

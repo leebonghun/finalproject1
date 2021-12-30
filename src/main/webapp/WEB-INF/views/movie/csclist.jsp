@@ -178,38 +178,9 @@
 			</div>
 			
 		</div>
-		<!-- //faq-banner -->
 		
-<<<<<<< HEAD
-		<div class="text-center">
-=======
-	</div>
-		<table class="table table-hover" id=csctbl>
-			<thead>
-				<tr>
-					<th scope="col">글번호</th>
-					<th scope="col">제목</th>
-					<th scope="col">사유</th>
-					<th scope="col">유저아이디</th>								
-					<th scope="col">등록일</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="cscDto" items="${list}">
-				<tr class="table-active">				
-					<th scope="row">${cscDto.CSC_BNO}</th>
-					<td>${cscDto.user_id}</td>
-
-					<td><a href="cscread?CSC_BNO=${cscDto.CSC_BNO}">${cscDto.CSC_TITLE}</a></td>				
-					<td>${cscDto.CSC_RFI}</td>
-					<td>${cscDto.user_id}</td>
-					<td>${cscDto.CSC_REGDATE}</td>
-				</tr>
-				</c:forEach>
-			</tbody>
-		</table>
 			<div class="text-center">
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
+
 			<ul class="pagination pagination-lg">
 				<li class="disabled"><a href="#"><i
 						class="fa fa-angle-left">«</i></a></li>

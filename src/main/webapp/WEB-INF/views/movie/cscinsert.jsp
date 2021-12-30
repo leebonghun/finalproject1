@@ -45,7 +45,7 @@
 			<label class="test_obj"><input type="radio" name="CSC_RFI" value="분실물"><span>분실물</span></label> 			
     </div>
 			<!-- /.panel-heading -->
-			<div class="panel-body">
+			
 			
 					<div class="form-group">
 						<label>Title</label> <input class="form-control" name="CSC_TITLE">
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+
 
 </body>
 </html>

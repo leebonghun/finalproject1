@@ -32,13 +32,13 @@
 			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
 			 <div class="form-group" style="margin-left: 25px; margin-top:25px  ">		 
-			<label class="test_obj"><input type="radio" name="CSC_RFI"  value="기타"><span>기타</span></label>
+			<label class="test_obj"><input type="radio" name="CSC_RFI"  value="기타" checked="checked"><span>기타</span></label>
 			<label class="test_obj" ><input type="radio" name="CSC_RFI" value="예매 환불 및 취소"><span>예매 환불 및 취소</span></label>
 			<label class="test_obj"><input type="radio" name="CSC_RFI" value="계정관련 문의"><span>계정관련 문의</span></label>
 			<label class="test_obj"><input type="radio" name="CSC_RFI" value="분실물"><span>분실물</span></label> 
     </div>
 			<!-- /.panel-heading -->
-			<div class="panel-body">
+		
 				<div class="form-group">
 						<label>글번호</label> <input class="form-control" name="CSC_BNO"
 							readonly="readonly" value="${readdto.CSC_BNO }">
@@ -64,7 +64,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+
 
 <%-- remove와 list를 위한 폼--%>
 <form action="" id="actionForm">
@@ -79,4 +79,4 @@
 		  <input type="hidden" name="writer" value="${dto.writer}" />  --%>
 </form>
 <script src="/resources/js/cscmodify.js"></script> 
-<%-- <%@include file="../includes/footer.jsp"%> --%>
+ <%@include file="../includes/footer.jsp"%> 
