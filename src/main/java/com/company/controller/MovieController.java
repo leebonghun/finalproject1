@@ -20,23 +20,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.company.domain.CscDTO;
-<<<<<<< HEAD
-=======
-
 import com.company.domain.InfoDTO;
 
 import com.company.domain.LoginDTO;
-
-import com.company.service.CscService;
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 
 import com.company.domain.MovieReplyDTO;
 import com.company.domain.UserDTO;
 
 import com.company.domain.LoginDTO;
 
-import com.company.service.CscService;
 import com.company.service.MovieReplyService;
 import com.company.domain.movieDTO;
 import com.company.service.MovieService;
@@ -52,17 +44,14 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping("/movie/*")
 public class MovieController {
 	
-<<<<<<< HEAD
+
 	@Autowired
 	private MovieReplyService replyService;
-=======
+
 
 	@Autowired
 	private NoticeService noticeService;
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 	
-	@Autowired
-	private CscService cscService;
 
 	@Autowired
 	private MovieService service;
@@ -137,33 +126,12 @@ public class MovieController {
 	public void selectSeat() {
 		log.info("좌석선택 중..");
 	}
-
 	
-
-<<<<<<< HEAD
-
-=======
-	@PostMapping("/cscinsert")
-	public String registerPost(CscDTO insertDto, RedirectAttributes rttr) {
-		log.info("register 가져오기" + insertDto);
-   
-		// 첨부파일 확인하기
-//		if(insertDto.getAttachList()!=null) {
-//			insertDto.getAttachList().forEach(attach ->log.info(attach+""));
-//		}
-
-		cscService.register(insertDto);
-
-		// log.info("bno"+insertDto.getBno());
-		rttr.addFlashAttribute("result", insertDto.getCSC_BNO());
-		return "redirect:/movie/csclist";
-	}
-
+	
 
 
 	
 	
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 	@GetMapping("movieRead")
 	public void movieRead(int movieCD,Model model) {
 		log.info("상세정보 페이지로 이동중입니다.");

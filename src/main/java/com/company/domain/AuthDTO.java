@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class AuthDTO {
 	private String user_id;
-	private String auth;
+	private String authority;
 }
