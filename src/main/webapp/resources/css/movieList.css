@@ -90,7 +90,6 @@ div[class^="sect-"]:after {
 }
 div{
 	display: block;
-}element.style {
 }
 img {
     vertical-align: middle;
@@ -208,7 +207,7 @@ body {
 }
 body, input, textarea, select, button, table {
     font-size: 13px;
-    line-height: 1.2;
+    line-height: 1.5;
     color: #666;
     font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
     font-weight: 400;

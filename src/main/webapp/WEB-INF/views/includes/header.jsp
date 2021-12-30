@@ -17,13 +17,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //for-mobile-apps -->
 
 
-<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />
+
+
 <link href="/resources/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="/resources/css/contactstyle.css" type="text/css" media="all" />
 <link rel="stylesheet" href="/resources/css/faqstyle.css" type="text/css" media="all" />
+<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />
+<link href="/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/resources/css/single.css" rel='stylesheet' type='text/css' />
 <link href="/resources/css/medile.css" rel='stylesheet' type='text/css' />
+<link href="/resources/css/noticelist.css" rel='stylesheet' type='text/css' />
+<link href="/resources/css/event.css" rel='stylesheet' type='text/css' />
 <!-- banner-slider -->
 <link href="/resources/css/jquery.slidey.min.css" rel="stylesheet">
 <!-- //banner-slider -->
@@ -162,7 +166,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="active"><a href="movieList">영화</a></li>
 							<li><a href="reserve">예매</a></li>
 							<li><a href="store">스토어</a></li>
-							<li><a href="noticeList">공지사항</a></li>
+							<li><a href="noticelist">공지사항</a></li>
 							<li><a href="event">이벤트</a></li>
 							<li><a href="csclist">고객센터</a></li>
 						</ul>

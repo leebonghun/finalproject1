@@ -172,11 +172,11 @@
 				<c:forEach var="cscDto" items="${list}">
 				<tr class="table-active">
 					<th scope="row">${cscDto.CSC_BNO}</th>
-					<td>${cscDto.CSC_WRITER}</td>
+					<td>${cscDto.user_id}</td>
 					<td>${cscDto.CSC_RFI}</td>
 					<td>${cscDto.CSC_TITLE}</td>
 					<td>${cscDto.CSC_REGDATE}</td>
-					
+					    
 				</tr>
 				</c:forEach>
 			</tbody>

@@ -8,7 +8,7 @@
  from csc_tbl -->
  
  
- select Csc_Bno,Csc_Title,Csc_Regdate,Csc_Rfi,user_id,Csc_Writer
+ select Csc_Bno,Csc_Title,Csc_Regdate,Csc_Rfi,user_id
  from csc_tbl
  
 </select>
