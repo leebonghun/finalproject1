@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+
+.replyAll{
+	background-color: white;
+	color: black;
+	font-weight: bold;
+	width: 70%;
+	
+}
+#replyer{
+	background-color : black;
+	color: white;
+	font-weight: bold;
+}

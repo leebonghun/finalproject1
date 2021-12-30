@@ -3,14 +3,14 @@
  */
 let replyService = (function(){
 	
-	function add(reply,callback){
+	function add(replyContent,callback){
 		console.log("add method 실행");
 		
 		$.ajax({
 			url:'/replies/new',
 			type:'post',
 			contentType:'application/json',
-			data:JSON.stringify(reply),
+			data:JSON.stringify(replyContent),
 			success:function(result){
 				if(callback){
 					callback(result);
