@@ -1,15 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@include file="../includes/header.jsp" %>     
+  <%@include file="../includes/header.jsp" %>     
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="/resources/js/cscread.js"></script>
 
-<script >
-
-</script>
 </head>
 <body>
 <div style="margin-left: 100px;">
@@ -46,7 +44,7 @@
 					<div class="form-group">
 						<label>내용</label>
 						<textarea class="form-control" rows="3" name="CSC_CONTENT"
-							readonly="readonly">${readdto.CSC_CONTENT }</textarea>
+							readonly="readonly" style="resize: none;">${readdto.CSC_CONTENT }</textarea>
 					</div>
 					
 					<%-- 로그인한 사용자가 글을 작성한 작성자냐? --%>
@@ -56,12 +54,18 @@
 						<button type="button" class="btn btn-default">Modify</button>
 					</c:if>
 					</sec:authorize> --%>
-					<button type="button" class="btn btn-default" onclick="location.href='/movie/csclist'">뒤로가기</button>
+						
 					<div class="form-group">
+					
 						<label>답변 내용</label>
 						<textarea class="form-control" rows="3" name="content"
-							readonly="readonly" placeholder="답변대기중...">${readdto.CSC_ANSWER}</textarea>
+							 placeholder="답변대기중..." style="resize: none;">${readdto.CSC_ANSWER}</textarea>
+							 <label><input type="checkbox" name="CSC_CHECK" value="[답변완료]">답변완료</label>
 					</div>
+				
+						<button type="button" class="btn btn-warning" id="modalModifyBtn" onclick="location.href='cscmodify?CSC_BNO=${readdto.CSC_BNO}'">수정</button>						
+					<button type="button" class="btn btn-default" onclick="location.href='/movie/csclist'">뒤로가기</button>
+					
 				</form>
 			</div>
 		</div>

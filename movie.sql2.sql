@@ -99,11 +99,12 @@ CREATE TABLE CSC_TBL
 	CSC_REGDATE date DEFAULT SYSDATE,
 	CSC_RFI varchar2(1000) not null,
 	CSC_ANSWER varchar2(1000),
+	CSC_CHECK varchar2(1000),
 	USER_ID varchar2(50) NOT NULL ,
 	PRIMARY KEY (CSC_BNO)
 );
-
-alter table csc_tbl add(CSC_WRITER varchar2(200))
+alter table csc_tbl add(CSC_CHECK varchar2(1000))
+alter table csc_tbl delete(CSC_WRITER varchar2(200))
 update csc_tbl set CSC_WRITER = 'USER1' WHERE CSC_BNO =1
 
 select * from csc_tbl;
@@ -286,6 +287,12 @@ CREATE TABLE USER_TBL
 	PRIMARY KEY (USER_ID)
 );
 
+select replyCd,movieCD,replyContent,replyer,replyDate 
+from(select /*+INDEX(reply_tbl idx_replys)*/rownum rn,replyCd,movieCD,replyContent,replyer,replyDate from reply_tbl where movieCD =20210028 and replyCd>0 and rownum<=10)
+where rn >1;
+
+
+
 alter table user_tbl modify(USER_PASSWORD varchar2(100));
 
 delete from CSC_TBL where user_password = 12345;
@@ -378,22 +385,30 @@ select * from csc_TBL;
 		select Csc_Bno,Csc_Title,Csc_Content,Csc_Regdate,Csc_Rfi,Csc_Answer,user_id
  from csc_tbl;
 ---
+
+ delete from csc_tbl where user_id='id2';
+ 
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(1,'고객센터1','고객센터내용1',sysdate,'기타','처리내용1','id1');
+values(CSC_bno_seq.nextval,'고객센터1','고객센터내용1',sysdate,'기타','처리내용1','id1');
 
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(2,'고객센터2','고객센터내용2',sysdate,'기타','처리내용2','id2');
+values(CSC_bno_seq.nextval,'고객센터2','고객센터내용2',sysdate,'기타','처리내용2','id2');
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(3,'고객센터3','고객센터내용3',sysdate,'기타','처리내용3','id2');
+values(CSC_bno_seq.nextval,'고객센터3','고객센터내용3',sysdate,'기타','처리내용3','id2');
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(4,'고객센터4','고객센터내용4',sysdate,'분실물','처리내용4','id2');
+values(CSC_bno_seq.nextval,'고객센터4','고객센터내용4',sysdate,'분실물','처리내용4','id2');
 
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
-values(5,'고객센터5','고객센터내용5',sysdate,'분실물','처리내용5','id1');
+values(CSC_bno_seq.nextval,'고객센터5','고객센터내용5',sysdate,'분실물','처리내용5','id1');
+
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
+values(CSC_bno_seq.nextval,'고객센터6','고객센터내용66',sysdate,'분실물','처리내용6','id1');
+insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id,CSC_CHECK)
+values(CSC_bno_seq.nextval,'고객센터7','고객센터내용7',sysdate,'분실물','처리내용7','id2','[답변완료]');
 
 create sequence CSC_bno_seq;
 
-
+  select CSC_bno_seq.nextval from dual;   
 
 delete csc_TBL;
 select * from csc_tbl;

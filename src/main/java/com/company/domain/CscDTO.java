@@ -22,5 +22,6 @@ public class CscDTO {
   private String CSC_RFI;
   private String CSC_ANSWER;
   private String user_id;
+  private String CSC_CHECK;
   
 }

@@ -22,6 +22,7 @@ public class UserDTO {
 	private String user_email;
 	private String user_tel;
 	private Date user_regdate;
+	private boolean user_enable;
 	
 	
 	private List<AuthDTO> authList;

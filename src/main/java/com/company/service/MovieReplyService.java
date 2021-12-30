@@ -12,4 +12,6 @@ public interface MovieReplyService {
 	public MovieReplyDTO getRow(int movieCD);
 	
 	public ReplyPageDTO list(Criteria cri, int movieCD	);
+	
+
 }
