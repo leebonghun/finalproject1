@@ -4,7 +4,8 @@
 DROP TRIGGER TRI_GOODS_TBL_GOODS_NUM;
 DROP TRIGGER TRI_MOVIE_TBL_ MOVIE_NUM;
 
-
+select * from auth_tbl;
+select * from user_tbl;
 
 
 /* Drop Tables */
@@ -84,7 +85,7 @@ CREATE TABLE ATTACH_MOVIE_TBL
 
 CREATE TABLE AUTH_TBL
 (
-	AUTHORIY varchar2(50),
+	AUTHORITY varchar2(50),
 	USER_ID varchar2(50) NOT NULL UNIQUE
 );
 
@@ -217,17 +218,30 @@ insert into MOVIE_TBL values(20211111,'티탄','아가트 루셀, 뱅상 랭동'
 insert into MOVIE_TBL values(20211112,'해피 뉴 이어','한지민, 이동욱, 강하늘, 윤아','138',
 '이이이','멜로/로맨스','12세이상 관람가','한국','CJ ENM','2021-12-29');
 
+
 CREATE TABLE REPLY_TBL
 (
-	replyCd number NOT NULL,
-	replyer varchar2(60) NOT NULL,
-	replyDate date DEFAULT SYSDATE NOT NULL,
-	replyContent varchar2(300) NOT NULL,
-	replygrade number,
-	movieCD number NOT NULL,
+	replyCd number NOT NULL, -- 댓글 글번호(rno)
+	replyer varchar2(60) NOT NULL, --댓글 작성자
+	replyDate date DEFAULT SYSDATE NOT NULL, --댓글 작성일
+	replyContent varchar2(300) NOT NULL, -- 댓글 내용
+	movieCD number NOT NULL, -- 원본 포스터 코드(bno)
 	PRIMARY KEY (replyCd)
 );
 
+
+insert into reply_tbl(replyCd,replyer,replyDate,replyContent,movieCD) values(seq_reply.nextval,'이봉훈',sysdate,'하하하하',20210028);
+
+select * from reply_tbl;
+
+
+create index idx_replys on reply_tbl(movieCD desc, replyCd asc);
+alter table reply_tbl add(key_code varchar2(100));
+alter table reply_tbl drop column key_code;
+
+insert into reply_tbl values(1,'이봉훈',sysdate,'영화정말 재밌네요',12,20210028);
+
+select * from reply_tbl;
 
 CREATE TABLE RESERVE_TBL
 (
@@ -244,7 +258,9 @@ CREATE TABLE RESERVE_TBL
 	PRIMARY KEY (scheduleNum)
 );
 
-
+delete from reply_tbl where replyCd=1;
+alter table reply_tbl drop column replygrade;
+select * from reply_tbl
 CREATE TABLE SEAT_TBL
 (
 	SEAT_NM varchar2(40) NOT NULL,
@@ -270,6 +286,14 @@ CREATE TABLE USER_TBL
 	USER_ENABLE char(10) DEFAULT '1',
 	PRIMARY KEY (USER_ID)
 );
+
+select replyCd,movieCD,replyContent,replyer,replyDate 
+from(select /*+INDEX(reply_tbl idx_replys)*/rownum rn,replyCd,movieCD,replyContent,replyer,replyDate from reply_tbl where movieCD =20210028 and replyCd>0 and rownum<=10)
+where rn >1;
+
+
+
+alter table user_tbl modify(USER_PASSWORD varchar2(100));
 
 delete from CSC_TBL where user_password = 12345;
 
@@ -343,7 +367,7 @@ ALTER TABLE RESERVE_TBL
 	REFERENCES USER_TBL (USER_ID)
 ;
 
-
+alter table auth_tbl rename column authoriy to authority;
 
 ----------------------------------------밑은 사용하지마시오.. 안쓰는 코드..----------------------------
 
@@ -462,3 +486,44 @@ SELECT * FROM MOVIE_BOARD;
 alter table movie_board ADD primary key(movieCD);
 
 commit;
+
+create table cmtboard(
+	cmt_num number not null,
+	cmt_writer varchar2(100) not null,
+	cmt_star number not null,
+	cmt_content varchar2(300) not null,
+	cmt_movie varchar2(100) not null,
+	cmt_regdate date DEFAULT sysdate
+);
+
+create table movie_reply(
+   rno number(10,0) constraint pk_reply primary key, -- 댓글 글번호
+   bno number(10,0) not null,   -- 원본 글번호
+   user_id varchar2(50) not null,
+   reply varchar2(1000) not null,   --댓글 내용
+   replyer varchar2(50) not null,   --댓글 작성자
+   replaydate date default sysdate,   --댓글 작성일
+   updatedate date default sysdate,   --댓글 수정일
+   constraint fk_movie_board foreign key(user_id) references user_tbl(user_id)
+);
+
+
+create sequence seq_reply;
+
+create index idx_reply on movie_reply(bno desc, rno asc);
+
+alter table user_tbl add(replyCnt number default 0);
+
+
+
+create table comment_reply(
+	idx number not null,
+	writer varchar2(100) not null,
+	commentDate date default sysdate,
+	content varchar2(100) not null,
+	delete_yn char(1) not null
+
+);
+
+create sequence seq_reply;
+

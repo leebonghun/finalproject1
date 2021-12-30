@@ -28,7 +28,7 @@ pageEncoding="UTF-8"%>
               name="user_id"
               id="user_id"
               class="form-control"
-              placeholder="아이디를 입력하세요"
+              placeholder="아이디를 입력하세요."
             />
             <small id="user_id" class="text-info"></small>
           </div>
@@ -41,7 +41,7 @@ pageEncoding="UTF-8"%>
               name="user_password"
               id="user_password"
               class="form-control"
-              placeholder="비밀번호를 입력하세요"
+              placeholder="비밀번호를 입력하세요."
             />
             <small id="user_password" class="text-info"></small>
           </div>
@@ -56,7 +56,7 @@ pageEncoding="UTF-8"%>
               name="confirm_password"
               id="confirm_password"
               class="form-control"
-              placeholder="비밀번호를 다시 입력하세요"
+              placeholder="비밀번호를 다시 입력하세요."
             />
             <small id="confirm_password" class="text-info"></small>
           </div>
@@ -69,7 +69,7 @@ pageEncoding="UTF-8"%>
               name="user_name"
               id="user_name"
               class="form-control"
-              placeholder="이름을 입력하세요"
+              placeholder="이름을 입력하세요."
             />
             <small id=user_name class="text-info"></small>
           </div>
@@ -82,8 +82,9 @@ pageEncoding="UTF-8"%>
               name="user_birth"
               id="user_birth"
               class="form-control"
-              placeholder="ex) 20210101"
+              placeholder="ex) 2021-01-01"
             />
+            <small id=birth class="text-info"></small>
             <small id=user_birth class="text-info"></small>
           </div>
         </div>      
@@ -113,6 +114,9 @@ pageEncoding="UTF-8"%>
               class="form-control"
               placeholder="전화번호를 입력하세요('-'제외)"
             />
+
+            <small id=tel class="text-info"></small>
+
             <small id=user_tel class="text-info"></small>
           </div>
         </div>

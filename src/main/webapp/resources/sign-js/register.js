@@ -71,7 +71,7 @@ $(function() {
       },
       user_name: {
         required: "이름은 필수 입력 요소입니다.",
-        minlength: "이름은 최소 2자리는 입력해야 합니다"
+        minlength: "이름은 최소 2자리는 입력해야 합니다."
       },
 	  user_birth: {
 		required: "생년월일은 필수 요소입니다."
@@ -102,10 +102,29 @@ $.validator.addMethod(
   "비밀번호는 숫자와 영문자와 특수문자의 조합으로 8~15자리를 사용해야 합니다."
 );
 $.validator.addMethod(
+  "validBirth",
+  function(value) {
+    var regBirth = /^[0-9]+$/;
+    return regBirth.test(value);
+  },
+  "생년월일을 확인해 주세요."
+);
+
+
+$.validator.addMethod(
   "email",
   function(value) {
     var regEmail = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     return regEmail.test(value);
   },
-  "이메일 형식을 확인해 주세요"
+  "이메일 형식을 확인해 주세요."
+);
+
+$.validator.addMethod(
+  "validTel",
+  function(value) {
+    var regTel = /^[0-9]+$/;
+    return regTel.test(value);
+  },
+  "전화번호를 확인해 주세요."
 );

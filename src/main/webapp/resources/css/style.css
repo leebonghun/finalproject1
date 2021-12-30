@@ -4,6 +4,49 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+/* component */
+
+.star-rating {
+  border:solid 1px #ccc;
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:5em;
+}
+
+.star-rating input {
+  display:none;
+}
+
+.star-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.star-rating :checked ~ label {
+  color:#f90;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color:#fc0;
+}
+
+/* explanation */
+
+article {
+  background-color:#ffe;
+  box-shadow:0 0 1em 1px rgba(0,0,0,.25);
+  color:#006;
+  font-family:cursive;
+  font-style:italic;
+  margin:4em;
+  max-width:30em;
+  padding:2em;
+}
 jsp, body {
 	font-size: 100%;
 	background: black;
@@ -35,7 +78,7 @@ body a:hover {
 
 input[type="submit"], .agileinfo_chat a, .w3ls_footer_grid1_left p a,
 	.w3l_sign_in_register ul li a, .w3ls_footer_grid1_right ul li a,
-	.w3_customer_email_right a, ul.dropdown-menu.multi-column ul li a {
+	.w3_customer_email_right a, ul.dropdown-menu.multi-column ul li a , #signup , #login{
 	transition: .5s ease-in;
 	-webkit-transition: .5s ease-in;
 	-moz-transition: .5s ease-in;
@@ -49,6 +92,27 @@ input[type="submit"], .agileinfo_chat a, .w3ls_footer_grid1_left p a,
 	border-top: #212121;
 }
 
+#signup{
+	color: white;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: red;
+	text-align: center;
+	padding: 6px 30px;
+	font-weight: bold;
+	
+}
+#login{
+color: white;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: red;
+	text-align: center;
+	padding: 6px 30px;
+	font-weight: bold;
+}
 .w3layouts_logo {
 	text-align: center;
 }

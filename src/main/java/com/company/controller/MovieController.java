@@ -4,10 +4,6 @@ package com.company.controller;
 import java.util.List;
 
 
-
-
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,11 +12,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+
 import com.company.domain.CscDTO;
+
+
+import com.company.domain.InfoDTO;
+
+
+import com.company.domain.MovieReplyDTO;
+import com.company.domain.UserDTO;
 import com.company.service.CscService;
 
+
+import com.company.service.MovieReplyService;
 import com.company.domain.movieDTO;
 import com.company.service.MovieService;
+
+import com.company.service.NoticeService;
 
 
 import lombok.extern.log4j.Log4j2;
@@ -30,10 +38,21 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping("/movie/*")
 public class MovieController {
 	
+	@Autowired
+	private MovieReplyService replyService;
 
+	@Autowired
+	private NoticeService noticeService;
+	
+	@Autowired
+	private CscService cscService;
+
+	
 	
 	@Autowired
 	private MovieService service;
+	
+	
 
 	
 	@GetMapping("index")
@@ -59,10 +78,8 @@ public class MovieController {
 	public void store() {
 		log.info("상점으로 이동중입니다.");
 	}
-	@GetMapping("noticeList")
-	public void notice() {
-		log.info("공지사항으로 이동중입니다.");
-	}
+	
+	
 	@GetMapping("event")
 	public void event() {
 		log.info("이벤트로 이동중입니다.");
@@ -73,10 +90,6 @@ public class MovieController {
 	public void selectSeat() {
 		log.info("좌석선택 중..");
 	}
-
-	
-
-	
 
 
 
@@ -92,7 +105,18 @@ public class MovieController {
 		
 			
 	}
+
 	
 	
+	//로그인
+	// 가입후 띄어주는 페이지
+	@GetMapping("/signin")
+	public void signin() {
+		log.info("로그인 페이지 요청");
+	}
+	
+
+	
+
 	
 }

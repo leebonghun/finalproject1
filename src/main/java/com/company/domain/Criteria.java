@@ -8,6 +8,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Criteria {
+
 	private int pageNum; // 페이지번호\
 	private int amount; // 한 페이지당 보여줄거
 
@@ -24,10 +25,12 @@ public class Criteria {
 		
 	}
 	
+	
+
+	
+	
 	public String[] getTypeArr() {
-		// 제목 => T =>{'T'}
-		
-		
+
 		return type==null?new String[] {}:type.split("");
 	}
 }

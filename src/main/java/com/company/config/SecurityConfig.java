@@ -58,7 +58,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
       http.addFilterBefore(filter, CsrfFilter.class);
       
       
-      http.formLogin().loginPage("/login").successHandler(loginSuccessHandler());
+      http
+      		.formLogin()
+      		.loginPage("/movie/signin")
+      		.successHandler(loginSuccessHandler())
+      		.failureUrl("/movie/signin");
       http.logout().logoutUrl("/customLogout").invalidateHttpSession(true).deleteCookies("remember-me","JSESSION_ID").logoutSuccessUrl("/");
       http.rememberMe().tokenRepository(persistentTokenRepository()).tokenValiditySeconds(604800);
    }

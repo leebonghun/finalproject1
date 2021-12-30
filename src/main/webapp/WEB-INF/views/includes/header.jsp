@@ -17,13 +17,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //for-mobile-apps -->
 
 
-<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />
+
+
 <link href="/resources/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="/resources/css/contactstyle.css" type="text/css" media="all" />
 <link rel="stylesheet" href="/resources/css/faqstyle.css" type="text/css" media="all" />
+<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />
+<link href="/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/resources/css/single.css" rel='stylesheet' type='text/css' />
 <link href="/resources/css/medile.css" rel='stylesheet' type='text/css' />
+<link href="/resources/css/noticelist.css" rel='stylesheet' type='text/css' />
+<link href="/resources/css/event.css" rel='stylesheet' type='text/css' />
 <!-- banner-slider -->
 <link href="/resources/css/jquery.slidey.min.css" rel="stylesheet">
 <!-- //banner-slider -->
@@ -58,7 +62,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="/resources/js/move-top.js"></script>
 <script type="text/javascript" src="/resources/js/easing.js"></script>
+<<<<<<< HEAD
 
+=======
+<script src="/resources/js/csclist.js"></script>
+<script src="/resources/sign-js/login.js">
+>>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -82,8 +91,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			<div class="w3l_sign_in_register">
 				<ul>
-					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054 </li> 
-					<li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054     </li> 
+					<li>
+						
+						<button type="submit" id="login">로그인</button>
+						<button type="submit" id="signup">회원가입</button>
+					</li>
+					
 				</ul>
 			</div>
 			<div class="clearfix"> </div>
@@ -110,6 +124,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<form action="#" method="post">
 								  <input type="text" name="Username" placeholder="Username" required="">
 								  <input type="password" name="Password" placeholder="Password" required="">
+								   <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
 								  <input type="submit" value="Login">
 								</form>
 							  </div>
@@ -164,7 +179,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="active"><a href="movieList">영화</a></li>
 							<li><a href="reserve">예매</a></li>
 							<li><a href="store">스토어</a></li>
-							<li><a href="noticeList">공지사항</a></li>
+							<li><a href="noticelist">공지사항</a></li>
 							<li><a href="event">이벤트</a></li>
 							<li><a href="csclist">고객센터</a></li>
 						</ul>
