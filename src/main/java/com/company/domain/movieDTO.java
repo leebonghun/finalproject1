@@ -17,12 +17,11 @@ public class movieDTO {
 	private String key;
 	private int movieCD;
 	private String movieNM;
-	private String peopleNm;
+	private String actors;
 	private String showTm;
-	private String MOVIE_CONTENT;
-	private String genreNm;
+	private String genres;
 	private String watchGradeNm;
 	private String nationNm;
-	private String companys;
+	private String companyNm;
 	private String openDt;
 }

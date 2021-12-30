@@ -38,11 +38,11 @@
         </tr>
         <tr>
           <td width=20% class="text-right">출연</td>
-          <td width=50% class="text-left">${movieDto.peopleNm }</td>
+          <td width=50% class="text-left">${movieDto.actors }</td>
         </tr>
         <tr>
           <td width=20% class="text-right">장르</td>
-          <td width=50% class="text-left">${movieDto.genreNm }</td>
+          <td width=50% class="text-left">${movieDto.genres }</td>
         </tr>
         <tr>
           <td width=20% class="text-right">등급</td>
@@ -57,15 +57,11 @@
           <td width=50% class="text-left">${movieDto.openDt}</td>
         </tr>
         
-        <tr>
-          <td colspan="3">${vo.story }</td>
-        </tr>
+       
         <tr>
           <td colspan="3" class="text-right">
+          	<button type="submit" id="goBack">예매</button>
             <button type="submit" id="goBack">목록</button>
-            
-            
-            
           </td>
         </tr>
       </table>

@@ -3,10 +3,7 @@ package com.company.controller;
 
 import java.util.List;
 
-
-
-
-
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,12 +14,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.company.domain.CscDTO;
+
 import com.company.domain.InfoDTO;
+
+import com.company.domain.LoginDTO;
+
 import com.company.service.CscService;
 
 import com.company.domain.movieDTO;
 import com.company.service.MovieService;
+
 import com.company.service.NoticeService;
+
+import com.company.service.UserService;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -31,14 +35,17 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping("/movie/*")
 public class MovieController {
 	
+
 	@Autowired
 	private NoticeService noticeService;
 	
 	@Autowired
 	private CscService cscService;
-	
+
 	@Autowired
 	private MovieService service;
+	
+	
 
 	
 	@GetMapping("index")
@@ -103,28 +110,14 @@ public class MovieController {
 		log.info("이벤트로 이동중입니다.");
 	}
 	
-	@GetMapping("cscinsert")
-	public void cscinsert() {
-		log.info("고객센터글작성으로 이동중입니다.");
-	}
-	@GetMapping("cscread")
-	public void cscread() {
-		log.info("고객센터글으로 이동중입니다.");
-	}
+	
 	@GetMapping("selectSeat")
 	public void selectSeat() {
 		log.info("좌석선택 중..");
 	}
-	@GetMapping("csclist")
-	public void csclist(Model model) {
-		log.info("고객센터으로 이동중입니다.");
-		
-		List<CscDTO> list = cscService.getList();
-		log.info(""+list);
-		
-		model.addAttribute("list", list);
-	}
+
 	
+
 	@PostMapping("/cscinsert")
 	public String registerPost(CscDTO insertDto, RedirectAttributes rttr) {
 		log.info("register 가져오기" + insertDto);
@@ -140,6 +133,9 @@ public class MovieController {
 		rttr.addFlashAttribute("result", insertDto.getCSC_BNO());
 		return "redirect:/movie/csclist";
 	}
+
+
+
 	
 	
 	@GetMapping("movieRead")
@@ -153,6 +149,26 @@ public class MovieController {
 			
 	}
 	
+	
+	//로그인
+	// 가입후 띄어주는 페이지
+	@GetMapping("/signin")
+	public void signin() {
+		log.info("로그인 페이지 요청");
+	}
+	
+		
+	//loginPost(
+//	@PostMapping("/signin")
+//	public String loginPost(LoginDTO loginDto, HttpSession session) {
+//		log.info("로그인 요청" + loginDto);
+//		
+//		loginDto = Uservice.login(loginDto);
+//		
+//		session.setAttribute("loginDto", loginDto);
+//	
+//		return "redirect:/"; //index로 보낼거얌
+//	}
 	
 	
 }

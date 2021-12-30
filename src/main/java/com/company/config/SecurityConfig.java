@@ -24,46 +24,50 @@ import com.company.service.CustomUserDetailsService;
 @EnableWebSecurity
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
-	
-	@Autowired
-	private DataSource dataSource;
-	
-	@Bean
-	public PasswordEncoder passwordencoder() {
-			return new BCryptPasswordEncoder();
-	}
-	
-	@Bean
-	public AuthenticationSuccessHandler loginSuccessHandler() {
-		return new CustomLoginSuccessHandler();
-	}
-	@Bean
-	public UserDetailsService customUserDetails() {
-		return new CustomUserDetailsService();
-	}
-	@Bean
-	public PersistentTokenRepository persistentTokenRepository() {
-		JdbcTokenRepositoryImpl resp = new JdbcTokenRepositoryImpl();
-		resp.setDataSource(dataSource);
-		return resp;
-	}	
-	
-	//security-context.xml을 변경해서
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		//한글깨짐현상을 위해서 여기로 옮김
-		CharacterEncodingFilter filter = new CharacterEncodingFilter();
-		filter.setEncoding("utf-8");
-		filter.setForceEncoding(true);
-		http.addFilterBefore(filter, CsrfFilter.class);
-		
-		
-		http.formLogin().loginPage("/login").successHandler(loginSuccessHandler());
-		http.logout().logoutUrl("/customLogout").invalidateHttpSession(true).deleteCookies("remember-me","JSESSION_ID").logoutSuccessUrl("/");
-		http.rememberMe().tokenRepository(persistentTokenRepository()).tokenValiditySeconds(604800);
-	}
-	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(customUserDetails()).passwordEncoder(passwordencoder());
-	}}
-	
+   
+   @Autowired
+   private DataSource dataSource;
+   
+   @Bean
+   public PasswordEncoder passwordencoder() {
+         return new BCryptPasswordEncoder();
+   }
+   
+   @Bean
+   public AuthenticationSuccessHandler loginSuccessHandler() {
+      return new CustomLoginSuccessHandler();
+   }
+   @Bean
+   public UserDetailsService customUserDetails() {
+      return new CustomUserDetailsService();
+   }
+   @Bean
+   public PersistentTokenRepository persistentTokenRepository() {
+      JdbcTokenRepositoryImpl resp = new JdbcTokenRepositoryImpl();
+      resp.setDataSource(dataSource);
+      return resp;
+   }   
+   
+   //security-context.xml을 변경해서
+   @Override
+   protected void configure(HttpSecurity http) throws Exception {
+      //한글깨짐현상을 위해서 여기로 옮김
+      CharacterEncodingFilter filter = new CharacterEncodingFilter();
+      filter.setEncoding("utf-8");
+      filter.setForceEncoding(true);
+      http.addFilterBefore(filter, CsrfFilter.class);
+      
+      
+      http
+      		.formLogin()
+      		.loginPage("/movie/signin")
+      		.successHandler(loginSuccessHandler())
+      		.failureUrl("/movie/signin");
+      http.logout().logoutUrl("/customLogout").invalidateHttpSession(true).deleteCookies("remember-me","JSESSION_ID").logoutSuccessUrl("/");
+      http.rememberMe().tokenRepository(persistentTokenRepository()).tokenValiditySeconds(604800);
+   }
+   @Override
+   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+      auth.userDetailsService(customUserDetails()).passwordEncoder(passwordencoder());
+   }}
+   

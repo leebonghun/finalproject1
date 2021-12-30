@@ -62,6 +62,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="/resources/js/move-top.js"></script>
 <script type="text/javascript" src="/resources/js/easing.js"></script>
+<script src="/resources/js/csclist.js"></script>
+<script src="/resources/sign-js/login.js">
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -70,6 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	});
 </script>
+
 <!-- start-smoth-scrolling -->
 </head>
 	
@@ -84,8 +87,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			<div class="w3l_sign_in_register">
 				<ul>
-					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054 </li> 
-					<li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054     </li> 
+					<li>
+						<button type="submit" id="login">로그인</button>
+						<button type="submit" id="signup">회원가입</button>
+					</li>
+					
 				</ul>
 			</div>
 			<div class="clearfix"> </div>
@@ -97,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					Sign In & Sign Up
+					BBM
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
 				</div>
 				<section>
@@ -108,10 +115,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="tooltip">Click Me</div>
 							  </div>
 							  <div class="form">
-								<h3>Login to your account</h3>
+								<h3>로그인</h3>
 								<form action="#" method="post">
 								  <input type="text" name="Username" placeholder="Username" required="">
 								  <input type="password" name="Password" placeholder="Password" required="">
+								   <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
 								  <input type="submit" value="Login">
 								</form>
 							  </div>

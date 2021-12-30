@@ -10,4 +10,5 @@ import com.company.domain.CscDTO;
 public interface CscService {
 	public List<CscDTO> getList();
 	public boolean register(CscDTO insertDto);
+	public CscDTO getRow(int Csc_Bno);
 }

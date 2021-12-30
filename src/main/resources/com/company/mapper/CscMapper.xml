@@ -13,15 +13,22 @@
  
 </select>
 
+<!-- 게시글 하나 가져오기 -->
+	<select id="read" resultType="com.company.domain.CscDTO">
+		select CSC_BNO,user_id,Csc_Rfi,Csc_Title,csc_content,csc_answer
+		from csc_tbl
+		where CSC_BNO=#{CSC_BNO}
+	</select>
+
 <!-- 게시글 작성 -->
-	<insert id="insert">
+	<insert id="insert1">
 		
 
 		<!-- <selectKey keyProperty="Csc_bno" order="BEFORE" resultType="int">
 			select seq_board.nextval from dual
 		</selectKey> -->
 		insert into csc_tbl(Csc_Bno,Csc_Title,csc_content,csc_regdate,csc_rfi,user_id)
-		values(#{Csc_Bno},#{Csc_Title},#{csc_content},#{csc_regdate},#{csc_rfi},#{user_id})
+		values(CSC_bno_seq.nextval,#{Csc_Title},#{csc_content},sysdate,#{csc_rfi},#{user_id})
 	</insert>
 
 

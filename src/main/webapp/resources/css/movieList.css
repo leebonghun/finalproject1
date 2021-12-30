@@ -284,9 +284,14 @@ strong{
 	
 }
 
-#strong{
-	background-color: #9b9aa5;
-	color: white;
+
+.clearfix  div:nth-child(-n+4) strong {
+	background-color: #fb4357;
+	
+	border-radius: 10px;
+}
+.rank{
+	background-color: gray;
 	border-radius: 10px;
 }
 .tit-heading-wrap {
