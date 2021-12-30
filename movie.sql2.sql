@@ -216,17 +216,28 @@ insert into MOVIE_TBL values(20211111,'티탄','아가트 루셀, 뱅상 랭동'
 insert into MOVIE_TBL values(20211112,'해피 뉴 이어','한지민, 이동욱, 강하늘, 윤아','138',
 '이이이','멜로/로맨스','12세이상 관람가','한국','CJ ENM','2021-12-29');
 
+
 CREATE TABLE REPLY_TBL
 (
-	replyCd number NOT NULL, -- movieCD
-	replyer varchar2(60) NOT NULL,
-	replyDate date DEFAULT SYSDATE NOT NULL,
-	replyContent varchar2(300) NOT NULL,
-	replygrade number,
-	movieCD number NOT NULL,
+	replyCd number NOT NULL, -- 댓글 글번호(rno)
+	replyer varchar2(60) NOT NULL, --댓글 작성자
+	replyDate date DEFAULT SYSDATE NOT NULL, --댓글 작성일
+	replyContent varchar2(300) NOT NULL, -- 댓글 내용
+	movieCD number NOT NULL, -- 원본 포스터 코드(bno)
 	PRIMARY KEY (replyCd)
 );
+
+
+insert into reply_tbl(replyCd,replyer,replyDate,replyContent,movieCD) values(seq_reply.nextval,'이봉훈',sysdate,'하하하하',20210028);
+
+select * from reply_tbl;
+
+
+create index idx_replys on reply_tbl(movieCD desc, replyCd asc);
 alter table reply_tbl add(key_code varchar2(100));
+alter table reply_tbl drop column key_code;
+
+insert into reply_tbl values(1,'이봉훈',sysdate,'영화정말 재밌네요',12,20210028);
 
 select * from reply_tbl;
 
@@ -245,7 +256,9 @@ CREATE TABLE RESERVE_TBL
 	PRIMARY KEY (scheduleNum)
 );
 
-
+delete from reply_tbl where replyCd=1;
+alter table reply_tbl drop column replygrade;
+select * from reply_tbl
 CREATE TABLE SEAT_TBL
 (
 	SEAT_NM varchar2(40) NOT NULL,
@@ -476,9 +489,23 @@ create table movie_reply(
    constraint fk_movie_board foreign key(user_id) references user_tbl(user_id)
 );
 
+
 create sequence seq_reply;
 
 create index idx_reply on movie_reply(bno desc, rno asc);
 
 alter table user_tbl add(replyCnt number default 0);
+
+
+
+create table comment_reply(
+	idx number not null,
+	writer varchar2(100) not null,
+	commentDate date default sysdate,
+	content varchar2(100) not null,
+	delete_yn char(1) not null
+
+);
+
+create sequence seq_reply;
 

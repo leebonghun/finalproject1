@@ -66,36 +66,69 @@
         </tr>
       </table>
     </div>
-    <!-- 댓글 리스트  -->
-<div class="container">
-    <form id="commentForm" name="commentForm" method="post">
-    <br><br>
-        <div>
-            <div>
-                <span><strong>Comments</strong></span> <span id="cCnt"></span>
-            </div>
-            <div>
-                <table class="table">                    
-                    <tr>
-                        <td>
-                            <textarea style="width: 1100px" rows="3" cols="30" id="comment" name="comment" placeholder="댓글을 입력하세요"></textarea>
-                            <br>
-                            <div>
-                                <a href='#' onClick="fn_comment('${movieDto.movieCD }')" class="btn pull-right btn-success">등록</a>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+<!-- 댓글 리스트  -->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<i class="fa fa-comments fa-fw"></i>
+				Reply
+				
+					<button id="addReplyBtn" class="btn btn-primary btn-xs pull-right">New Reply</button>
+		    
+		    </div>
+			<div class="panel-body">
+				<ul class="chat">
+					<li class="left clearfix" data-rno='1'>
+						<div>
+							<div class="header">
+								<strong class="primary-font">user00</strong> <!-- 댓글 작성자 -->
+								<small class="pull-right text-muted">2021-06-15 14:25</small> <!-- 댓글 작성 시간 -->
+								<p>Good Job!!</p><!-- 댓글 작성 내용 -->
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="panel-footer">
+				
+			
+			</div><!-- 댓글 페이지 나누기 -->
+		</div><!-- panel-default close -->
+	</div><!-- col-lg-12 close -->
+</div><!-- row close -->  
+<!-- 댓글 작성 폼  -->
+<div class="modal" tabindex="-1" id="replyModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-title">Reply</h5>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+        	<label for="">댓글 내용</label>
+        	<input type="text" name="reply" class="form-control" value="댓글내용"/>
         </div>
-        <input type="hidden" id="movie_CD" name="movie_CD" value="${movieDto.movieCD }" />        
-    </form>
-</div>
-<div class="container">
-    <form id="commentListForm" name="commentListForm" method="post">
-        <div id="commentList">
+        <div class="form-group">
+        	<label for="">작성자</label>
+        	<input type="text" name="replyer" class="form-control" value="작성자"/>
         </div>
-    </form>
+        <div class="form-group">
+        	<label for="">작성일</label>
+        	<input type="text" name="replyDate" class="form-control" value="작성일"/>
+        </div>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="modalRegisterBtn">등록</button>
+        <button type="button" class="btn btn-warning" id="modalModifyBtn">수정</button>
+        <button type="button" class="btn btn-danger" id="modalRemoveBtn">삭제</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="modalCloseBtn">종료</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -107,12 +140,24 @@
 	<input type="hidden" name="amount" value="${cri.amount}" />
 	<input type="hidden" name="type" value="${cri.type}" />
 	<input type="hidden" name="keyword" value="${cri.keyword}" />
-	<input type="hidden" name="bno" value="${read.bno}" />
+	<input type="hidden" name="movieCD" value="${movieDto.movieCD}" />
 </form>  
 <script>
 	//현재 글번호 가져오기
 	let movieCD = ${movieDto.movieCD};	
-</script>   
+	
+	//스프링 시큐리티 설정으로 인한 추가
+	//댓글 작성 시 작성자 란에 현재 로그인한 사용자 보여주기
+	
+	let replyer = null;
+	<sec:authorize access="isAuthenticated()">
+	   replyer = '<sec:authentication property="principal.username"/>';
+	</sec:authorize>
+	
+	let csrfHeaderName = "${_csrf.headerName}";
+	let csrfTokenValue = "${_csrf.token}";
+</script>    
+ 
  
 	
     
