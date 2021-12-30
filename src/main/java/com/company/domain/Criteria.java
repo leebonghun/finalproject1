@@ -4,10 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 @Getter
 @Setter
 @ToString
@@ -30,10 +26,4 @@ public class Criteria {
 	public String[] getTypeArr() {
 		return type==null?new String[] {}:type.split("");
 	}
-<<<<<<< HEAD
-	
- 	
 }
-=======
-}
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git

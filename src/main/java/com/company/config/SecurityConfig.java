@@ -63,7 +63,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
       		.loginPage("/movie/signin")
       		.successHandler(loginSuccessHandler())
       		.failureUrl("/movie/signin");
-      http.logout().logoutUrl("/customLogout").invalidateHttpSession(true).deleteCookies("remember-me","JSESSION_ID").logoutSuccessUrl("/");
+      http.logout().logoutUrl("/logout").invalidateHttpSession(true).deleteCookies("remember-me","JSESSION_ID").logoutSuccessUrl("/movie/signin");
       http.rememberMe().tokenRepository(persistentTokenRepository()).tokenValiditySeconds(604800);
    }
    @Override

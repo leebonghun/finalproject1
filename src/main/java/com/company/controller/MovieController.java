@@ -12,28 +12,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-<<<<<<< HEAD
-=======
 import com.company.domain.CscDTO;
 
-
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 import com.company.domain.InfoDTO;
 
-
-<<<<<<< HEAD
 import com.company.domain.MovieReplyDTO;
 import com.company.domain.UserDTO;
-=======
+
 import com.company.service.CscService;
 
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 import com.company.service.MovieReplyService;
 import com.company.domain.movieDTO;
 import com.company.service.MovieService;
@@ -47,8 +34,6 @@ import lombok.extern.log4j.Log4j2;
 @Controller
 @RequestMapping("/movie/*")
 public class MovieController {
-	
-<<<<<<< HEAD
 
 	@Autowired
 	private MovieReplyService replyService;
@@ -56,9 +41,6 @@ public class MovieController {
 
 	@Autowired
 	private NoticeService noticeService;
-	
-=======
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
 
 	@Autowired
 	private MovieService service;
@@ -101,13 +83,6 @@ public class MovieController {
 	public void selectSeat() {
 		log.info("좌석선택 중..");
 	}
-<<<<<<< HEAD
-	
-	
-=======
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
-
-
 	
 	
 	@GetMapping("movieRead")
@@ -120,29 +95,17 @@ public class MovieController {
 		
 			
 	}
-
-	
 	
 	//로그인
-	// 가입후 띄어주는 페이지
 	@GetMapping("/signin")
 	public void signin() {
 		log.info("로그인 페이지 요청");
 	}
 	
+	@PostMapping("/logout")
+	public void logoutPost(){
+		log.info("로그아웃");
 		
-	//loginPost(
-//	@PostMapping("/signin")
-//	public String loginPost(LoginDTO loginDto, HttpSession session) {
-//		log.info("로그인 요청" + loginDto);
-//		
-//		loginDto = Uservice.login(loginDto);
-//		
-//		session.setAttribute("loginDto", loginDto);
-//	
-//		return "redirect:/"; //index로 보낼거얌
-//	}
-	
-
+	}
 	
 }
