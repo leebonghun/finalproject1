@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-
+import com.company.domain.Criteria;
 import com.company.domain.CscDTO;
 
 
@@ -62,10 +62,13 @@ public class MovieController {
 	}
 	
 	@GetMapping("movieList")
-	public void movieList(Model model) {
+	public void movieList(Model model,Criteria cri) {
 		log.info("영화 리스트 페이지로 이동중입니다.");
 		
 		List<movieDTO> listDto = service.list();
+		
+		
+	
 		
 		model.addAttribute("list",listDto);
 		
@@ -100,6 +103,8 @@ public class MovieController {
 		log.info("상세정보 페이지로 이동중입니다.");
 		
 		movieDTO movieDto = service.read(movieCD);
+		
+		log.info("data"+movieDto);
 		
 		model.addAttribute("movieDto", movieDto);
 		

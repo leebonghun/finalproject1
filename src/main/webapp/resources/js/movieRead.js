@@ -3,6 +3,14 @@
  */
 $(function(){
 	
+		//list로 돌아가기
+		$("#goBack").click(function(){
+			
+			location.href='/movie/movieList';
+			
+		})
+		
+	
 		//댓글 전체 가져오기 함수 호출
 		showList(1);
 		//댓글 보여줄 영역 가져오기
@@ -230,11 +238,11 @@ $(function(){
 			//댓글이 있는 게시물일 경우
 			let str="";
 			for(var i=0,len=data.length||0;i<len;i++){
-				str += "<li class='left clearfix' data-rno='"+data[i].rno+"'>"; //첫번째 댓글의 rno
-				str += "<div><div class='header'>";
-				str += "<strong class='primary-font'>"+data[i].replyer+"</strong>";
+				str += "<li class='left clearfix' data-rno='"+data[i].replyCd+"'>"; //첫번째 댓글의 rno
+				str += "<div><div class='replyAll' id='replyAll'>";
+				str += "<strong class='primary-font' id='replyer'>"+data[i].replyer+"</strong>";
 				str += "<small class='pull-right text-muted'>"+replyService.displayTime(data[i].replyDate)+"</small>";
-				str += "<p>"+data[i].reply+"</p>";
+				str += "<p>"+data[i].replyContent+"</p>";
 				str += "</div></div></li>";
 			}
 			replyUl.html(str);

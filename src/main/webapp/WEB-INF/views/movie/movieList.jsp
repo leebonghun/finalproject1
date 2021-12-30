@@ -63,4 +63,16 @@
 			</div>
 		</div>
 	</div>
+	<script>
+let result = '${result}';
+
+	
+
+
+
+
+
+
+</script>
+	
 	<%@include file="../includes/footer.jsp"%>

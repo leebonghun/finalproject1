@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@include file="../includes/header.jsp" %>
    <script src="/resources/js/movieList.js"></script>
+   <link rel="stylesheet" href="/resources/css/replyAll.css" />
 <div class="bg-bricks" id="container">
 		<div class="" id="contents">
 			<div class="wrap-movie-chart">
@@ -9,6 +10,8 @@
 					<div class="sect-sorting">
 						<div class="nowshow"></div>
 					</div>
+					
+					
 					<h3 id="live">영화 상세 정보</h3>
 						
 					</div>
@@ -22,6 +25,7 @@
        <tr>
         <td>
           <iframe src="https://www.youtube.com/embed/${movieDto.key}" width=750 height=350></iframe>
+          <input type="hidden" name="movieCD" value="${movieDto.movieCD}" />
         </td>
        </tr>
       </table>
@@ -60,7 +64,7 @@
        
         <tr>
           <td colspan="3" class="text-right">
-          	<button type="submit" id="goBack">예매</button>
+          	<button type="submit" id="goReserve">예매</button>
             <button type="submit" id="goBack">목록</button>
           </td>
         </tr>
@@ -72,16 +76,16 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<i class="fa fa-comments fa-fw"></i>
-				Reply
-				
-					<button id="addReplyBtn" class="btn btn-primary btn-xs pull-right">New Reply</button>
-		    
+				리뷰를 남겨주세요!!!
+					<sec:authorize access="isAuthenticated()"> 
+					<button id="addReplyBtn" class="btn btn-primary btn-xs pull-right">리뷰 작성</button>
+		    		</sec:authorize>
 		    </div>
 			<div class="panel-body">
 				<ul class="chat">
 					<li class="left clearfix" data-rno='1'>
 						<div>
-							<div class="header">
+							<div class="replyAll" id="replyAll">
 								<strong class="primary-font">user00</strong> <!-- 댓글 작성자 -->
 								<small class="pull-right text-muted">2021-06-15 14:25</small> <!-- 댓글 작성 시간 -->
 								<p>Good Job!!</p><!-- 댓글 작성 내용 -->
@@ -122,6 +126,7 @@
         </div>        
       </div>
       <div class="modal-footer">
+      	
         <button type="button" class="btn btn-success" id="modalRegisterBtn">등록</button>
         <button type="button" class="btn btn-warning" id="modalModifyBtn">수정</button>
         <button type="button" class="btn btn-danger" id="modalRemoveBtn">삭제</button>

@@ -228,6 +228,7 @@ CREATE TABLE REPLY_TBL
 	PRIMARY KEY (replyCd)
 );
 
+select * from reply_tbl;
 
 insert into reply_tbl(replyCd,replyer,replyDate,replyContent,movieCD) values(seq_reply.nextval,'이봉훈',sysdate,'하하하하',20210028);
 
@@ -517,4 +518,8 @@ create table comment_reply(
 );
 
 create sequence seq_reply;
+
+select * from REPLY_TBL;
+
+select rank,poster,key,movieNM,actors,showTM,genres,watchGradeNm,nationNm,companyNm,openDt,movieCD from movie_board where movieCD = 20210028;
 

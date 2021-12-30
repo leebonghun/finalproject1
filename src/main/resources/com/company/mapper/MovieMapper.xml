@@ -3,7 +3,7 @@
 <mapper namespace="com.company.mapper.MovieMapper">
 
 <select  id="read" resultType="com.company.domain.movieDTO">
-	select rank,poster,key,movieNM,actors,showTM,genres,watchGradeNm,nationNm,companyNm,openDt from movie_board where movieCD = #{movieCD}
+	select * from movie_board where movieCD = #{movieCD}
 	
 	
 	
@@ -12,5 +12,8 @@
 <select  id="list" resultType="com.company.domain.movieDTO">
 	select  * from movie_board
 </select>
+
+
+
 
 </mapper>
