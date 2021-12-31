@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.company.domain.Criteria;
 import com.company.domain.CscDTO;
 import com.company.domain.InfoDTO;
+import com.company.domain.PageDTO;
 import com.company.service.NoticeService;
 
 import lombok.extern.log4j.Log4j2;
@@ -59,16 +61,22 @@ public class NoticeController {
 		model.addAttribute("readdto", readdto);
 	
 	}
-	@GetMapping("noticelist")
-	public void noticelist(Model model) {
-		log.info("공지사항으로 이동중입니다.");
-		
-		List<InfoDTO> list = noticeService.getList();
-		log.info(""+list);
-		
-		model.addAttribute("list", list);
-	}
 
+	// 전체 리스트 조회
+		@GetMapping("/noticelist")
+		public void noticelist(Model model,Criteria cri) { //객체 생성구문
+			log.info("전체 리스트 요청 "+cri);
+
+			List<InfoDTO> list = noticeService.getList(cri);
+		
+			//페이지 나누기를 위한 정보 얻기
+			int totalCnt = noticeService.getTotalCount(cri);
+			
+			model.addAttribute("pageDto", new PageDTO(cri, totalCnt));
+			model.addAttribute("list", list);
+		}
+	
+	
 	
 //	@GetMapping({ "noticeread", "noticemodify" })
 //	public void noticeread(int INFO_BNO, Model model) {
