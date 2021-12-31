@@ -20,16 +20,16 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler  
             roleNames.add(auth.getAuthority());
          });
          
-         if(roleNames.contains("ROLE_USER") || roleNames.contains("ROLE_MEMBER")) {
-            response.sendRedirect("/movie/index");
-            return;
-         }
-         
-         if(roleNames.contains("ROLE_ADMIN")) {
-            response.sendRedirect("/admin");
-            return;
-         }
-         response.sendRedirect("/");
+//         if(roleNames.contains("ROLE_USER") || roleNames.contains("ROLE_MEMBER")) {
+//            response.sendRedirect("/movie/index");
+//            return;
+//         }
+//         
+//         if(roleNames.contains("ROLE_ADMIN")) {
+//            response.sendRedirect("/movie/index");
+//            return;
+//         }
+         response.sendRedirect("/movie/index");
    }
 
 }
