@@ -231,7 +231,7 @@ CREATE TABLE REPLY_TBL
 
 select * from reply_tbl;
 
-insert into reply_tbl(replyCd,replyer,replyDate,replyContent,movieCD) values(seq_reply.nextval,'이봉훈',sysdate,'하하하하',20210028);
+insert into reply_tbl(replyCd,replyer,replyDate,replyContent,movieCD) values(seq_reply.nextval,'kk12345',sysdate,'하하하하',20210028);
 
 select * from reply_tbl;
 
@@ -416,6 +416,26 @@ select * from csc_tbl;
 select Csc_Bno,Csc_Title,Csc_Regdate,Csc_Rfi,user_id
  from csc_tbl
 
+-----
+select * from INFO_TBL;
+insert into info_TBL(INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
+values(INFO_bno_seq.nextval,'공지사항1','공지 내용1',sysdate);
+insert into info_TBL(INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
+values(INFO_bno_seq.nextval,'공지사항2','공지 내용2',sysdate);
+insert into info_TBL(INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
+values(INFO_bno_seq.nextval,'공지사항3','공지 내용3',sysdate);
+insert into info_TBL(INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
+values(INFO_bno_seq.nextval,'공지사항4','공지 내용4',sysdate);
+insert into info_TBL(INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
+values(INFO_bno_seq.nextval,'공지사항5','공지 내용5',sysdate);
+ 
+select INFO_bno_seq.nextval from dual;
+
+create sequence INFO_bno_seq;
+
+ 
+ 
+ 
 ALTER USER c##team DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
 
 select * from movie_board;

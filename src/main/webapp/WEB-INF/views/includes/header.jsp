@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="/resources/js/easing.js"></script>
 <script src="/resources/js/csclist.js"></script>
 <script src="/resources/sign-js/login.js">
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
+
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		

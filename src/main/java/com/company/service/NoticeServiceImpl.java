@@ -16,7 +16,7 @@ public class NoticeServiceImpl implements NoticeService {
 	
 	@Override
 	public List<InfoDTO> getList() {
-		return noticeMapper.listAll();
+		return noticeMapper.listAll();     
 	}
 
 
@@ -25,5 +25,24 @@ public class NoticeServiceImpl implements NoticeService {
 		 boolean result= noticeMapper.insert(insertDto)>0?true:false;
 		return result;
 	}
+
+
+	@Override
+	public InfoDTO getRow(int Info_Bno) {
+		return noticeMapper.read(Info_Bno);
+	}
+
+
+//	@Override
+//	public boolean update(InfoDTO updateDto) {
+//		boolean modifyResult = noticeMapper.update(updateDto) == 1;
+//		return modifyResult;
+//	}
+//
+//
+//	@Override
+//	public boolean remove(int Info_Bno) {
+//		return noticeMapper.delete(Info_Bno)>0?true:false;
+//	}
 
 }

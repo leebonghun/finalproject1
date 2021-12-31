@@ -118,7 +118,7 @@
         </div>
         <div class="form-group">
         	<label for="">작성자</label>
-        	<input type="text" name="replyer" class="form-control" value="작성자"/>
+        	<input type="text" name="replyer" class="form-control" value="<sec:authentication property="principal.username"/>"/>
         </div>
         <div class="form-group">
         	<label for="">작성일</label>

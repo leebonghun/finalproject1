@@ -8,21 +8,41 @@
  from Info_tbl -->
  
  
- select INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE,INFO_UPDATEDATE,INFO_CNT
+ select INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
  from info_tbl
  
 </select>
 
 <!-- 게시글 작성 -->
 	<insert id="insert">
+		<selectKey resultType="int" keyProperty="INFO_BNO" order="BEFORE">
+			select INFO_bno_seq.nextval from dual
+		</selectKey>
+		insert into info_tbl(INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
+		values(#{INFO_BNO},#{INFO_TITLE},#{INFO_CONTENT},sysdate)
 		
-
-		<!-- <selectKey keyProperty="Csc_bno" order="BEFORE" resultType="int">
-			select seq_board.nextval from dual
-		</selectKey> -->
-		insert into Info_tbl(Info_Bno,Info_Title,Info_Content,Info_Regdate,Info_Updatedate,Info_Cnt)
-		values(#{Info_Bno},#{Info_Title},#{Info_Content},#{Info_Regdate},#{Info_Updatedate},#{Info_Cnt})
 	</insert>
+	
+	<!-- 게시글 하나 읽기 -->
+	<select id="read" resultType="com.company.domain.InfoDTO">
+		select INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE,INFO_UPDATEDATE,INFO_CNT
+		from Info_tbl
+		where INFO_BNO=#{INFO_BNO}
+	</select>
+	
+	<!-- 게시글 삭제 -->
+
+	<!-- <delete id="delete">
+		delete from info_tbl where INFO_BNO=#{INFO_BNO}
+	</delete>
+	
+게시글 수정
+	<update id="update">
+		update info_tbl
+		set
+		INFO_TITLE=#{INFO_TITLE},INFO_CONTENT=#{INFO_CONTENT}
+		where INFO_BNO=#{INFO_BNO}
+	</update>	 -->
 	
 	
 </mapper>
