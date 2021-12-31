@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.company.domain.Criteria;
 import com.company.domain.CscDTO;
 import com.company.mapper.CscMapper;
 @Service
@@ -13,9 +14,9 @@ public class CscServiceImpl implements CscService {
 	private CscMapper cscMapper;
 
 	@Override
-	public List<CscDTO> getList() {
+	public List<CscDTO> getList(Criteria cri) {
 		
-		return cscMapper.listAll();
+		return cscMapper.listAll(cri);
 	}
 
 	@Override
@@ -55,6 +56,12 @@ public class CscServiceImpl implements CscService {
 		
 		
 		return modifyResult;
+	}
+
+	@Override
+	public int getTotalCount(Criteria cri) {
+		
+		return cscMapper.totalCnt(cri);
 	}
 
 }

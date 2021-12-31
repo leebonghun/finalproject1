@@ -145,12 +145,10 @@
 				<div class="panel-body" >
 			<div>
 				<div>
-					<button type="button" class="btn btn-info"
-						onclick="location.href='/movie/cscinsert'" style="margin-bottom: 10px">글쓰기</button>
+					<button type="button" class="btn btn-info"				
+						onclick="location.href='/movie/cscinsert'" style="margin-bottom: 10px">글쓰기</button>					
 				</div>
-
 			</div>
-
 			<table class="table" id=csctbl>
 				<thead >
 					<tr style="background-color: black;" >
@@ -166,18 +164,52 @@
 						<tr class="table-active">
 							<th scope="row">${cscDto.CSC_BNO}</th>
 							<td>${cscDto.CSC_RFI}</td>
-							<td><a href="cscread?CSC_BNO=${cscDto.CSC_BNO}">${cscDto.CSC_TITLE}
+							<td><a class="move" href= "${cscDto.CSC_BNO}">${cscDto.CSC_TITLE}
 							</a></td>
 							<td>${cscDto.CSC_CHECK}</td>
-
-							<td>${cscDto.CSC_REGDATE}</td>
+							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${cscDto.CSC_REGDATE}"/></td>
 
 
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
-		
+		<div class="row">
+			<!-- start search -->
+					<div class="col-md-12">
+						<div class="col-md-8">
+							<!--search Form-->
+							<form action=" " method="get" id="searchForm">
+							<input type="hidden" name="pageNum" value="${pageDto.cri.pageNum }">
+								<input type="hidden" name="amount" value="${pageDto.cri.amount }">
+								<select name="type" id="">
+									<option value="">-----</option>
+									<option value="T"<c:out value="${pageDto.cri.type=='T'?'selected':'' }"/>>제목</option>
+									<option value="C"<c:out value="${pageDto.cri.type=='C'?'selected':'' }"/>>내용</option>
+									<option value="R"<c:out value="${pageDto.cri.type=='R'?'selected':'' }"/>>사유</option>
+									<option value="TC"<c:out value="${pageDto.cri.type=='TC'?'selected':'' }"/>>제목 or 내용</option>
+									<option value="TR"<c:out value="${pageDto.cri.type=='TR'?'selected':'' }"/>>제목 or 사유</option>
+									<option value="TCR"<c:out value="${pageDto.cri.type=='TCR'?'selected':'' }"/>>제목 or 내용 or 사유</option>
+								</select> 
+								<input type="text" name="keyword" id="" value='<c:out value="${pageDto.cri.keyword }"/>'>
+								<button class="btn btn-default">검색</button>
+							</form>
+						</div>
+						<div class="col-md-2 col-md-offset-2">
+							<!--페이지 목록 갯수 지정하는 폼-->
+							<select name="" id="amount" class="form-control">
+								<option value="10"
+									<c:out value="${pageDto.cri.amount==10?'selected':'' }"/>>10</option>
+								<option value="20"
+									<c:out value="${pageDto.cri.amount==20?'selected':'' }"/>>20</option>
+								<option value="30"
+									<c:out value="${pageDto.cri.amount==30?'selected':'' }"/>>30</option>
+								<option value="40"
+									<c:out value="${pageDto.cri.amount==40?'selected':'' }"/>>40</option>
+							</select>
+						</div>
+					</div>
+				</div>		
 			</div>
 			
 		</div>
@@ -188,21 +220,46 @@
 
 		<!-- //faq-banner -->
 		<div>
-
-			<ul class="pagination pagination-lg">
-				<li class="disabled"><a href="#"><i
-						class="fa fa-angle-left">«</i></a></li>
-				<li class="active"><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#"><i class="fa fa-angle-right">»</i></a></li>
-			</ul>
+<!-- start Pagination -->
+				<div class="text-center">
+					<ul class="pagination">
+						<c:if test="${pageDto.prev }">
+							<li class="paginate_button previous"><a
+								href="${pageDto.startPage-10 }">Previous</a></li>
+						</c:if>
+						<c:forEach var="idx" begin="${pageDto.startPage }"
+							end="${pageDto.endPage }">
+							<li
+								class="paginate_button ${pageDto.cri.pageNum==idx?'active':'' }">
+								<a href="${idx }">${idx }</a>
+							</li>
+						</c:forEach>
+						<c:if test="${pageDto.next }">
+							<li class="paginate_button next"><a
+								href="${pageDto.endPage+1 }">Next</a></li>
+						</c:if>
+					</ul>
+				</div>
+				<!-- end Pagination -->
+			
 		</div>
 	</div>
 	</div>
 	</div>
+	<!--  페이지 나누기를 위한 폼 -->
+<form action="" method="get" id="actionForm">
+	<input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}">
+	<input type="hidden" name="amount" value="${pageDto.cri.amount}">
+	<input type="hidden" name="type" value="${pageDto.cri.type}">
+	<input type="hidden" name="keyword" value="${pageDto.cri.keyword}">
+	<input type="hidden" name="CSC_BNO" value="">
+	
+</form>
+<!-- 스크립트 -->
+<script>
+	let result = '${result}';
+</script>
+
 </body>
 </html>
 <%@include file="../includes/footer.jsp"%>

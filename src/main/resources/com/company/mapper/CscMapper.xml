@@ -4,14 +4,39 @@
 
 <!-- 고객센터글 select all -->
  <select id="listAll" resultType="com.company.domain.CscDTO">
-	<!-- select CscBno,CscTitle,CscContent,CscRegdate,CscRfi,CscAnswer,CscWriter
- from csc_tbl -->
+	<![CDATA[
+	select CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
+ from  (select /*+INDEX_DESC(csc_tbl SYS_C008418*/ rownum rn,CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
+ from csc_tbl
+ where 
+  ]]>
+ <include refid="criteria"></include>
+ 
+ <![CDATA[
+ rownum <=(#{pageNum} * #{amount}))
+ where rn>(#{pageNum}-1) * #{amount}
+	
+	]]>
+
+	</select> 
+ <!-- <select id="listAll" resultType="com.company.domain.CscDTO">
+	
  
  
  select Csc_Bno,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
  from csc_tbl order by Csc_Bno desc
  
-</select>
+</select> -->
+<!-- 전체 게시물 수 -->
+	<select id="totalCnt" resultType="int">
+		select count(*) from
+		csc_tbl
+		where  
+		
+		 <include refid="criteria"></include>
+		
+		 Csc_Bno >0
+	</select> 
 
 <!-- 게시글 하나 가져오기 -->
 	<select id="read" resultType="com.company.domain.CscDTO">
@@ -58,5 +83,25 @@
 		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK=#{CSC_CHECK}
 		where CSC_BNO=#{CSC_BNO}
 	</update>	
+<sql id="criteria">
+		<trim prefix="(" suffix=") AND" prefixOverrides="OR">
 
+			<foreach collection="typeArr" item="type">
+				<trim prefix="OR">
+					<choose>
+						<when test="type=='T'.toString()">
+							CSC_TITLE like '%'||#{keyword}||'%'
+						</when>
+						<when test="type=='C'.toString()">
+							CSC_CONTENT like '%'||#{keyword}||'%'
+						</when>
+						<when test="type=='R'.toString()">
+							CSC_RFI like '%'||#{keyword}||'%'
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+
+	</sql>
 </mapper>

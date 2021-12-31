@@ -20,6 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.company.domain.Criteria;
 import com.company.domain.CscDTO;
+import com.company.domain.PageDTO;
 import com.company.service.CscService;
 
 
@@ -40,12 +41,14 @@ public class CscController {
 	
 	
 	@GetMapping("csclist")
-	public void csclist(Model model) {
-		log.info("고객센터으로 이동중입니다.");
+	public void csclist(Model model, Criteria cri) {
+		log.info("고객센터으로 이동중입니다."+cri);
 		
-		List<CscDTO> list = cscService.getList();
+		List<CscDTO> list = cscService.getList(cri);
+		// 페이지 나누기를 위한 정보
+		int totalCnt = cscService.getTotalCount(cri);
 		log.info(""+list);
-		
+		model.addAttribute("pageDto", new PageDTO(cri, totalCnt));
 		model.addAttribute("list", list);
 	}
 	
