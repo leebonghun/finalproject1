@@ -42,7 +42,7 @@
       />
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" value="remember-me" /> Remember me
+          <input type="checkbox" value="remember-me" /> 로그인 정보 저장
         </label>
       </div>
       <div>
