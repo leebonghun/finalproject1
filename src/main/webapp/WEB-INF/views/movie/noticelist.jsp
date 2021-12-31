@@ -48,7 +48,16 @@
 	                        <th>작성일</th>
 	                    </tr>									
 	                </thead>
-	               
+					<tbody>
+	                	<tr class="table-active">
+	                		<th scope="row">1</th>
+	                		<td>공지사항</td>
+	                		<td>기타</td>
+	                		<td>2021-12-29</td>
+	                		<td>2021-12-29</td>              	
+	                	</tr>
+	                	
+	                </tbody>
 				<!-- 게시판 리스트 반복문 -->
 				<tbody>
 					<c:forEach var="infodto" items="${list}">
