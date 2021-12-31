@@ -62,8 +62,9 @@
 					<button type="submit" class="btn btn-info">작성완료</button>
 					<button type="reset" class="btn btn-warning">초기화</button>
 					<button type="button" class="btn btn-default" onclick="location.href='/movie/csclist'">뒤로가기</button>
+					</form>
 					</div>
-				</form>
+				
 			</div>
 		</div>
 	</div>

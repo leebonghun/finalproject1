@@ -35,6 +35,8 @@
 		insert into csc_tbl(CSC_BNO,CSC_TITLE,CSC_CONTENT,csc_regdate,CSC_RFI,user_id,CSC_CHECK)
 		values(#{CSC_BNO},#{CSC_TITLE},#{CSC_CONTENT},sysdate,#{CSC_RFI},#{user_id},#{CSC_CHECK})
 	</insert>
+	
+	
 <!-- 게시글 삭제 -->
 
 	<delete id="delete">
@@ -46,6 +48,14 @@
 		update csc_tbl
 		set
 		CSC_TITLE=#{CSC_TITLE},CSC_CONTENT=#{CSC_CONTENT},CSC_RFI=#{CSC_RFI}
+		where CSC_BNO=#{CSC_BNO}
+	</update>	
+	
+	<!-- 답글 달기  -->
+	<update id="update2">
+		update csc_tbl
+		set
+		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK=#{CSC_CHECK}
 		where CSC_BNO=#{CSC_BNO}
 	</update>	
 

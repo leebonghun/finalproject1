@@ -13,4 +13,5 @@ public interface CscMapper {
 	public CscDTO read(int Csc_Bno);
 	public int delete(int Csc_Bno);
 	public int update(CscDTO updateDto);
+	public int update2(CscDTO updateDto2);
 }

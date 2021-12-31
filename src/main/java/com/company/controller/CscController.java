@@ -118,6 +118,26 @@ public class CscController {
 		
 		return"redirect:/movie/csclist";
 	}
+	
+	@PostMapping("cscread")
+	public String modify2(CscDTO modifyDto2) {
+		log.info("답글 입력" + modifyDto2 );
+
+		
+		
+		
+		
+		// 수정완료후 list로 이동
+		cscService.update(modifyDto2);
+
+		
+		
+
+		
+		return"redirect:/movie/csclist";
+	}
+	
+	
 
 	
 	

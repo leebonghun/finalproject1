@@ -48,4 +48,13 @@ public class CscServiceImpl implements CscService {
 		return modifyResult;
 	}
 
+	@Override
+	public boolean update2(CscDTO updateDto2) {
+			boolean modifyResult = cscMapper.update(updateDto2) == 1;
+		
+		
+		
+		return modifyResult;
+	}
+
 }

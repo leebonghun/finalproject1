@@ -8,10 +8,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="/resources/js/csclist.js"></script>
+<script src="/resources/css/bootstrap.css"></script>
+<script src="/resources/css/csclist.css"></script>
 
 </head>
 <body>
-	<div style="margin-left: 100px;" class="jumbotron">
+	<div style="margin-left: 100px; margin-right: 100px;" >
 		<h2 class="h1" style="color: black;">
 			<img src="/resources/images/cscicon.png" style="height: 50px;" /> 고객
 			센터
@@ -28,7 +30,8 @@
 							<h4 class="panel-title asd">
 								<a class="pa_italic" role="button" data-toggle="collapse"
 									data-parent="#accordion" href="#collapseOne"
-									aria-expanded="true" aria-controls="collapseOne"> <span
+									aria-expanded="false" aria-controls="collapseOne">
+									 <span
 									class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
 									class="glyphicon glyphicon-minus" aria-hidden="true"></i>분실물
 								</a>
@@ -143,19 +146,19 @@
 			<div>
 				<div>
 					<button type="button" class="btn btn-info"
-						onclick="location.href='/movie/cscinsert'">글쓰기</button>
+						onclick="location.href='/movie/cscinsert'" style="margin-bottom: 10px">글쓰기</button>
 				</div>
 
 			</div>
 
-			<table class="table table-hover" id=csctbl>
-				<thead>
-					<tr>
-						<th scope="col">글번호</th>
-						<th scope="col">사유</th>
-						<th scope="col">제목</th>
-						<th scope="col">접수상태</th>
-						<th scope="col">등록일</th>
+			<table class="table" id=csctbl>
+				<thead >
+					<tr style="background-color: black;" >
+						<th scope="col"  style="color: white;">글번호</th>
+						<th scope="col"style="color: white;">사유</th>
+						<th scope="col"style="color: white;">제목</th>
+						<th scope="col"style="color: white;">접수상태</th>
+						<th scope="col"style="color: white;">등록일</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -174,12 +177,17 @@
 					</c:forEach>
 				</tbody>
 			</table>
-		</div>
+		
 			</div>
 			
 		</div>
+
 		
 			<div class="text-center">
+
+
+		<!-- //faq-banner -->
+		<div>
 
 			<ul class="pagination pagination-lg">
 				<li class="disabled"><a href="#"><i
@@ -192,7 +200,8 @@
 				<li><a href="#"><i class="fa fa-angle-right">»</i></a></li>
 			</ul>
 		</div>
-
+	</div>
+	</div>
 	</div>
 </body>
 </html>

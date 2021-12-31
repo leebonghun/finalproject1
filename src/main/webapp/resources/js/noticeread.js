@@ -1,5 +1,5 @@
 /**
- * cscread.jsp
+ * noticeread.jsp
  */
 
 $(function() {
@@ -10,10 +10,10 @@ $(function() {
 	let form = $("#actionForm");
 	//list 를 클릭하면 전체 리스트 보여주기
 	$(".btn-info").click(function() {
-		//actionForm에서 CSC_BNO 제거
-		form.find("input[name='CSC_BNO']").remove();
-		//actionForm action /movie/csclist
-		form.attr("action", "/movie/csclist");
+		//actionForm에서 INFO_BNO 제거
+		form.find("input[name='INFO_BNO']").remove();
+		//actionForm action /movie/noticelist
+		form.attr("action", "/movie/noticelist");
 		//actionForm 전송
 		form.submit();
 	})
@@ -21,13 +21,9 @@ $(function() {
 
 	//modify를 클릭하면 actionForm 보내기
 	$(".btn btn-warning").click(function() {
-		form.attr("action", "/movie/cscmodify");
+		form.attr("action", "/movie/noticemodify");
 		form.submit();
 	})
-	
-	
-	
-	
 	
 
 	

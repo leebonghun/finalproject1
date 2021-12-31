@@ -58,11 +58,11 @@
 					<div class="form-group">
 					
 						<label>답변 내용</label>
-						<textarea class="form-control" rows="3" name="content"
-							 placeholder="답변대기중..." style="resize: none;">${readdto.CSC_ANSWER}</textarea>
-							 <label><input type="checkbox" name="CSC_CHECK" value="[답변완료]">답변완료</label>
+						<textarea class="form-control" rows="3" name="CSC_ANSWER"
+							 placeholder="답변대기중..." style="resize: none;" >${readdto.CSC_ANSWER}</textarea>
+							 <label><input type="checkbox" name="CSC_CHECK" value="[답변완료]">답변완료여부</label>
 					</div>
-				
+					<button type="submit" class="btn btn-info">답변완료</button>
 						<button type="button" class="btn btn-warning" id="modalModifyBtn" onclick="location.href='cscmodify?CSC_BNO=${readdto.CSC_BNO}'">수정</button>						
 					<button type="button" class="btn btn-default" onclick="location.href='/movie/csclist'">뒤로가기</button>
 					
