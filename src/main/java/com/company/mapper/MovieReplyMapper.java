@@ -15,4 +15,6 @@ public interface MovieReplyMapper {
 	public MovieReplyDTO get(int replyCd);
 	
 	public int getCountByBno(int movieCD);
+	
+	public int updateReply(MovieReplyDTO updateDto);
 }

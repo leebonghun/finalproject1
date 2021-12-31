@@ -36,8 +36,20 @@
 		<button type="button" class="btn btn-default" onclick="location.href='/movie/noticelist'">뒤로가기</button>
 	</form>
 	</div>
+
 		</div>
 	</div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
 
 <%@include file="../includes/footer.jsp"%>

@@ -31,16 +31,16 @@ let replyService = (function(){
 		$.getJSON({
 			url:'/replies/pages/'+movieCD+'/'+page,
 			success:function(data){
-				callback(data.replyCnt,data.list);
+				callback(data.replyContent,data.list);
 			}
 		})
 		
 	}//getList end
 	
-	function remove(rno,replyer,callback,error){
+	function remove(replyCd,replyer,callback,error){
 		
 		$.ajax({
-			url:'/replies/'+rno,
+			url:'/replies/'+replyCd,
 			type:'delete',
 			contentType:'application/json',
 			data:JSON.stringify({
@@ -62,14 +62,14 @@ let replyService = (function(){
 		
 	}//remove end
 	
-	function update(reply,callback,error){
+	function update(replyContent,callback,error){
 		
 		$.ajax({
 			
-			url:'/replies/'+reply.rno,
+			url:'/replies/'+replyContent.replyCd,
 			type:'put',
 			contentType:'application/json',
-			data:JSON.stringify(reply),
+			data:JSON.stringify(replyContent),
 			success:function(data){
 				if(callback){
 					callback(data);

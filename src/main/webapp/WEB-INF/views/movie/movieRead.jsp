@@ -83,7 +83,7 @@
 		    </div>
 			<div class="panel-body">
 				<ul class="chat">
-					<li class="left clearfix" data-rno='1'>
+					<li class="left clearfix" data-replyCd='1'>
 						<div>
 							<div class="replyAll" id="replyAll">
 								<strong class="primary-font">user00</strong> <!-- 댓글 작성자 -->
@@ -114,11 +114,11 @@
       <div class="modal-body">
         <div class="form-group">
         	<label for="">댓글 내용</label>
-        	<input type="text" name="reply" class="form-control" value="댓글내용"/>
+        	<input type="text" name="replyContent" class="form-control" value="댓글내용"/>
         </div>
         <div class="form-group">
         	<label for="">작성자</label>
-        	<input type="text" name="replyer" class="form-control" value="작성자"/>
+        	<input type="text" name="replyer" class="form-control" value="<sec:authentication property="principal.username"/>"/>
         </div>
         <div class="form-group">
         	<label for="">작성일</label>
@@ -150,6 +150,7 @@
 <script>
 	//현재 글번호 가져오기
 	let movieCD = ${movieDto.movieCD};	
+
 	
 	//스프링 시큐리티 설정으로 인한 추가
 	//댓글 작성 시 작성자 란에 현재 로그인한 사용자 보여주기

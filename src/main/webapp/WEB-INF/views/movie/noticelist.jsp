@@ -47,7 +47,8 @@
 	                        <th>작성일</th>
 	                    </tr>									
 	                </thead>
-	                
+				
+
 				<!-- 게시판 리스트 반복문 -->
 				<tbody>
 					<c:forEach var="infodto" items="${list}">
