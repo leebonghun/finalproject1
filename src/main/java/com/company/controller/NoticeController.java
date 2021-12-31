@@ -77,7 +77,7 @@ public class NoticeController {
 //
 //		InfoDTO readdto = noticeService.getRow(INFO_BNO);
 //
-//		model.addAttribute("readdto", readdto);
+//		model.addAttribute("readdto", readdto);     
 //		
 //	}
 //	

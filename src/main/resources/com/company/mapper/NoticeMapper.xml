@@ -8,24 +8,24 @@
  from Info_tbl -->
  
  
- select INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
+ select INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
  from info_tbl
  
 </select>
 
 <!-- 게시글 작성 -->
-	<insert id="insert">
+<!-- 	<insert id="insert">
 		<selectKey resultType="int" keyProperty="INFO_BNO" order="BEFORE">
 			select INFO_bno_seq.nextval from dual
 		</selectKey>
-		insert into info_tbl(INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
-		values(#{INFO_BNO},#{INFO_TITLE},#{INFO_CONTENT},sysdate)
+		insert into info_tbl(INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
+		values(#{INFO_BNO},#{INFO_RFI},#{INFO_TITLE},#{INFO_CONTENT},sysdate)
 		
-	</insert>
+	</insert> -->
 	
 	<!-- 게시글 하나 읽기 -->
 	<select id="read" resultType="com.company.domain.InfoDTO">
-		select INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE,INFO_UPDATEDATE,INFO_CNT
+		select INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE,INFO_UPDATEDATE,INFO_CNT
 		from Info_tbl
 		where INFO_BNO=#{INFO_BNO}
 	</select>
@@ -40,7 +40,7 @@
 	<update id="update">
 		update info_tbl
 		set
-		INFO_TITLE=#{INFO_TITLE},INFO_CONTENT=#{INFO_CONTENT}
+		INFO_RFI=#{INFO_RFI},INFO_TITLE=#{INFO_TITLE},INFO_CONTENT=#{INFO_CONTENT}
 		where INFO_BNO=#{INFO_BNO}
 	</update>	 -->
 	

@@ -36,13 +36,15 @@
 	            <table class="table table-hover" id="dtotbl">
 	            	<colgroup>
 					    <col class="col-md-1">
+					    <col class="col-md-1">
 					    <col class="col-md-4">
-					    <col class="col-md-5">
+					    <col class="col-md-4">
 					    <col class="col-md-2">
 					  </colgroup>
 	                <thead>
 	                    <tr>
 	                        <th>번 호</th>
+	                        <th>분 류</th>
 	                        <th>제 목</th>
 	                        <th>내 용</th>
 	                        <th>작성일</th>
@@ -54,6 +56,7 @@
 					<c:forEach var="infodto" items="${list}">
 						<tr class="table-active">				
 							<th scope="row">${infodto.INFO_BNO}</th>
+							<td>${infodto.INFO_RFI}</td>
 							<td><a href="inforead?INFO_BNO=${infodto.INFO_BNO}">${infodto.INFO_TITLE}</a></td>				
 							<td>${infodto.INFO_CONTENT}</td>
 							<td>${infodto.INFO_REGDATE}</td>
