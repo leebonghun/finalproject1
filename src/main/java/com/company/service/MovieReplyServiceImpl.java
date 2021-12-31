@@ -27,16 +27,24 @@ public class MovieReplyServiceImpl implements MovieReplyService{
 	
 
 	@Override
-	public MovieReplyDTO getRow(int movieCD) {
+	public MovieReplyDTO getRow(int replyCd) {
 		// TODO Auto-generated method stub
-		return null;
+		return mapper.get(replyCd);
 	}
 
-	@Transactional
+
 	@Override
 	public ReplyPageDTO list(Criteria cri, int movieCD) {
 		// TODO Auto-generated method stub
 		return new ReplyPageDTO(mapper.getCountByBno(movieCD),mapper.list(cri, movieCD));
+	}
+
+
+
+	@Override
+	public boolean updateReply(MovieReplyDTO updateDto) {
+		// TODO Auto-generated method stub
+		return mapper.updateReply(updateDto)>0?true:false;
 	}
 
 

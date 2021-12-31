@@ -31,11 +31,11 @@ $(function(){
 			
 		})
 		
-		/*$(".btn-default").click(function(){
+		$(".btn-default").click(function(){
 			form.attr("action","/board/modify");
 			form.submit();
 			
-		})*/
+		})
 		
 		//댓글 작성
 		
@@ -44,7 +44,7 @@ $(function(){
 		let modal = $('#replyModal');
 		
 		//모달 창 영역 안의 요소 가져오기
-		let modalReply = modal.find("input[name='reply']");
+		let modalReply = modal.find("input[name='replyContent']");
 		let modalReplyer = modal.find("input[name='replyer']");
 		let modalReplyDate = modal.find("input[name='replyDate']");
 		
@@ -86,9 +86,9 @@ $(function(){
 		//댓글 등록버튼 클릭시
 		modalRegisterBtn.click(function(){
 			
-			var reply = {movieCD:movieCD,replyer:modalReplyer.val(),reply:modalReply.val()};
+			var replyContent = {movieCD:movieCD,replyer:modalReplyer.val(),replyContent:modalReply.val()};
 			
-		replyService.add(reply,function(result){
+		replyService.add(replyContent,function(result){
 			if(result){
 				if(result =='success'){
 					alert("댓글 등록 성공");
@@ -124,7 +124,7 @@ $(function(){
 				return;
 			}
 			
-		replyService.remove(modal.data("rno"),oriReplyer,function(result){
+		replyService.remove(modal.data("replyCd"),oriReplyer,function(result){
 			if(result=='success'){
 				alert("삭제 성공");
 			}
@@ -157,12 +157,12 @@ $(function(){
 			}
 			
 			
-			var reply={rno:modal.data("rno"),
-			reply:modalReply.val(),
+			var replyContent={replyCd:modal.data("replyCd"),
+			replyContent:modalReply.val(),
 			replyer:oriReplyer
 			};
 			
-		replyService.update(reply,function(data){
+		replyService.update(replyContent,function(data){
 			//alert(data);
 			if(data=='success'){
 				alert("수정성공");
@@ -187,16 +187,16 @@ $(function(){
 			
 			var replyCd = $(this).data("replyCd");
 			
-			console.log("rno"+replyCd);
+			//console.log("replyCd"+replyCd);
 		replyService.get(replyCd,function(data){
 				console.log(data);
 				
-				modalReply.val(data.reply);
+				modalReply.val(data.replyContent);
 				modalReplyer.val(data.replyer).attr("readonly","readonly");
 				modalReplyDate.val(replyService.displayTime(data.replyDate)).attr("readonly","readonly");
 				
 				
-				modal.data("rno",data.rno);
+				modal.data("replyCd",data.replyCd);
 				
 				//작성날짜 영역 보여주기
 				modal.find("[name='replyDate']").closest("div").show(); //제일 가까운 div를 보여줘
@@ -238,7 +238,7 @@ $(function(){
 			//댓글이 있는 게시물일 경우
 			let str="";
 			for(var i=0,len=data.length||0;i<len;i++){
-				str += "<li class='left clearfix' data-rno='"+data[i].replyCd+"'>"; //첫번째 댓글의 rno
+				str += "<li class='left clearfix' data-replyCd='"+data[i].replyCd+"'>"; //첫번째 댓글의 rno
 				str += "<div><div class='replyAll' id='replyAll'>";
 				str += "<strong class='primary-font' id='replyer'>"+data[i].replyer+"</strong>";
 				str += "<small class='pull-right text-muted'>"+replyService.displayTime(data[i].replyDate)+"</small>";

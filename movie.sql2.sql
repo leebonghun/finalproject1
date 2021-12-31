@@ -233,7 +233,7 @@ select * from reply_tbl;
 
 insert into reply_tbl(replyCd,replyer,replyDate,replyContent,movieCD) values(seq_reply.nextval,'kk12345',sysdate,'하하하하',20210028);
 
-select * from reply_tbl;
+select * from reply_tbl;	
 
 
 create index idx_replys on reply_tbl(movieCD desc, replyCd asc);
@@ -241,6 +241,7 @@ alter table reply_tbl add(key_code varchar2(100));
 alter table reply_tbl drop column key_code;
 
 insert into reply_tbl values(1,'이봉훈',sysdate,'영화정말 재밌네요',12,20210028);
+select * from reply_tbl where replyCd = 1;
 
 select * from reply_tbl;
 

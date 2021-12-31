@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@include file="../includes/header.jsp" %>     
+    <%@include file="../includes/header.jsp" %>   
+    
+      
 <style>
     .test_obj input[type="radio"] {
         display: none;
@@ -55,6 +57,8 @@
 					</div>
 			</div>
 		</div>
+
+
 
 
 <%-- remove와 list를 위한 폼--%>

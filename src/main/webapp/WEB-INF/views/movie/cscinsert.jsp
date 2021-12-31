@@ -11,6 +11,8 @@
         display: none;
     }
  
+ 
+ 
     .test_obj input[type="radio"] + span {
         display: inline-block;
         padding: 15px 10px;
