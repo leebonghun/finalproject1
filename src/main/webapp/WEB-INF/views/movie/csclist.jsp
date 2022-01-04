@@ -164,7 +164,7 @@
 						<tr class="table-active">
 							<th scope="row">${cscDto.CSC_BNO}</th>
 							<td>${cscDto.CSC_RFI}</td>										
-							<td><a class="move" href= "${cscDto.CSC_BNO}">${cscDto.CSC_TITLE}
+							<td  id="tit"><a class="move"    href= "${cscDto.CSC_BNO}">${cscDto.CSC_TITLE} 
 							</a></td>							
 							<td>${cscDto.CSC_CHECK}</td>
 							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${cscDto.CSC_REGDATE}"/></td>

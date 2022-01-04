@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" session="true"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>로그인</title>
+    <title>회원탈퇴</title>
     <!-- Bootstrap core CSS -->
     <link
       rel="stylesheet"
@@ -21,38 +21,39 @@
     <link href="/resources/css/signin.css" rel="stylesheet" />
   </head>
   <body class="text-center">
-    <form class="form-signin" method="post" action="/movie/signin">
+    <form class="form-signin" method="post" action="">
       <h1 class="h3 mb-3 font-weight-normal">BBM</h1>
       <label for="username" class="sr-only">아이디</label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        class="form-control"
-        placeholder="아이디"
-        required
-        autofocus
-      />
+      <sec:authentication property="principal" var="info"/>     
+      <sec:authorize access="isAuthenticated()" >	                        
+	      <input
+	        type="text"
+	        id="username"
+	        name="username"
+	        class="form-control"
+	        placeholder="아이디"
+	        required
+	        autofocus
+	        value="${info.username}"
+	        readonly="readonly"
+	      />
+      </sec:authorize>
       <label for="password" class="sr-only">비밀번호</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        class="form-control"
-        placeholder="비밀번호"
-        required
-      />
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me" /> 로그인 정보 저장
-        </label>
-      </div>
+      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+	     <input
+	       type="password"
+	       id="password"
+	       name="password"
+	       class="form-control"
+	       placeholder="비밀번호"
+	       required
+	     />
       <div>
         <p style="color: red;">${error}</p>
       </div>
       <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
       <button class="btn btn-lg btn-primary btn-block" type="submit"> 
-        로그인
+        탈퇴하기
       </button>
     </form>
   </body>
