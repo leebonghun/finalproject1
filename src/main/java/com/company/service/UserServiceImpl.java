@@ -10,6 +10,7 @@ import com.company.domain.LoginDTO;
 import com.company.domain.UserDTO;
 import com.company.mapper.UserMapper;
 
+
 @Service
 public class UserServiceImpl implements UserService {
 	
@@ -50,6 +51,19 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public LoginDTO login(LoginDTO loginDto) {
 		return mapper.login(loginDto);
+	}
+
+	@Override
+	public boolean leave(UserDTO leaveDto) {
+		
+		// 12345 => 암호화
+		leaveDto.setUser_password(encoder.encode(leaveDto.getUser_password()));
+		
+		boolean result=mapper.delete(leaveDto)> 0 ? true : false;
+		
+		return result;
+		
+		
 	}
 
 }
