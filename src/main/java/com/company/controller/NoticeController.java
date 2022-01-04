@@ -79,7 +79,7 @@ public class NoticeController {
 
 		InfoDTO readdto = noticeService.getRow(INFO_BNO);
 
-		model.addAttribute("dto", readdto);     
+		model.addAttribute("readdto", readdto);     
 		
 	}
 	
@@ -99,7 +99,7 @@ public class NoticeController {
 		rttr.addAttribute("type", cri.getType());
 		rttr.addAttribute("keyword", cri.getKeyword());
 		
-		rttr.addAttribute("result", "success");
+		rttr.addFlashAttribute("result", "success");
 		return "redirect:/movie/noticelist";
 	}
 
@@ -109,11 +109,6 @@ public class NoticeController {
 //		log.info("게시글 삭제" + INFO_BNO);
 //
 //		
-//		noticeService.remove(INFO_BNO);
-//		// 수정삭제 후 리스트로 이동
-//		if (cscService.remove(CSC_BNO)) {
-//			첨부 폴더 파일 삭제
-//			deleteFiles(attachList);
 //			// 페이지 나누기 값
 //			rttr.addAttribute("pageNum", cri.getPageNum());
 //			rttr.addAttribute("amount", cri.getAmount());
@@ -123,7 +118,6 @@ public class NoticeController {
 //			rttr.addAttribute("keyword", cri.getKeyword());
 //
 //			rttr.addFlashAttribute("result", "success");
-//		}
 //
 //		return "redirect:/movie/noticelist";
 //	}
