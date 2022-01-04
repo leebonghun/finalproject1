@@ -12,6 +12,8 @@
 					</div>
 					
 					
+					
+					
 					<h3 id="live">영화 상세 정보</h3>
 						
 					</div>
@@ -77,9 +79,9 @@
 			<div class="panel-heading">
 				<i class="fa fa-comments fa-fw"></i>
 				리뷰를 남겨주세요!!!
-					<sec:authorize access="isAuthenticated()"> 
+					
 					<button id="addReplyBtn" class="btn btn-primary btn-xs pull-right">리뷰 작성</button>
-		    		</sec:authorize>
+		    	
 		    </div>
 			<div class="panel-body">
 				<ul class="chat">

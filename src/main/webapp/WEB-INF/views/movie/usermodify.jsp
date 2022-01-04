@@ -4,7 +4,7 @@ pageEncoding="UTF-8"%>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>회원가입</title>
+    <title>회원 정보 수정</title>
     <!-- resources 앞에 / 를 붙일때는 context path가 없는 경우일 때 -->
     <link
       rel="stylesheet"
@@ -29,7 +29,8 @@ pageEncoding="UTF-8"%>
               id="user_id"
               class="form-control"
               placeholder="아이디를 입력하세요."
-              readonly
+              value="{userdto.user_id}"
+              readonly="readonly"
             />
             <small id="user_id" class="text-info"></small>
           </div>
@@ -121,7 +122,7 @@ pageEncoding="UTF-8"%>
             <small id=user_tel class="text-info"></small>
           </div>
         </div>
-          <button type="submit" class="btn btn-primary">가입하기</button>
+          <button type="submit" class="btn btn-primary">회원정보수정</button>
           <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
         </div>
       </form>

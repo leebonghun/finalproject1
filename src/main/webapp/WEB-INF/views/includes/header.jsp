@@ -98,11 +98,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<button type="submit" id="login">로그인</button>
 							<button type="submit" id="signup">회원가입</button>
 						</sec:authorize>
+					
 						<sec:authorize access="isAuthenticated()" >                           
                      <sec:authentication property="principal.username"/>님, 반갑습니다.</p>
 	                     <button type="submit" id="logout">로그아웃</button>
 	                     <button type="submit" id="mypage">마이페이지</button>
-
 
                         </sec:authorize>
                         					</li>
