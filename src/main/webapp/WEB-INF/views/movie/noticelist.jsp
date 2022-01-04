@@ -62,45 +62,7 @@
 					</c:forEach>					
 				</tbody>
 	        </table>
-			</div>
-         </div>
-       </div>
-     </div>
-              <!-- end Pagination -->
-    <div class="row"> <!-- start search -->
-       	<div class="col-md-12">
-       	  <div class="col-md-8"><!--search Form-->
-       		 <form action="" method="get" id="searchForm">
-       		 	<input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}" />
-       		 	<input type="hidden" name="amount" value="${pageDto.cri.amount}" />
-       		 	<select name="type" id="">
-       		 		<option value="">---------</option>
-       		 		<option value="T" <c:out value="${pageDto.cri.type == 'T'?'selected':''}"/>>제목</option>
-       		 		<option value="C" <c:out value="${pageDto.cri.type == 'C'?'selected':''}"/>>내용</option>
-       		 		<option value="R" <c:out value="${pageDto.cri.type == 'R'?'selected':''}"/>>분류</option>
-       		 		<option value="TC" <c:out value="${pageDto.cri.type == 'TC'?'selected':''}"/>>제목 or 내용</option>
-       		 		<option value="TW" <c:out value="${pageDto.cri.type == 'TW'?'selected':''}"/>>제목 or 분류</option>
-       		 		<option value="TCR" <c:out value="${pageDto.cri.type == 'TCR'?'selected':''}"/>>제목 or 내용 or 분류</option>
-       		 	</select>                     		 	
-       		 	
-       		 	<input type="text" name="keyword" id=""  value='<c:out value="${pageDto.cri.keyword}"/>'/>
-       		 	<button class="btn btn-default">Search</button>
-       		 </form>
-       	   </div>
-        	 </div>                             	 
- 		 </div><!-- end search -->
-                            <!-- end panel-body -->
-
-		<div class="row" style="width:100%"> 
-			<ul class="contactus">
-				<li>[문의안내]</li>
-		    	<li>*&nbsp;게시물에&nbsp;대한&nbsp;문의는&nbsp;페이지&nbsp;상단의&nbsp;담당자&nbsp;및&nbsp;전화번호&nbsp;내용을&nbsp;참고하세요.
-		    	<br>
-				*&nbsp;고객상담센터&nbsp;국번없이&nbsp;1350(전화연결장애 문의 : 012-345-6789)&nbsp; </li>
-			</ul>
-		</div>
-    <!-- start Pagination -->
-          <div class="text-center">
+          <div class="text-center" style="text-align: center;">
           	<ul class="pagination">
           		<c:if test="${pageDto.prev}">
           			<li class="paginate_button previous">
@@ -121,6 +83,43 @@
            	</c:if>
           	</ul>
           </div>
+         <!-- start Pagination -->
+              <!-- end Pagination -->
+    <div class="row"> <!-- start search -->
+       	<div class="col-md-12">
+       	  <div class="col-md-12" style="text-align: right;"><!--search Form-->
+       		 <form action="" method="get" id="searchForm">
+       		 	<input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}" />
+       		 	<input type="hidden" name="amount" value="${pageDto.cri.amount}" />
+       		 	<select name="type" id="">
+       		 		<option value="">---------</option>
+       		 		<option value="T" <c:out value="${pageDto.cri.type == 'T'?'selected':''}"/>>제목</option>
+       		 		<option value="C" <c:out value="${pageDto.cri.type == 'C'?'selected':''}"/>>내용</option>
+       		 		<option value="R" <c:out value="${pageDto.cri.type == 'R'?'selected':''}"/>>분류</option>
+       		 		<option value="TC" <c:out value="${pageDto.cri.type == 'TC'?'selected':''}"/>>제목 or 내용</option>
+       		 		<option value="TW" <c:out value="${pageDto.cri.type == 'TW'?'selected':''}"/>>제목 or 분류</option>
+       		 		<option value="TCR" <c:out value="${pageDto.cri.type == 'TCR'?'selected':''}"/>>제목 or 내용 or 분류</option>
+       		 	</select>                     		 	
+       		 	
+       		 	<input type="text" name="keyword" id=""  value='<c:out value="${pageDto.cri.keyword}"/>'/>
+       		 	<button class="btn btn-default">Search</button>
+       		 </form>
+       	   </div>
+        	 </div>                             	 
+ 		 </div><!-- end search -->
+    
+		<div class="row" style="width:100%"> 
+			<ul class="contactus">
+				<li>[문의안내]</li>
+		    	<li>*&nbsp;게시물에&nbsp;대한&nbsp;문의는&nbsp;페이지&nbsp;상단의&nbsp;담당자&nbsp;및&nbsp;전화번호&nbsp;내용을&nbsp;참고하세요.
+		    	<br>
+				*&nbsp;고객상담센터&nbsp;국번없이&nbsp;1350(전화연결장애 문의 : 012-345-6789)&nbsp; </li>
+			</ul>
+		</div>
+		</div>
+       </div>
+      </div>
+    </div>
      
 
 <!-- 페이지 나누기를 위한 폼 -->     
