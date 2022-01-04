@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>
 <style>
     .test_obj input[type="radio"] {
@@ -50,15 +51,19 @@
 							readonly="readonly" value="${readdto.INFO_BNO }">
 					</div>
 					<div class="form-group">
-						<label>제목</label> <input class="form-control" name="INFO_TITLE" value="${readdto.INFO_TITLE}" >
+						<label>제목</label> <input class="form-control" name="INFO_TITLE" 
+							readonly="readonly" value="${readdto.INFO_TITLE}" >
 					</div>
 					<div class="form-group">
 						<label>내용</label>
-						<textarea class="form-control" rows="3" name="INFO_CONTENT" >${readdto.INFO_CONTENT}</textarea>
+						<textarea class="form-control" rows="3" name="INFO_CONTENT"
+							readonly="readonly" >${readdto.INFO_CONTENT}</textarea>
 					</div>	
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
-					<button type="submit" data-oper='modify' class="btn btn-info">수정완료</button>
-					<button type="submit" data-oper='remove' class="btn btn-danger">글삭제</button>
+					<!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
+					<sec:authorize access="hasRole('ROLE_ADMIN')" >
+					<button type="submit" data-oper='modify' class="btn btn-info">수정</button>
+					</sec:authorize>
 					<button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
 					</div>
 				</form>
@@ -79,4 +84,4 @@
 		<%-- 	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 		  <input type="hidden" name="writer" value="${dto.writer}" />  --%>
 </form>
-<script src="/resources/js/noticemodify.js"></script> 
+<script src="/resources/js/noticeread.js"></script> 

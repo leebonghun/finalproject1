@@ -64,7 +64,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="/resources/js/easing.js"></script>
 <script src="/resources/js/csclist.js"></script>
 <script src="/resources/js/noticelist.js"></script>
+
+
+
+
+
+
 <script src="/resources/sign-js/login.js">
+
+	
 
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -94,9 +102,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					<li><i class="fa fa-phone" aria-hidden="true"></i> (+82) 010-5232-2054     </li> 
 					<li>
-						<sec:authorize access="isAnonymous()" >
-							<button type="submit" id="login">로그인</button>
-							<button type="submit" id="signup">회원가입</button>
+
+						<sec:authorize access="isAnonymous()" > <!--이거 true면 로그아웃  -->
+						<button type="submit" id="login">로그인</button>
+						<button type="submit" id="signup">회원가입</button>
 						</sec:authorize>
 					
 						<sec:authorize access="isAuthenticated()" >                           
@@ -105,9 +114,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	                     <button type="submit" id="mypage">마이페이지</button>
 
                         </sec:authorize>
+
+						
+					</li>
+					
+
                         					</li>
+
 				</ul>
 
+			
+
+						
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -152,7 +170,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 				</section>
-			</div>
+			</div>        
 		</div>
 	</div>
 	<script>
