@@ -1,6 +1,5 @@
 @charset "UTF-8";
-
-/* 이벤트 화면 상단부분
+/* 스토어 화면 상단부분
 */
 .mt70 {
     margin-top: 70px!important;
@@ -11,7 +10,7 @@
     margin: 0 auto;
 }
 
-/* BBM Pick 부분
+/* BBM Goods & Ticket, Food 부분
 */
 .tit-util .tit {
     float: left;
@@ -74,7 +73,7 @@ li {
 * {
     box-sizing: border-box;
 }
-/* 영화
+/* 굿즈, 푸드 사진
 */
 .event-list ul li a {
     overflow: hidden;

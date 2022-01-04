@@ -1,48 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.company.mapper.NoticeMapper">
+<mapper namespace="com.company.mapper.NoticeMapper">    
 
 <!-- 고객센터글 select all -->
  <select id="listAll" resultType="com.company.domain.InfoDTO">
-	<!-- select InfoBno,InfoTitle,InfoContent,InfoRegdate,InfoUpdatedate,Info
- from Info_tbl -->
  
- 
- select INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
- from info_tbl
- 
+ 	<![CDATA[
+	 
+	 select INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
+	 from (select /*+INDEX_DESC(info_tbl SYS_C007695*/
+	 rownum rn,INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
+	 from info_tbl
+	 where
+	 ]]>
+	 
+	 <include refid="criteria"></include>
+	     		  
+	<![CDATA[
+	     		  rownum <= (#{pageNum} * #{amount}))
+			where rn > (#{pageNum}-1) * #{amount}
+	]]>  
 </select>
-
-<!-- 게시글 작성 -->
+	
+	<!-- select INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
+ 	from info_tbl order by INFO_BNO desc -->
+ 	<!-- 게시글 작성 -->
 	<insert id="insert">
 		<selectKey resultType="int" keyProperty="INFO_BNO" order="BEFORE">
 			select INFO_bno_seq.nextval from dual
 		</selectKey>
-		insert into info_tbl(INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
-		values(#{INFO_BNO},#{INFO_TITLE},#{INFO_CONTENT},sysdate)
+		insert into info_tbl(INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE)
+		values(#{INFO_BNO},#{INFO_RFI},#{INFO_TITLE},#{INFO_CONTENT},sysdate)
 		
 	</insert>
 	
+	<!-- 전체 게시물 수 -->
+	<select id="totalCnt" resultType="int">
+		select count(*)
+		from info_tbl
+		where 
+
+        <include refid="criteria"></include>
+		
+		INFO_BNO > 0 	
+	</select>
+	
+	
 	<!-- 게시글 하나 읽기 -->
 	<select id="read" resultType="com.company.domain.InfoDTO">
-		select INFO_BNO,INFO_TITLE,INFO_CONTENT,INFO_REGDATE,INFO_UPDATEDATE,INFO_CNT
-		from Info_tbl
+		select INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE,INFO_UPDATEDATE,INFO_CNT
+		from info_tbl
 		where INFO_BNO=#{INFO_BNO}
 	</select>
 	
 	<!-- 게시글 삭제 -->
 
-	<!-- <delete id="delete">
+	<delete id="delete">
 		delete from info_tbl where INFO_BNO=#{INFO_BNO}
 	</delete>
 	
-게시글 수정
+<!-- 게시글 수정 -->
 	<update id="update">
 		update info_tbl
 		set
-		INFO_TITLE=#{INFO_TITLE},INFO_CONTENT=#{INFO_CONTENT}
+		INFO_RFI=#{INFO_RFI},INFO_TITLE=#{INFO_TITLE},INFO_CONTENT=#{INFO_CONTENT}
 		where INFO_BNO=#{INFO_BNO}
-	</update>	 -->
+	</update>
+ 	
+ 	<sql id="criteria">
+			<trim prefix="(" suffix=") And " prefixOverrides="OR"> 
+			<foreach collection="typeArr" item="type">
+				<trim prefix="OR">
+					<choose>
+						<when test="type=='T'.toString()">
+							INFO_TITLE like '%'||#{keyword}||'%'
+						</when>
+						<when test="type=='C'.toString()">
+							INFO_CONTENT like '%'||#{keyword}||'%'
+						</when>
+						<when test="type=='R'.toString()">
+							INFO_RFI like '%'||#{keyword}||'%'
+						</when>
+					</choose>	
+				</trim>
+			</foreach>
+		</trim>	     		  
+	 </sql>
 	
 	
 </mapper>

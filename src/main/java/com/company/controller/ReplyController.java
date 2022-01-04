@@ -52,16 +52,6 @@ public class ReplyController {
 	}
 	
 
-//	@PreAuthorize("principal.username == #updateDto.replyer")
-//	@PutMapping("/{replyCd}")
-//	public ResponseEntity<String> update(@PathVariable int replyCd, @RequestBody MovieReplyDTO updateDto) {
-//
-//		// updateDto 세팅하기
-//		updateDto.setRno(replyCd);
-//
-//		return service.updateReply(updateDto) ? new ResponseEntity<String>("success", HttpStatus.OK)
-//				: new ResponseEntity<String>("fail", HttpStatus.BAD_REQUEST);
-//	}
 //	@PreAuthorize("principal.username == #reply.replyer")
 //	@DeleteMapping("/{rno}")
 //	public ResponseEntity<String> delete(@PathVariable int rno,@RequestBody MovieReplyDTO reply) {
@@ -70,15 +60,7 @@ public class ReplyController {
 //				: new ResponseEntity<String>("fail", HttpStatus.BAD_REQUEST);
 //	}
 
-//	@GetMapping("/pages/{bno}/{page}")
-//	public ResponseEntity<List<ReplyDTO>> list(@PathVariable int bno,@PathVariable int page) {
-//		log.info("댓글전체가져오기");
-//		
-//		Criteria cri = new Criteria(page,10);
-//		
-//		return new ResponseEntity<List<ReplyDTO>>(service.list(cri,bno), HttpStatus.OK);
-//
-//	}
+	
 	//페이지 나누기 댓글 처리 
 	@GetMapping("/pages/{movieCD}/{page}")
 	public ResponseEntity<ReplyPageDTO> list(@PathVariable int movieCD,@PathVariable int page) {
@@ -88,5 +70,15 @@ public class ReplyController {
 		
 		return new ResponseEntity<ReplyPageDTO>(service.list(cri,movieCD), HttpStatus.OK);
 		
+	}
+	@PreAuthorize("principal.username == #updateDto.replyer")
+	@PutMapping("/{replyCd}")
+	public ResponseEntity<String> update(@PathVariable int replyCd, @RequestBody MovieReplyDTO updateDto) {
+
+		// updateDto 세팅하기
+		updateDto.setReplyCd(replyCd);
+
+		return service.updateReply(updateDto) ? new ResponseEntity<String>("success", HttpStatus.OK)
+				: new ResponseEntity<String>("fail", HttpStatus.BAD_REQUEST);
 	}
 }

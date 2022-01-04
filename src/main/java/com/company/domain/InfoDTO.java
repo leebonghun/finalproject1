@@ -16,6 +16,7 @@ import lombok.ToString;
 public class InfoDTO {
 	private int INFO_BNO;
 	private String INFO_TITLE;
+	private String INFO_RFI;
 	private String INFO_CONTENT;
 	private Date INFO_REGDATE;
 	private Date INFO_UPDATEDATE;

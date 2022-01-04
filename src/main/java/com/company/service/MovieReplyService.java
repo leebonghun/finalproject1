@@ -9,9 +9,10 @@ import com.company.domain.ReplyPageDTO;
 public interface MovieReplyService {
 	public boolean insertReply(MovieReplyDTO replyDto);
 	
-	public MovieReplyDTO getRow(int movieCD);
+	public MovieReplyDTO getRow(int replyCd);
 	
 	public ReplyPageDTO list(Criteria cri, int movieCD	);
 	
+	public boolean updateReply(MovieReplyDTO updateDto);
 
 }
