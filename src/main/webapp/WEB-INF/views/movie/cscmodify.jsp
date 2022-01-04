@@ -26,8 +26,8 @@
 <div style="margin-left: 100px; margin-right: 100px;">
 <div class="row">
 	<div class="col-lg-12">
-		<div class="panel panel-default">
-		<form action="" method="post" role="form">
+	<form action="" method="post" role="form">
+		<div class="panel panel-default">		
 		 <div class="form-group" style="margin-left: 25px; margin-top:25px  ">
 			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
@@ -55,9 +55,15 @@
 						<textarea class="form-control" rows="3" name="CSC_CONTENT" >${readdto.CSC_CONTENT }</textarea>
 					</div>	
 					<input type="hidden" name="CSC_CHECK" value=${readdto.CSC_CHECK }>				
-					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+					 
+					<sec:authentication property="principal" var="info"/>
+						<sec:authorize access="isAuthenticated()">
+						<c:if test="${info.username == readdto.user_id }">
 					<button type="submit" data-oper='modify' class="btn btn-info">수정완료</button>
 					<button type="submit" data-oper='remove' class="btn btn-danger">글삭제</button>
+					</c:if>
+					</sec:authorize>
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 					<button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
 					</div>
 				</form>
@@ -68,15 +74,23 @@
 
 <%-- remove와 list를 위한 폼--%>
 <form action="" id="actionForm">
-	<%-- <input type="hidden" name="pageNum" value="${cri.pageNum }"> <input
+	 <input type="hidden" name="pageNum" value="${cri.pageNum }"> <input
 		type="hidden" name="amount" value="${cri.amount }">
 		<input type="hidden" name="type" value="${cri.type}">
-	<input type="hidden" name="keyword" value="${cri.keyword}"> --%>
+	<input type="hidden" name="keyword" value="${cri.keyword}"> 
 		 <input type="hidden" name="CSC_BNO" value="${readdto.CSC_BNO } ">
-		 
+	 
 	 <%--시큐리티 적용으로 인한 추가 --%>
-		<%-- 	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
-		  <input type="hidden" name="writer" value="${dto.writer}" />  --%>
-</form>
+			  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+		  <input type="hidden" name="user_id" value="${readdto.user_id}" /> 
+</form>	
+<script type="text/javascript">
+	//헌재 글 번호 가져오기
+	let CSC_BNO = ${dto.CSC_BNO};
+	
+	//토큰값 설정
+	let csrfHeaderName = "${_csrf.headerName}";
+	let csrfTokenValue = "${_csrf.token}";
+</script>
 <script src="/resources/js/cscmodify.js"></script> 
  <%@include file="../includes/footer.jsp"%> 

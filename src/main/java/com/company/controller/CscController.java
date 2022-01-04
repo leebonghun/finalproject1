@@ -9,6 +9,7 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -53,7 +54,7 @@ public class CscController {
 	}
 	
 	
-		
+	@PreAuthorize("isAuthenticated()")
 	@GetMapping("cscinsert")
 	public void cscinsert() {
 		log.info("고객센터글작성으로 이동중입니다.");
@@ -75,9 +76,9 @@ public class CscController {
 //		rttr.addFlashAttribute("result", insertDto.getCSC_BNO());
 //		return "redirect:/movie/csclist";
 //	}
-	
+	@PreAuthorize("isAuthenticated()")
 	@PostMapping("/cscinsert")
-	public String cscinsertPost(CscDTO insertDto) {
+	public String cscinsertPost(CscDTO insertDto, RedirectAttributes rttr) {
 		log.info("register 가져오기" + insertDto);
 
 		// 첨부파일 확인하기
@@ -86,14 +87,14 @@ public class CscController {
 //		}
 
 		cscService.register(insertDto);
-
+		rttr.addFlashAttribute( insertDto.getCSC_BNO());
 		// log.info("bno"+insertDto.getBno());
 		
 		return "redirect:/movie/csclist";
 	}
 	
-	@GetMapping({ "cscread", "cscmodify" })
-	public void cscread(int CSC_BNO, Model model) {
+	@GetMapping({ "/cscread", "/cscmodify" })
+	public void cscread(int CSC_BNO, @ModelAttribute("cri") Criteria cri, Model model) {
 		log.info("고객센터글으로 이동중입니다.");
 
 
@@ -105,8 +106,8 @@ public class CscController {
 	
 	
 	@PostMapping("cscmodify")
-	public String modify(CscDTO modifyDto) {
-		log.info("게시글 수정" + modifyDto );
+	public String modify(CscDTO modifyDto, Criteria cri, RedirectAttributes rttr) {
+		log.info("게시글 수정" + modifyDto+ "" + cri );
 
 		
 		
@@ -114,7 +115,14 @@ public class CscController {
 		
 		// 수정완료후 list로 이동
 		cscService.update(modifyDto);
+		// 페이지 나누기 값
+				rttr.addAttribute("pageNum", cri.getPageNum());
+				rttr.addAttribute("amount", cri.getAmount());
+				// 검색 값
+				rttr.addAttribute("type", cri.getType());
+				rttr.addAttribute("keyword", cri.getKeyword());
 
+				rttr.addFlashAttribute("result", "success");
 		
 		
 
@@ -123,7 +131,7 @@ public class CscController {
 	}
 	
 	@PostMapping("cscread")
-	public String modify2(CscDTO modifyDto2) {
+	public String modify2(CscDTO modifyDto2, Criteria cri, RedirectAttributes rttr) {
 		log.info("답글 입력" + modifyDto2 );
 
 		
@@ -131,9 +139,16 @@ public class CscController {
 		
 		
 		// 수정완료후 list로 이동
-		cscService.update(modifyDto2);
+		cscService.update2(modifyDto2);
 
-		
+		// 페이지 나누기 값
+		rttr.addAttribute("pageNum", cri.getPageNum());
+		rttr.addAttribute("amount", cri.getAmount());
+		// 검색 값
+		rttr.addAttribute("type", cri.getType());
+		rttr.addAttribute("keyword", cri.getKeyword());
+
+		rttr.addFlashAttribute("result", "success");
 		
 
 		
@@ -147,7 +162,7 @@ public class CscController {
 	
 	
 	@PostMapping("remove")
-	public String removePost(int CSC_BNO ) {
+	public String removePost(int CSC_BNO,String user_id ,Criteria cri, RedirectAttributes rttr ) {
 		log.info("게시글 삭제" + CSC_BNO);
 
 //		// 첨부파일 목록 얻어오기
@@ -159,14 +174,14 @@ public class CscController {
 			//첨부 폴더 파일 삭제
 //			deleteFiles(attachList);
 //			// 페이지 나누기 값
-//			rttr.addAttribute("pageNum", cri.getPageNum());
-//			rttr.addAttribute("amount", cri.getAmount());
+		rttr.addAttribute("pageNum", cri.getPageNum());
+			rttr.addAttribute("amount", cri.getAmount());
 //
 //			// 검색 값
-//			rttr.addAttribute("type", cri.getType());
-//			rttr.addAttribute("keyword", cri.getKeyword());
+			rttr.addAttribute("type", cri.getType());
+			rttr.addAttribute("keyword", cri.getKeyword());
 //
-//			rttr.addFlashAttribute("result", "success");
+		rttr.addFlashAttribute("result", "success");
 //		}
 
 		return "redirect:/movie/csclist";

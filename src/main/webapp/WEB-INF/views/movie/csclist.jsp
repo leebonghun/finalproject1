@@ -163,9 +163,9 @@
 					<c:forEach var="cscDto" items="${list}">
 						<tr class="table-active">
 							<th scope="row">${cscDto.CSC_BNO}</th>
-							<td>${cscDto.CSC_RFI}</td>
+							<td>${cscDto.CSC_RFI}</td>										
 							<td><a class="move" href= "${cscDto.CSC_BNO}">${cscDto.CSC_TITLE}
-							</a></td>
+							</a></td>							
 							<td>${cscDto.CSC_CHECK}</td>
 							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${cscDto.CSC_REGDATE}"/></td>
 
@@ -208,6 +208,7 @@
 									<c:out value="${pageDto.cri.amount==40?'selected':'' }"/>>40</option>
 							</select>
 						</div>
+							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 					</div>
 				</div>		
 			</div>
@@ -255,6 +256,9 @@
 	<input type="hidden" name="CSC_BNO" value="">
 	
 </form>
+<%--시큐리티 적용으로 인한 추가 --%>
+			  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+		  <input type="hidden" name="user_id" value="${readdto.user_id}" /> 
 <!-- 스크립트 -->
 <script>
 	let result = '${result}';
