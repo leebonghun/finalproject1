@@ -35,8 +35,6 @@ public class NoticeServiceImpl implements NoticeService {
 	}
 
 
-
-
 	@Override
 	public boolean update(InfoDTO updateDto) {
 		boolean modifyResult = noticeMapper.update(updateDto) == 1;

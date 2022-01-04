@@ -49,7 +49,7 @@
 	<!-- 게시글 하나 읽기 -->
 	<select id="read" resultType="com.company.domain.InfoDTO">
 		select INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE,INFO_UPDATEDATE,INFO_CNT
-		from Info_tbl
+		from info_tbl
 		where INFO_BNO=#{INFO_BNO}
 	</select>
 	
