@@ -231,6 +231,8 @@ CREATE TABLE REPLY_TBL
 	PRIMARY KEY (replyCd)
 );
 
+alter table reply_tbl add (updateDate date DEFAULT SYSDATE)
+
 select * from reply_tbl;
 
 insert into reply_tbl(replyCd,replyer,replyDate,replyContent,movieCD) values(seq_reply.nextval,'kk12345',sysdate,'하하하하',20210028);
@@ -239,6 +241,8 @@ select * from reply_tbl;
 
 
 create index idx_replys on reply_tbl(movieCD desc, replyCd asc);
+
+select *from idx_replys;
 alter table reply_tbl add(key_code varchar2(100));
 alter table reply_tbl drop column key_code;
 
@@ -291,11 +295,13 @@ CREATE TABLE USER_TBL
 	PRIMARY KEY (USER_ID)
 );
 
-select replyCd,movieCD,replyContent,replyer,replyDate 
-from(select /*+INDEX(reply_tbl idx_replys)*/rownum rn,replyCd,movieCD,replyContent,replyer,replyDate from reply_tbl where movieCD =20210028 and replyCd>0 and rownum<=10)
-where rn >1;
+select replyCd,movieCD,replyContent,replyer,replyDate ,updateDate
+from(select /*+INDEX(reply_tbl idx_replys)*/rownum rn,replyCd,movieCD,replyContent,replyer,replyDate ,updateDate from reply_tbl where movieCD =20210028 and replyCd>0 and rownum<=10)
+where rn >1 order by updateDate desc ;
 
+delete from REPLY_TBL;
 
+select* from reply_tbl;
 
 alter table user_tbl modify(USER_PASSWORD varchar2(100));
 
@@ -555,3 +561,4 @@ select * from REPLY_TBL;
 
 select rank,poster,key,movieNM,actors,showTM,genres,watchGradeNm,nationNm,companyNm,openDt,movieCD from movie_board where movieCD = 20210028;
 
+update MOVIE_BOARD set movieNM = '스파이더맨노웨이홈' where rank = 'No.1';

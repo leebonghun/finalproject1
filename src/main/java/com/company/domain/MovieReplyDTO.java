@@ -18,4 +18,5 @@ public class MovieReplyDTO {
 	private Date replyDate;
 	private String replyContent;
 	private int movieCD;
+	private Date updateDate;
 }

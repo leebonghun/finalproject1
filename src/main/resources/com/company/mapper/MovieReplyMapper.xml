@@ -15,16 +15,17 @@
 	<!-- bno가 일치하는 댓글 가져오기  -->
 	<select  id="list" resultType="com.company.domain.MovieReplyDTO">
 		<![CDATA[
-		select replyCd,replyer,replyDate,replyContent,movieCD 
-		from(select /*+INDEX(reply_tbl idx_replys)*/rownum rn,replyCd,movieCD,replyContent,replyer,replyDate from reply_tbl where movieCD =#{movieCD} and replyCd>0 and rownum<= #{cri.pageNum}* #{cri.amount})
-		where rn > (#{cri.pageNum}-1) * #{cri.amount}
+		select replyCd,replyer,replyDate,replyContent,movieCD,updateDate
+		from(select /*+INDEX(reply_tbl idx_replys)*/rownum rn,replyCd,movieCD,replyContent,replyer,replyDate,updateDate from reply_tbl where movieCD =#{movieCD} and replyCd>0 and rownum<= #{cri.pageNum}* #{cri.amount})
+		where rn > (#{cri.pageNum}-1) * #{cri.amount} order by updateDate DESC
 		]]>
 	</select>
+	
+	
 
 	<update id="updateReply">
-		update reply_tbl set replyContent = #{replyContent} , updatedate=sysdate where replyCd=#{replyCd}
+		update reply_tbl set replyContent = #{replyContent} ,updateDate = sysdate where replyCd=#{replyCd}
 		
-	
 	</update>
 
 	

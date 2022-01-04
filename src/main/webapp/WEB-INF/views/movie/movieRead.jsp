@@ -104,7 +104,7 @@
 	</div><!-- col-lg-12 close -->
 </div><!-- row close -->  
 <!-- 댓글 작성 폼  -->
-<div class="modal" tabindex="-1" id="replyModal">
+ <div class="modal" tabindex="-1" id="replyModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -120,7 +120,7 @@
         </div>
         <div class="form-group">
         	<label for="">작성자</label>
-        	<input type="text" name="replyer" class="form-control" value="<sec:authentication property="principal.username"/>"/>
+        	<input type="text" name="replyer" class="form-control" value="작성자"/>"/>
         </div>
         <div class="form-group">
         	<label for="">작성일</label>
@@ -136,10 +136,9 @@
       </div>
     </div>
   </div>
-</div>
+</div> 
 
-
-
+ 		
 
 <!-- 페이지 나누기를 위한 form -->            
 <form action="" id="actionForm">
