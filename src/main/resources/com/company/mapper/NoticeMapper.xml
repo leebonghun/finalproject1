@@ -63,7 +63,7 @@
 	<update id="update">
 		update info_tbl
 		set
-		INFO_RFI=#{INFO_RFI},INFO_TITLE=#{INFO_TITLE},INFO_CONTENT=#{INFO_CONTENT}
+		INFO_TITLE=#{INFO_TITLE},INFO_CONTENT=#{INFO_CONTENT}
 		where INFO_BNO=#{INFO_BNO}
 	</update>
  	

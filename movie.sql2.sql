@@ -544,6 +544,7 @@ create index idx_reply on movie_reply(bno desc, rno asc);
 
 alter table user_tbl add(replyCnt number default 0);
 
+ TRUNCATE table CSC_TBL;
 
 
 create table comment_reply(

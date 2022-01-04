@@ -8,10 +8,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="/resources/js/csclist.js"></script>
+<script src="/resources/css/bootstrap.css"></script>
+<script src="/resources/css/csclist.css"></script>
 
 </head>
 <body>
-	<div style="margin-left: 100px;" class="jumbotron">
+	<div style="margin-left: 100px; margin-right: 100px;" >
 		<h2 class="h1" style="color: black;">
 			<img src="/resources/images/cscicon.png" style="height: 50px;" /> 고객
 			센터
@@ -28,7 +30,8 @@
 							<h4 class="panel-title asd">
 								<a class="pa_italic" role="button" data-toggle="collapse"
 									data-parent="#accordion" href="#collapseOne"
-									aria-expanded="true" aria-controls="collapseOne"> <span
+									aria-expanded="false" aria-controls="collapseOne">
+									 <span
 									class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
 									class="glyphicon glyphicon-minus" aria-hidden="true"></i>분실물
 								</a>
@@ -142,56 +145,125 @@
 				<div class="panel-body" >
 			<div>
 				<div>
-					<button type="button" class="btn btn-info"
-						onclick="location.href='/movie/cscinsert'">글쓰기</button>
+					<button type="button" class="btn btn-info"				
+						onclick="location.href='/movie/cscinsert'" style="margin-bottom: 10px">글쓰기</button>					
 				</div>
-
 			</div>
-
-			<table class="table table-hover" id=csctbl>
-				<thead>
-					<tr>
-						<th scope="col">글번호</th>
-						<th scope="col">사유</th>
-						<th scope="col">제목</th>
-						<th scope="col">접수상태</th>
-						<th scope="col">등록일</th>
+			<table class="table" id=csctbl>
+				<thead >
+					<tr style="background-color: black;" >
+						<th scope="col"  style="color: white;">글번호</th>
+						<th scope="col"style="color: white;">사유</th>
+						<th scope="col"style="color: white;">제목</th>
+						<th scope="col"style="color: white;">접수상태</th>
+						<th scope="col"style="color: white;">등록일</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="cscDto" items="${list}">
 						<tr class="table-active">
 							<th scope="row">${cscDto.CSC_BNO}</th>
-							<td>${cscDto.CSC_RFI}</td>
-							<td><a href="cscread?CSC_BNO=${cscDto.CSC_BNO}">${cscDto.CSC_TITLE}
-							</a></td>
+							<td>${cscDto.CSC_RFI}</td>										
+							<td  id="tit"><a class="move"    href= "${cscDto.CSC_BNO}">${cscDto.CSC_TITLE} 
+							</a></td>							
 							<td>${cscDto.CSC_CHECK}</td>
-
-							<td>${cscDto.CSC_REGDATE}</td>
+							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${cscDto.CSC_REGDATE}"/></td>
 
 
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
-		</div>
+		<div class="row">
+			<!-- start search -->
+					<div class="col-md-12">
+						<div class="col-md-8">
+							<!--search Form-->
+							<form action=" " method="get" id="searchForm">
+							<input type="hidden" name="pageNum" value="${pageDto.cri.pageNum }">
+								<input type="hidden" name="amount" value="${pageDto.cri.amount }">
+								<select name="type" id="">
+									<option value="">-----</option>
+									<option value="T"<c:out value="${pageDto.cri.type=='T'?'selected':'' }"/>>제목</option>
+									<option value="C"<c:out value="${pageDto.cri.type=='C'?'selected':'' }"/>>내용</option>
+									<option value="R"<c:out value="${pageDto.cri.type=='R'?'selected':'' }"/>>사유</option>
+									<option value="TC"<c:out value="${pageDto.cri.type=='TC'?'selected':'' }"/>>제목 or 내용</option>
+									<option value="TR"<c:out value="${pageDto.cri.type=='TR'?'selected':'' }"/>>제목 or 사유</option>
+									<option value="TCR"<c:out value="${pageDto.cri.type=='TCR'?'selected':'' }"/>>제목 or 내용 or 사유</option>
+								</select> 
+								<input type="text" name="keyword" id="" value='<c:out value="${pageDto.cri.keyword }"/>'>
+								<button class="btn btn-default">검색</button>
+							</form>
+						</div>
+						<div class="col-md-2 col-md-offset-2">
+							<!--페이지 목록 갯수 지정하는 폼-->
+							<select name="" id="amount" class="form-control">
+								<option value="10"
+									<c:out value="${pageDto.cri.amount==10?'selected':'' }"/>>10</option>
+								<option value="20"
+									<c:out value="${pageDto.cri.amount==20?'selected':'' }"/>>20</option>
+								<option value="30"
+									<c:out value="${pageDto.cri.amount==30?'selected':'' }"/>>30</option>
+								<option value="40"
+									<c:out value="${pageDto.cri.amount==40?'selected':'' }"/>>40</option>
+							</select>
+						</div>
+							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+					</div>
+				</div>		
 			</div>
 			
 		</div>
+
+		
+			<div class="text-center">
+
+
 		<!-- //faq-banner -->
 		<div>
-			<ul class="pagination pagination-lg">
-				<li class="disabled"><a href="#"><i
-						class="fa fa-angle-left">«</i></a></li>
-				<li class="active"><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#"><i class="fa fa-angle-right">»</i></a></li>
-			</ul>
+<!-- start Pagination -->
+				<div class="text-center">
+					<ul class="pagination">
+						<c:if test="${pageDto.prev }">
+							<li class="paginate_button previous"><a
+								href="${pageDto.startPage-10 }">Previous</a></li>
+						</c:if>
+						<c:forEach var="idx" begin="${pageDto.startPage }"
+							end="${pageDto.endPage }">
+							<li
+								class="paginate_button ${pageDto.cri.pageNum==idx?'active':'' }">
+								<a href="${idx }">${idx }</a>
+							</li>
+						</c:forEach>
+						<c:if test="${pageDto.next }">
+							<li class="paginate_button next"><a
+								href="${pageDto.endPage+1 }">Next</a></li>
+						</c:if>
+					</ul>
+				</div>
+				<!-- end Pagination -->
+			
 		</div>
 	</div>
+	</div>
+	</div>
+	<!--  페이지 나누기를 위한 폼 -->
+<form action="" method="get" id="actionForm">
+	<input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}">
+	<input type="hidden" name="amount" value="${pageDto.cri.amount}">
+	<input type="hidden" name="type" value="${pageDto.cri.type}">
+	<input type="hidden" name="keyword" value="${pageDto.cri.keyword}">
+	<input type="hidden" name="CSC_BNO" value="">
+	
+</form>
+<%--시큐리티 적용으로 인한 추가 --%>
+			  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+		  <input type="hidden" name="user_id" value="${readdto.user_id}" /> 
+<!-- 스크립트 -->
+<script>
+	let result = '${result}';
+</script>
+
 </body>
 </html>
 <%@include file="../includes/footer.jsp"%>

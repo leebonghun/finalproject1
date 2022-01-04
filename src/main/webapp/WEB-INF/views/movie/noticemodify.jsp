@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@include file="../includes/header.jsp" %>   
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@include file="../includes/header.jsp" %>   
     
       
 <style>
@@ -32,14 +33,11 @@
 		<form action="" method="post" role="form">
 		 <div class="form-group" style="margin-left: 25px; margin-top:25px  "></div>
 			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
-			</form>
-			</div>
-    </div>
+			
 			<!-- /.panel-heading -->
 			<div class="panel-body">
 				<div class="form-group">
-						<label>글번호</label> <input class="form-control" name="INFO_BNO"
-							readonly="readonly" value="${readdto.INFO_BNO }">
+						<label>글번호</label> <input class="form-control" name="INFO_BNO" readonly="readonly" value="${readdto.INFO_BNO }">
 					</div>
 				
 					<div class="form-group">
@@ -48,13 +46,18 @@
 					<div class="form-group">
 						<label>내용</label>
 						<textarea class="form-control" rows="3" name="INFO_CONTENT" >${readdto.INFO_CONTENT }</textarea>
-					</div>	
-					<input type="hidden" name="INFO_CHECK" value=${readdto.INFO_CHECK }>				
+					</div>				
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+					<!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
+					<sec:authorize access="hasRole('ROLE_ADMIN')" >
 					<button type="submit" data-oper='modify' class="btn btn-info">수정완료</button>
 					<button type="submit" data-oper='remove' class="btn btn-danger">글삭제</button>
+					</sec:authorize>			
 					<button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
-					</div>
+				</div>
+    		</form>
+			</div>
+    		</div>
 			</div>
 		</div>
 
@@ -67,11 +70,10 @@
 		type="hidden" name="amount" value="${cri.amount }">
 		<input type="hidden" name="type" value="${cri.type}">
 	<input type="hidden" name="keyword" value="${cri.keyword}"> --%>
-		 <input type="hidden" name="INFO_BNO" value="${readdto.INFO_BNO } ">
+	 <input type="hidden" name="INFO_BNO" value="${readdto.INFO_BNO } ">
 		 
 	 <%--시큐리티 적용으로 인한 추가 --%>
-		<%-- 	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
-		  <input type="hidden" name="writer" value="${dto.writer}" />  --%>
+	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+	  <input type="hidden" name="writer" value="${dto.writer}" /> 
 </form>
 <script src="/resources/js/noticemodify.js"></script> 
-<%-- <%@include file="../includes/footer.jsp"%> --%>
