@@ -9,6 +9,7 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,15 +34,16 @@ public class NoticeController {
 	@Autowired
 	private NoticeService noticeService;
 	
-		
+	@PreAuthorize("isAuthenticated()")
 	@GetMapping("/noticeinsert")
-	public void registerGet() {
+	public void insertGet() {
 		log.info("notice 폼 요청");
 		//return "/movie/noticeinsert";
 	}
 	
+	@PreAuthorize("isAuthenticated()")
 	@PostMapping("/noticeinsert")
-	public String registerPost(InfoDTO insertDto, RedirectAttributes rttr) {
+	public String insertPost(InfoDTO insertDto, RedirectAttributes rttr) {
 		log.info("register 가져오기" + insertDto);
 
 		// 첨부파일 확인하기
@@ -57,18 +59,18 @@ public class NoticeController {
 	
 
 	// 전체 리스트 조회
-		@GetMapping("/noticelist")
-		public void noticelist(Model model,Criteria cri) { //객체 생성구문
-			log.info("전체 리스트 요청 "+cri);
+	@GetMapping("/noticelist")
+	public void noticelist(Model model,Criteria cri) { //객체 생성구문
+		log.info("전체 리스트 요청 "+cri);
 
-			List<InfoDTO> list = noticeService.getList(cri);
+		List<InfoDTO> list = noticeService.getList(cri);
+	
+		//페이지 나누기를 위한 정보 얻기
+		int totalCnt = noticeService.getTotalCount(cri);
 		
-			//페이지 나누기를 위한 정보 얻기
-			int totalCnt = noticeService.getTotalCount(cri);
-			
-			model.addAttribute("pageDto", new PageDTO(cri, totalCnt));
-			model.addAttribute("list", list);
-		}
+		model.addAttribute("pageDto", new PageDTO(cri, totalCnt));
+		model.addAttribute("list", list);
+	}
 	
 	
 	// 특정 번호 조회
@@ -84,8 +86,9 @@ public class NoticeController {
 	}
 	
 	// /noticemodify/post
+	@PreAuthorize("principal.username == #modifyDto.writer")
 	@PostMapping("/noticemodify")
-	public String modify(InfoDTO modifyDto, Criteria cri, RedirectAttributes rttr) {
+	public String modifyPost(InfoDTO modifyDto, Criteria cri, RedirectAttributes rttr) {
 		log.info("게시글 수정" +modifyDto+" "+cri);
 
 		// 수정완료후 list로 이동
