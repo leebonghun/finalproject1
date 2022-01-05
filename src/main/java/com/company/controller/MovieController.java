@@ -82,7 +82,7 @@ public class MovieController {
 	}
 	
 	
-	@GetMapping("event")
+	@GetMapping("eventlist")
 	public void event() {
 		log.info("이벤트로 이동중입니다.");
 	}

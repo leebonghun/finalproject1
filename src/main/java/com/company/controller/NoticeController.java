@@ -3,11 +3,6 @@ package com.company.controller;
 
 import java.util.List;
 
-
-
-
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -19,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.company.domain.Criteria;
-import com.company.domain.CscDTO;
 import com.company.domain.InfoDTO;
 import com.company.domain.PageDTO;
 import com.company.service.NoticeService;

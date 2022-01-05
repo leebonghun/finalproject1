@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.mapper.EventMapper">
+
+
+
+<!-- 게시글 하나 가져오기 -->
+<select id="read" resultType="com.company.domain.EventDTO">
+	select EVENT_BNO,EVENT_TITLE,EVENT_CONTENT,EVENT_REGDATE
+	from event_tbl
+	where EVENT_BNO=#{EVENT_BNO}
+</select>
+
+
+</mapper>

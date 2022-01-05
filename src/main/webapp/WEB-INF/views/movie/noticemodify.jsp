@@ -71,9 +71,10 @@
 		<input type="hidden" name="type" value="${cri.type}">
 	<input type="hidden" name="keyword" value="${cri.keyword}"> --%>
 	
+	 <!-- admin9로 작성한 글을 넘겨주는것 -->
 	 <input type="hidden" name="INFO_BNO" value="${readdto.INFO_BNO } ">
 		 
-	 <%--시큐리티 적용으로 인한 추가 --%>
+	 <%--시큐리티 적용으로 인한 추가 --%> <!-- 토큰값 => 끌고 다니는 거  -->
 	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 	  <input type="hidden" name="writer" value="${dto.writer}" /> 
 </form>

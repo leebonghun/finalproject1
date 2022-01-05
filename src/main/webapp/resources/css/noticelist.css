@@ -1,5 +1,6 @@
 @charset "UTF-8";
-
+/* 하단 부분 전체 디자인
+*/
 li {
     list-style: none;
     display: list-item;

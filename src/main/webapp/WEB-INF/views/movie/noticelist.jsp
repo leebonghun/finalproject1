@@ -28,7 +28,7 @@
 					<p>총 게시글 : 
 						<span class="red bold" style="color: red;">30</span>
 						건
-					</p>g
+					</p>
 					
 			<div class="row" style="width:100%">			
 	            <table class="table table-hover" id="dtotbl">

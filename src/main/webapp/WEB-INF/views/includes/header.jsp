@@ -207,7 +207,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="reserve">예매</a></li>
 							<li><a href="store">스토어</a></li>
 							<li><a href="noticelist">공지사항</a></li>
-							<li><a href="event">이벤트</a></li>
+							<li><a href="eventlist">이벤트</a></li>
 							<li><a href="csclist">고객센터</a></li>
 						</ul>
 					</nav>
