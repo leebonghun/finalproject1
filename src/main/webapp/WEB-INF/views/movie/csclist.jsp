@@ -22,6 +22,7 @@
 
 		<div class="faq">
 			<h4 class="latest-text w3_faq_latest_text w3_latest_text">FAQ</h4>
+			
 			<div class="container">
 				<div class="panel-group w3l_panel_group_faq" id="accordion"
 					role="tablist" aria-multiselectable="true" >
@@ -33,7 +34,7 @@
 									aria-expanded="false" aria-controls="collapseOne">
 									 <span
 									class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
-									class="glyphicon glyphicon-minus" aria-hidden="true"></i>분실물
+									class="glyphicon glyphicon-minus" aria-hidden="true"></i><img src="/resources/images/분실물.png" style="height: 30px;" />분실물
 								</a>
 							</h4>
 						</div>
@@ -42,6 +43,7 @@
 							<div class="panel-body panel_text">분실물은 본점의 안내데스크에서도 문의가
 								가능하며 또한 해당 게시판을 통하여 문의하실 수 있습니다. 분실물은 최대 7일동안 보관하며 아무 문의가 없는 경우
 								7일후 파기되며 본사는 이에 아무 책임이 없음을 알려드립니다.</div>
+								
 						</div>
 					</div>
 					<div class="panel panel-default">
@@ -52,16 +54,59 @@
 									href="#collapseTwo" aria-expanded="false"
 									aria-controls="collapseTwo"> <span
 									class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
-									class="glyphicon glyphicon-minus" aria-hidden="true"></i>대관 및
+									class="glyphicon glyphicon-minus" aria-hidden="true"></i><img src="/resources/images/사람들.png" style="height: 30px;" />대관 및
 									단체관람
 								</a>
 							</h4>
 						</div>
 						<div id="collapseTwo" class="panel-collapse collapse"
 							role="tabpanel" aria-labelledby="headingTwo">
-							<div class="panel-body panel_text">단체 관림 및 대관문의를 원하시는 경우
+							<div class="panel-body panel_text">
+							대관안내<hr>
+							<ol style="list-style-type:decimal"  start="1">
+								<li>
+								1회 대관은 2시간을 최소 기준으로 합니다.
+								</li>
+								<li>
+								대관관람료의 금액은 부가세 10% 포함하기 전 금액입니다.
+								</li>								
+							</ol>
+							단체관람 안내<hr>
+							<ol style="list-style-type:decimal"  start="1">
+								<li>
+								단체관람은 관람인원이 15인 이상시 적용 가능합니다.
+								</li>
+								<li>
+								현재 상영관에서 상영중인 영화를 기준으로 신청 가능합니다.
+								</li>								
+							</ol>
+							안내사항<hr>
+							<ol style="list-style-type:decimal"  start="1">
+								<li>
+								사전에 전화나 고겍센터 게시글로 일정과 대관 가능 여부를 확인하시기 바랍니다.
+								</li>
+								<li>
+								사전에 협의 및 허가되지 않은 시설 사용은 진행할 수 없습니다.
+								</li>
+								<li>
+								행사장 내부 구조변경(책상/의자 등) 시 원상복구를 원칙으로 합니다.
+								</li>
+								<li>
+								공간의 장비 및 시설물 파손 시 그에 대한 배상 책임이 있습니다.
+								</li>
+								<li>
+								대관료는 계약체결 후 대관일 이틀 전까지 입금 또는 결제하여야 합니다.
+								</li>
+								<li>
+							6시간 이상 대관 혹은 종일 대관시 별도의 금액을 책정합니다.
+								</li>								
+							</ol>
+							
+							단체 관림 및 대관문의를 원하시는 경우
 								고객센터에 대관일,관람할 영화,관람인원,이름,연락처,이메일을 적어 글을 남겨주시면 하루안에 답변해드립니다.혹은 고객
-								센터 전화서비스를 통하여 문의 하실수도 있습니다. 고객센터:02-1234-5678</div>
+								센터 전화서비스를 통하여 문의 하실수도 있습니다.
+								
+								</div>
 						</div>
 					</div>
 					<div class="panel panel-default">
@@ -72,22 +117,42 @@
 									href="#collapseThree" aria-expanded="false"
 									aria-controls="collapseThree"> <span
 									class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
-									class="glyphicon glyphicon-minus" aria-hidden="true"></i>예매 환불
-									및 취소
+									class="glyphicon glyphicon-minus" aria-hidden="true"></i><img src="/resources/images/환불.png" style="height: 30px;" />예매/환불
+									/취소
 								</a>
 							</h4>
 						</div>
 						<div id="collapseThree" class="panel-collapse collapse"
 							role="tabpanel" aria-labelledby="headingThree">
-							<div class="panel-body panel_text">Neque porro quisquam
-								est, qui dolorem ipsum quia dolor sit amet, consectetur,
-								adipisci velit, sed quia non numquam eius modi tempora incidunt
-								ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
-								ad minima veniam, quis nostrum exercitationem ullam corporis
-								suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-								Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-								esse quam nihil molestiae consequatur, vel illum qui dolorem eum
-								fugiat quo voluptas nulla pariatur.</div>
+							<div class="panel-body panel_text">
+							예매안내<hr>
+							<ol style="list-style-type:decimal"  start="1">
+								<li>
+								BBM 홈페이지 해당 영화을 선택하고 예매하기를 클릭합니다.
+								</li>
+								<li>
+								 로그인 후 이용가능 합니다.
+								</li>
+								<li>
+								
+								해당영화 날짜 및 상영관선택, 좌석지정 및 매수를 선택합니다.
+								</li>
+								
+								<li>
+							결제방식 선택 후 결제를 완료하면, 예매확인을 통해 예약된 내역을 확인합니다.
+								</li>								
+							</ol>
+							예매취소 및 환불안내<hr>
+							<ol style="list-style-type:decimal"  start="1">
+								<li>
+							온라인 예매 취소 및 취소수수료, 환불은 각 해당 사이트 운영 관리 지침에 따른 취소수수료를 공제 후 환급합니다.
+								</li>
+								<li>
+								방문 및 전화예매는 소비자분쟁해결기준에 따라 환불됩니다.
+								</li>					
+							</ol>
+							
+							</div>
 						</div>
 					</div>
 					<div class="panel panel-default">
@@ -98,22 +163,16 @@
 									href="#collapseFour" aria-expanded="false"
 									aria-controls="collapseFour"> <span
 									class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
-									class="glyphicon glyphicon-minus" aria-hidden="true"></i>아이디 및
+									class="glyphicon glyphicon-minus" aria-hidden="true"></i><img src="/resources/images/아이디비번찾기.png" style="height: 30px;" />아이디 및
 									비밀번호 찾기
 								</a>
 							</h4>
 						</div>
 						<div id="collapseFour" class="panel-collapse collapse"
 							role="tabpanel" aria-labelledby="headingFour">
-							<div class="panel-body panel_text">Neque porro quisquam
-								est, qui dolorem ipsum quia dolor sit amet, consectetur,
-								adipisci velit, sed quia non numquam eius modi tempora incidunt
-								ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
-								ad minima veniam, quis nostrum exercitationem ullam corporis
-								suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-								Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-								esse quam nihil molestiae consequatur, vel illum qui dolorem eum
-								fugiat quo voluptas nulla pariatur.</div>
+							<div class="panel-body panel_text">아이디 및 비밀번호 분실의 경우 로그인창의 아이디 및 비밀번호 찾기를 이용하여 찾으실수 있습니다.
+							원활하게 찾지 못하실경우 고겍센터에 글을 남겨주시길바랍니다.
+							</div>
 						</div>
 					</div>
 					<div class="panel panel-default">
@@ -124,24 +183,19 @@
 									href="#collapseFive" aria-expanded="false"
 									aria-controls="collapseFive"> <span
 									class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
-									class="glyphicon glyphicon-minus" aria-hidden="true"></i>기타
+									class="glyphicon glyphicon-minus" aria-hidden="true"></i><img src="/resources/images/기타.png" style="height: 30px;" />기타
 								</a>
 							</h4>
 						</div>
 						<div id="collapseFive" class="panel-collapse collapse"
 							role="tabpanel" aria-labelledby="headingFive">
-							<div class="panel-body panel_text">Neque porro quisquam
-								est, qui dolorem ipsum quia dolor sit amet, consectetur,
-								adipisci velit, sed quia non numquam eius modi tempora incidunt
-								ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
-								ad minima veniam, quis nostrum exercitationem ullam corporis
-								suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-								Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-								esse quam nihil molestiae consequatur, vel illum qui dolorem eum
-								fugiat quo voluptas nulla pariatur.</div>
+							<div class="panel-body panel_text">만약 기타의 문의사항이나 궁금한점이 있으시다면
+							하단의 게시판에 글을 남겨주세요.</div>
 						</div>
 					</div>
 				</div>
+				
+								고객센터 상담전화:02-1234-5678  상담가능시간 : 09:00~18:30
 				<div class="panel-body" >
 			<div>
 				<div>
@@ -163,10 +217,18 @@
 					<c:forEach var="cscDto" items="${list}">
 						<tr class="table-active">
 							<th scope="row">${cscDto.CSC_BNO}</th>
-							<td>${cscDto.CSC_RFI}</td>										
-							<td  id="tit"><a class="move"    href= "${cscDto.CSC_BNO}">${cscDto.CSC_TITLE} 
-							</a></td>							
+							<td>${cscDto.CSC_RFI}
+							</td>										
+							<td  id="tit"><a class="move"    href= "${cscDto.CSC_BNO}">
+							${cscDto.CSC_TITLE} 
+							</a></td>	
+							<c:if test="${cscDto.CSC_CHECK == '[답변 대기중]' }">						
 							<td>${cscDto.CSC_CHECK}</td>
+							</c:if>
+							<c:if test="${cscDto.CSC_CHECK == '[답변완료]' }">
+								<td style=" color:red;">${cscDto.CSC_CHECK}
+									</td>	
+								</c:if>
 							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${cscDto.CSC_REGDATE}"/></td>
 
 
@@ -247,6 +309,7 @@
 	</div>
 	</div>
 	</div>
+	
 	<!--  페이지 나누기를 위한 폼 -->
 <form action="" method="get" id="actionForm">
 	<input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}">
@@ -256,6 +319,7 @@
 	<input type="hidden" name="CSC_BNO" value="">
 	
 </form>
+
 <%--시큐리티 적용으로 인한 추가 --%>
 			  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 		  <input type="hidden" name="user_id" value="${readdto.user_id}" /> 

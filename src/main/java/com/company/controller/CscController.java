@@ -106,7 +106,7 @@ public class CscController {
 	
 	
 	@PostMapping("cscmodify")
-	public String modify(CscDTO modifyDto, Criteria cri, RedirectAttributes rttr) {
+	public String cscmodify(CscDTO modifyDto, Criteria cri, RedirectAttributes rttr) {
 		log.info("게시글 수정" + modifyDto+ "" + cri );
 
 		
@@ -131,7 +131,7 @@ public class CscController {
 	}
 	
 	@PostMapping("cscread")
-	public String modify2(CscDTO modifyDto2, Criteria cri, RedirectAttributes rttr) {
+	public String cscmodify2(CscDTO modifyDto2, Criteria cri, RedirectAttributes rttr) {
 		log.info("답글 입력" + modifyDto2 );
 
 		
@@ -161,8 +161,8 @@ public class CscController {
 	
 	
 	
-	@PostMapping("remove")
-	public String removePost(int CSC_BNO,String user_id ,Criteria cri, RedirectAttributes rttr ) {
+	@PostMapping("cscremove")
+	public String cscremovePost(int CSC_BNO,String user_id ,Criteria cri, RedirectAttributes rttr ) {
 		log.info("게시글 삭제" + CSC_BNO);
 
 //		// 첨부파일 목록 얻어오기

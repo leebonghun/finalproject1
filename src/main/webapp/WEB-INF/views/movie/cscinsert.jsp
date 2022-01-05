@@ -51,13 +51,13 @@
 			
 			
 					<div class="form-group">
-						<label>Title</label> <input type="text" class="form-control" name="CSC_TITLE">
+						<label>제목</label> <input type="text" class="form-control" name="CSC_TITLE">
 					</div>
 					<div class="form-group">
-						<label>Writer</label> <input class="form-control" name="user_id" value='<sec:authentication property="principal.username"/>' readonly  >
+						<label>작성자</label> <input class="form-control" name="user_id" value='<sec:authentication property="principal.username"/>' readonly  >
 					</div>
 					<div class="form-group">
-						<label>Content</label>
+						<label>내용</label>
 						<textarea class="form-control" rows="3" name="CSC_CONTENT"></textarea>
 					</div>	
 					<input type="hidden" name="CSC_CHECK" value="[답변 대기중]">				
