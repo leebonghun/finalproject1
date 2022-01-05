@@ -18,10 +18,9 @@ $(function(){
 		if(oper=='modify'){
 			formObj =$("form[role='form']");			
 		} if(oper=='remove'){
-			formObj.attr("action","/movie/remove")
+			formObj.attr("action","/movie/cscremove")
 			.attr("method","post");
-		}if(oper =='list'){
-			
+		}if(oper =='list'){			
 			formObj.attr("action","/movie/csclist")
 					.attr("method","get")
 					.find("input[name='CSC_BNO']").remove();

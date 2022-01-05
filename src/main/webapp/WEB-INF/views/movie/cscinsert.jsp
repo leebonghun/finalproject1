@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <%@include file="../includes/header.jsp" %>     
 <!DOCTYPE html>
 <html>
@@ -36,7 +37,7 @@
 <div class="row">
 	<div class="col-lg-12">
 		<div class="panel panel-default">
-		<form action="" method="post" role="form">
+		<form action="" method="post" role="form" id="insertForm">
 		<div class="form-group" style="margin-left: 25px; margin-top:25px  ">
 			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
@@ -47,30 +48,32 @@
 			<label class="test_obj"><input type="radio" name="CSC_RFI" value="분실물"><span>분실물</span></label> 			
     </div>
 			<!-- /.panel-heading -->
-			<div class="panel-body">
+			
 			
 					<div class="form-group">
-						<label>Title</label> <input class="form-control" name="CSC_TITLE">
+						<label>제목</label> <input type="text" class="form-control" name="CSC_TITLE">
 					</div>
 					<div class="form-group">
-						<label>Writer</label> <input class="form-control" name="user_id"  >
+						<label>작성자</label> <input class="form-control" name="user_id" value='<sec:authentication property="principal.username"/>' readonly  >
 					</div>
 					<div class="form-group">
-						<label>Content</label>
+						<label>내용</label>
 						<textarea class="form-control" rows="3" name="CSC_CONTENT"></textarea>
 					</div>	
 					<input type="hidden" name="CSC_CHECK" value="[답변 대기중]">				
 					 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
-					<button type="submit" class="btn btn-info">작성완료</button>
+					<button type="submit" class="btn btn-info" id="insert" >작성완료</button>
 					<button type="reset" class="btn btn-warning">초기화</button>
 					<button type="button" class="btn btn-default" onclick="location.href='/movie/csclist'">뒤로가기</button>
+					</form>
 					</div>
-				</form>
+				
 			</div>
 		</div>
 	</div>
-</div>
+<script type="text/javascript">
 
-</body>
-</html>
+</script>
+
+<script src="/resources/js/cscinsert.js"></script> 
 <%@include file="../includes/footer.jsp"%>

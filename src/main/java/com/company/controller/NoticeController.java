@@ -9,6 +9,7 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,13 +34,27 @@ public class NoticeController {
 	@Autowired
 	private NoticeService noticeService;
 	
+	// 전체 리스트 조회
+	@GetMapping("noticelist")
+	public void noticelist(Model model,Criteria cri) { //객체 생성구문
+		log.info("전체 리스트 요청 "+cri);
 		
-	@GetMapping("/noticeinsert")
-	public void registerGet() {
+		List<InfoDTO> list = noticeService.getList(cri);
+		
+		//페이지 나누기를 위한 정보 얻기
+		int totalCnt = noticeService.getTotalCount(cri);
+		
+		model.addAttribute("pageDto", new PageDTO(cri, totalCnt));
+		model.addAttribute("list", list);
+	}
+	@PreAuthorize("isAuthenticated()")
+	@GetMapping("noticeinsert")
+	public void insertGet() {
 		log.info("notice 폼 요청");
 		//return "/movie/noticeinsert";
 	}
 	
+	@PreAuthorize("isAuthenticated()")
 	@PostMapping("/noticeinsert")
 	public String registerPost(InfoDTO insertDto, RedirectAttributes rttr) {
 		log.info("register 가져오기" + insertDto);
@@ -56,19 +71,6 @@ public class NoticeController {
 	}
 	
 
-	// 전체 리스트 조회
-		@GetMapping("/noticelist")
-		public void noticelist(Model model,Criteria cri) { //객체 생성구문
-			log.info("전체 리스트 요청 "+cri);
-
-			List<InfoDTO> list = noticeService.getList(cri);
-		
-			//페이지 나누기를 위한 정보 얻기
-			int totalCnt = noticeService.getTotalCount(cri);
-			
-			model.addAttribute("pageDto", new PageDTO(cri, totalCnt));
-			model.addAttribute("list", list);
-		}
 	
 	
 	// 특정 번호 조회
@@ -79,9 +81,11 @@ public class NoticeController {
 
 		InfoDTO readdto = noticeService.getRow(INFO_BNO);
 
-		model.addAttribute("dto", readdto);     
+		model.addAttribute("readdto", readdto);     
 		
 	}
+	
+	
 	
 	// /noticemodify/post
 	@PostMapping("/noticemodify")
@@ -99,34 +103,28 @@ public class NoticeController {
 		rttr.addAttribute("type", cri.getType());
 		rttr.addAttribute("keyword", cri.getKeyword());
 		
-		rttr.addAttribute("result", "success");
+		rttr.addFlashAttribute("result", "success");
 		return "redirect:/movie/noticelist";
 	}
 
-//	// /noticemodify/post
-//	@PostMapping("/remove")
-//	public String removePost(int INFO_BNO, Criteria cri, RedirectAttributes rttr) {
-//		log.info("게시글 삭제" + INFO_BNO);
-//
-//		
-//		noticeService.remove(INFO_BNO);
-//		// 수정삭제 후 리스트로 이동
-//		if (cscService.remove(CSC_BNO)) {
-//			첨부 폴더 파일 삭제
-//			deleteFiles(attachList);
-//			// 페이지 나누기 값
-//			rttr.addAttribute("pageNum", cri.getPageNum());
-//			rttr.addAttribute("amount", cri.getAmount());
-//
-//			// 검색 값
-//			rttr.addAttribute("type", cri.getType());
-//			rttr.addAttribute("keyword", cri.getKeyword());
-//
-//			rttr.addFlashAttribute("result", "success");
-//		}
-//
-//		return "redirect:/movie/noticelist";
-//	}
+	// /noticemodify/post
+	@PostMapping("noticeremove")
+	public String noticeremove(int INFO_BNO, Criteria cri, RedirectAttributes rttr) {
+		log.info("게시글 삭제" + INFO_BNO);
+
+	noticeService.remove(INFO_BNO);
+	// 페이지 나누기 값
+	rttr.addAttribute("pageNum", cri.getPageNum());
+	rttr.addAttribute("amount", cri.getAmount());
+
+	// 검색 값
+	rttr.addAttribute("type", cri.getType());
+	rttr.addAttribute("keyword", cri.getKeyword());
+
+	rttr.addFlashAttribute("result", "success");
+
+	return "redirect:/movie/noticelist";
+	}
 
 	
 	

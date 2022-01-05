@@ -42,6 +42,7 @@ public class ReplyController {
 
 				new ResponseEntity<String>("fail", HttpStatus.BAD_REQUEST);
 	}
+	
 
 	@GetMapping("/{replyCd}")
 	public ResponseEntity<MovieReplyDTO> read(@PathVariable int replyCd) {
@@ -52,13 +53,6 @@ public class ReplyController {
 	}
 	
 
-//	@PreAuthorize("principal.username == #reply.replyer")
-//	@DeleteMapping("/{rno}")
-//	public ResponseEntity<String> delete(@PathVariable int rno,@RequestBody MovieReplyDTO reply) {
-//
-//		return service.deleteReply(rno) ? new ResponseEntity<String>("success", HttpStatus.OK)
-//				: new ResponseEntity<String>("fail", HttpStatus.BAD_REQUEST);
-//	}
 
 	
 	//페이지 나누기 댓글 처리 
@@ -81,4 +75,5 @@ public class ReplyController {
 		return service.updateReply(updateDto) ? new ResponseEntity<String>("success", HttpStatus.OK)
 				: new ResponseEntity<String>("fail", HttpStatus.BAD_REQUEST);
 	}
+	
 }

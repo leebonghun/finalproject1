@@ -124,7 +124,7 @@ $(function(){
 				return;
 			}
 			
-		replyService.remove(modal.data("replyCd"),oriReplyer,function(result){
+		replyService.remove(modal.data("replycd"),oriReplyer,function(result){
 			if(result=='success'){
 				alert("삭제 성공");
 			}
@@ -157,7 +157,7 @@ $(function(){
 			}
 			
 			
-			var replyContent={replyCd:modal.data("replyCd"),
+			var replyContent={replyCd:modal.data("replycd"),
 			replyContent:modalReply.val(),
 			replyer:oriReplyer
 			};
@@ -185,7 +185,7 @@ $(function(){
 		//있는 요소에 이벤트를 걸고 나중에 위임하는 형태로 작성
 		replyUl.on("click","li",function(){
 			
-			var replyCd = $(this).data("replyCd");
+			var replyCd = $(this).data("replycd");
 			
 			//console.log("replyCd"+replyCd);
 		replyService.get(replyCd,function(data){
@@ -196,7 +196,7 @@ $(function(){
 				modalReplyDate.val(replyService.displayTime(data.replyDate)).attr("readonly","readonly");
 				
 				
-				modal.data("replyCd",data.replyCd);
+				modal.data("replycd",data.replyCd);
 				
 				//작성날짜 영역 보여주기
 				modal.find("[name='replyDate']").closest("div").show(); //제일 가까운 div를 보여줘

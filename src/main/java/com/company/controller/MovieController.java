@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.company.domain.Criteria;
 
@@ -119,11 +120,17 @@ public class MovieController {
 	}
 	
 	@PostMapping("/userleave")
-	public String leavePost(UserDTO leaveDto, HttpSession session) {
+	public String leavePost(UserDTO leaveDto, HttpSession session,RedirectAttributes rttr) {
 		log.info("탈퇴 요청"+leaveDto);
 		// userid, password
-				
-		if (userService.leave(leaveDto)) {
+		UserDTO userDto = new UserDTO();
+		
+		
+		String truePw = userDto.getUser_password();
+	
+			
+		
+		if (truePw == leaveDto.getUser_password() && userService.leave(leaveDto)) {
 			//세션해제
 			session.invalidate();
 			return "redirect:/movie/index";
