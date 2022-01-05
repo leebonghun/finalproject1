@@ -22,6 +22,10 @@
 	</select>
 	
 	
+	
+	
+	
+	
 
 	<update id="updateReply">
 		update reply_tbl set replyContent = #{replyContent} ,updateDate = sysdate where replyCd=#{replyCd}
