@@ -29,6 +29,7 @@
 						<span class="red bold" style="color: red;">30</span>
 						건
 					</p>g
+					
 			<div class="row" style="width:100%">			
 	            <table class="table table-hover" id="dtotbl">
 	            	<colgroup>
