@@ -14,10 +14,11 @@
 	values(#{authority}, #{user_id})
 </insert>
 
-<!-- 중복 아이디 검사 -->
+<!-- 중복 아이디 -->
 <select id="selectById" resultType="com.company.domain.UserDTO">
 	select * from user_tbl where user_id=#{user_id}
 </select>
+
 
 <!-- 로그인 -->
 <select id="login" resultType="com.company.domain.LoginDTO">
@@ -47,10 +48,32 @@
 	select s1.user_id, user_password, user_name, user_birth, user_email, user_tel, user_regdate, user_enable, authority from user_tbl s1 left outer join auth_tbl s2 on s1.user_id = s2.user_id where s1.user_id = #{user_id}
 </select>
 
-<delete id="delete">
+<delete id="delete" >
 	delete from user_tbl
-	where user_id=#{user_id} and user_password=#{user_password}
+	where user_id=#{user_id}
 </delete>
+
+<delete id="authDelete" >
+	delete from auth_tbl
+	where user_id=#{user_id}
+</delete>
+
+<!-- 삭제할때 인코딩 후 비밀번호 받아오기 -->
+<select id="findByPwd" resultType="java.lang.String">
+	select user_password from user_tbl where user_id = #{user_id}
+</select>
+
+<update id="modify">
+	update user_tbl
+	set user_password=#{user_password}, user_password=#{confirm_password}
+	where user_id=#{user_id} and user_password=#{user_password}
+</update>
+
+
+
+
+
+
 
 </mapper>
 

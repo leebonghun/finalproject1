@@ -12,5 +12,7 @@ public interface UserMapper {
 	public LoginDTO login(LoginDTO loginDto);
 	public UserDTO signin(String user_id);
 	public int auth(@Param("user_id") String user_id,@Param("authority") String authority);
-	public int delete(UserDTO leaveDto);
+	public int delete(String user_id);
+	public String findByPwd(String user_id);
+	public int authDelete(String user_id);
 }

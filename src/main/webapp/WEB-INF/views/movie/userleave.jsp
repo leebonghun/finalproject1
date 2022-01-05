@@ -23,13 +23,13 @@
   <body class="text-center">
     <form class="form-signin" method="post" action="">
       <h1 class="h3 mb-3 font-weight-normal">BBM</h1>
-      <label for="username" class="sr-only">아이디</label>
+      <label for="user_id" class="sr-only">아이디</label>
       <sec:authentication property="principal" var="info"/>     
       <sec:authorize access="isAuthenticated()" >	                        
 	      <input
 	        type="text"
-	        id="username"
-	        name="username"
+	        id="user_id"
+	        name="user_id"
 	        class="form-control"
 	        placeholder="아이디"
 	        required
@@ -38,12 +38,12 @@
 	        readonly="readonly"
 	      />
       </sec:authorize>
-      <label for="password" class="sr-only">비밀번호</label>
+      <label for="user_password" class="sr-only">비밀번호</label>
       <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 	     <input
 	       type="password"
-	       id="password"
-	       name="password"
+	       id="user_password"
+	       name="user_password"
 	       class="form-control"
 	       placeholder="비밀번호"
 	       required

@@ -133,6 +133,10 @@ public class MovieController {
 		
 		
 	}
+	@GetMapping("/mypage")
+	public void mypage() {
+		log.info("마이페이지");
+	}
 	
 
 	

@@ -54,16 +54,23 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	@Transactional
 	public boolean leave(UserDTO leaveDto) {
 		
 		// 12345 => 암호화
-		leaveDto.setUser_password(encoder.encode(leaveDto.getUser_password()));
+		// encoder.matches('12345','dfldfjeofdjl')
+		// 
+		boolean result = false;
 		
-		boolean result=mapper.delete(leaveDto)> 0 ? true : false;
-		
+		if(encoder.matches(leaveDto.getUser_password(), mapper.findByPwd(leaveDto.getUser_id()))) {
+			//auth_tbl 과 user_tbl 이 join 되어 있어서 Transactional 을 이용하여 둘다 지움
+			mapper.authDelete(leaveDto.getUser_id());
+			result = mapper.delete(leaveDto.getUser_id()) > 0 ? true : false;
+		}
+				
 		return result;
-		
-		
+
 	}
+
 
 }
