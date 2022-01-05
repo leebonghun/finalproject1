@@ -82,7 +82,7 @@ public class MovieController {
 	}
 	
 	
-	@GetMapping("event")
+	@GetMapping("eventlist")
 	public void event() {
 		log.info("이벤트로 이동중입니다.");
 	}
@@ -139,6 +139,10 @@ public class MovieController {
 			return "redirect:/movie/userleave"; //탈퇴가 실패시
 		
 		
+	}
+	@GetMapping("/mypage")
+	public void mypage() {
+		log.info("마이페이지");
 	}
 	
 

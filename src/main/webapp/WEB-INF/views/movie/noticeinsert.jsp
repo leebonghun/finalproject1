@@ -18,10 +18,10 @@
 			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
 			 <div class="form-group" style="margin-left: 0px; margin-top:0px  ">
-		 	<label class="test_obj"><input type="radio" name="INFO_RFI" checked="checked" value="기타"><span>기타</span></label>
-			<label class="test_obj"><input type="radio" name="INFO_RFI" value="예매 환불 및 취소"><span>예매 환불 및 취소</span></label>
-			<label class="test_obj"><input type="radio" name="INFO_RFI" value="계정관련 문의"><span>계정관련 문의</span></label>
-			<label class="test_obj"><input type="radio" name="INFO_RFI" value="분실물"><span>분실물</span></label> 			
+		 	<label class="test_obj"><input type="radio" name="INFO_RFI" checked="checked" value="전체 공지"><span>전체 공지</span></label>
+			<label class="test_obj"><input type="radio" name="INFO_RFI" value="예매 환불 및 취소"><span>영화 관련 공지</span></label>
+			<label class="test_obj"><input type="radio" name="INFO_RFI" value="계정관련 문의"><span>코로나 19 관련 공지</span></label>
+			<label class="test_obj"><input type="radio" name="INFO_RFI" value="기타"><span>기타</span></label> 			
     </div>
 		<div class="form-group">
 			<label>Title</label> <input class="form-control" name="INFO_TITLE">
