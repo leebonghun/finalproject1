@@ -70,6 +70,7 @@
 		type="hidden" name="amount" value="${cri.amount }">
 		<input type="hidden" name="type" value="${cri.type}">
 	<input type="hidden" name="keyword" value="${cri.keyword}"> --%>
+	
 	 <input type="hidden" name="INFO_BNO" value="${readdto.INFO_BNO } ">
 		 
 	 <%--시큐리티 적용으로 인한 추가 --%>
@@ -77,3 +78,4 @@
 	  <input type="hidden" name="writer" value="${dto.writer}" /> 
 </form>
 <script src="/resources/js/noticemodify.js"></script> 
+<%@include file="../includes/footer.jsp"%>

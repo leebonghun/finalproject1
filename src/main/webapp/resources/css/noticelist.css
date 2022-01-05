@@ -115,8 +115,20 @@ input[type="text"], input[type="password"] {
 .contactus li:last-child {
     float: left;
     width: auto;
-    padding: 15px 15px 15px 165px;
+    padding: 10px 10px 10px 40px;
     font-weight: normal;
+        --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    font-size: 15px;
+    -webkit-text-size-adjust: none;
+    line-height: 1.5;
+    color: #000;
+    word-wrap: break-word;
+    font-family: 'Malgun Gothic','맑은 고딕', '돋음','Dotum','Apple SD Gothic Neo', Arial, Helvetica, sans-serif;
+    letter-spacing: -0.7px;
+    word-break: break-all;
+    margin: 0;
+    list-style: none;
 }
 
 .contactus:after {
