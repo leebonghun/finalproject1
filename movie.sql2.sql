@@ -103,6 +103,8 @@ CREATE TABLE CSC_TBL
 	USER_ID varchar2(50) NOT NULL ,
 	PRIMARY KEY (CSC_BNO)
 );
+
+alter table csc_tbl modify(CSC_CONTENT varchar2(3000));
 alter table csc_tbl add(CSC_CHECK varchar2(1000))
 alter table csc_tbl delete(CSC_WRITER varchar2(200))
 update csc_tbl set CSC_WRITER = 'USER1' WHERE CSC_BNO =1
