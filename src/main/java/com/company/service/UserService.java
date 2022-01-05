@@ -8,4 +8,6 @@ public interface UserService {
 	public UserDTO dupId(String user_id);
 	public LoginDTO login(LoginDTO loginDto);
 	public boolean leave(UserDTO leaveDto);
+
+
 }
