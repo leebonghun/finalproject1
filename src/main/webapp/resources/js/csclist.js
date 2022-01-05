@@ -5,8 +5,8 @@
 $(function(){
 	/*checkModal(result);
 	
-	history.replaceState({},null,null);*/
-	/*function checkModal(result){
+	history.replaceState({},null,null);
+	function checkModal(result){
 		if(result===''||history.state){
 			return ;
 		}
@@ -14,8 +14,9 @@ $(function(){
 			$(".modal-body").html("게시글"+parseInt(result)+"번이 등록됨");
 		}
 		$("#myModal").modal("show");
-	}*/
-	
+		
+	}
+	*/
 	
 	//페이지 나누기 스크립트
 	let actionForm=$("#actionForm");

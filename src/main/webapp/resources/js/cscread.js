@@ -22,7 +22,7 @@ $(function() {
 		if(oper=='modify'){
 			formObj.attr("action", "/movie/cscmodify");				
 		} if(oper=='remove'){
-			formObj.attr("action","/movie/remove")
+			formObj.attr("action","/movie/cscremove")
 			.attr("method","post");
 		}if(oper =='list'){			
 			formObj.attr("action","/movie/csclist")

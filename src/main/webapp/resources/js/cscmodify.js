@@ -18,7 +18,7 @@ $(function(){
 		if(oper=='modify'){
 			formObj =$("form[role='form']");			
 		} if(oper=='remove'){
-			formObj.attr("action","/movie/remove")
+			formObj.attr("action","/movie/cscremove")
 			.attr("method","post");
 		}if(oper =='list'){			
 			formObj.attr("action","/movie/csclist")
