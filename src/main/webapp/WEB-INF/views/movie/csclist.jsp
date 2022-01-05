@@ -14,15 +14,18 @@
 </head>
 <body>
 	<div style="margin-left: 100px; margin-right: 100px;" >
+	<div class="container">
 		<h2 class="h1" style="color: black;">
 			<img src="/resources/images/cscicon.png" style="height: 50px;" /> 고객
 			센터
 		</h2>
+		</div>
 		<!-- faq-banner -->
 
 		<div class="faq">
-			<h4 class="latest-text w3_faq_latest_text w3_latest_text">FAQ</h4>
-			
+		<div style="margin-left: 30px">
+			<h4 class="latest-text w3_faq_latest_text w3_latest_text" >FAQ</h4>
+			</div  >
 			<div class="container">
 				<div class="panel-group w3l_panel_group_faq" id="accordion"
 					role="tablist" aria-multiselectable="true" >
@@ -308,6 +311,7 @@
 		</div>
 	</div>
 	</div>
+	
 	</div>
 	
 	<!--  페이지 나누기를 위한 폼 -->

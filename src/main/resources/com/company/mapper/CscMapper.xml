@@ -7,7 +7,7 @@
 	<![CDATA[
 	select CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
  from  (select /*+INDEX_DESC(csc_tbl SYS_C008418*/ rownum rn,CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
- from csc_tbl
+ from csc_tbl 
  where 
   ]]>
  <include refid="criteria"></include>
@@ -15,7 +15,7 @@
  <![CDATA[
  rownum <=(#{pageNum} * #{amount}))
  where rn>(#{pageNum}-1) * #{amount}
-	
+	order by CSC_BNO desc
 	]]>
 
 	</select> 
