@@ -62,6 +62,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="/resources/js/move-top.js"></script>
 <script type="text/javascript" src="/resources/js/easing.js"></script>
+<script src="/resources/js/csclist.js"></script>
+<script src="/resources/js/noticelist.js"></script>
 
 
 

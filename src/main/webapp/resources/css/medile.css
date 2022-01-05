@@ -200,7 +200,7 @@ ul#myTab {
   right: 0;
 }
 .w3l-movie-text h6 a {
-    font-size: 1.4em;
+    font-size: 1.0em;
     color: #222;
 }
 .w3l-movie-text {
@@ -235,7 +235,7 @@ ul.w3l-ratings li i ,.w3l-ratings a i{
 .w3l-movie-gride-agile-list {
       text-align: center;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
-    margin-right: 4%;
+    margin-right: 8%;
     margin-bottom:3%;
     position: relative;
     padding-left: 0;

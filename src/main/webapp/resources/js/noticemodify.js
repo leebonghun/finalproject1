@@ -18,10 +18,9 @@ $(function(){
 		if(oper=='modify'){
 			formObj =$("form[role='form']");			
 		} if(oper=='remove'){
-			formObj.attr("action","/movie/remove")
+			formObj.attr("action","/movie/noticeremove")
 			.attr("method","post");
 		}if(oper =='list'){
-			
 			formObj.attr("action","/movie/noticelist")
 					.attr("method","get")
 					.find("input[name='INFO_BNO']").remove();

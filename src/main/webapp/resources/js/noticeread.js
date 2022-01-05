@@ -3,40 +3,33 @@
  */
 
 $(function() {
-
 	
-
-
-	let form = $("#actionForm");
-	//list 를 클릭하면 전체 리스트 보여주기
-	$(".btn-info").click(function() {
-		//actionForm에서 INFO_BNO 제거
-		form.find("input[name='INFO_BNO']").remove();
-		//actionForm action /movie/noticelist
-		form.attr("action", "/movie/noticelist");
-		//actionForm 전송
-		form.submit();
-	})
-
-
-	//modify를 클릭하면 actionForm 보내기
-	$(".btn btn-warning").click(function() {
-		form.attr("action", "/movie/noticemodify");
-		form.submit();
-	})
+	let formObj=$("#actionForm");	
 	
-
+	let button=$("form[role='form']").find("button");	
 	
-	
-	
-	
-	//beforeSend : ajax 추가해서 header 값으로 보내야 하는 값들을 전송(ajax 코드 안에 해당 코드가 존재해야 함)
-	//ajaxSend(): ajax 호출되면 무저건 이 값을 헤더로 전송
-	$(document).ajaxSend(function(e,xhr,options){
-		xhr.setRequestHeader(csrfHeaderName,csrfTokenValue);
-	});
-	
-	
+	$(button).click(function(e){
+		e.preventDefault(); //submit 막기
 		
-
+		//어느버튼에서 명령이 왔는가?		
+		//data-*
+		let oper =$(this).data("oper");
+		if(oper=='answer'){
+			/*formObj.attr("action","/movie/read")
+			.attr("method","post");*/
+			formObj =$("form[role='form']");		
+		}
+		if(oper=='modify'){
+			formObj.attr("action", "/movie/noticemodify");				
+		} if(oper=='remove'){
+			formObj.attr("action","/movie/remove")
+			.attr("method","post");
+		}if(oper =='list'){			
+			formObj.attr("action","/movie/noticelist")
+					.attr("method","get")
+					.find("input[name='INFO_BNO']").remove();
+		}
+		
+		formObj.submit();
+	})
 })

@@ -55,7 +55,7 @@
 						<tr class="table-active">				
 							<th scope="row">${infodto.INFO_BNO}</th>
 							<td>${infodto.INFO_RFI}</td>
-							<td><a href="inforead?INFO_BNO=${infodto.INFO_BNO}">${infodto.INFO_TITLE}</a></td>				
+							<td><a class="move" href="${infodto.INFO_BNO}">${infodto.INFO_TITLE}</a></td>				
 							<td>${infodto.INFO_CONTENT}</td>
 							<td>${infodto.INFO_REGDATE}</td>
 						</tr>								
