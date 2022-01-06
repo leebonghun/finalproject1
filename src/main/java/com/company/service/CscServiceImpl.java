@@ -64,5 +64,10 @@ public class CscServiceImpl implements CscService {
 		
 		return cscMapper.totalCnt(cri);
 	}
+	@Override
+	public List<CscDTO> getmyList() {
+		
+		return cscMapper.myList();
+	}
 
 }

@@ -187,6 +187,18 @@ public class CscController {
 		return "redirect:/movie/csclist";
 	}
 	
+	@GetMapping("mypagecsclist")
+	public void cscmylist(Model model) {
+		log.info("내 글목록으로 이동중입니다.");
+		
+		List<CscDTO> mylist = cscService.getmyList();
+		// 페이지 나누기를 위한 정보
+	
+		log.info(""+mylist);
+		model.addAttribute("pageDto");
+		model.addAttribute("mylist", mylist);
+	}
+	
 	
 	
 }

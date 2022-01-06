@@ -19,6 +19,19 @@
 	]]>
 
 	</select> 
+	
+	 <select id="myList" resultType="com.company.domain.CscDTO">
+	
+ 
+ 
+ select Csc_Bno,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
+ from csc_tbl where user_id='admin97' order by Csc_Bno desc
+ 
+</select>
+<!-- 전체 게시물 수 -->
+	
+	
+	
  <!-- <select id="listAll" resultType="com.company.domain.CscDTO">
 	
  
