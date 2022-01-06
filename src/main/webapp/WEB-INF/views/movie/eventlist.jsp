@@ -3,6 +3,7 @@
 <%@include file="../includes/header.jsp" %>
 <link href="/resources/css/eventlist.css" rel='stylesheet' type='text/css' />
 
+<link href="/resources/css/event.css" rel='stylesheet' type='text/css' />
 <!-- 이벤트 상단 -->
 <div class="container" >
 	<div>

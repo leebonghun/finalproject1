@@ -108,7 +108,7 @@
 </form>	
 <script type="text/javascript">
 	//헌재 글 번호 가져오기
-	let CSC_BNO = ${dto.CSC_BNO};
+	let CSC_BNO = ${readdto.CSC_BNO};
 	let CSC_RFI = ${readdto.CSC_RFI};
 	
 	//토큰값 설정

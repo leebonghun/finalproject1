@@ -16,13 +16,11 @@
 		<form action="" method="post" role="form">
 		<div class="panel panel-default">
 		 <div class="form-group" style="margin-left: -78px; margin-top:25px;  "></div>
-			<label>사유를 선택해주세요.</label>
-			</div>
-			 <div class="form-group" style="margin-left:-78px; margin-top:10px;  ">
+			 <div class="form-group" style="margin-left:-10px; margin-top:10px;  ">
 		 	<label class="test_obj"><input type="radio" name="INFO_RFI" value="전체 공지"><span>전체 공지</span></label>
 			<label class="test_obj"><input type="radio" name="INFO_RFI" value="영화 관련 공지"><span>영화 관련 공지</span></label>
 			<label class="test_obj"><input type="radio" name="INFO_RFI" value="코로나 19 관련 공지"><span>코로나 19 관련 공지</span></label>
-			<label class="test_obj"><input type="radio" name="INFO_RFI" value="기타"><span>기타</span></label> 			
+			<label class="test_obj"><input type="radio" name="INFO_RFI" value="기타"><span>기타</span></label> 
 			<!-- /.panel-heading -->
 			<div class="panel-body">
 				<div class="form-group">
@@ -47,9 +45,10 @@
                </sec:authorize>
                <button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
                </div>
+			</div>			
             </form>
+			</div>
 		</div>
-	</div>
 </div>
 
 <%-- remove와 list를 위한 폼--%>
