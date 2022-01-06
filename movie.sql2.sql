@@ -103,6 +103,7 @@ CREATE TABLE CSC_TBL
 	USER_ID varchar2(50) NOT NULL ,
 	PRIMARY KEY (CSC_BNO)
 );
+select CSC_RFI from csc_tbl;
 
 alter table csc_tbl modify(CSC_CONTENT varchar2(3000));
 alter table csc_tbl add(CSC_CHECK varchar2(1000))
