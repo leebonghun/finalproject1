@@ -4,8 +4,8 @@
 <%@include file="../includes/header.jsp" %>
 <script src="/resources/js/noticelist.js"></script>
 
-
-
+<link href="/resources/css/noticelist.css" rel='stylesheet' type='text/css' />
+<script src="/resources/js/noticelist.js"></script>
 <div class="container">
 	<div>
 		<h2 class="h2" style="color: black;">

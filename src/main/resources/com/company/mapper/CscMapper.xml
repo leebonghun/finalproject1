@@ -7,18 +7,36 @@
 	<![CDATA[
 	select CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
  from  (select /*+INDEX_DESC(csc_tbl SYS_C008418*/ rownum rn,CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
- from csc_tbl
+ from csc_tbl 
  where 
   ]]>
  <include refid="criteria"></include>
  
  <![CDATA[
  rownum <=(#{pageNum} * #{amount}))
- where rn>(#{pageNum}-1) * #{amount} order by CSC_BNO DESC
+
+ where rn>(#{pageNum}-1) * #{amount}
+	order by CSC_BNO desc
+
+
 	
+
 	]]>
 
 	</select> 
+	
+	 <select id="myList" resultType="com.company.domain.CscDTO">
+	
+ 
+ 
+ select Csc_Bno,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
+ from csc_tbl where user_id=#{pageNum} order by Csc_Bno desc
+ 
+</select>
+<!-- 내  게시물들  -->
+	
+	
+	
  <!-- <select id="listAll" resultType="com.company.domain.CscDTO">
 	
  
@@ -85,9 +103,9 @@
 	<update id="update2">
 		update csc_tbl
 		set
-		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK=${CSC_CHECK}
 
 		
+		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK=#{CSC_CHECK}
 		where CSC_BNO=#{CSC_BNO}
 	</update>	
 <sql id="criteria">

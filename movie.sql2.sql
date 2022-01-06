@@ -223,6 +223,9 @@ insert into MOVIE_TBL values(20211111,'티탄','아가트 루셀, 뱅상 랭동'
 insert into MOVIE_TBL values(20211112,'해피 뉴 이어','한지민, 이동욱, 강하늘, 윤아','138',
 '이이이','멜로/로맨스','12세이상 관람가','한국','CJ ENM','2021-12-29');
 
+select Csc_Bno,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
+ from csc_tbl where user_id='admin97' order by Csc_Bno desc;
+
 
 CREATE TABLE REPLY_TBL
 (

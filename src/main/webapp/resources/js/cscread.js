@@ -13,9 +13,9 @@ $(function() {
 		$("input:checkbox[name='CSC_CHECK']").prop("checked",true);
 	}else if{
 		$("input:checkbox[name='CSC_CHECK']").prop("checked",false);
-	}*/
+	}
 	
-/*	if($("#dab").val()){
+	if($("#dab").val()){
 		$("input:checkbox[name='CSC_CHECK']").prop("checked",true);
 	}
 	if(!$("#dab").val()){

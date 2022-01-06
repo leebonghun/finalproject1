@@ -15,4 +15,5 @@ public interface CscMapper {
 	public int update(CscDTO updateDto);
 	public int update2(CscDTO updateDto2);
 	public int totalCnt(Criteria cri);
+	public List<CscDTO> myList();
 }
