@@ -86,6 +86,8 @@
 		update csc_tbl
 		set
 		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK=${CSC_CHECK}
+
+		
 		where CSC_BNO=#{CSC_BNO}
 	</update>	
 <sql id="criteria">
