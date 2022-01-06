@@ -1,5 +1,5 @@
 /**
- *  list.jsp
+ *  csclist.jsp
  */
 
 $(function(){

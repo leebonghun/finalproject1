@@ -3,8 +3,8 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>
 
-
-
+<link href="/resources/css/noticelist.css" rel='stylesheet' type='text/css' />
+<script src="/resources/js/noticelist.js"></script>
 <div class="container">
 	<div>
 		<h2 class="h2" style="color: black;">

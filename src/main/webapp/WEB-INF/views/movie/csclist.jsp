@@ -10,7 +10,16 @@
 <script src="/resources/js/csclist.js"></script>
 <script src="/resources/css/bootstrap.css"></script>
 <script src="/resources/css/csclist.css"></script>
+<style type="text/css">
+#readlink{
+ color: black;
+  
+ font-size: medium;
+ font-style: italic;
+}
+#readlink :visited {color: blue; text-decoration: none;}
 
+</style>
 </head>
 <body>
 	<div style="margin-left: 100px; margin-right: 100px;" >
@@ -222,7 +231,7 @@
 							<th scope="row">${cscDto.CSC_BNO}</th>
 							<td>${cscDto.CSC_RFI}
 							</td>										
-							<td  id="tit"><a class="move"    href= "${cscDto.CSC_BNO}">
+							<td  id="tit"><a class="move"    href= "${cscDto.CSC_BNO}"  id="readlink" >
 							${cscDto.CSC_TITLE} 
 							</a></td>	
 							<c:if test="${cscDto.CSC_CHECK == '[답변 대기중]' }">						

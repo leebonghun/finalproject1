@@ -25,10 +25,10 @@
  
  
  select Csc_Bno,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
- from csc_tbl where user_id='admin97' order by Csc_Bno desc
+ from csc_tbl where user_id=#{pageNum} order by Csc_Bno desc
  
 </select>
-<!-- 전체 게시물 수 -->
+<!-- 내  게시물들  -->
 	
 	
 	
@@ -98,7 +98,7 @@
 	<update id="update2">
 		update csc_tbl
 		set
-		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK=#{CSC_CHECK}
+		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK='[답변완료]'
 		where CSC_BNO=#{CSC_BNO}
 	</update>	
 <sql id="criteria">
