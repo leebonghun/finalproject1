@@ -14,5 +14,7 @@ public interface MovieReplyService {
 	public ReplyPageDTO list(Criteria cri, int movieCD	);
 	
 	public boolean updateReply(MovieReplyDTO updateDto);
-
+	
+	
+	public boolean deleteReply(int replyCd);
 }

@@ -2,6 +2,12 @@
 
 /* 이벤트 화면 상단부분
 */
+
+.pagination > li {
+    display: inline;
+    margin-left: 20px;
+    margin-right: auto;
+}
 .mt70 {
     margin-top: 70px!important;
 }

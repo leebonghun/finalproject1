@@ -2,7 +2,9 @@
  * 
  */
 $(function(){
-	
+		
+		
+		
 		//list로 돌아가기
 		$("#goBack").click(function(){
 			
@@ -119,6 +121,7 @@ $(function(){
 			//댓글 작성자 가져오기
 			let oriReplyer = modalReplyer.val();
 			if(replyer != oriReplyer){
+				
 				alert("자신의 댓글만 삭제가 가능합니다");
 				modal.modal("hide");
 				return;
@@ -186,6 +189,7 @@ $(function(){
 		replyUl.on("click","li",function(){
 			
 			var replyCd = $(this).data("replycd");
+		
 			
 			//console.log("replyCd"+replyCd);
 		replyService.get(replyCd,function(data){
@@ -204,6 +208,9 @@ $(function(){
 				modal.find("button").show();
 				
 				//등록버튼 숨기기
+				
+				
+				
 				modal.find("#modalRegisterBtn").hide();
 				modal.modal("show");
 				

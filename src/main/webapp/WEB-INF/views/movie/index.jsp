@@ -23,13 +23,13 @@
 				<div id="owl-demo" class="owl-carousel owl-theme">
 					<div class="item">
 						<div class="w3l-movie-gride-agile w3l-movie-gride-agile1">
-							<a href="movieRead?movieCD=2021002" class="hvr-shutter-out-horizontal"><img src="/resources/images/m1.jpg" title="album-name" class="img-responsive" alt=" " />
+							<a href="movieRead?movieCD=20210028" class="hvr-shutter-out-horizontal"><img src="/resources/images/m1.jpg" title="album-name" class="img-responsive" alt=" " />
 								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
 
-									<h6><a href=movieRead?movieCD=2021002">스파이더맨: 노 웨이 홈</a></h6>													
+									<h6><a href=movieRead?movieCD=20210028">스파이더맨: 노 웨이 홈</a></h6>													
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -636,12 +636,12 @@
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
 						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="movieRead?movieCD=2021002" class="hvr-shutter-out-horizontal"><img src="/resources/images/m1.jpg" title="album-name" class="img-responsive" alt=" " />
+							<a href="movieRead?movieCD=20210028" class="hvr-shutter-out-horizontal"><img src="/resources/images/m1.jpg" title="album-name" class="img-responsive" alt=" " />
 								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=2021002">스파이더맨: 노 웨이 홈</a></h6>							
+									<h6><a href="movieRead?movieCD=20210028">스파이더맨: 노 웨이 홈</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>

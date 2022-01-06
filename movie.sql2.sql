@@ -492,6 +492,8 @@ UPDATE movie_board SET key ='rs8YZgpoYRM' where movieCD=20210752;
 UPDATE movie_board SET key ='vjnNkaFsdMA' where movieCD=20211111;
 UPDATE movie_board SET key ='tAhLvuK7hb0' where movieCD=20211112;
 
+select * from csc_tbl;
+
 --순위 
 UPDATE movie_board SET rank ='No.1' where movieCD=20210028;
 UPDATE movie_board SET rank ='No.2' where movieCD=20210864;

@@ -6,6 +6,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 /* component */
 
+#editor{
+	color: white;
+}
+
+
 .star-rating {
   border:solid 1px #ccc;
   display:flex;
