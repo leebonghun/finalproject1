@@ -22,7 +22,7 @@
 								<img src="/resources/images/ticket1.jpg" alt="영화 티켓" onerror="noImg(this);" />
 							</p>
 							<p class="tit"> 영화 티켓 </p>
-							<p> ￦12000 </p>
+							<p style="color: black;"> ￦12000 </p>
 						</a>
 					</li>
 					<li>
@@ -31,7 +31,7 @@
 								<img src="/resources/images/tumbler1.jpg" alt="텀블러" onerror="noImg(this);" />
 							</p>
 							<p class="tit"> 텀블러 </p>
-							<p> ￦10000 </p>
+							<p style="color: black;"> ￦10000 </p>
 						</a>
 					</li>
 					<li>
@@ -40,7 +40,7 @@
 								<img src="/resources/images/ecobag1.jpg" alt="에코백" onerror="noImg(this);" />
 							</p>
 							<p class="tit"> 에코백 </p>
-							<p> ￦5000 </p>
+							<p style="color: black;"> ￦5000 </p>
 						</a>
 					</li>
 				</ul>
@@ -61,7 +61,7 @@
 								<img src="/resources/images/popcorn1.jpg" alt="콜라 2 + 팝콘" onerror="noImg(this);" />
 							</p>
 							<p class="tit"> 콜라 2 + 팝콘 </p>
-							<p> ￦9000 </p>
+							<p style="color: black;"> ￦9000 </p>
 						</a>
 					</li>
 					<li>
@@ -70,7 +70,7 @@
 								<img src="/resources/images/cuttlefish1.jpg" alt="오징어 버터구이" onerror="noImg(this);" />
 							</p>
 							<p class="tit"> 오징어 버터구이 </p>
-							<p> ￦3500 </p>
+							<p style="color: black;"> ￦3500 </p>
 						</a>
 					</li>
 					<li>
@@ -79,7 +79,7 @@
 								<img src="/resources/images/nacho.jpg" alt="나초" onerror="noImg(this);" />
 							</p>
 							<p class="tit"> 나초 </p>
-							<p> ￦4900 </p>
+							<p style="color: black;"> ￦4900 </p>
 						</a>
 					</li>
 				</ul>
