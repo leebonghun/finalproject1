@@ -29,7 +29,6 @@ pageEncoding="UTF-8"%>
               id="user_id"
               class="form-control"
               placeholder="아이디를 입력하세요."
-             	
             />
             <small id="user_id" class="text-info"></small>
           </div>

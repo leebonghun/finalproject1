@@ -72,6 +72,7 @@ pageEncoding="UTF-8"%>
               id="user_name"
               class="form-control"
               placeholder="이름을 입력하세요."
+              readonly="readonly"
             />
             <small id=user_name class="text-info"></small>
           </div>
@@ -85,6 +86,7 @@ pageEncoding="UTF-8"%>
               id="user_birth"
               class="form-control"
               placeholder="ex) 2021-01-01"
+              readonly="readonly"
             />
             <small id=birth class="text-info"></small>
             <small id=user_birth class="text-info"></small>

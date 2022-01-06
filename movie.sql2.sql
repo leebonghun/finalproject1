@@ -444,7 +444,19 @@ select INFO_bno_seq.nextval from dual;
 
 create sequence INFO_bno_seq;
 
+------------------------------------------------
+delete event_TBL;
+
+select * from EVENT_TBL;
+
+insert into event_TBL(EVENT_BNO,EVENT_TITLE,EVENT_CONTENT,EVENT_REGDATE)
+values(EVENT_bno_seq.nextval,'이벤트1','이벤트 내용1',sysdate);
+insert into event_TBL(EVENT_BNO,EVENT_TITLE,EVENT_CONTENT,EVENT_REGDATE)
+values(EVENT_bno_seq.nextval,'이벤트2','이벤트 내용2',sysdate);
+insert into event_TBL(EVENT_BNO,EVENT_TITLE,EVENT_CONTENT,EVENT_REGDATE)
+values(EVENT_bno_seq.nextval,'이벤트3','이벤트 내용3',sysdate);
  
+create sequence EVENT_bno_seq;
  
  
 ALTER USER c##team DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
