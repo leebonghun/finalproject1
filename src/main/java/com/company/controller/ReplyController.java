@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -45,9 +46,12 @@ public class ReplyController {
 	
 
 	@GetMapping("/{replyCd}")
-	public ResponseEntity<MovieReplyDTO> read(@PathVariable int replyCd) {
+	public ResponseEntity<MovieReplyDTO> read(@PathVariable int replyCd,Model model) {
 		log.info("dsad" + replyCd);
-
+	
+		
+	
+		
 		return new ResponseEntity<MovieReplyDTO>(service.getRow(replyCd), HttpStatus.OK);
 
 	}
@@ -67,13 +71,22 @@ public class ReplyController {
 	}
 	@PreAuthorize("principal.username == #updateDto.replyer")
 	@PutMapping("/{replyCd}")
-	public ResponseEntity<String> update(@PathVariable int replyCd, @RequestBody MovieReplyDTO updateDto) {
-
+	public ResponseEntity<String> update(@PathVariable int replyCd, @RequestBody MovieReplyDTO updateDto,Model model) {
+		
 		// updateDto 세팅하기
 		updateDto.setReplyCd(replyCd);
-
+		
+		model.addAttribute("updateDto",updateDto);
 		return service.updateReply(updateDto) ? new ResponseEntity<String>("success", HttpStatus.OK)
 				: new ResponseEntity<String>("fail", HttpStatus.BAD_REQUEST);
 	}
+	@PreAuthorize("principal.username == #reply.replyer")
+	@DeleteMapping("/{replyCd}")
+	public ResponseEntity<String> delete(@PathVariable int replyCd,@RequestBody MovieReplyDTO reply) {
+
+		return service.deleteReply(replyCd) ? new ResponseEntity<String>("success", HttpStatus.OK)
+				: new ResponseEntity<String>("fail", HttpStatus.BAD_REQUEST);
+	}
+
 	
 }

@@ -51,7 +51,7 @@
 					<c:if test="${info.username != 'admin97' }">
 					<div class="form-group">			
 						<label>답변 내용</label>
-						<textarea class="form-control" rows="3" name="CSC_ANSWER"
+						<textarea class="form-control" rows="3" name="CSC_ANSWER" id="dab"
 							 placeholder="답변대기중..." style="resize: none;"  readonly="readonly">${readdto.CSC_ANSWER}</textarea>						
 					</div>
 					</c:if>	
@@ -65,13 +65,19 @@
 							 placeholder="답변대기중..." style="resize: none;"  >${readdto.CSC_ANSWER}</textarea>						
 					</div>
 					</c:if>	
-							</sec:authorize>	
+							</sec:authorize>							
 						<sec:authentication property="principal" var="info" />
 				<sec:authorize access="isAuthenticated()">
 					<c:if test="${info.username == 'admin97' }">
-							 <label><input type="checkbox" name="CSC_CHECK" value="[답변완료]">답변완료여부</label>
-					<button type="submit" data-oper='answer'  class="btn btn-info">답변완료</button>
-					</c:if>	
+						<c:if test="${readdto.CSC_CHECK == '[답변 대기중]'}">
+							 <label><input type="checkbox" name="CSC_CHECK">답변완료여부</label>
+						</c:if>
+						<c:if test="${readdto.CSC_CHECK == '[답변완료]'}">
+							 <label><input type="checkbox" name="CSC_CHECK" checked>답변완료여부</label>
+						</c:if>	 
+               				<button type="submit" data-oper='answer'  class="btn btn-info">답변완료</button>
+               		</c:if>   
+
 							</sec:authorize>	
 					<sec:authentication property="principal" var="info" />
 					<sec:authorize access="isAuthenticated()">
@@ -96,6 +102,7 @@
 		</div>
 	</div>
 </div>
+
 <!--  페이지 나누기를 위한 폼 -->
 <form action="" id="actionForm">
 	<input type="hidden" name="pageNum" value="${cri.pageNum }"> <input
@@ -112,6 +119,7 @@
 <script type="text/javascript">
 	//헌재 글 번호 가져오기
 	let CSC_BNO = ${readdto.CSC_BNO};
+	let CSC_RFI = ${readdto.CSC_RFI};
 	
 	let csrfHeaderName = "${_csrf.headerName}";
 	let csrfTokenValue = "${_csrf.token}";
