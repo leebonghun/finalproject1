@@ -14,7 +14,7 @@
  
  <![CDATA[
  rownum <=(#{pageNum} * #{amount}))
- where rn>(#{pageNum}-1) * #{amount}
+ where rn>(#{pageNum}-1) * #{amount} order by CSC_BNO DESC
 	
 	]]>
 
@@ -35,7 +35,7 @@
 		
 		 <include refid="criteria"></include>
 		
-		 Csc_Bno >0
+		 Csc_Bno >0 
 	</select> 
 
 <!-- 게시글 하나 가져오기 -->
@@ -85,7 +85,7 @@
 	<update id="update2">
 		update csc_tbl
 		set
-		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK=#{CSC_CHECK}
+		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK=${CSC_CHECK}
 		where CSC_BNO=#{CSC_BNO}
 	</update>	
 <sql id="criteria">

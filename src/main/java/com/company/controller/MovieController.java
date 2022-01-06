@@ -76,13 +76,6 @@ public class MovieController {
 	public void reserve(Model model) {
 		log.info("영화 예매 페이지로 이동중입니다.");
 		
-		List<movieDTO> listDto = service.list();
-		
-		
-	
-		
-		model.addAttribute("list",listDto);
-		
 	}
 	@GetMapping("store")
 	public void store() {

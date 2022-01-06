@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@include file="../includes/header.jsp" %>
-   <script src="/resources/js/movieList.js"></script>
+
    <link rel="stylesheet" href="/resources/css/replyAll.css" />
 <div class="bg-bricks" id="container">
 		<div class="" id="contents">
@@ -10,12 +10,7 @@
 					<div class="sect-sorting">
 						<div class="nowshow"></div>
 					</div>
-					
-					
-					
-					
 					<h3 id="live">영화 상세 정보</h3>
-						
 					</div>
 				</div>
 			</div>
@@ -175,6 +170,7 @@
     
   </div>
 		</div>
+<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />		
 <script src="/resources/js/movieRead.js"></script>		
 <script src="/resources/js/movieReply.js"></script>		
 <%@include file="../includes/footer.jsp"%>

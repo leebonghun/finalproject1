@@ -70,10 +70,10 @@
 				<sec:authorize access="isAuthenticated()">
 					<c:if test="${info.username == 'admin97' }">
 						<c:if test="${readdto.CSC_CHECK == '[답변 대기중]'}">
-							 <label><input type="checkbox" name="CSC_CHECK">답변완료여부</label>
+							 <label><input type="checkbox" value="[답변 대기중]" name="CSC_CHECK">답변완료여부</label>
 						</c:if>
 						<c:if test="${readdto.CSC_CHECK == '[답변완료]'}">
-							 <label><input type="checkbox" name="CSC_CHECK" checked>답변완료여부</label>
+							 <label><input type="checkbox" value="[답변완료]" name="CSC_CHECK" checked>답변완료여부</label>
 						</c:if>	 
                				<button type="submit" data-oper='answer'  class="btn btn-info">답변완료</button>
                		</c:if>   

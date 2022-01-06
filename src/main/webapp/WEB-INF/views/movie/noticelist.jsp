@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>
+<script src="/resources/js/noticelist.js"></script>
 
 
 
@@ -137,5 +138,4 @@
 <script>
 let result = '${result}';
 </script>
-<script src="/resources/js/noticelist.js"></script>
 <%@include file="../includes/footer.jsp"%>
