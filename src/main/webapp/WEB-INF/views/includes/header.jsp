@@ -26,8 +26,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/resources/css/single.css" rel='stylesheet' type='text/css' />
 <link href="/resources/css/medile.css" rel='stylesheet' type='text/css' />
-<link href="/resources/css/noticelist.css" rel='stylesheet' type='text/css' />
-<link href="/resources/css/event.css" rel='stylesheet' type='text/css' />
 <!-- banner-slider -->
 <link href="/resources/css/jquery.slidey.min.css" rel="stylesheet">
 <!-- //banner-slider -->
@@ -63,7 +61,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="/resources/js/move-top.js"></script>
 <script type="text/javascript" src="/resources/js/easing.js"></script>
 <script src="/resources/js/csclist.js"></script>
-<script src="/resources/js/noticelist.js"></script>
 
 
 

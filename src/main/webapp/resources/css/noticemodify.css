@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+
+.test_obj input[type="radio"] {
+        display: none;
+}
+ 
+.test_obj input[type="radio"] + span {
+        display: inline-block;
+        padding: 15px 10px;
+        border: 2px solid #dfdfdf;
+        background-color: #fff;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 16px;
+	
+}
+ 
+.test_obj input[type="radio"]:checked + span {
+        background-color: #113a6b;
+        color: #fff;
+}
