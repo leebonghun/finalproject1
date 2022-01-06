@@ -103,6 +103,7 @@ CREATE TABLE CSC_TBL
 	USER_ID varchar2(50) NOT NULL ,
 	PRIMARY KEY (CSC_BNO)
 );
+select CSC_RFI from csc_tbl;
 
 alter table csc_tbl modify(CSC_CONTENT varchar2(3000));
 alter table csc_tbl add(CSC_CHECK varchar2(1000))
@@ -503,6 +504,8 @@ UPDATE movie_board SET key ='Y1_Ujpsn1Jc' where movieCD=20210600;
 UPDATE movie_board SET key ='rs8YZgpoYRM' where movieCD=20210752;
 UPDATE movie_board SET key ='vjnNkaFsdMA' where movieCD=20211111;
 UPDATE movie_board SET key ='tAhLvuK7hb0' where movieCD=20211112;
+
+select * from csc_tbl;
 
 --순위 
 UPDATE movie_board SET rank ='No.1' where movieCD=20210028;

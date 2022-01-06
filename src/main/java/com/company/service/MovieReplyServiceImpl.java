@@ -49,6 +49,14 @@ public class MovieReplyServiceImpl implements MovieReplyService{
 
 
 
+	@Override
+	public boolean deleteReply(int replyCd) {
+		// TODO Auto-generated method stub
+		return mapper.deleteReply(replyCd)>0?true:false;
+	}
+
+
+
 	
 	
 	

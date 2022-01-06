@@ -13,13 +13,12 @@
 </div>   
 <div style="margin-left: 100px; margin-right: 100px;">
 <div class="row">
-	<div class="col-lg-12">
-		<div class="panel panel-default">
 		<form action="" method="post" role="form">
-		 <div class="form-group" style="margin-left: -78px; margin-top:25px  "></div>
-			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
+		<div class="panel panel-default">
+		 <div class="form-group" style="margin-left: -78px; margin-top:25px;  "></div>
+			<label>사유를 선택해주세요.</label>
 			</div>
-			 <div class="form-group" style="margin-left:-78px; margin-top:10px  ">
+			 <div class="form-group" style="margin-left:-78px; margin-top:10px;  ">
 		 	<label class="test_obj"><input type="radio" name="INFO_RFI" value="전체 공지"><span>전체 공지</span></label>
 			<label class="test_obj"><input type="radio" name="INFO_RFI" value="영화 관련 공지"><span>영화 관련 공지</span></label>
 			<label class="test_obj"><input type="radio" name="INFO_RFI" value="코로나 19 관련 공지"><span>코로나 19 관련 공지</span></label>
@@ -46,11 +45,10 @@
 					</sec:authorize>			
 					<button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
 				</div>
-			</div>
-		</form>
+			</form>
 		</div>
-   	</div>	
-   </div>
+	</div>
+  </div>	
 
 
 

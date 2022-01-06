@@ -21,7 +21,9 @@
 		]]>
 	</select>
 	
-	
+	<delete id="deleteReply">
+		delete from reply_tbl where replyCd =#{replyCd}
+	</delete>
 	
 	
 	

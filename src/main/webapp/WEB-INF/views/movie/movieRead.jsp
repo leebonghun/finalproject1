@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@include file="../includes/header.jsp" %>
-   <script src="/resources/js/movieList.js"></script>
+
    <link rel="stylesheet" href="/resources/css/replyAll.css" />
 <div class="bg-bricks" id="container">
 		<div class="" id="contents">
@@ -10,12 +10,7 @@
 					<div class="sect-sorting">
 						<div class="nowshow"></div>
 					</div>
-					
-					
-					
-					
 					<h3 id="live">영화 상세 정보</h3>
-						
 					</div>
 				</div>
 			</div>
@@ -79,9 +74,9 @@
 			<div class="panel-heading">
 				<i class="fa fa-comments fa-fw"></i>
 				리뷰를 남겨주세요!!!
-					
+					<sec:authorize access="isAuthenticated()"> 
 					<button id="addReplyBtn" class="btn btn-primary btn-xs pull-right">리뷰 작성</button>
-		    	
+		    		</sec:authorize>
 		    </div>
 			<div class="panel-body">
 				<ul class="chat">
@@ -115,23 +110,24 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-        	<label for="">댓글 내용</label>
+        	<label for="" id="editor">댓글 내용</label>
         	<input type="text" name="replyContent" class="form-control" value="댓글내용"/>
         </div>
         <div class="form-group">
-        	<label for="">작성자</label>
+        	<label for="" id="editor">작성자</label>
         	<input type="text" name="replyer" class="form-control" value="작성자"/>"/>
         </div>
         <div class="form-group">
-        	<label for="">작성일</label>
+        	<label for="" id="editor">작성일</label>
         	<input type="text" name="replyDate" class="form-control" value="작성일"/>
         </div>        
       </div>
       <div class="modal-footer">
-      	
+   		
         <button type="button" class="btn btn-success" id="modalRegisterBtn">등록</button>
         <button type="button" class="btn btn-warning" id="modalModifyBtn">수정</button>
         <button type="button" class="btn btn-danger" id="modalRemoveBtn">삭제</button>
+        
         <button type="button" class="btn btn-primary" data-dismiss="modal" id="modalCloseBtn">종료</button>
       </div>
     </div>
@@ -151,6 +147,7 @@
 <script>
 	//현재 글번호 가져오기
 	let movieCD = ${movieDto.movieCD};	
+	
 
 	
 	//스프링 시큐리티 설정으로 인한 추가
@@ -173,6 +170,7 @@
     
   </div>
 		</div>
+<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />		
 <script src="/resources/js/movieRead.js"></script>		
 <script src="/resources/js/movieReply.js"></script>		
 <%@include file="../includes/footer.jsp"%>
