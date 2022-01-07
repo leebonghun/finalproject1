@@ -13,11 +13,8 @@
     icon?family=Material+Icons|Material+Icons+Sharp|Material+Icons+Two+Tone|Material+Icons+Outlined"
     rel="stylesheet">
 <style type="text/css">
-a :hover {
-	
-}
 </style>
-</head>
+</head>  
 	<body bgcolor="black">
 		<div class="header">
 			<div class="btn-gate-container">
@@ -53,7 +50,7 @@ a :hover {
 							</li>
 							<li class="button">
 								<div>
-									<a class="btn-link" href="index" tabindex="0" data-uia="action-select-btn+secondary">
+									<a class="btn-link" href="pwdmodify" tabindex="0" data-uia="action-select-btn+secondary">
 										<div class="btn-wrapper">
 											<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/password.png')">
 											</div>
@@ -62,34 +59,37 @@ a :hover {
 									</a>
 								</div>
 							</li>
-							<li class="button">
-								<div>
-									<a class="btn-link" tabindex="0" data-uia="action-select-btn+secondary">
-										<div class="btn-wrapper">
-											<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/shutdown.png')">
+								<li class="button">
+									<div>
+										<a class="btn-link" tabindex="0" id="logout" data-uia="action-select-btn+secondary" href="#" onclick="document.getElementById('logoutForm').submit();">
+											<form action="/logout" method="post" id="logoutForm">
+												<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
+											</form>
+											<div class="btn-wrapper">
+												<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/shutdown.png')">
+												</div>
 											</div>
-										</div>
-										<span class="btn-name">로그아웃</span>
-									</a>
-								</div>
-							</li>
-							<li class="button">
-								<div>
-									<a class="btn-link" href="userleave" tabindex="0" data-uia="action-select-btn+secondary">
-										<div class="btn-wrapper">
-											<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/logout.png')">
+											<span class="btn-name">로그아웃</span>
+										</a>
+									</div>
+								</li>
+								<li class="button">
+									<div>
+										<a class="btn-link" href="userleave" tabindex="0" data-uia="action-select-btn+secondary">
+											<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
+											<div class="btn-wrapper">
+												<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/logout.png')">
+												</div>
 											</div>
-										</div>
-										<span class="btn-name">회원탈퇴</span>
-									</a>
-								</div>
-							</li>
+											<span class="btn-name">회원탈퇴</span>
+										</a>
+									</div>
+								</li>
 						</ul>
 					</div>
 				<span data-uia="btn-button"></span>
 				</div>
 			</div>
 		</div>
-
 	</body>
 </html>

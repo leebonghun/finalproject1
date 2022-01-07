@@ -21,7 +21,7 @@
 
 
 <!-- 로그인 -->
-<select id="login" resultType="com.company.domain.LoginDTO">
+<select id="login" resultType="com.company.domain.PwdDTO">
 	SELECT USER_ID, USER_PASSWORD FROM USER_TBL WHERE USER_ID=#{USER_ID} AND USER_PASSWORD=#{USER_PASSWORD}
 </select>
 
@@ -63,16 +63,12 @@
 	select user_password from user_tbl where user_id = #{user_id}
 </select>
 
+<!-- 비밀번호 수정 -->
 <update id="modify">
-	update user_tbl
-	set user_password=#{user_password}, user_password=#{confirm_password}
+	update user_tbl 
+	set user_password=#{confirm_password} 
 	where user_id=#{user_id} and user_password=#{user_password}
 </update>
-
-
-
-
-
 
 
 </mapper>
