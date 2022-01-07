@@ -15,19 +15,17 @@
         <div class="movie-part">
             <div class="reserve-title">영화</div>
             <div class="sort-wrapper">
-                <div class="sort-rate sort-selected">예매율순</div>
-                <div class="sort-korean">가나다순</div>
+                <div class="sort-rate sort-selected">영화</div>
             </div>
             <c:forEach var="item" items="${list1}">
-             <div class="movie-list-wrapper">
+            <ul class="content scroll-y" onscroll="movieSectionScrollEvent();" tabindex="1" style="right : -17px;">
+             	<li class="selected">
+             		<input type="hidden" value="${item.movieCD}" />
              		<a href="#" onclick="return false;" title="${item.movieNM}" alt="${item.movieNM}"><span class="icon">&nbsp;</span>
              		<span class="text">${item.movieNM}</span><span class="sreader"></span></a>
-             
-                <div class="movie-list">
-                    <%-- <div class="movie-list-age">15</div>
-                    <div class="movie-list-title">1917</div> --%>
-                </div>
-            </div>
+             	</li>
+              
+            </ul>
                 </c:forEach>
         </div>
         <div class="theater-part">
@@ -46,9 +44,9 @@
                 </div>
             </div>
         </div>
-        <div class="day-part">
+        <div class="day">
             <div class="reserve-title">날짜</div>
-            <div class="reserve-date"></div>
+            
         </div>
         <div class="time-part">
             <div class="reserve-title">시간</div>

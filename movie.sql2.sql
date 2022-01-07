@@ -257,6 +257,9 @@ select * from reply_tbl where replyCd = 1;
 
 select * from reply_tbl;
 
+select * from reserve_tbl;
+
+
 CREATE TABLE RESERVE_TBL
 (
 	scheduleNum number NOT NULL,
@@ -271,6 +274,7 @@ CREATE TABLE RESERVE_TBL
 	GUEST_NUM number NOT NULL UNIQUE,
 	PRIMARY KEY (scheduleNum)
 );
+
 
 delete from reply_tbl where replyCd=1;
 alter table reply_tbl drop column replygrade;
@@ -335,6 +339,17 @@ ALTER TABLE RESERVE_TBL
 	REFERENCES GUEST_TBL (GUEST_NUM)
 ;
 
+create table reserve(
+	movieNM varchar2(100),
+	movieRoom varchar2(100),
+	movieDay varchar2(100),
+	movieTime varchar2(100),
+	movieSeat varchar2(1000)
+);
+
+alter table reserve
+	ADD FOREIGN KEY (movieNM)
+	REFERENCES MOVIE_TBL(movieNM);
 
 ALTER TABLE ATTACH_INFO_TBL
 	ADD FOREIGN KEY (INFO_BNO)
