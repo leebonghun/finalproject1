@@ -121,7 +121,7 @@ a :hover {
                      </li>
                      <li class="button">
                         <div>
-                           <a class="btn-link" href="index" tabindex="0" data-uia="action-select-btn+secondary">
+                           <a class="btn-link" href="mypagecsclist" tabindex="0" data-uia="action-select-btn+secondary">
                               <div class="btn-wrapper">
                                  <div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/support.png')">
                                  </div>

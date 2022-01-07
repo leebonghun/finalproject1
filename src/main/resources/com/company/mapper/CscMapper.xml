@@ -30,7 +30,7 @@
  
  
  select Csc_Bno,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
- from csc_tbl where user_id=#{pageNum} order by Csc_Bno desc
+ from csc_tbl where user_id='admin97' order by Csc_Bno desc
  
 </select>
 <!-- 내  게시물들  -->
