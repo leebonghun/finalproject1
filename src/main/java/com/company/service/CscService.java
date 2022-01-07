@@ -1,5 +1,6 @@
 package com.company.service;
 
+import java.security.Principal;
 import java.util.List;
 
 import com.company.domain.Criteria;
@@ -15,5 +16,5 @@ public interface CscService {
 	public boolean update(CscDTO updateDto);
 	public boolean update2(CscDTO updateDto2);
 	public int getTotalCount(Criteria cri);
-	public List<CscDTO> getmyList();
+	public List<CscDTO> getmyList(Principal username);
 }

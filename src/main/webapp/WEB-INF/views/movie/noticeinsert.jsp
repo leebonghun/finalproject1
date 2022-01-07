@@ -17,7 +17,7 @@
 		<div class="panel panel-default">
 				<form action="" method="post" role="form">
 		<div class="form-group" style="margin-left: 0px; margin-top:0px  ">
-			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
+			<label style="font:sans-serif; color: black; padding: 3px">사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
 			 <div class="form-group" style="margin-left: 0px; margin-top:0px  ">
 		 	<label class="test_obj"><input type="radio" name="INFO_RFI" checked="checked" value="전체 공지"><span>전체 공지</span></label>
@@ -26,10 +26,10 @@
 			<label class="test_obj"><input type="radio" name="INFO_RFI" value="기타"><span>기타</span></label> 			
     </div>
 		<div class="form-group">
-			<label>Title</label> <input class="form-control" name="INFO_TITLE">
+			<label style="font:sans-serif; color: black; padding: 3px">제목</label> <input class="form-control" name="INFO_TITLE">
 		</div>
 		<div class="form-group">
-			<label>Content</label>
+			<label style="font:sans-serif; color: black; padding: 3px">내용</label>
 			<textarea class="form-control" rows="3" name="INFO_CONTENT"></textarea>
 		</div>					
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 

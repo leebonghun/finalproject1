@@ -192,7 +192,7 @@
                   <tbody>
                      <c:forEach var="cscDto" items="${list}">
                         <tr class="table-active">
-                           <th scope="row">${cscDto.CSC_BNO}</th>
+                           <th scope="row">${cscDto.rn}</th>
                            <td>${cscDto.CSC_RFI}</td>
                            <td id="tit"><a class="move" href="${cscDto.CSC_BNO}" style="color: black;">
                                  ${cscDto.CSC_TITLE} </a></td>

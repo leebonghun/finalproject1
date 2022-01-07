@@ -1,12 +1,10 @@
 package com.company.controller;
 
 
+import java.security.Principal;
 import java.util.List;
 
-
-
-
-
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -188,15 +186,17 @@ public class CscController {
 	}
 	
 	@GetMapping("mypagecsclist")
-	public void cscmylist(Model model) {
+	public void cscmylist(Model model,Principal username) {
 		log.info("내 글목록으로 이동중입니다.");
 		
-		List<CscDTO> mylist = cscService.getmyList();
+		List<CscDTO> mylist = cscService.getmyList(username);
 		// 페이지 나누기를 위한 정보
 	
 		log.info(""+mylist);
-		model.addAttribute("pageDto");
+		
 		model.addAttribute("mylist", mylist);
+	
+		
 	}
 	
 	

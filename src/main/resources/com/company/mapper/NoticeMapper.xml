@@ -7,8 +7,8 @@
  
  	<![CDATA[
 	 
-	 select INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
-	 from (select /*+INDEX_DESC(info_tbl SYS_C007695*/
+	 select rn,INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
+	 from (select /*+INDEX_DESC(info_tbl SYS_C007695)*/
 	 rownum rn,INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
 	 from info_tbl
 	 where
@@ -18,8 +18,7 @@
 	     		  
 	<![CDATA[
 	     		  rownum <= (#{pageNum} * #{amount}))
-			where rn > (#{pageNum}-1) * #{amount}
-	order by INFO_BNO desc
+			where rn > (#{pageNum}-1) * #{amount}	
 	]]>  
 </select>
 	
@@ -64,7 +63,7 @@
 	<update id="update">
 		update info_tbl
 		set
-		INFO_TITLE=#{INFO_TITLE},INFO_CONTENT=#{INFO_CONTENT}
+		INFO_RFI=#{INFO_RFI},INFO_TITLE=#{INFO_TITLE},INFO_CONTENT=#{INFO_CONTENT}
 		where INFO_BNO=#{INFO_BNO}
 	</update>
  	
