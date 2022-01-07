@@ -16,6 +16,6 @@ $(function(){
 	$("#mypage").click(function(){
 		location.href="/movie/mypage";
 	})
-	
+
 })
 

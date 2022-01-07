@@ -6,6 +6,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.company.domain.Criteria;
 
-import com.company.domain.LoginDTO;
+import com.company.domain.PwdDTO;
 import com.company.domain.UserDTO;
 import com.company.service.CscService;
 
@@ -50,6 +51,7 @@ public class MovieController {
 	
 	@Autowired
 	private MovieService service;
+
 	
 	
 
@@ -119,33 +121,48 @@ public class MovieController {
 	public void leaveGet() {
 		log.info("회원 탈퇴 페이지 요청");
 	}
-	
 	@PostMapping("/userleave")
 	public String leavePost(UserDTO leaveDto, HttpSession session,RedirectAttributes rttr) {
-		log.info("탈퇴 요청"+leaveDto);
+		log.info("탈퇴 요청 "+leaveDto);
 		// userid, password
 		UserDTO userDto = new UserDTO();
-		
-		
 		String truePw = userDto.getUser_password();
-	
-			
 		
 		if (truePw == leaveDto.getUser_password() && userService.leave(leaveDto)) {
 			//세션해제
 			session.invalidate();
 			return "redirect:/movie/index";
-			
 		} 
-			return "redirect:/movie/userleave"; //탈퇴가 실패시
-		
-		
+		return "redirect:/movie/userleave"; //탈퇴가 실패시
 	}
+	
+	@PreAuthorize("isAuthenticated()")
 	@GetMapping("/mypage")
 	public void mypage() {
 		log.info("마이페이지");
 	}
 	
-
+	//비밀번호 변경
+	@PreAuthorize("isAuthenticated()")
+	@GetMapping("/pwdmodify")
+	public void changePwd() {
+		log.info("pwdModify 요청");
+	}
+	@PostMapping("/pwdmodify")
+	public String changePwdPost(PwdDTO pwdDto, HttpSession session, RedirectAttributes rttr) {
+		log.info("비밀번호 변경 요청 "+pwdDto);
+		//userid 가져오기
+		UserDTO userDto = new UserDTO();
+		String truePw = userDto.getUser_password();
+		
+		if(truePw == pwdDto.getUser_password() && userService.modify(userDto)) {
+			//성공시
+			//비밀번호 변경이 되면 기존의 세션 해제
+			session.invalidate();
+			return "redirect:/movie/signin";
+		}
+		//실패시
+		return "redirect:/movie/pwdmodify";
+	}
 	
 }

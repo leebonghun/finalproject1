@@ -11,8 +11,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class LoginDTO {
-
-	private String username;
-	private String password;
+public class PwdDTO {
+	private String user_id;
+	private String user_password; //현재 비밀번호
+	private String new_password; //현재 비밀번호	
+	private String confirm_password; //변경할 비밀번호
 }
