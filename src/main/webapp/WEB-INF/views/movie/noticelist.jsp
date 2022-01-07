@@ -36,24 +36,24 @@
                </colgroup>              
                    <thead>
                        <tr>
-                           <th>번 호</th>
-                           <th>분 류</th>
-                           <th>제 목</th>
-                           <th>내 용</th>
-                           <th>작성일</th>
+                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">번 호</th>
+                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">분 류</th>
+                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">제 목</th>
+                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">내 용</th>
+                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">작성일</th>
                        </tr>                           
                    </thead>
             
 
             <!-- 게시판 리스트 반복문 -->
-            <tbody>
-               <c:forEach var="infodto" items="${list}">
-                  <tr class="table-active">            
-                     <th scope="row">${infodto.INFO_BNO}</th>
-                     <td>${infodto.INFO_RFI}</td>
-                     <td><a class="move" href="${infodto.INFO_BNO}">${infodto.INFO_TITLE}</a></td>            
-                     <td>${infodto.INFO_CONTENT}</td>
-                     <td>${infodto.INFO_REGDATE}</td>
+            <tbody >
+               <c:forEach var="infodto" items="${list}">             
+                  <tr class="table-active" >            
+                     <th scope="row" style="font:sans-serif; color: black;">${infodto.rn}</th>
+                     <td style="font:sans-serif; color: black;">${infodto.INFO_RFI}</td>
+                     <td style="font:sans-serif; color: black;"><a class="move" href="${infodto.INFO_BNO}">${infodto.INFO_TITLE}</a></td>            
+                     <td style="font:sans-serif; color: black;">${infodto.INFO_CONTENT}</td>
+                     <td style="font:sans-serif; color: black;"><fmt:formatDate pattern="yyyy-MM-dd HH:mm"  value="${infodto.INFO_REGDATE}"/></td>
                   </tr>                        
                </c:forEach>               
             </tbody>
@@ -110,8 +110,8 @@
     
       <div class="row" style="width:100%"> 
          <ul class="contactus">
-            <li>[문의안내]</li>
-             <li>*&nbsp;게시물에&nbsp;대한&nbsp;문의는&nbsp;페이지&nbsp;상단의&nbsp;담당자&nbsp;및&nbsp;전화번호&nbsp;내용을&nbsp;참고하세요.
+            <li >[문의안내]</li>
+            <li>*&nbsp;게시물에&nbsp;대한&nbsp;문의는&nbsp;페이지&nbsp;상단의&nbsp;담당자&nbsp;및&nbsp;전화번호&nbsp;내용을&nbsp;참고하세요.
              <br>
             *&nbsp;고객상담센터&nbsp;국번없이&nbsp;1234(전화연결장애 문의 : 012-345-6789)&nbsp; </li>
          </ul>

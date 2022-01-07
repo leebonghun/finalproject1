@@ -19,16 +19,16 @@
 			 
 			<div class="panel-body">
 				<div class="form-group">
-						<label style="margin-top:10px;">글번호</label> <input class="form-control" name="INFO_BNO" 
+						<label style="font:sans-serif; color: black; padding: 3px">글번호</label> <input class="form-control" name="INFO_BNO" 
 						readonly="readonly" value="${readdto.INFO_BNO }">
 					</div>
 				
 					<div class="form-group">
-						<label>제목</label> <input class="form-control" name="INFO_TITLE" 
+						<label style="font:sans-serif; color: black; padding: 3px">제목</label> <input class="form-control" name="INFO_TITLE" 
 						readonly="readonly"	 value="${readdto.INFO_TITLE }" >
 					</div>
 					<div class="form-group">
-						<label>내용</label>
+						<label style="font:sans-serif; color: black; padding: 3px">내용</label>
 						<textarea class="form-control" rows="3" 
 						readonly="readonly" name="INFO_CONTENT" >${readdto.INFO_CONTENT }</textarea>
 					</div>				

@@ -9,10 +9,11 @@ li {
 }
 .contactus {
     border: 1px solid #e2e2e2;
-    border-radius: 3px;
-    background: url(/resources/images/icon_contactus_bg.png) no-repeat;
+    text-align: center;
+    border-radius: 8px;
+    background: url(/resources/images/contact3.png) no-repeat;
     background-size: 145px 100%;
-    margin: 20px 0;
+    margin: 10px 0;
     word-break: break-all;
 }
 
@@ -103,7 +104,7 @@ input[type="text"] {
     line-height: 34px;
     color: #fff;
     font-size: 15px;
-    background: #063863;
+    background : #063863; 
     text-align: center;
     color: #063863;
     font-weight: normal;
@@ -115,9 +116,8 @@ input[type="text"] {
 }
 
 .contactus li:last-child {
-    float: left;
     width: auto;
-    padding: 10px 10px 10px 40px;
+    padding: 10px 110px 10px 50px;
     font-weight: normal;
     font-size: 15px;
     -webkit-text-size-adjust: none;
@@ -151,7 +151,7 @@ tr{
 
 table table-hover {
 	border: 2px solid #ddd;
-	border-radius: 30%;
+	border-radius: 16px;
     background-color: #fff;
     height: 34px;
     font-size: 14px;
@@ -167,12 +167,6 @@ table table-hover {
     font-size: 14px;
 }
 
-tabl{
-	overflow: hidden;
-    display: block;
-    border: 1px solid #e4e4e4;
-    border-radius: 10px;
-}
 
 select {
 	border-radius: 16px;
