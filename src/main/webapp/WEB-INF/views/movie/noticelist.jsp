@@ -17,10 +17,11 @@
 <div class="panel-body" >
    <div>
       <div style="text-align: right;">
-      		<sec:authorize access="hasRole('ROLE_ADMIN')" >
-         <button type="button" class="btn btn-info" onclick="location.href='/movie/noticeinsert'"
-         style="background-color : rgb(255, 115, 86); border-color: rgb(251, 67, 87);">글쓰기</button>
-         </sec:authorize>
+	  <!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
+		<sec:authorize access="hasRole('ROLE_ADMIN')" >
+       		<button type="button" class="btn btn-info" onclick="location.href='/movie/noticeinsert'"
+   		    	     style="background-color : rgb(255, 115, 86); border-color: rgb(251, 67, 87);">글쓰기</button>
+        </sec:authorize>
       </div>
    </div>
 </div>
