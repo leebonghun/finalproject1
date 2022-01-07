@@ -28,7 +28,9 @@ a :hover {
 						<a href="index"><h1 style="margin-left: 30px">BBM</h1></a>
 					</div>		
 					<div class="btn-gate-label">
+				
 						<h1>마이 페이지</h1>
+					
 						<ul class="choose-btn">
 							<li class="button">
 								<div>
@@ -129,6 +131,9 @@ a :hover {
                               <span class="btn-name">내 문의</span>
                            </a>
                         </div>
+                        <sec:authorize access="isAuthenticated()" >                           
+							<input type="hidden" name="user_id" value= "<sec:authentication  property="principal.username"/> "/>
+							</sec:authorize>
                      </li>
                      <li class="button">
                         <div>
@@ -173,7 +178,8 @@ a :hover {
             </div>
          </div>
       </div>
-      
+     
+   <!-- 스크립트 -->
 <script type="text/javascript">
 	function goBack(){
 		if(window.history.back()){
