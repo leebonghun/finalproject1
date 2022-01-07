@@ -17,8 +17,8 @@
 <div class="panel-body" >
    <div>
       <div style="text-align: right;">
-         <button type="button" class="btn btn-info"
-            onclick="location.href='/movie/noticeinsert'">글쓰기</button>
+         <button type="button" class="btn btn-info" onclick="location.href='/movie/noticeinsert'"
+         style="background-color : rgb(255, 115, 86); border-color: rgb(251, 67, 87);">글쓰기</button>
       </div>
    </div>
 </div>
@@ -27,7 +27,7 @@
            <div class="board_info">
             <div class="board_number" style="font:bold; color: black;">
                <p>총 게시글 : 
-                  <span class="red bold" style="color: red;">30</span>
+                  <span class="red bold" style="color: red;">3</span>
                   건
                </p>
                
@@ -68,25 +68,25 @@
              <ul class="pagination">
                 <c:if test="${pageDto.prev}">
                    <li class="paginate_button previous">
-                      <a href="${pageDto.startPage-10}">Previous</a>
+                      <a href="${pageDto.startPage-10}" style="background-color : rgb(255, 115, 86); 
+	border-color: rgb(251, 67, 87);">Previous</a>
                    </li>
                 </c:if>
                 
                 <c:forEach var="idx" begin="${pageDto.startPage}" end="${pageDto.endPage}">
                    <li class="paginate_button ${pageDto.cri.pageNum==idx?'active':''}">
-                      <a href="${idx}">${idx}</a>
+                      <a href="${idx}" style="background-color : rgb(255, 115, 86); 
+	border-color: rgb(251, 67, 87);">${idx}</a>
                    </li>
                 </c:forEach>
                 
                 <c:if test="${pageDto.next}">
                  <li class="paginate_button next">
-                    <a href="${pageDto.endPage+1}">Next</a>
+                    <a href="${pageDto.endPage+1}" style="background-color : rgb(255, 115, 86); 
+	border-color: rgb(251, 67, 87);">Next</a>
                  </li>
               </c:if>
              </ul>
-          </div>
-         <!-- start Pagination -->
-              <!-- end Pagination -->
     <div class="row"> <!-- start search -->
           <div class="col-md-12">
             <div class="col-md-12" style="text-align: right;"><!--search Form-->
@@ -104,8 +104,12 @@
                  </select>                               
                  
                  <input type="text" name="keyword" id=""  value='<c:out value="${pageDto.cri.keyword}"/>'/>
-                 <button class="btn btn-default">Search</button>
+                 <button style="background-color : rgb(255, 115, 86); 
+	border-color: rgb(251, 67, 87);" class="btn btn-default">Search</button>
               </form>
+          </div>
+         <!-- start Pagination -->
+              <!-- end Pagination -->
              </div>
             </div>                                 
         </div><!-- end search -->

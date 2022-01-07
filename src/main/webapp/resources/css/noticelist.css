@@ -157,6 +157,7 @@ table table-hover {
     font-size: 14px;
 }
 
+
 .a1 {
 	border-radius: 16px;
 	border: 2px solid #ddd;
@@ -172,6 +173,17 @@ tabl{
     border: 1px solid #e4e4e4;
     border-radius: 10px;
 }
+
+select {
+	border-radius: 16px;
+	border: 2px solid #ddd;
+    background-color: #fff;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+
 
 /* ul li {
     margin: 30px;
