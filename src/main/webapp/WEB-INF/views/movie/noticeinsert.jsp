@@ -33,8 +33,10 @@
 			<textarea class="form-control" rows="3" name="INFO_CONTENT"></textarea>
 		</div>					
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+		<sec:authorize access="hasRole('ROLE_ADMIN')" >
 		<button type="submit" class="btn btn-info">작성완료</button>
 		<button type="reset" class="btn btn-warning">초기화</button>
+		</sec:authorize>
 		<button type="button" class="btn btn-default" onclick="location.href='/movie/noticelist'">뒤로가기</button>
 	</form>
 	</div>
