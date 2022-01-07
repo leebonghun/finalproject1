@@ -30,4 +30,21 @@ public class EventController {
 		model.addAttribute("readdto", readdto);
 	}
 	
+	@GetMapping("/eventread2")
+	public void eventread2(int EVENT_BNO, Model model) {
+		log.info("이벤트로 이동중입니다.");
+		
+		EventDTO readdto = eventService.getRow(EVENT_BNO);
+		
+		model.addAttribute("readdto", readdto);
+	}
+	
+	@GetMapping("/eventread3")
+	public void eventread3(int EVENT_BNO, Model model) {
+		log.info("이벤트로 이동중입니다.");
+		
+		EventDTO readdto = eventService.getRow(EVENT_BNO);
+		
+		model.addAttribute("readdto", readdto);
+	}
 }

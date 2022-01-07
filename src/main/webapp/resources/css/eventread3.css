@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.tit{
+	margin: 20px;
+}
+.con{
+	margin: 20px;
+}	
+.hum{
+	margin: 20px;
+}	
+.date{
+	margin: 20px;
+}	
+.contain {
+	margin-top: 30px;
+	width: 940px;
+    padding: 4px;
+    border: 7px solid #ff8080;
+    border-radius: 50px;
+    background-size: 145px 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+

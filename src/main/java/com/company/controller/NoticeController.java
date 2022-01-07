@@ -44,7 +44,7 @@ public class NoticeController {
 	@PreAuthorize("isAuthenticated()")
 	@GetMapping("noticeinsert")
 	public void insertGet() {
-		log.info("notice 폼 요청");
+		log.info("공지사항 글 작성으로 이동중입니다.");
 		//return "/movie/noticeinsert";
 	}
 	
@@ -60,7 +60,7 @@ public class NoticeController {
 		noticeService.register(insertDto);
 
 		// log.info("bno"+insertDto.getBno());
-		rttr.addFlashAttribute("result", insertDto.getINFO_BNO());
+		rttr.addFlashAttribute(insertDto.getINFO_BNO());
 		return "redirect:/movie/noticelist";  
 	}
 	
