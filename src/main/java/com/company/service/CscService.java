@@ -15,4 +15,5 @@ public interface CscService {
 	public boolean update(CscDTO updateDto);
 	public boolean update2(CscDTO updateDto2);
 	public int getTotalCount(Criteria cri);
+	public List<CscDTO> getmyList();
 }

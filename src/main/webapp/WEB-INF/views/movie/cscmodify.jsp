@@ -31,11 +31,33 @@
 		 <div class="form-group" style="margin-left: 25px; margin-top:25px  ">
 			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
-			 <div class="form-group" style="margin-left: 25px; margin-top:25px  ">		 
-			<label class="test_obj"><input type="radio" name="CSC_RFI"  value="기타" checked="checked"><span>기타</span></label>
+			 <div class="form-group" style="margin-left: 25px; margin-top:25px  "> 
+			 
+			 
+			 <c:if test="${readdto.CSC_RFI == '기타'}">
+			<label class="test_obj"><input type="radio" name="CSC_RFI" checked value="기타"><span>기타</span></label>
 			<label class="test_obj" ><input type="radio" name="CSC_RFI" value="예매 환불 및 취소"><span>예매 환불 및 취소</span></label>
 			<label class="test_obj"><input type="radio" name="CSC_RFI" value="계정관련 문의"><span>계정관련 문의</span></label>
 			<label class="test_obj"><input type="radio" name="CSC_RFI" value="분실물"><span>분실물</span></label> 
+			</c:if>
+			<c:if test="${readdto.CSC_RFI == '예매 환불 및 취소'}">
+			<label class="test_obj"><input type="radio" name="CSC_RFI" value="기타"><span>기타</span></label>
+			<label class="test_obj" ><input type="radio" name="CSC_RFI" checked value="예매 환불 및 취소"><span>예매 환불 및 취소</span></label>
+			<label class="test_obj"><input type="radio" name="CSC_RFI" value="계정관련 문의"><span>계정관련 문의</span></label>
+			<label class="test_obj"><input type="radio" name="CSC_RFI" value="분실물"><span>분실물</span></label> 
+			</c:if>
+			<c:if test="${readdto.CSC_RFI == '계정관련 문의'}">
+			<label class="test_obj"><input type="radio" name="CSC_RFI" value="기타"><span>기타</span></label>
+			<label class="test_obj" ><input type="radio" name="CSC_RFI"  value="예매 환불 및 취소"><span>예매 환불 및 취소</span></label>
+			<label class="test_obj"><input type="radio" name="CSC_RFI" checked value="계정관련 문의"><span>계정관련 문의</span></label>
+			<label class="test_obj"><input type="radio" name="CSC_RFI" value="분실물"><span>분실물</span></label> 
+			</c:if>
+			<c:if test="${readdto.CSC_RFI == '분실물'}">
+			<label class="test_obj"><input type="radio" name="CSC_RFI" value="기타"><span>기타</span></label>
+			<label class="test_obj" ><input type="radio" name="CSC_RFI" value="예매 환불 및 취소"><span>예매 환불 및 취소</span></label>
+			<label class="test_obj"><input type="radio" name="CSC_RFI" value="계정관련 문의"><span>계정관련 문의</span></label>
+			<label class="test_obj"><input type="radio" name="CSC_RFI" checked value="분실물"><span>분실물</span></label> 
+    		</c:if>
     </div>
 			<!-- /.panel-heading -->
 		
@@ -86,7 +108,8 @@
 </form>	
 <script type="text/javascript">
 	//헌재 글 번호 가져오기
-	let CSC_BNO = ${dto.CSC_BNO};
+	let CSC_BNO = ${readdto.CSC_BNO};
+	let CSC_RFI = ${readdto.CSC_RFI};
 	
 	//토큰값 설정
 	let csrfHeaderName = "${_csrf.headerName}";

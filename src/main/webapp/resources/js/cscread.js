@@ -8,6 +8,22 @@ $(function() {
 	
 	let button=$("form[role='form']").find("button");	
 	
+	
+	/*if($("input:checkbox[name='CSC_CHECK']").val('[답변완료]')){
+		$("input:checkbox[name='CSC_CHECK']").prop("checked",true);
+	}else if{
+		$("input:checkbox[name='CSC_CHECK']").prop("checked",false);
+	}
+	
+	if($("#dab").val()){
+		$("input:checkbox[name='CSC_CHECK']").prop("checked",true);
+	}
+	if(!$("#dab").val()){
+		$("input:checkbox[name='CSC_CHECK']").prop("checked",false);
+	}*/
+	
+	
+	
 	$(button).click(function(e){
 		e.preventDefault(); //submit 막기
 		
@@ -17,7 +33,8 @@ $(function() {
 		if(oper=='answer'){
 			/*formObj.attr("action","/movie/read")
 			.attr("method","post");*/
-			formObj =$("form[role='form']");		
+			formObj =$("form[role='form']");
+					
 		}
 		if(oper=='modify'){
 			formObj.attr("action", "/movie/cscmodify");				

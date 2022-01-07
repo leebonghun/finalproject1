@@ -103,6 +103,7 @@ CREATE TABLE CSC_TBL
 	USER_ID varchar2(50) NOT NULL ,
 	PRIMARY KEY (CSC_BNO)
 );
+select CSC_RFI from csc_tbl;
 
 alter table csc_tbl modify(CSC_CONTENT varchar2(3000));
 alter table csc_tbl add(CSC_CHECK varchar2(1000))
@@ -221,6 +222,9 @@ insert into MOVIE_TBL values(20211111,'티탄','아가트 루셀, 뱅상 랭동'
 
 insert into MOVIE_TBL values(20211112,'해피 뉴 이어','한지민, 이동욱, 강하늘, 윤아','138',
 '이이이','멜로/로맨스','12세이상 관람가','한국','CJ ENM','2021-12-29');
+
+select Csc_Bno,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
+ from csc_tbl where user_id='admin97' order by Csc_Bno desc;
 
 
 CREATE TABLE REPLY_TBL
@@ -394,6 +398,7 @@ values('id2','name2','12345','1997/10/14','id2@naver.com','010-1234-5678',sysdat
 
 select * from user_tbl;	
 select * from csc_TBL;	
+alter table info_tbl add(INFO_RFI varchar2(1000));
 		select Csc_Bno,Csc_Title,Csc_Content,Csc_Regdate,Csc_Rfi,Csc_Answer,user_id
  from csc_tbl;
 ---
@@ -503,6 +508,8 @@ UPDATE movie_board SET key ='Y1_Ujpsn1Jc' where movieCD=20210600;
 UPDATE movie_board SET key ='rs8YZgpoYRM' where movieCD=20210752;
 UPDATE movie_board SET key ='vjnNkaFsdMA' where movieCD=20211111;
 UPDATE movie_board SET key ='tAhLvuK7hb0' where movieCD=20211112;
+
+select * from csc_tbl;
 
 --순위 
 UPDATE movie_board SET rank ='No.1' where movieCD=20210028;

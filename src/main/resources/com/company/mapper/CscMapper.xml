@@ -7,18 +7,36 @@
 	<![CDATA[
 	select CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
  from  (select /*+INDEX_DESC(csc_tbl SYS_C008418*/ rownum rn,CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
- from csc_tbl
+ from csc_tbl 
  where 
   ]]>
  <include refid="criteria"></include>
  
  <![CDATA[
  rownum <=(#{pageNum} * #{amount}))
+
  where rn>(#{pageNum}-1) * #{amount}
+	order by CSC_BNO desc
+
+
 	
+
 	]]>
 
 	</select> 
+	
+	 <select id="myList" resultType="com.company.domain.CscDTO">
+	
+ 
+ 
+ select Csc_Bno,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
+ from csc_tbl where user_id=#{user_id} order by Csc_Bno desc
+ 
+</select>
+<!-- 내  게시물들  -->
+	
+	
+	
  <!-- <select id="listAll" resultType="com.company.domain.CscDTO">
 	
  
@@ -35,14 +53,19 @@
 		
 		 <include refid="criteria"></include>
 		
-		 Csc_Bno >0
+		 Csc_Bno >0 
 	</select> 
 
 <!-- 게시글 하나 가져오기 -->
 	<select id="read" resultType="com.company.domain.CscDTO">
-		select CSC_BNO,user_id,Csc_Rfi,CSC_TITLE,csc_content,csc_answer,CSC_CHECK
+		select CSC_BNO,Csc_Rfi,CSC_TITLE,csc_content,csc_answer,CSC_CHECK,user_id
 		from csc_tbl
 		where CSC_BNO=#{CSC_BNO}
+		
+		
+		
+		
+		
 	</select>
 
 <!-- 게시글 작성 -->
@@ -80,6 +103,8 @@
 	<update id="update2">
 		update csc_tbl
 		set
+
+		
 		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK=#{CSC_CHECK}
 		where CSC_BNO=#{CSC_BNO}
 	</update>	
