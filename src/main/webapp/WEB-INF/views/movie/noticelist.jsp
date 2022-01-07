@@ -25,14 +25,8 @@
       <!-- /.panel-heading -->
         <div class="panel-body" > 
            <div class="board_info">
-            <div class="board_number" style="font:bold; color: black;">
-               <p>총 게시글 : 
-                  <span class="red bold" style="color: red;">3</span>
-                  건
-               </p>
-               
-         <div class="row" style="width:100%">         
-               <table class="table table-hover" id="dtotbl">
+         <div class="row" >         
+               <table class="table table-hover" id="dtotbl" >
                   <colgroup>
                    <col class="col-md-1">
                    <col class="col-md-1">
@@ -64,6 +58,7 @@
                </c:forEach>               
             </tbody>
            </table>
+        </div><!-- end search -->
           <div class="text-center" style="text-align: center;">
              <ul class="pagination">
                 <c:if test="${pageDto.prev}">
@@ -89,7 +84,7 @@
              </ul>
     <div class="row"> <!-- start search -->
           <div class="col-md-12">
-            <div class="col-md-12" style="text-align: right;"><!--search Form-->
+            <div class="col-md-12" style="text-align: right; width: 830px;" ><!--search Form-->
               <form action="" method="get" id="searchForm">
                  <input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}" />
                  <input type="hidden" name="amount" value="${pageDto.cri.amount}" />
@@ -112,7 +107,6 @@
               <!-- end Pagination -->
              </div>
             </div>                                 
-        </div><!-- end search -->
     
       <div class="row" style="width:100%"> 
          <ul class="contactus">
@@ -123,7 +117,6 @@
          </ul>
       </div>
       </div>
-       </div>
       </div>
     </div>
      

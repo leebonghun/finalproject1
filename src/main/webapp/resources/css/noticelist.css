@@ -182,8 +182,11 @@ select {
     line-height: 32px;
     font-size: 14px;
 }
-
-
+.row {
+    margin: 0px auto;
+    width: 830px;
+    background-color: #fff;
+}
 
 /* ul li {
     margin: 30px;
