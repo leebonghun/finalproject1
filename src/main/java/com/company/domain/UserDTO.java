@@ -25,5 +25,5 @@ public class UserDTO {
 	private boolean user_enable;
 	
 	
-	private List<AuthDTO> authList;
+	private List<AuthDTO> authList;	
 }

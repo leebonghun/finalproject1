@@ -476,6 +476,8 @@ insert into MOVIE_board values(20211111,'티탄','2021-12-09','120',
 
 select * from user_tbl;
 
+select * from info_tbl;
+
 insert into MOVIE_board values(20211112,'해피 뉴 이어','2021-12-29','138',
 '한지민, 이동욱, 강하늘, 윤아','멜로/로맨스','한국','CJ ENM','12세이상관람가','tAhLvuK7hb0','m12.jpg','No.12');
 insert into MOVIE_board values(20211112,'해피 뉴 이어','한지민, 이동욱, 강하늘, 윤아','138',
@@ -584,3 +586,8 @@ select * from REPLY_TBL;
 select rank,poster,key,movieNM,actors,showTM,genres,watchGradeNm,nationNm,companyNm,openDt,movieCD from movie_board where movieCD = 20210028;
 
 update MOVIE_BOARD set movieNM = '스파이더맨노웨이홈' where rank = 'No.1';
+
+
+select rn,INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
+from (select /*+INDEX_DESC(info_tbl SYS_C007695)*/ rownum rn,INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE 
+from info_tbl where rownum <= (1 * 10)) where rn > (1-1) * 10;

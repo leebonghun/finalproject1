@@ -6,7 +6,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.company.domain.LoginDTO;
+import com.company.domain.PwdDTO;
 import com.company.domain.UserDTO;
 import com.company.mapper.UserMapper;
 
@@ -49,7 +49,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public LoginDTO login(LoginDTO loginDto) {
+	public PwdDTO login(PwdDTO loginDto) {
 		return mapper.login(loginDto);
 	}
 
@@ -63,7 +63,6 @@ public class UserServiceImpl implements UserService {
 		
 		// 12345 => 암호화
 		// encoder.matches('12345','dfldfjeofdjl')
-		// 
 		boolean result = false;
 		leaveDto.setUser_password(encodedPassword);
 		
@@ -77,5 +76,23 @@ public class UserServiceImpl implements UserService {
 
 	}
 
+	@Override
+	@Transactional
+	public boolean modify(UserDTO pwdDto) {
+		
+			BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+			
+			String encodedPassword = bCryptPasswordEncoder.encode(pwdDto.getUser_password());
+			
+			boolean result = false;
+			pwdDto.setUser_password(encodedPassword);
+			
+			if(encoder.matches(pwdDto.getUser_password(), mapper.findByPwd(pwdDto.getUser_id()))) {
+				result = mapper.modify(pwdDto.getUser_id()) > 0 ? true : false;
+			}
+					
+			return result;
+
+	}
 
 }

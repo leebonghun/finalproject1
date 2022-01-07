@@ -14,6 +14,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class InfoDTO {
+	private int rn;
 	private int INFO_BNO;
 	private String INFO_TITLE;
 	private String INFO_RFI;

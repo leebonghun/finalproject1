@@ -14,7 +14,7 @@
 			<div class="event-list mt15" >
 				<div class="img" style="text-align: center; width: 880px; padding: 20px;">
 					<img src="/resources/images/signup.png" alt="신규 회원 이벤트" onerror="noImg(this);"  />
-				<div class="contain" >
+				<div class="contain" style="text-align: left;">
 					<div class="tit"> [이벤트 제목 : 신규 회원 이벤트] </div>
 					<div class="con"> [이벤트 내용 : 신규 회원가입하신 고객분들 중에 선착순 100명에게 비타 500 1BOX를 증정합니다.] </div>
 					<div class="hum"> [이벤트 대상 : 신규로 회원가입한 고객] </div>

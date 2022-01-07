@@ -44,22 +44,22 @@
 			<!-- /.panel-heading -->
 			<div class="panel-body">
 				<div class="form-group">
-						<label style="margin-top:10px;">글번호</label> <input class="form-control" name="INFO_BNO" 
+						<label style="font:sans-serif; color: black; padding: 3px">글번호</label> <input class="form-control" name="INFO_BNO" 
 						readonly="readonly" value="${readdto.INFO_BNO }">
 					</div>
 				
 					<div class="form-group">
-						<label>제목</label> <input class="form-control" name="INFO_TITLE" value="${readdto.INFO_TITLE }" >
+						<label style="font:sans-serif; color: black; padding: 3px">제목</label> <input class="form-control" name="INFO_TITLE" value="${readdto.INFO_TITLE }" >
 					</div>
 					<div class="form-group">
-						<label>내용</label>
+						<label style="font:sans-serif; color: black; padding: 3px">내용</label>
 						<textarea class="form-control" rows="3" name="INFO_CONTENT" >${readdto.INFO_CONTENT }</textarea>
 					</div>				
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 					<!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
 					<sec:authorize access="hasRole('ROLE_ADMIN')" >
-					<button type="submit" data-oper='modify' class="btn btn-info">수정완료</button>
-					<button type="submit" data-oper='remove' class="btn btn-danger">글삭제</button>
+					<button type="submit" data-oper='modify' class="btn btn-info" class="btn btn-default">수정완료</button>
+					<button type="submit" data-oper='remove' class="btn btn-danger"	class="btn btn-default">글삭제</button>
 					</sec:authorize>			
 					<button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
     </div> 			

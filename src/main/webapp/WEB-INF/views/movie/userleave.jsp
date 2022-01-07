@@ -33,7 +33,6 @@
 	        class="form-control"
 	        placeholder="아이디"
 	        required
-	        autofocus
 	        value="${info.username}"
 	        readonly="readonly"
 	      />
@@ -47,6 +46,7 @@
 	       class="form-control"
 	       placeholder="비밀번호"
 	       required
+	       autofocus
 	     />
       <div>
         <p style="color: red;">${error}</p>
