@@ -67,7 +67,7 @@
 <update id="modify">
 	update user_tbl 
 	set user_password=#{confirm_password} 
-	where user_id=#{user_id} and user_password=#{user_password}
+	where user_id=#{user_id}
 </update>
 
 
