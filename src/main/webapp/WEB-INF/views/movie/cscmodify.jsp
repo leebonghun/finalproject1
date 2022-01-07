@@ -86,7 +86,7 @@
 					</c:if>
 					</sec:authorize>
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-					<button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
+					<button type="submit" data-oper='list' class="btn btn-default">고객센터목록</button>
 					</div>
 				</form>
 			</div>

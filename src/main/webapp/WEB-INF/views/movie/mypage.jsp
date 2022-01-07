@@ -19,8 +19,12 @@ a :hover {
 }
 </style>
 </head>
-<<<<<<< HEAD
+   
 	<body bgcolor="black">
+	
+	 <form action="" role="form" method="post">
+    
+    </form>
 		<div class="header">
 			<div class="btn-gate-container">
 				<div class="centered-div list-btn-container">
@@ -45,15 +49,19 @@ a :hover {
 								</div>
 							</li>
 							<li class="button">
+							 
+							
 								<div>
-									<a class="btn-link" href= "${cscDto.CSC_BNO}" tabindex="0" data-uia="action-select-btn+secondary">
+									<a class="btn-link" href= "mypagecsclist" tabindex="0" data-uia="action-select-btn+secondary">
 										<div class="btn-wrapper">
 											<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/support.png')">
 											</div>
 										</div>
 										<span class="btn-name">내 문의</span>
 									</a>
+									
 								</div>
+									
 							</li>
 							<li class="button">
 								<div>
@@ -94,8 +102,7 @@ a :hover {
 				</div>
 			</div>
 		</div>
-=======
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
+
 
 
 
