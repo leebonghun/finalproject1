@@ -17,8 +17,10 @@
 <div class="panel-body" >
    <div>
       <div style="text-align: right;">
+      		<sec:authorize access="hasRole('ROLE_ADMIN')" >
          <button type="button" class="btn btn-info" onclick="location.href='/movie/noticeinsert'"
          style="background-color : rgb(255, 115, 86); border-color: rgb(251, 67, 87);">글쓰기</button>
+         </sec:authorize>
       </div>
    </div>
 </div>
