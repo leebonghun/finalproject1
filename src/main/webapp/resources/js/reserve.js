@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 데이터 가져오기
 function add() {
     $.ajax({
-        url: 'crawling.do',
+        url: 'reserve',
         type: 'get',
         success: function(data) {
             crawlingData = setData(data);
