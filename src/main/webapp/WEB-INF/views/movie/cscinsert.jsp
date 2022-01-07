@@ -64,7 +64,7 @@
 					 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 					<button type="submit" class="btn btn-info" id="insert" >작성완료</button>
 					<button type="reset" class="btn btn-warning">초기화</button>
-					<button type="button" class="btn btn-default" onclick="location.href='/movie/csclist'">뒤로가기</button>
+					<button type="button" class="btn btn-default" onclick="location.href='/movie/csclist'">고객센터목록</button>
 					</form>
 					</div>
 				

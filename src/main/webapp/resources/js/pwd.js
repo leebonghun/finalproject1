@@ -3,11 +3,6 @@
  */
 
 $(function(){
-	
-	
-	
-	
-	
 	$("#password").validate({
 		errorPlacement: function(error, element) {
 		      $(element)

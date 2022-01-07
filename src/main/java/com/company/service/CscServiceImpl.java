@@ -1,5 +1,6 @@
 package com.company.service;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,9 +66,9 @@ public class CscServiceImpl implements CscService {
 		return cscMapper.totalCnt(cri);
 	}
 	@Override
-	public List<CscDTO> getmyList() {
+	public List<CscDTO> getmyList(Principal username) {
 		
-		return cscMapper.myList();
+		return cscMapper.myList(username);
 	}
 
 }

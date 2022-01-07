@@ -117,6 +117,7 @@ public class MovieController {
 	}
 	
 	//회원탈퇴
+	@PreAuthorize("isAuthenticated()")
 	@GetMapping("/userleave")
 	public void leaveGet() {
 		log.info("회원 탈퇴 페이지 요청");
@@ -124,11 +125,9 @@ public class MovieController {
 	@PostMapping("/userleave")
 	public String leavePost(UserDTO leaveDto, HttpSession session,RedirectAttributes rttr) {
 		log.info("탈퇴 요청 "+leaveDto);
-		// userid, password
-		UserDTO userDto = new UserDTO();
-		String truePw = userDto.getUser_password();
+		// userid, password		
 		
-		if (truePw == leaveDto.getUser_password() && userService.leave(leaveDto)) {
+		if (userService.leave(leaveDto)) {
 			//세션해제
 			session.invalidate();
 			return "redirect:/movie/index";
@@ -149,13 +148,11 @@ public class MovieController {
 		log.info("pwdModify 요청");
 	}
 	@PostMapping("/pwdmodify")
-	public String changePwdPost(PwdDTO pwdDto, HttpSession session, RedirectAttributes rttr) {
+	public String changePwdPost(PwdDTO pwdDto, HttpSession session) {
 		log.info("비밀번호 변경 요청 "+pwdDto);
 		//userid 가져오기
-		UserDTO userDto = new UserDTO();
-		String truePw = userDto.getUser_password();
 		
-		if(truePw == pwdDto.getUser_password() && userService.modify(userDto)) {
+		if(userService.modify(pwdDto)){
 			//성공시
 			//비밀번호 변경이 되면 기존의 세션 해제
 			session.invalidate();

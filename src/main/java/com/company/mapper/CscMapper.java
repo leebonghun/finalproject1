@@ -1,5 +1,6 @@
 package com.company.mapper;
 
+import java.security.Principal;
 import java.util.List;
 
 import com.company.domain.Criteria;
@@ -15,5 +16,5 @@ public interface CscMapper {
 	public int update(CscDTO updateDto);
 	public int update2(CscDTO updateDto2);
 	public int totalCnt(Criteria cri);
-	public List<CscDTO> myList();
+	public List<CscDTO> myList(Principal username);
 }

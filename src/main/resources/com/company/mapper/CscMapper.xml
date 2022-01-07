@@ -5,8 +5,8 @@
 <!-- 고객센터글 select all -->
  <select id="listAll" resultType="com.company.domain.CscDTO">
 	<![CDATA[
-	select CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
- from  (select /*+INDEX_DESC(csc_tbl SYS_C008418*/ rownum rn,CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
+	select rn,CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
+ from  (select /*+INDEX_DESC(csc_tbl SYS_C008418)*/ rownum rn,CSC_BNO,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
  from csc_tbl 
  where 
   ]]>
@@ -16,7 +16,7 @@
  rownum <=(#{pageNum} * #{amount}))
 
  where rn>(#{pageNum}-1) * #{amount}
-	order by CSC_BNO desc
+	
 
 
 	
@@ -30,7 +30,7 @@
  
  
  select Csc_Bno,CSC_CHECK,CSC_TITLE,Csc_Regdate,Csc_Rfi,user_id
- from csc_tbl where user_id=#{user_id} order by Csc_Bno desc
+ from csc_tbl where user_id=#{principal.username} order by Csc_Bno desc
  
 </select>
 <!-- 내  게시물들  -->
@@ -103,8 +103,6 @@
 	<update id="update2">
 		update csc_tbl
 		set
-
-		
 		CSC_ANSWER=#{CSC_ANSWER},CSC_CHECK=#{CSC_CHECK}
 		where CSC_BNO=#{CSC_BNO}
 	</update>	

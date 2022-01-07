@@ -7,16 +7,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="/resources/js/csclist.js"></script>
+<script src="/resources/js/mypagecsclist.js"></script>
 <script src="/resources/css/bootstrap.css"></script>
 <script src="/resources/css/csclist.css"></script>
 
 </head>
 <body>
-<div class="container">
-				
-				
-								
+<div class="container">							
 				<div class="panel-body" >
 			<div>
 				<div>
@@ -41,7 +38,7 @@
 							<th scope="row">${mycscDto.CSC_BNO}</th>
 							<td>${mycscDto.CSC_RFI}
 							</td>										
-							<td  id="tit"><a class="move"    href= "${mycscDto.CSC_BNO}">
+							<td  id="tit"><a class="move" href="${mycscDto.CSC_BNO}">
 							${mycscDto.CSC_TITLE} 
 							</a></td>	
 							<c:if test="${mycscDto.CSC_CHECK == '[답변 대기중]' }">						
@@ -52,19 +49,30 @@
 									</td>	
 								</c:if>
 							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${mycscDto.CSC_REGDATE}"/></td>
-
-
 						</tr>
 					</c:forEach>
 				</tbody>
-			</table>
-				
+			</table>		
 			</div>
-			
-		
+	
 </div>
+  <input type="hidden" name="${_csrf.parameterName}"
+                        value="${_csrf.token}" />
+<!--  페이지 나누기를 위한 폼 -->
+   <form action="" method="get" id="actionForm">
+      
+      <input type="hidden" name="CSC_BNO" value="">
 
+   </form>
 
+   <%--시큐리티 적용으로 인한 추가 --%>
+   <input type="hidden" name="${_csrf.parameterName}"
+      value="${_csrf.token}" />
+   <input type="hidden" name="user_id" value="${readdto.user_id}" />
+   <!-- 스크립트 -->
+   <script>
+      let result = '${result}';
+   </script>
 
 
 

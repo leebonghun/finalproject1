@@ -55,16 +55,9 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	@Transactional
-	public boolean leave(UserDTO leaveDto) {
+	public boolean leave(UserDTO leaveDto) {			
 		
-		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-		
-		String encodedPassword = bCryptPasswordEncoder.encode(leaveDto.getUser_password());
-		
-		// 12345 => 암호화
-		// encoder.matches('12345','dfldfjeofdjl')
-		boolean result = false;
-		leaveDto.setUser_password(encodedPassword);
+		boolean result=false;
 		
 		if(encoder.matches(leaveDto.getUser_password(), mapper.findByPwd(leaveDto.getUser_id()))) {
 			//auth_tbl 과 user_tbl 이 join 되어 있어서 Transactional 을 이용하여 둘다 지움
@@ -77,21 +70,15 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	@Transactional
-	public boolean modify(UserDTO pwdDto) {
+	public boolean modify(PwdDTO pwdDto) {
 		
-			BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-			
-			String encodedPassword = bCryptPasswordEncoder.encode(pwdDto.getUser_password());
-			
-			boolean result = false;
-			pwdDto.setUser_password(encodedPassword);
-			
-			if(encoder.matches(pwdDto.getUser_password(), mapper.findByPwd(pwdDto.getUser_id()))) {
-				result = mapper.modify(pwdDto.getUser_id()) > 0 ? true : false;
-			}
-					
-			return result;
+		boolean result = false;
+		
+		if(encoder.matches(pwdDto.getUser_password(), mapper.findByPwd(pwdDto.getUser_id()))) {
+			result = mapper.modify(pwdDto.getUser_id(), encoder.encode(pwdDto.getConfirm_password())) > 0 ? true : false;
+		}
+				
+		return result;
 
 	}
 
