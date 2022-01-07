@@ -398,6 +398,7 @@ values('id2','name2','12345','1997/10/14','id2@naver.com','010-1234-5678',sysdat
 
 select * from user_tbl;	
 select * from csc_TBL;	
+alter table info_tbl add(INFO_RFI varchar2(1000));
 		select Csc_Bno,Csc_Title,Csc_Content,Csc_Regdate,Csc_Rfi,Csc_Answer,user_id
  from csc_tbl;
 ---

@@ -194,7 +194,7 @@
                         <tr class="table-active">
                            <th scope="row">${cscDto.CSC_BNO}</th>
                            <td>${cscDto.CSC_RFI}</td>
-                           <td id="tit"><a class="move" href="${cscDto.CSC_BNO}">
+                           <td id="tit"><a class="move" href="${cscDto.CSC_BNO}" style="color: black;">
                                  ${cscDto.CSC_TITLE} </a></td>
                            <c:if test="${cscDto.CSC_CHECK == '[답변 대기중]'}">
                               <td>${cscDto.CSC_CHECK}</td>
