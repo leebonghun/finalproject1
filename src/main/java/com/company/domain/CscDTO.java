@@ -15,6 +15,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CscDTO {
+	private int rn;
   private int CSC_BNO;
   private String CSC_TITLE;
   private String CSC_CONTENT;

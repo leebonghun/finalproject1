@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+n<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
   <%@include file="../includes/header.jsp" %>     
 <!DOCTYPE html>
@@ -95,7 +95,7 @@
                      </sec:authorize>      
                <!-- <button type="reset" class="btn btn-default" >뒤로가기</button> -->
                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-               <button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
+               <button type="submit" data-oper='list' class="btn btn-default">고객센터목록</button>
                <!-- onclick="location.href='/movie/csclist'" -->
             </form>
          </div>

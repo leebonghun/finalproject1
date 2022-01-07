@@ -69,6 +69,8 @@ ul {
 li {
     display: list-item;
     text-align: -webkit-match-parent;
+    list-style: none;
+    padding-left: 0px;
 }
 
 * {

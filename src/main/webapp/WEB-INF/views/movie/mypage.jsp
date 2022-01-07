@@ -13,11 +13,13 @@
 <link href="https://fonts.googleapis.com/
     icon?family=Material+Icons|Material+Icons+Sharp|Material+Icons+Two+Tone|Material+Icons+Outlined"
     rel="stylesheet">
+
 <style type="text/css">
 
 
 
 </style>
+
 	<body bgcolor="black">
 		<div class="header">
 			<div class="btn-gate-container">
@@ -43,15 +45,19 @@
 								</div>
 							</li>
 							<li class="button">
+							 
+							
 								<div>
-									<a class="btn-link" href= "${cscDto.CSC_BNO}" tabindex="0" data-uia="action-select-btn+secondary">
+									<a class="btn-link" href= "mypagecsclist" tabindex="0" data-uia="action-select-btn+secondary">
 										<div class="btn-wrapper">
 											<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/support.png')">
 											</div>
 										</div>
 										<span class="btn-name">내 문의</span>
 									</a>
+									
 								</div>
+									
 							</li>
 							<li class="button">
 								<div>
@@ -97,6 +103,8 @@
 			</div>
 		</div>
 
+	
+
    <!-- 스크립트 -->
 <script type="text/javascript">
 	function goBack(){
@@ -104,11 +112,9 @@
 			alert("로그인 이후 사용가능한 페이지 입니다");
 			location.href="/movie/index";
 		}
-		
 	}
-
-
 </script>
+
 	</body>
 </html>
 
@@ -118,3 +124,6 @@
    
      
  
+=======
+</html>
+>>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git

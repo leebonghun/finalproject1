@@ -14,7 +14,7 @@
 			<div class="event-list mt15" >
 				<div class="img" style="text-align: center; width: 880px; padding: 20px;">
 					<img src="/resources/images/card1.jpg" alt="카드 할인 행사" onerror="noImg(this);"  />
-				<div class="contain" >
+				<div class="contain" style="text-align: left;">
 					<div class="tit"> [이벤트 제목 : 카드 할인 행사] </div>
 					<div class="con"> [이벤트 내용 : 신한, 우리, 국민카드로 영화 예매 결제 시 영화 티켓 가격의 5% 할인혜택] </div>
 					<div class="hum"> [이벤트 대상 : 신한,우리,국민 카드 사용자] </div>

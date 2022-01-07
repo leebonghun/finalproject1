@@ -8,6 +8,6 @@ public interface UserService {
 	public UserDTO dupId(String user_id);
 	public PwdDTO login(PwdDTO loginDto);
 	public boolean leave(UserDTO leaveDto);
-	public boolean modify(UserDTO pwdDto);
+	public boolean modify(PwdDTO pwdDto);
 
 }

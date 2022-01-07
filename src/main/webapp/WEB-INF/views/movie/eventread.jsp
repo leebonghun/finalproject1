@@ -14,7 +14,7 @@
 			<div class="event-list mt15" >
 				<div class="img" style="text-align: center; width: 880px; padding: 20px;">
 					<img src="/resources/images/2022-calendar.jpg" alt="신년 달력 증정 행사" onerror="noImg(this);"  />
-				<div class="contain" >
+				<div class="contain" style="text-align: left;">
 					<div class="tit"> [이벤트 제목 : 신년 맞이 달력 증정 행사] </div>
 					<div class="con"> [이벤트 내용 : 신년을 맞이하여 영화를 관람하시는 분들에게 2022년 달력을 증정합니다.] </div>
 					<div class="hum"> [이벤트 대상 : 영화 관람객 누구나(선착순 100명)] </div>

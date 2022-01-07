@@ -15,5 +15,5 @@ public interface UserMapper {
 	public int delete(String user_id);
 	public String findByPwd(String user_id);
 	public int authDelete(String user_id);
-	public int modify(String user_id);
+	public int modify(@Param("user_id") String user_id,@Param("confirm_password") String confirm_password);
 }
