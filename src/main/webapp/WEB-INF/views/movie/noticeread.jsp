@@ -36,7 +36,7 @@
 					value="${_csrf.token}" /> 
                <!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
                <sec:authorize access="hasRole('ROLE_ADMIN')" >
-               <button type="submit" data-oper='modify' class="btn btn-info">수정</button>
+               <button type="submit" data-oper='modify' class="btn btn-info" style="background-color: black; border-color: black;">수정</button>
                </sec:authorize>
                <button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
                </div>

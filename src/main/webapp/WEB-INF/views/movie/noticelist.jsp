@@ -20,7 +20,7 @@
 	  <!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
 		<sec:authorize access="hasRole('ROLE_ADMIN')" >
        		<button type="button" class="btn btn-info" onclick="location.href='/movie/noticeinsert'"
-   		    	     style="background-color : rgb(255, 115, 86); border-color: rgb(251, 67, 87);">글쓰기</button>
+   		    	     style="background-color: black; border-color: black;">글쓰기</button>
         </sec:authorize>
       </div>
    </div>
@@ -28,7 +28,7 @@
       <!-- /.panel-heading -->
         <div class="panel-body" > 
            <div class="board_info">
-         <div class="row" >         
+         <div class="row" >          
                <table class="table table-hover" id="dtotbl" >
                   <colgroup>
                    <col class="col-md-1">
@@ -39,11 +39,11 @@
                </colgroup>              
                    <thead>
                        <tr>
-                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">번 호</th>
-                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">분 류</th>
-                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">제 목</th>
-                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">내 용</th>
-                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">작성일</th>
+                           <th style="background: black; font:sans-serif; color: white;">번 호</th>
+                           <th style="background: black; font:sans-serif; color: white;">분 류</th>
+                           <th style="background: black; font:sans-serif; color: white;">제 목</th>
+                           <th style="background: black; font:sans-serif; color: white;">내 용</th>
+                           <th style="background: black; font:sans-serif; color: white;">작성일</th>
                        </tr>                           
                    </thead>
             
@@ -66,22 +66,19 @@
              <ul class="pagination">
                 <c:if test="${pageDto.prev}">
                    <li class="paginate_button previous">
-                      <a href="${pageDto.startPage-10}" style="background-color : rgb(255, 115, 86); 
-	border-color: rgb(251, 67, 87);">Previous</a>
+                      <a href="${pageDto.startPage-10}" style="background-color: black; border-color: black;">Previous</a>
                    </li>
                 </c:if>
                 
                 <c:forEach var="idx" begin="${pageDto.startPage}" end="${pageDto.endPage}">
                    <li class="paginate_button ${pageDto.cri.pageNum==idx?'active':''}">
-                      <a href="${idx}" style="background-color : rgb(255, 115, 86); 
-	border-color: rgb(251, 67, 87);">${idx}</a>
+                      <a href="${idx}" style="background-color: black; border-color: black;">${idx}</a>
                    </li>
                 </c:forEach>
                 
                 <c:if test="${pageDto.next}">
                  <li class="paginate_button next">
-                    <a href="${pageDto.endPage+1}" style="background-color : rgb(255, 115, 86); 
-	border-color: rgb(251, 67, 87);">Next</a>
+                    <a href="${pageDto.endPage+1}" style="background-color: black; border-color: black;">Next</a>
                  </li>
               </c:if>
              </ul>
@@ -102,8 +99,7 @@
                  </select>                               
                  
                  <input type="text" name="keyword" id=""  value='<c:out value="${pageDto.cri.keyword}"/>'/>
-                 <button style="background-color : rgb(255, 115, 86); 
-	border-color: rgb(251, 67, 87);" class="btn btn-default">Search</button>
+                 <button style="background-color: black; border-color: black;" class="btn btn-default">검색</button>
               </form>
           </div>
          <!-- start Pagination -->
