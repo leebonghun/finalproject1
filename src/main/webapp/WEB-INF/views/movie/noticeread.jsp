@@ -2,12 +2,19 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <link href="/resources/css/noticeread.css" rel='stylesheet' type='text/css' />
 
+</head>
+<body>
 <div class="container">
 	<div>
 		<h2 class="h2" style="color: black;">
-			<img src="/resources/images/notice1.jpg" style="height: 60px;" /> 공지사항
+			<img src="/resources/images/notice1.png" style="height: 60px;" /> 공지사항
 		</h2>            
 	</div>	
 </div>
@@ -57,5 +64,8 @@
 		<%-- 	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 		  <input type="hidden" name="writer" value="${dto.writer}" />  --%>
 </form>
-<script src="/resources/js/noticeread.js"></script> 
+<script src="/resources/js/noticeread.js"></script>
+
+</body>
+</html> 
 <%@include file="../includes/footer.jsp"%>

@@ -10,12 +10,64 @@
 <script src="/resources/css/noticelist.css"></script>
 
 <script src="/resources/js/noticelist.js"></script>
+<style>
+input[type="text"] {
+    border-radius: 16px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+tr{         
+	border: 2px solid #ddd;
+	border-radius: 30%;
+    background-color: #fff;
+    height: 34px;
+    font-size: 14px;
+}
+
+table table-hover {
+	border: 2px solid #ddd;
+	border-radius: 16px;
+    background-color: #fff;
+    height: 34px;
+    font-size: 14px;
+}
+
+
+.a1 {
+	border-radius: 16px;
+	border: 2px solid #ddd;
+    background-color: #fff;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+
+select {
+	border-radius: 16px;
+	border: 2px solid #ddd;
+    background-color: #fff;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+}
+.row {
+    margin: 0px auto;
+    width: 830px;
+    background-color: #fff;
+}
+
+</style>
 </head>
 <body>
 <div class="container">
    <div>
       <h2 class="h2" style="color: black;">
-         <img src="/resources/images/notice1.jpg" style="height: 60px;" /> 공지사항
+         <img src="/resources/images/notice1.png" style="height: 60px;" /> 공지사항
       </h2>            
    </div>   
 </div>
@@ -109,7 +161,7 @@
                  </select>                               
                  
                  <input type="text" name="keyword" id=""  value='<c:out value="${pageDto.cri.keyword}"/>'/>
-                 <button style="background-color: black; border-color: black;" class="btn btn-default">검색</button>
+                 <button style="background-color: black; border-color: black; color: white;" class="btn btn-default">검색</button>
               </form>
           </div>
          <!-- start Pagination -->
@@ -117,14 +169,7 @@
              </div>
             </div>                                 
     
-      <div class="row" style="width:100%"> 
-         <ul class="contactus">
-            <li >[문의안내]</li>
-            <li>*&nbsp;게시물에&nbsp;대한&nbsp;문의는&nbsp;페이지&nbsp;상단의&nbsp;담당자&nbsp;및&nbsp;전화번호&nbsp;내용을&nbsp;참고하세요.
-             <br>
-            *&nbsp;고객상담센터&nbsp;국번없이&nbsp;1234(전화연결장애 문의 : 012-345-6789)&nbsp; </li>
-         </ul>
-      </div>
+
       </div>
       </div>
     </div>

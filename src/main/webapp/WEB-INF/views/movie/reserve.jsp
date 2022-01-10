@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
   <%@include file="../includes/header.jsp" %>   
@@ -21,8 +20,7 @@
             <ul class="content scroll-y" onscroll="movieSectionScrollEvent();" tabindex="1" style="right : -17px;">
              	<li class="selected">
              		<input type="hidden" value="${item.movieCD}" />
-             		<a href="#" onclick="return false;" title="${item.movieNM}" alt="${item.movieNM}"><span class="icon">&nbsp;</span>
-             		<span class="text">${item.movieNM}</span><span class="sreader"></span></a>
+             		<button type="button" class="theater-place"  id="reserveButton">${item.movieNM}</button>
              	</li>
               
             </ul>
@@ -46,7 +44,10 @@
         </div>
         <div class="day">
             <div class="reserve-title">날짜</div>
-            
+            <button type="button" class="theater-place"  id="reserveButton">1월 17일</button>
+            <button type="button" class="theater-place"  id="reserveButton">1월 18일</button>
+            <button type="button" class="theater-place"  id="reserveButton">1월 19일</button>
+            <button type="button" class="theater-place"  id="reserveButton">1월 20일</button>
         </div>
         <div class="time-part">
             <div class="reserve-title">시간</div>
