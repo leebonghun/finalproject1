@@ -178,11 +178,13 @@
             고객센터 상담전화:02-1234-5678 상담가능시간 : 09:00~18:30
             <div class="panel-body">
                <div>
+                  <form action=" " method="get" id="regForm">
                   <div>
-                     <button type="button" class="btn btn-info"
+                     <button type="button" class="btn btn-info"   id="CscRegisterBtn"          
                         onclick="location.href='/movie/cscinsert'"
                         style="margin-bottom: 10px">글쓰기</button>
                   </div>
+                  </form>
                </div>
                <table class="table" id=csctbl>
                   <thead>

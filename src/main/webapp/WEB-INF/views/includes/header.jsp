@@ -26,6 +26,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="/resources/css/single.css" rel='stylesheet' type='text/css' />
 <link href="/resources/css/medile.css" rel='stylesheet' type='text/css' />
+<link href="/resources/css/footer.css" rel='stylesheet' type='text/css' />
 <!-- banner-slider -->
 <link href="/resources/css/jquery.slidey.min.css" rel="stylesheet">
 <!-- //banner-slider -->
@@ -70,7 +71,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <script src="/resources/sign-js/login.js">
-
 	
 
 <script type="text/javascript">
@@ -80,6 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
 	});
+	
 </script>
 
 <!-- start-smoth-scrolling -->

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@include file="../includes/header.jsp"%>
+ <%@include file="../includes/header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,8 +17,8 @@
 				<div class="panel-body" >
 			<div>
 				<div>
-					<img src="/resources/images/내글목록.png" style="height: 50px;" />
-			<h4 class="latest-text w3_faq_latest_text w3_latest_text"  style="margin-left: 0px;">내 고객센터 글목록</h4>
+					<img src="/resources/images/내글목록.png" style="height: 50px;  " />
+			<h4 class="latest-text w3_faq_latest_text w3_latest_text"  style="margin-left: 0px;  display: inline; ">내 고객센터 글목록</h4>
 			
 				</div>
 			</div>
@@ -74,12 +74,35 @@
       let result = '${result}';
    </script>
 
+<!-- 
+<script type="text/javascript">
 
 
-
+$(function(){
+	//글제목 클릭시
+	$(".move").click(function(e){
+		//a테그 속성 중지
+		e.preventDefault();
+		
+		let CSC_BNO=$(this).attr('href');
+	//actionForm에 CSC_BNO 값을 추가
+	actionForm.find("input[name='CSC_BNO']").val(CSC_BNO);
+	//actionForm action 설정 /movie/cscread
+	actionForm.attr("action","/movie/cscread")
+	//actionForm 보내기	
+	actionForm.submit();
+	})
+	
+	
+	
+	
+	
+})	
+</script> 
+ -->
 
 
 
 </body>
 </html>
-<%@include file="../includes/footer.jsp"%>
+ <%@include file="../includes/footer.jsp"%> 
