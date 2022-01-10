@@ -15,8 +15,9 @@
 }
  
 .test_obj input[type="radio"]:checked + span {
-        background-color: #113a6b;
+        background-color: black;
         color: #fff;
+        font-weight: bold;
 }
 
 .form-group {

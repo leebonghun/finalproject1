@@ -2,10 +2,16 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>
-<script src="/resources/js/noticelist.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/resources/css/noticelist.css"></script>
 
-<link href="/resources/css/noticelist.css" rel='stylesheet' type='text/css' />
 <script src="/resources/js/noticelist.js"></script>
+</head>
+<body>
 <div class="container">
    <div>
       <h2 class="h2" style="color: black;">
@@ -17,15 +23,22 @@
 <div class="panel-body" >
    <div>
       <div style="text-align: right;">
-         <button type="button" class="btn btn-info" onclick="location.href='/movie/noticeinsert'"
-         style="background-color : rgb(255, 115, 86); border-color: rgb(251, 67, 87);">글쓰기</button>
+
+     
+
+	  <!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
+		<sec:authorize access="hasRole('ROLE_ADMIN')" >
+       		<button type="button" class="btn btn-info" onclick="location.href='/movie/noticeinsert'"
+   		    	     style="background-color: black; border-color: black;">글쓰기</button>
+        </sec:authorize>
+
       </div>
    </div>
 </div>
       <!-- /.panel-heading -->
         <div class="panel-body" > 
            <div class="board_info">
-         <div class="row" >         
+         <div class="row" >          
                <table class="table table-hover" id="dtotbl" >
                   <colgroup>
                    <col class="col-md-1">
@@ -36,11 +49,11 @@
                </colgroup>              
                    <thead>
                        <tr>
-                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">번 호</th>
-                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">분 류</th>
-                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">제 목</th>
-                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">내 용</th>
-                           <th style="background: rgb(255, 115, 86); font:sans-serif; color: white;">작성일</th>
+                           <th style="background: black; font:sans-serif; color: white;">번 호</th>
+                           <th style="background: black; font:sans-serif; color: white;">분 류</th>
+                           <th style="background: black; font:sans-serif; color: white;">제 목</th>
+                           <th style="background: black; font:sans-serif; color: white;">내 용</th>
+                           <th style="background: black; font:sans-serif; color: white;">작성일</th>
                        </tr>                           
                    </thead>
             
@@ -63,22 +76,19 @@
              <ul class="pagination">
                 <c:if test="${pageDto.prev}">
                    <li class="paginate_button previous">
-                      <a href="${pageDto.startPage-10}" style="background-color : rgb(255, 115, 86); 
-	border-color: rgb(251, 67, 87);">Previous</a>
+                      <a href="${pageDto.startPage-10}" style="background-color: black; border-color: black;">Previous</a>
                    </li>
                 </c:if>
                 
                 <c:forEach var="idx" begin="${pageDto.startPage}" end="${pageDto.endPage}">
                    <li class="paginate_button ${pageDto.cri.pageNum==idx?'active':''}">
-                      <a href="${idx}" style="background-color : rgb(255, 115, 86); 
-	border-color: rgb(251, 67, 87);">${idx}</a>
+                      <a href="${idx}" style="background-color: black; border-color: black;">${idx}</a>
                    </li>
                 </c:forEach>
                 
                 <c:if test="${pageDto.next}">
                  <li class="paginate_button next">
-                    <a href="${pageDto.endPage+1}" style="background-color : rgb(255, 115, 86); 
-	border-color: rgb(251, 67, 87);">Next</a>
+                    <a href="${pageDto.endPage+1}" style="background-color: black; border-color: black;">Next</a>
                  </li>
               </c:if>
              </ul>
@@ -99,8 +109,7 @@
                  </select>                               
                  
                  <input type="text" name="keyword" id=""  value='<c:out value="${pageDto.cri.keyword}"/>'/>
-                 <button style="background-color : rgb(255, 115, 86); 
-	border-color: rgb(251, 67, 87);" class="btn btn-default">Search</button>
+                 <button style="background-color: black; border-color: black;" class="btn btn-default">검색</button>
               </form>
           </div>
          <!-- start Pagination -->
@@ -108,14 +117,7 @@
              </div>
             </div>                                 
     
-      <div class="row" style="width:100%"> 
-         <ul class="contactus">
-            <li >[문의안내]</li>
-            <li>*&nbsp;게시물에&nbsp;대한&nbsp;문의는&nbsp;페이지&nbsp;상단의&nbsp;담당자&nbsp;및&nbsp;전화번호&nbsp;내용을&nbsp;참고하세요.
-             <br>
-            *&nbsp;고객상담센터&nbsp;국번없이&nbsp;1234(전화연결장애 문의 : 012-345-6789)&nbsp; </li>
-         </ul>
-      </div>
+
       </div>
       </div>
     </div>
@@ -135,4 +137,6 @@
 <script>
 let result = '${result}';
 </script>
+</body>
+</html>
 <%@include file="../includes/footer.jsp"%>

@@ -2,8 +2,15 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <link href="/resources/css/noticeread.css" rel='stylesheet' type='text/css' />
 
+</head>
+<body>
 <div class="container">
 	<div>
 		<h2 class="h2" style="color: black;">
@@ -36,7 +43,7 @@
 					value="${_csrf.token}" /> 
                <!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
                <sec:authorize access="hasRole('ROLE_ADMIN')" >
-               <button type="submit" data-oper='modify' class="btn btn-info">수정</button>
+               <button type="submit" data-oper='modify' class="btn btn-info" style="background-color: black; border-color: black;">수정</button>
                </sec:authorize>
                <button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
                </div>
@@ -57,5 +64,8 @@
 		<%-- 	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 		  <input type="hidden" name="writer" value="${dto.writer}" />  --%>
 </form>
-<script src="/resources/js/noticeread.js"></script> 
+<script src="/resources/js/noticeread.js"></script>
+
+</body>
+</html> 
 <%@include file="../includes/footer.jsp"%>
