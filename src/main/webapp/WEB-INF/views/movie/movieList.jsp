@@ -1,7 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="../includes/header.jsp"%>
-<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="/resources/css/movieList.css"></script>
+
+</head>
+<body>
+
 <div class="bg-bricks" id="container">
 	<div class="" id="contents">
 		<div class="wrap-movie-chart">
@@ -75,4 +85,6 @@ let result = '${result}';
 
 </script>
 	
+</body>
+</html>
 	<%@include file="../includes/footer.jsp"%>

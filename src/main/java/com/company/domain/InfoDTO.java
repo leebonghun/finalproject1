@@ -14,6 +14,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class InfoDTO {
+	// rn : 임의 숫자 부여
 	private int rn;
 	private int INFO_BNO;
 	private String INFO_TITLE;

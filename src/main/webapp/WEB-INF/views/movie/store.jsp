@@ -2,7 +2,19 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>
-<link href="/resources/css/store.css" rel='stylesheet' type='text/css' />
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+
+<script src="/resources/css/store.css"></script>
+
+</head>
+<body>
+
 <!-- 스토어 굿즈 -->
 <div class="container">
 	<div>
@@ -29,6 +41,7 @@
 					</li>
 					<li>
 						<a data-no="10808" data-netfunnel="N" style="text-align: center;" title="텀블러">
+							
 							<p class="img">
 								<img src="/resources/images/tumbler1.jpg" alt="텀블러" onerror="noImg(this);" />
 							</p>
@@ -89,5 +102,6 @@
 			</div>
 		</div>           
 </div> 
-
+</body>
+</html>
 <%@include file="../includes/footer.jsp"%>

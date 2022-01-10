@@ -23,7 +23,7 @@
 				</div>
 			<div style="text-align: right; width: 880px; padding: 20px;" >
 			<button type="button" class="btn btn-info" onclick="location.href='/movie/eventlist'" 
-					style="background-color: rgb(255, 115, 86); border-color: rgb(251, 67, 87);">뒤로가기</button>
+					style="background-color: black; border-color: black;">뒤로가기</button>
 			</div>
 			</div>
 		</div>           
