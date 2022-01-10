@@ -117,14 +117,7 @@
              </div>
             </div>                                 
     
-      <div class="row" style="width:100%"> 
-         <ul class="contactus">
-            <li >[문의안내]</li>
-            <li>*&nbsp;게시물에&nbsp;대한&nbsp;문의는&nbsp;페이지&nbsp;상단의&nbsp;담당자&nbsp;및&nbsp;전화번호&nbsp;내용을&nbsp;참고하세요.
-             <br>
-            *&nbsp;고객상담센터&nbsp;국번없이&nbsp;1234(전화연결장애 문의 : 012-345-6789)&nbsp; </li>
-         </ul>
-      </div>
+
       </div>
       </div>
     </div>

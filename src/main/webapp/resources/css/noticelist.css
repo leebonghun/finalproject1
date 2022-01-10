@@ -7,15 +7,7 @@ li {
     text-align: -webkit-match-parent;
     
 }
-.contactus {
-    border: 1px solid #e2e2e2;
-    text-align: center;
-    border-radius: 8px;
-    background: url(/resources/images/contact3.png) no-repeat;
-    background-size: 145px 100%;
-    margin: 10px 0;
-    word-break: break-all;
-}
+
 
 
 .contactus li:first-child {

@@ -2,8 +2,15 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>   
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/resources/js/noticemodify.js"></script>
 <link href="/resources/css/noticemodify.css" rel='stylesheet' type='text/css' />
-    
+</head>
+<body>
 <div class="container">
 	<div>
 		<h2  class="h2" style=" color: black;">
@@ -86,5 +93,7 @@
 	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 	  <input type="hidden" name="writer" value="${dto.writer}" /> 
 </form>
-<script src="/resources/js/noticemodify.js"></script> 
+
+</body>
+</html> 
 <%@include file="../includes/footer.jsp"%>
