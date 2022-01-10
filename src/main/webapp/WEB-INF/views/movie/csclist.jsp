@@ -12,15 +12,20 @@
 <script src="/resources/css/csclist.css"></script>
 </head>
 <body>
+
    <div style="margin-left: 100px; margin-right: 100px;">
+   <div class="container">
+   <div>
       <h2 class="h1" style="color: black;">
          <img src="/resources/images/cscicon.png" style="height: 50px;" /> 고객
          센터
       </h2>
+      </div>
       <!-- faq-banner -->
-
+</div>
+ <div class="panel-body" > 
       <div class="faq">
-         <h4 class="latest-text w3_faq_latest_text w3_latest_text">FAQ</h4>
+         <h4 class="latest-text w3_faq_latest_text w3_latest_text" style="margin-left: 0px">FAQ</h4>
 
          <div class="container">
             <div class="panel-group w3l_panel_group_faq" id="accordion"
@@ -294,6 +299,7 @@
             </div>
          </div>
       </div>
+      </div>	 
    </div>
 
    <!--  페이지 나누기를 위한 폼 -->

@@ -2,10 +2,16 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>
-<script src="/resources/js/noticelist.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/resources/css/noticelist.css"></script>
 
-<link href="/resources/css/noticelist.css" rel='stylesheet' type='text/css' />
 <script src="/resources/js/noticelist.js"></script>
+</head>
+<body>
 <div class="container">
    <div>
       <h2 class="h2" style="color: black;">
@@ -17,11 +23,15 @@
 <div class="panel-body" >
    <div>
       <div style="text-align: right;">
+
+     
+
 	  <!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
 		<sec:authorize access="hasRole('ROLE_ADMIN')" >
        		<button type="button" class="btn btn-info" onclick="location.href='/movie/noticeinsert'"
    		    	     style="background-color: black; border-color: black;">글쓰기</button>
         </sec:authorize>
+
       </div>
    </div>
 </div>
@@ -134,4 +144,6 @@
 <script>
 let result = '${result}';
 </script>
+</body>
+</html>
 <%@include file="../includes/footer.jsp"%>
