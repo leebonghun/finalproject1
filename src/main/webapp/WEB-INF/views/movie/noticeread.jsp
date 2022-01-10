@@ -14,7 +14,7 @@
 <div class="container">
 	<div>
 		<h2 class="h2" style="color: black;">
-			<img src="/resources/images/notice1.jpg" style="height: 60px;" /> 공지사항
+			<img src="/resources/images/notice1.png" style="height: 60px;" /> 공지사항
 		</h2>            
 	</div>	
 </div>
