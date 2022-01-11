@@ -8,6 +8,9 @@ select * from auth_tbl;
 select * from user_tbl;
 
 
+
+
+
 /* Drop Tables */
 
 DROP TABLE ATTACH_EVENT_TBL CASCADE CONSTRAINTS;
@@ -133,6 +136,22 @@ CREATE TABLE GOODS_TBL
 	GOODS_NUM number NOT NULL,
 	PRIMARY KEY (GOODS_NUM)
 );
+
+
+create table reservetbl(
+	movieNM varchar(200) primary key,
+	reserveDay varchar(200),
+	reserveTime varchar(200),
+	reserveSeat char (10) default'1' 
+	
+
+);
+
+insert into reservetbl(movieNM) values('엔칸토: 마법의 세계')
+
+alter table reservetbl modify (reserveSeat varchar(200));
+
+select * from RESERVETBL
 
 
 CREATE TABLE GUEST_TBL
@@ -290,6 +309,14 @@ CREATE TABLE SEAT_TBL
 	movieDay varchar2(60),
 	PRIMARY KEY (SEAT_NO)
 );
+
+
+create table reservetbl(
+	reserveDay varchar(200),
+	reserveTime varchar(200),
+	reserveSeat char (10) default '1', 
+
+)
 
 
 CREATE TABLE USER_TBL

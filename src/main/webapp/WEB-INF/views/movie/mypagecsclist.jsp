@@ -61,7 +61,7 @@
 <!--  페이지 나누기를 위한 폼 -->
    <form action="" method="get" id="actionForm">
       
-      <input type="hidden" name="CSC_BNO" value="">
+      <input type="hidden" name="CSC_BNO" value="${mycscDto.CSC_BNO}">
 
    </form>
 
@@ -71,6 +71,7 @@
    <input type="hidden" name="user_id" value="${readdto.user_id}" />
    <!-- 스크립트 -->
    <script>
+   
       let result = '${result}';
    </script>
 
