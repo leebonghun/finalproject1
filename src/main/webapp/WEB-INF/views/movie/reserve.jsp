@@ -6,11 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-
-
-</style>
-  <%@include file="../includes/header.jsp" %>  
   <style>
         .seat {
             width: 30px;
