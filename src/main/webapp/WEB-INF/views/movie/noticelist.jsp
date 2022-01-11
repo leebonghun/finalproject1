@@ -61,6 +61,11 @@ select {
     background-color: #fff;
 }
 
+.event-list p {
+    margin: 0;
+    text-align: center;
+}
+
 </style>
 </head>
 <body>

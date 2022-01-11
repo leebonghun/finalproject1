@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
   <%@include file="../includes/header.jsp" %>   
+  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+
+</style>
   <link rel="stylesheet" href="/resources/css/reset.css">
     <link rel="stylesheet" href="/resources/css/header.css">
     <link rel="stylesheet" href="/resources/css/reserve.css">
@@ -87,5 +96,6 @@
 
     </div>
     <script src="/resources/js/reserve.js"></script>
-   
+   </body>
+</html>
  <%@include file="../includes/footer.jsp" %>     
