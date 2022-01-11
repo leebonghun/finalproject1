@@ -19,6 +19,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     border: 0;
     vertical-align: baseline;
     word-break: break-all;
+        line-height: 1.6;
 }
 [class|="sect"][class*="chart"] .box-image {
     position: relative;
@@ -26,6 +27,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     min-height: 272px;
     margin-bottom: 10px;
 }
+
 
 div {
     display: block;
