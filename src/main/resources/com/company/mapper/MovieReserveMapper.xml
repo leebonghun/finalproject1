@@ -3,7 +3,7 @@
 <mapper namespace="com.company.mapper.MovieReserveMapper">
 
 	<select  id="reserveRead" resultType="com.company.domain.ReserveDTO">
-		select * from reservetbl
+		select * from reservetbl where movieNM = #{movieNM}
 	</select>
 
 

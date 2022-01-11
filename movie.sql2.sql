@@ -649,8 +649,7 @@ insert into RESERVETBL values('스파이더맨 노웨이홈','1월 18일','13:00
 insert into RESERVETBL values('스파이더맨 노웨이홈','1월 19일','14:20',49,3);
 insert into RESERVETBL values('스파이더맨 노웨이홈','1월 20일','15:10',49,4);
 
-
-
+select * from reservetbl;
 insert into RESERVETBL values('엔칸토: 마법의 세계','1월 17일','11:20',49,5);
 insert into RESERVETBL values('엔칸토: 마법의 세계','1월 18일','13:10',49,6);
 insert into RESERVETBL values('엔칸토: 마법의 세계','1월 19일','15:30',49,7);
