@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
  <script src="/resources/css/eventlist.css"></script> 
+
 <style>
 li {
     display: inline-table;
