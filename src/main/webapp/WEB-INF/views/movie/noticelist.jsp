@@ -22,7 +22,7 @@ input[type="text"] {
 
 tr{         
 	border: 2px solid #ddd;
-	border-radius: 30%;
+	border-radius: 30px;
     background-color: #fff;
     height: 34px;
     font-size: 14px;
