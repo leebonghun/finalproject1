@@ -1,7 +1,3 @@
-/**
- * mypagecsclist.jsp
- */
-
 $(function(){
 	//글제목 클릭시
 	$(".move").click(function(e){
@@ -16,9 +12,12 @@ $(function(){
 	//actionForm 보내기	
 	$("#actionForm").submit();
 	})
+
 	
-	
-	
-	
-	
-})	
+   
+   
+   	
+   
+   
+})   
+
