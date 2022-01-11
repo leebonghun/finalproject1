@@ -15,10 +15,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-
-
-
-
 <link href="/resources/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="/resources/css/contactstyle.css" type="text/css" media="all" />
 <link rel="stylesheet" href="/resources/css/faqstyle.css" type="text/css" media="all" />
@@ -61,14 +57,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="/resources/js/move-top.js"></script>
 <script type="text/javascript" src="/resources/js/easing.js"></script>
 <script src="/resources/js/csclist.js"></script>
-
-
-
-
-
-
-
-
 <script src="/resources/sign-js/login.js">
 
 	
