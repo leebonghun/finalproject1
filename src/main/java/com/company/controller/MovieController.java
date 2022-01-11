@@ -80,12 +80,12 @@ public class MovieController {
 		
 	}
 	@GetMapping("reserve")
-	public void reserve(Model model) {
-		
+	public void reserve(Model model,int movieCD) {
+		movieDTO movieDto = service.read(movieCD);
 		
 		log.info("영화 예매 페이지로 이동중입니다.");
 		List<ReserveDTO> listDto = reservice.reserveRead();
-		
+		model.addAttribute("movieDto", movieDto);
 		model.addAttribute("list1",listDto);
 		
 	}
