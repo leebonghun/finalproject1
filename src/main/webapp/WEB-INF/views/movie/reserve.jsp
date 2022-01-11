@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-  <%@include file="../includes/header.jsp" %>  
+  <%@include file="../includes/header.jsp" %>   
+
+  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
   <style>
         .seat {
             width: 30px;
@@ -12,6 +18,7 @@
             color: white;
         }
     </style> 
+
   <link rel="stylesheet" href="/resources/css/reset.css">
     <link rel="stylesheet" href="/resources/css/header.css">
     <link rel="stylesheet" href="/resources/css/reserve.css">
@@ -27,15 +34,17 @@
             <div class="sort-wrapper">
                 <div class="sort-rate sort-selected">영화</div>
             </div>
-            <c:forEach var="item" items="${list1}">
+            
             <ul class="content scroll-y" onscroll="movieSectionScrollEvent();" tabindex="1" style="right : -17px;">
              	<li class="selected">
-             		<input type="hidden" value="${item.movieCD}" />
-             		<button type="button" class="theater-place"  id="reserveButton">${item.movieNM}</button>
+             		<button type="button" class="theater-place"  id="reserveButton" value="스파이더맨 노 웨이 홈">스파이더맨 노 웨이 홈</button>
+             	</li>
+             	<li class="selected">
+             		<button type="button" class="theater-place"  id="reserveButton" value="엔칸토: 마법의 세계">엔칸토: 마법의 세계</button>
              	</li>
               
             </ul>
-                </c:forEach>
+               
         </div>
         <div class="theater-part">
             <div class="reserve-title">
@@ -55,10 +64,19 @@
         </div>
         <div class="day">
             <div class="reserve-title">날짜</div>
-            <button type="button" class="theater-place"  id="reserveButton">1월 17일</button>
-            <button type="button" class="theater-place"  id="reserveButton">1월 18일</button>
-            <button type="button" class="theater-place"  id="reserveButton">1월 19일</button>
-            <button type="button" class="theater-place"  id="reserveButton">1월 20일</button>
+         <%--    <c:if test="${list1.movieNM == '스파이더맨 노 웨이 홈'}">
+          		  <c:forEach var="item" items="${list1}">
+           			<button type="submit">${item.reserveDay}</button>
+           
+          		 </c:forEach>  
+            </c:if>
+            <c:if test="${list1.movieNM == '엔칸토: 마법의 세계'}">
+          		  <c:forEach var="item" items="${list1}">
+           			<button type="submit">${item.reserveDay}</button>
+           
+          		 </c:forEach>  
+            </c:if> --%>
+         	
         </div>
         <div class="time-part">
             <div class="reserve-title">시간</div>
@@ -81,12 +99,7 @@
             <span class="reserve-time-want">18:20</span>
             <span class="reserve-time-remain">240석</span>
           </button>
-          
-          
-          
-          
-          
-			<div class="seat-wrapper"></div>
+
                 </div>
             </div>
             <div>
@@ -99,11 +112,14 @@
             <button class="moveSeatButton" type="button">예약하기</button>
             </form>
             </div>
-            
         </div>
-			
+
     </div>
     <script src="/resources/js/reserve.js"></script>
+
+
+   </body>
+</html>
     <script>
     let test = [];
     let selectedSeats = new Array();
@@ -167,5 +183,6 @@
         }
     }
 </script>
+
    
  <%@include file="../includes/footer.jsp" %>     

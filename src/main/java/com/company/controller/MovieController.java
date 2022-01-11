@@ -18,11 +18,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.company.domain.Criteria;
 
 import com.company.domain.PwdDTO;
+import com.company.domain.ReserveDTO;
 import com.company.domain.UserDTO;
 import com.company.service.CscService;
 
 
 import com.company.service.MovieReplyService;
+import com.company.service.MovieReserveService;
 import com.company.domain.movieDTO;
 import com.company.service.MovieService;
 
@@ -51,6 +53,9 @@ public class MovieController {
 	
 	@Autowired
 	private MovieService service;
+	
+	@Autowired
+	private MovieReserveService reservice;
 
 	
 	
@@ -80,7 +85,7 @@ public class MovieController {
 		
 		
 		log.info("영화 예매 페이지로 이동중입니다.");
-		List<movieDTO> listDto = service.list();
+		List<ReserveDTO> listDto = reservice.reserveRead();
 		
 		model.addAttribute("list1",listDto);
 		

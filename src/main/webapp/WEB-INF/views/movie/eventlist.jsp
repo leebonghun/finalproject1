@@ -39,12 +39,6 @@ li {
     }
 
 
-p {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
 .event-list ul li a .date {
     padding: 10px 10px 10px 10px;
     font-size: .8667em;
@@ -53,8 +47,8 @@ p {
 }
 
 .event-list p {
-    display: block;
     margin: 0;
+    text-align: center;
 }
 
 
