@@ -2,12 +2,19 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>   
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/resources/js/noticemodify.js"></script>
 <link href="/resources/css/noticemodify.css" rel='stylesheet' type='text/css' />
-    
+</head>
+<body>
 <div class="container">
 	<div>
 		<h2  class="h2" style=" color: black;">
-			<img src="/resources/images/notice1.jpg" style=" height: 60px; " />고객 센터
+			<img src="/resources/images/notice1.png" style=" height: 60px; " />고객 센터
 		</h2>
 	</div>
 </div>   
@@ -58,7 +65,7 @@
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 					<!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
 					<sec:authorize access="hasRole('ROLE_ADMIN')" >
-					<button type="submit" data-oper='modify' class="btn btn-info" class="btn btn-default">수정완료</button>
+					<button type="submit" data-oper='modify' class="btn btn-info" class="btn btn-default" style="background-color: black; border-color: black;">수정완료</button>
 					<button type="submit" data-oper='remove' class="btn btn-danger"	class="btn btn-default">글삭제</button>
 					</sec:authorize>			
 					<button type="submit" data-oper='list' class="btn btn-default">뒤로가기</button>
@@ -86,5 +93,7 @@
 	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 	  <input type="hidden" name="writer" value="${dto.writer}" /> 
 </form>
-<script src="/resources/js/noticemodify.js"></script> 
+
+</body>
+</html> 
 <%@include file="../includes/footer.jsp"%>

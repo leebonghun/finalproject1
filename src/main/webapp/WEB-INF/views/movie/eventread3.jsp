@@ -1,7 +1,38 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="../includes/header.jsp" %>
-<link href="/resources/css/eventread3.css" rel='stylesheet' type='text/css' />
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.tit{
+	margin: 20px;
+}
+.con{
+	margin: 20px;
+}	
+.hum{
+	margin: 20px;
+}	
+.date{
+	margin: 20px;
+}	
+.contain {
+	margin-top: 30px;
+	width: 940px;
+    padding: 4px;
+    border: 7px solid black;
+    border-radius: 50px;
+    background-size: 145px 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+</style>
+</head>
+<body>
 <div class="container" >
 	<div>
 		<h2 class="h2" style="color: black;">
@@ -23,7 +54,7 @@
 				</div>
 			<div style="text-align: right; width: 965px; padding: 20px;" >
 			<button type="button" class="btn btn-info" onclick="location.href='/movie/eventlist'" 
-					style="background-color: rgb(255, 115, 86); border-color: rgb(251, 67, 87);">뒤로가기</button>
+					style="background-color: black; border-color: black;">뒤로가기</button>
 			</div>
 			</div>
 		</div>           
@@ -41,5 +72,6 @@
 
 
 
-
+</body>
+</html>
 <%@include file="../includes/footer.jsp" %>

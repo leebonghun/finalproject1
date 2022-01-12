@@ -8,6 +8,9 @@ select * from auth_tbl;
 select * from user_tbl;
 
 
+
+
+
 /* Drop Tables */
 
 DROP TABLE ATTACH_EVENT_TBL CASCADE CONSTRAINTS;
@@ -133,6 +136,30 @@ CREATE TABLE GOODS_TBL
 	GOODS_NUM number NOT NULL,
 	PRIMARY KEY (GOODS_NUM)
 );
+
+
+create table reservetbl(
+	movieNM varchar2(200),
+	reserveDay varchar2(200),
+	reserveTime varchar2(200),
+	reserveSeat number,
+	reserveNm number primary key
+);
+
+
+
+
+
+
+
+drop table reservetbl;
+
+
+insert into reservetbl(movieNM) values('엔칸토: 마법의 세계')
+
+alter table reservetbl modify (reserveSeat varchar(200));
+
+select * from RESERVETBL
 
 
 CREATE TABLE GUEST_TBL
@@ -290,6 +317,14 @@ CREATE TABLE SEAT_TBL
 	movieDay varchar2(60),
 	PRIMARY KEY (SEAT_NO)
 );
+
+
+create table reservetbl(
+	reserveDay varchar(200),
+	reserveTime varchar(200),
+	reserveSeat char (10) default '1', 
+
+)
 
 
 CREATE TABLE USER_TBL
@@ -606,3 +641,16 @@ update MOVIE_BOARD set movieNM = '스파이더맨노웨이홈' where rank = 'No.
 select rn,INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
 from (select /*+INDEX_DESC(info_tbl SYS_C007695)*/ rownum rn,INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE 
 from info_tbl where rownum <= (1 * 10)) where rn > (1-1) * 10;
+
+
+
+insert into RESERVETBL values('스파이더맨 노웨이홈','1월 17일','12:20',49,1);
+insert into RESERVETBL values('스파이더맨 노웨이홈','1월 18일','13:00',49,2);
+insert into RESERVETBL values('스파이더맨 노웨이홈','1월 19일','14:20',49,3);
+insert into RESERVETBL values('스파이더맨 노웨이홈','1월 20일','15:10',49,4);
+
+select * from reservetbl;
+insert into RESERVETBL values('엔칸토: 마법의 세계','1월 17일','11:20',49,5);
+insert into RESERVETBL values('엔칸토: 마법의 세계','1월 18일','13:10',49,6);
+insert into RESERVETBL values('엔칸토: 마법의 세계','1월 19일','15:30',49,7);
+insert into RESERVETBL values('엔칸토: 마법의 세계','1월 20일','17:40',49,8);

@@ -61,8 +61,9 @@
        
         <tr>
           <td colspan="3" class="text-right">
-          	<button type="submit" id="goReserve">예매</button>
-            <button type="submit" id="goBack">목록</button>
+          	<a href="reserve?movieCD=${movieDto.movieCD}"
+			class="hvr-shutter-out-horizontal">예매</a>
+            <a href="movieList">목록</a>
           </td>
         </tr>
       </table>

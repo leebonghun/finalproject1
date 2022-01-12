@@ -104,10 +104,11 @@ input[type="submit"], .agileinfo_chat a, .w3ls_footer_grid1_left p a,
 	text-decoration: none;
 	background: red;
 	text-align: center;
-	padding: 6px 30px;
-	font-weight: bold;
+	padding: 1px 12px;
+
 	
 }
+
 #login{
 color: white;
 	display: inline-block;
@@ -115,8 +116,8 @@ color: white;
 	text-decoration: none;
 	background: red;
 	text-align: center;
-	padding: 6px 30px;
-	font-weight: bold;
+	padding: 1px 12px;
+	
 }
 .w3layouts_logo {
 	text-align: center;

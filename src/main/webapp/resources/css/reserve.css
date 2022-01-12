@@ -3,9 +3,7 @@
     font-size: 11px;
 }
 
-body {
-    background-color: #FDFCF0;
-}
+
 
 ul {
     display: block;
@@ -143,7 +141,10 @@ ul {
     font-size: 10px !important;
 }
 
-
+#reserveButton-active{
+	background-color: blue;
+	
+}
 /* content */
 
 .reserve-container {
@@ -170,22 +171,22 @@ ul {
 
 .movie-part {
     width: 284px;
-    height: 600px;
+    height: 800px;
 }
 
 .theater-part {
     width: 264px;
-	height: 600px;
+	height: 800px;
 }
 
 .day{
     width: 91px;
-	height: 600px;
+	height: 800px;
 }
 
 .time-part {
     width: 384px;
-	height: 600px;
+	height: 800px;
 }
 
 .sort-wrapper {
@@ -195,6 +196,7 @@ ul {
     border-bottom: 1px solid #dddddd;
     font-size: 12px;
 }
+
 
 .sort-wrapper>div {
     padding: 3px;

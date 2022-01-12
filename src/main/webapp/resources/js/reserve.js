@@ -166,9 +166,9 @@ theaterPlace.forEach(list => {
         const theaterPlaceWrapper = document.querySelectorAll(
             '.theater-place-active'
         );
-        theaterPlaceWrapper.forEach(li => {
+      /*  theaterPlaceWrapper.forEach(li => {
             li.classList.remove('theater-place-active');
-        });
+        });*/
         list.classList.add('theater-place-active');
         console.log(list.innerHTML);
         inputSelectedTheater.value = list.innerHTML;

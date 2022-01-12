@@ -12,39 +12,8 @@
 
 <style>
 table {
-	width: 100%;
 	list-style: none;
     padding-left: 0px;
-}
-
-table.ft {
-  border-collapse: collapse;
-  text-align: left;
-  line-height: 1.5;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  margin: 20px 10px;
-}
-table.ft thead th {
-  width: 150px;
-  padding: 10px;
-  font-weight: bold;
-  vertical-align: top;
-  color: #fff;
-  background: #e7708d;
-  margin: 20px 10px;
-}
-table.ft tbody th {
-  width: 150px;
-  padding: 10px;
-}
-table.ft td {
-  width: 350px;
-  padding: 10px;
-  vertical-align: top;
-}
-table.ft .even {
-  background: #fdf3f5;
 }
 
 table.st th, td {
@@ -52,7 +21,7 @@ table.st th, td {
 }
 
 .container {
-	width: 67.2.5%;
+	width: 67.265%;
 }
 
 
@@ -60,34 +29,130 @@ table.st th, td {
 </head>
 <body>
 	<div class="container">
-		<div>
-		
-		</div>
-		
+		<div><h3>내 예매 내역</h3></div>
+		<table class="table" id=csctbl>
+                  <thead>
+                     <tr style="background-color: black;">
+                        <th scope="col" style="color: white;">관람 영화</th>
+                        <th scope="col" style="color: white;">관람BBM</th>
+                        <th scope="col" style="color: white;">관람 일시</th>
+                        <th scope="col" style="color: white;">결제일</th>
+                        <th scope="col" style="color: white;">결제 금액</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <c:forEach var="cscDto" items="${list}">
+                        <tr class="table-active">
+                           <th scope="row">${cscDto.rn}</th>
+                           <td>${cscDto.CSC_RFI}</td>
+                           <td id="tit"><a class="move" href="${cscDto.CSC_BNO}" style="color: black;">
+                                 ${cscDto.CSC_TITLE} </a></td>
+                           <c:if test="${cscDto.CSC_CHECK == '[답변 대기중]'}">
+                              <td>${cscDto.CSC_CHECK}</td>
+                           </c:if>
+                           
+                           <c:if test="${cscDto.CSC_CHECK == '[답변완료]'}">
+                              <td style="color: red;">${cscDto.CSC_CHECK}</td>
+                           </c:if>
+                           <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+                                 value="${cscDto.CSC_REGDATE}" /></td>
 
-		<div class="table">
-			<table class="ft">
-			  <thead>
-			  <tr>
-			    <th scope="cols">타이틀</th>
-			    <th scope="cols">내용</th>
-			  </tr>
-			  </thead>
-			  <tbody>
-			  <tr>
-			    <th scope="row">항목명</th>
-			    <td>내용이 들어갑니다.</td>
-			  </tr>
-			  <tr>
-			    <th scope="row" class="even">항목명</th>
-			    <td class="even">내용이 들어갑니다.</td>
-			  </tr>
-			  <tr>
-			    <th scope="row">항목명</th>
-			    <td>내용이 들어갑니다.</td>
-			  </tr>
-			  </tbody>
-			</table>
+                        </tr>
+                     </c:forEach>
+                  </tbody>
+        </table>
+               
+               
+               <div class="row">
+                  <!-- start search -->
+                  <div class="col-md-12">
+                     <div class="col-md-8">
+                        <!--search Form-->
+                        <form action=" " method="get" id="searchForm">
+                           <input type="hidden" name="pageNum"
+                              value="${pageDto.cri.pageNum }"> <input type="hidden"
+                              name="amount" value="${pageDto.cri.amount }"> <select
+                              name="type" id="">
+                              <option value="">-----</option>
+                              <option value="T"
+                                 <c:out value="${pageDto.cri.type=='T'?'selected':'' }"/>>제목</option>
+                              <option value="C"
+                                 <c:out value="${pageDto.cri.type=='C'?'selected':'' }"/>>내용</option>
+                              <option value="R"
+                                 <c:out value="${pageDto.cri.type=='R'?'selected':'' }"/>>사유</option>
+                              <option value="TC"
+                                 <c:out value="${pageDto.cri.type=='TC'?'selected':'' }"/>>제목
+                                 or 내용</option>
+                              <option value="TR"
+                                 <c:out value="${pageDto.cri.type=='TR'?'selected':'' }"/>>제목
+                                 or 사유</option>
+                              <option value="TCR"
+                                 <c:out value="${pageDto.cri.type=='TCR'?'selected':'' }"/>>제목
+                                 or 내용 or 사유</option>
+                           </select> <input type="text" name="keyword" id=""
+                              value='<c:out value="${pageDto.cri.keyword }"/>'>
+                           <button class="btn btn-default">검색</button>
+                        </form>
+                     </div>
+                     <div class="col-md-2 col-md-offset-2">
+                        <!--페이지 목록 갯수 지정하는 폼-->
+                        <select name="" id="amount" class="form-control">
+                           <option value="5"
+                              <c:out value="${pageDto.cri.amount==10?'selected':'' }"/>>5</option>
+                           <option value="10"
+                              <c:out value="${pageDto.cri.amount==20?'selected':'' }"/>>10</option>
+                     </div>
+                     <input type="hidden" name="${_csrf.parameterName}"
+                        value="${_csrf.token}" />
+                  </div>
+               </div>
+           
+
+         <div class="text-center">
+            <!-- //faq-banner -->
+            <div>
+               <!-- start Pagination -->
+               <div class="text-center">
+                  <ul class="pagination">
+                     <c:if test="${pageDto.prev }">
+                        <li class="paginate_button previous"><a
+                           href="${pageDto.startPage-10 }">Previous</a></li>
+                     </c:if>
+                     <c:forEach var="idx" begin="${pageDto.startPage }"
+                        end="${pageDto.endPage }">
+                        <li
+                           class="paginate_button ${pageDto.cri.pageNum==idx?'active':'' }">
+                           <a href="${idx }">${idx }</a>
+                        </li>
+                     </c:forEach>
+                     <c:if test="${pageDto.next }">
+                        <li class="paginate_button next"><a
+                           href="${pageDto.endPage+1 }">Next</a></li>
+                     </c:if>
+                  </ul>
+               </div>
+               <!-- end Pagination -->
+            </div>
+         </div>
+
+<!--  페이지 나누기를 위한 폼 -->
+<form action="" method="get" id="actionForm">
+   <input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}">
+   <input type="hidden" name="amount" value="${pageDto.cri.amount}">
+   <input type="hidden" name="type" value="${pageDto.cri.type}">
+   <input type="hidden" name="keyword" value="${pageDto.cri.keyword}">
+   <input type="hidden" name="CSC_BNO" value="">
+</form>
+
+<%--시큐리티 적용으로 인한 추가 --%>
+<input type="hidden" name="${_csrf.parameterName}"
+  value="${_csrf.token}" />
+<input type="hidden" name="user_id" value="${readdto.user_id}" />
+<!-- 스크립트 -->
+<script>
+  let result = '${result}';
+</script>
+			
 			<table class="st">
 		      <tbody>
 		        <tr>
@@ -150,7 +215,7 @@ table.st th, td {
 			        </tr>
 			      </tbody>
 			    </table>
-		    </div>
+		   
 	</div>
 </body>
 <%@include file="../includes/footer.jsp"%>
