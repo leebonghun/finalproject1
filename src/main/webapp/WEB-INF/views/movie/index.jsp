@@ -2,6 +2,14 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="../includes/header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+</style>
 <!-- //nav -->
 <!-- banner -->
     <script src="/resources/js/jquery.slidey.js"></script>
@@ -17,7 +25,8 @@
 		</script>
 <!-- //banner -->
 <!-- banner-bottom -->
-	<div class="banner-bottom">
+	<div class="banner-bottom" >
+	<h4 class="latest-text w3_latest_text" >무비 차트</h4>
 		<div class="container">
 			<div class="w3_agile_banner_bottom_grid">
 				<div id="owl-demo" class="owl-carousel owl-theme">
@@ -310,7 +319,7 @@
 
 <!-- general -->
 	<div class="general">
-		<h4 class="latest-text w3_latest_text">주간 박스 오피스</h4>
+		<h4 class="latest-text w3_latest_text" >주간 박스 오피스</h4>
 		<div class="container">
 			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 				<ul id="myTab" class="nav nav-tabs" role="tablist">
@@ -959,6 +968,8 @@
 			</div>
 		</div>
 	</div>
+	</body>
+</html>
 <%@include file="../includes/footer.jsp"%>
 <!-- //general -->
 <!-- Latest-tv-series -->

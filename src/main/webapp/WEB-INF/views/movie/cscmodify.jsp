@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@include file="../includes/header.jsp" %>     
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <style>
     .test_obj input[type="radio"] {
         display: none;
@@ -20,18 +25,22 @@
         color: #ffffff;
     }
 </style>
-<div style="margin-left: 100px;">
-<h2  class="h1"   style=" color: black;"><img src="/resources/images/cscicon.png" style=" height:50px; " />고객 센터</h2>
-</div>
+</head>
+<body>
+<div class="container">
+	<div>
+		<h2  class="h2" style=" color: black;">
+			<img src="/resources/images/cscicon.png" style=" height:60px; " />고객 센터
+		</h2>
+	</div>
+</div>   
 <div style="margin-left: 100px; margin-right: 100px;">
 <div class="row">
-	<div class="col-lg-12">
-	<form action="" method="post" role="form">
-		<div class="panel panel-default">		
-		 <div class="form-group" style="margin-left: 25px; margin-top:25px  ">
+		<form action="" method="post" role="form">
+		<div class="panel panel-default">
+		<div class="form-group" style="margin-left: 0px; margin-top:25px  "> 
 			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
-			 <div class="form-group" style="margin-left: 25px; margin-top:25px  "> 
 			 
 			 
 			 <c:if test="${readdto.CSC_RFI == '기타'}">
@@ -62,18 +71,18 @@
 			<!-- /.panel-heading -->
 		
 				<div class="form-group">
-						<label>글번호</label> <input class="form-control" name="CSC_BNO"
+						<label style="font:sans-serif; color: black; padding: 3px;">글번호</label> <input class="form-control" name="CSC_BNO"
 							readonly="readonly" value="${readdto.CSC_BNO }">
 					</div>
 				
 					<div class="form-group">
-						<label>제목</label> <input class="form-control" name="CSC_TITLE" value="${readdto.CSC_TITLE }" >
+						<label style="font:sans-serif; color: black; padding: 3px;">제목</label> <input class="form-control" name="CSC_TITLE" value="${readdto.CSC_TITLE }" >
 					</div>
 					<div class="form-group">
-						<label>유저 아이디</label> <input class="form-control" name="user_id" value="${readdto.user_id }" readonly="readonly" >
+						<label style="font:sans-serif; color: black; padding: 3px;">유저 아이디</label> <input class="form-control" name="user_id" value="${readdto.user_id }" readonly="readonly" >
 					</div>
 					<div class="form-group">
-						<label>내용</label>
+						<label style="font:sans-serif; color: black; padding: 3px;">내용</label>
 						<textarea class="form-control" rows="3" name="CSC_CONTENT" >${readdto.CSC_CONTENT }</textarea>
 					</div>	
 					<input type="hidden" name="CSC_CHECK" value=${readdto.CSC_CHECK }>				
