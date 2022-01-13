@@ -34,7 +34,7 @@
 .panel-body {
     font-size: 14px;
     color: #999;
-    width: 990px;
+    width: 1040px;
     padding-right: 174px;
     padding-left: 1px;   
     margin-right: auto;
