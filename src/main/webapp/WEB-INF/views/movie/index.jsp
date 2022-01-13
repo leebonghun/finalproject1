@@ -26,8 +26,12 @@
 <!-- //banner -->
 <!-- banner-bottom -->
 	<div class="banner-bottom" >
-	<h4 class="latest-text w3_latest_text" >무비 차트</h4>
-		<div class="container">
+	<div class="container">
+	<div>
+      <h2 class="h2" style="color: black;">
+         <img src="/resources/images/chart1.png" style="height: 60px;" /> 무비차트
+      </h2>            
+   </div>   
 			<div class="w3_agile_banner_bottom_grid">
 				<div id="owl-demo" class="owl-carousel owl-theme">
 					<div class="item">
@@ -319,10 +323,14 @@
 
 <!-- general -->
 	<div class="general">
-		<h4 class="latest-text w3_latest_text" >주간 박스 오피스</h4>
-		<div class="container">
+	<div class="container">
+		<div>
+	      <h2 class="h2" style="color: black;">
+	         <img src="/resources/images/boxes1.png" style="height: 60px;" /> 주간 박스 오피스
+	      </h2>            
+   		</div>   
 			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-				<ul id="myTab" class="nav nav-tabs" role="tablist">
+				<ul id="myTab" class="nav nav-tabs" role="tablist" >
 					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">상영중인 영화</a></li>
 				</ul>
 				<div id="myTabContent" class="tab-content">
