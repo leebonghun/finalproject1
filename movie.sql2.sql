@@ -115,7 +115,7 @@ alter table csc_tbl delete(CSC_WRITER varchar2(200))
 update csc_tbl set CSC_WRITER = 'USER1' WHERE CSC_BNO =1
 
 select * from csc_tbl;
-
+alter table csc_tbl add(CSC_EMAIL varchar2(2000));
 alter table info_tbl add(INFO_RFI varchar2(1000));
 CREATE TABLE EVENT_TBL
 (

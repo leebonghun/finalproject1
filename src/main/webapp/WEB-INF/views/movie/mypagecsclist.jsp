@@ -38,11 +38,11 @@
 							<th scope="row">${mycscDto.CSC_BNO}</th>
 							<td>${mycscDto.CSC_RFI}
 							</td>										
-							<td  id="tit"><a class="move" href="${mycscDto.CSC_BNO}">
-							${mycscDto.CSC_TITLE} 
+							<td  id="tit" ><a class="move" href="${mycscDto.CSC_BNO}" style="color: black;">
+							${mycscDto.CSC_TITLE}   
 							</a></td>	
 							<c:if test="${mycscDto.CSC_CHECK == '[답변 대기중]' }">						
-							<td>${mycscDto.CSC_CHECK}</td>
+							<td style=" color:blue;">${mycscDto.CSC_CHECK}</td>
 							</c:if>
 							<c:if test="${mycscDto.CSC_CHECK == '[답변완료]' }">
 								<td style=" color:red;">${mycscDto.CSC_CHECK}

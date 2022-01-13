@@ -6,6 +6,12 @@
 		select * from reservetbl where movieCD = #{movieCD} order by reserveNm asc
 	</select>
 
+	<select   id="reserveRead2" resultType="com.company.domain.ReserveDTO">
+					select * from reservetbl where reserveNm=1
+	</select>
+
+
+
 
 	<select id="myList" resultType="com.company.domain.ticketDTO">
 	
@@ -21,6 +27,7 @@
 		insert into ticket(user_id,movieCD,movieNM,reserveDay,reserveTime,reservePlace,reserveGuan,reserveSeat,reserveNm) 
 		values(#{user_id},#{movieCD},#{movieNM},#{reserveDay},#{reserveTime},#{reservePlace},#{reserveGuan},#{reserveSeat},#{reserveNm})
 	</insert>
+
 
 
 </mapper>

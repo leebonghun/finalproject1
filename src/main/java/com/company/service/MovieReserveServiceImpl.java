@@ -12,35 +12,35 @@ import com.company.mapper.MovieReserveMapper;
 
 @Service
 public class MovieReserveServiceImpl implements MovieReserveService{
-	
-	@Autowired
-	private MovieReserveMapper mapper;
-	
-	
-	@Override
-	public List<ReserveDTO> reserveRead(int movieCD) {
-		// TODO Auto-generated method stub
-		return mapper.reserveRead(movieCD);
-	}
+   
+   @Autowired
+   private MovieReserveMapper mapper;
+   
+   
+   @Override
+   public List<ReserveDTO> reserveRead(int movieCD) {
+      // TODO Auto-generated method stub
+      return mapper.reserveRead(movieCD);
+   }
 
 
-	
+   
 
 
-	@Override
-	public boolean insert(ticketDTO insertDto) {
-		// TODO Auto-generated method stub
-		return mapper.insert(insertDto)>0?true:false;
-	}
+   @Override
+   public boolean insert(ticketDTO insertDto) {
+      // TODO Auto-generated method stub
+      return mapper.insert(insertDto)>0?true:false;
+   }
 
 
 
 
 
-	@Override
-	public List<ticketDTO> getmyList(Principal username) {
-		// TODO Auto-generated method stub
-		return mapper.myList(username);
-	}
-	
+   @Override
+   public List<ticketDTO> getmyList(Principal username) {
+      // TODO Auto-generated method stub
+      return mapper.myList(username);
+   }
+   
 }

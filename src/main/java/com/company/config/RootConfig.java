@@ -1,6 +1,12 @@
 package com.company.config;
 
+import java.util.Properties;
+
 import javax.sql.DataSource;
+
+import org.springframework.mail.javamail.*;
+
+
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -11,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -48,4 +55,28 @@ public class RootConfig {
    public DataSourceTransactionManager txManager() {
       return new DataSourceTransactionManager(dataSource());      
    }
+   
+ 
+   @Bean 
+   public JavaMailSender mailSender(){
+	   
+	   JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+       
+       mailSender.setHost("smtp.gmail.com");
+       mailSender.setPort(587);
+       mailSender.setUsername("parkgod971014@gmail.com");
+       mailSender.setPassword("p65129584!");
+       
+       Properties javaMailProperties = new Properties();
+       
+       javaMailProperties.put("mail.smtp.starttls.enable", "true");
+       javaMailProperties.put("mail.smtp.auth", "true");
+       javaMailProperties.put("mail.transport.protocol", "smtp");
+       javaMailProperties.put("mail.debug", "true");
+
+       mailSender.setJavaMailProperties(javaMailProperties);
+       
+       return mailSender;	 
+	 } 
+   
 }
