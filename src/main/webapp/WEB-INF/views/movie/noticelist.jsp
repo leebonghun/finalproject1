@@ -156,13 +156,13 @@ select {
                  <input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}" />
                  <input type="hidden" name="amount" value="${pageDto.cri.amount}" />
                  <select name="type" id="">
-                    <option value="">---------</option>
-                    <option value="T" <c:out value="${pageDto.cri.type == 'T'?'selected':''}"/>>제목</option>
-                    <option value="C" <c:out value="${pageDto.cri.type == 'C'?'selected':''}"/>>내용</option>
-                    <option value="R" <c:out value="${pageDto.cri.type == 'R'?'selected':''}"/>>분류</option>
-                    <option value="TC" <c:out value="${pageDto.cri.type == 'TC'?'selected':''}"/>>제목 or 내용</option>
-                    <option value="TW" <c:out value="${pageDto.cri.type == 'TW'?'selected':''}"/>>제목 or 분류</option>
-                    <option value="TCR" <c:out value="${pageDto.cri.type == 'TCR'?'selected':''}"/>>제목 or 내용 or 분류</option>
+                    <option value="" style="color: black;">---------</option>
+                    <option value="T" style="color: black;" <c:out value="${pageDto.cri.type == 'T'?'selected':''}"/>>제목</option>
+                    <option value="C" style="color: black;" <c:out value="${pageDto.cri.type == 'C'?'selected':''}"/>>내용</option>
+                    <option value="R" style="color: black;" <c:out value="${pageDto.cri.type == 'R'?'selected':''}"/>>분류</option>
+                    <option value="TC" style="color: black;" <c:out value="${pageDto.cri.type == 'TC'?'selected':''}"/>>제목 or 내용</option>
+                    <option value="TW" style="color: black;" <c:out value="${pageDto.cri.type == 'TW'?'selected':''}"/>>제목 or 분류</option>
+                    <option value="TCR" style="color: black;" <c:out value="${pageDto.cri.type == 'TCR'?'selected':''}"/>>제목 or 내용 or 분류</option>
                  </select>                               
                  
                  <input type="text" name="keyword" id=""  value='<c:out value="${pageDto.cri.keyword}"/>'/>

@@ -22,7 +22,11 @@
   </head>
   <body class="text-center">
     <form class="form-signin" method="post" action="">
-      <h1 class="h3 mb-3 font-weight-normal">BBM</h1>
+    <div class="w3layouts_logo" id="header" role="banner">
+		<a href="/movie/index" class="b_logo">
+			<h1 class="h3 mb-3 font-weight-bold">BBM</h1>
+		</a>
+	</div>
       <label for="user_id" class="sr-only">아이디</label>
       <sec:authentication property="principal" var="info"/>     
       <sec:authorize access="isAuthenticated()" >	                        

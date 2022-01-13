@@ -172,5 +172,11 @@ public class MovieController {
 		return "redirect:/movie/pwdmodify";
 	}
 	
+
+	@GetMapping("mybbm")
+	public void myBbm() {
+		log.info("예매내역");
+		
+	}
 	
 }

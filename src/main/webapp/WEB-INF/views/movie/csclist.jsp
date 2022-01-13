@@ -190,10 +190,10 @@ input {
             <div class="panel-body">
                <div>
                   <form action=" " method="get" id="regForm">
-                  <div>
+                  <div style="text-align: right;">
                      <button type="button" class="btn btn-info"   id="CscRegisterBtn"          
                         onclick="location.href='/movie/cscinsert'"
-                        style="margin-bottom: 10px; background-color: black; border-color: black; ">글쓰기</button>
+                        style="margin-bottom: 10px; background-color: black; border-color: black;">글쓰기</button>
                   </div>
                   </form>
                </div>
@@ -231,28 +231,28 @@ input {
                </table>
                <div class="row">
                   <!-- start search -->
-                  <div class="col-md-12">
-                     <div class="col-md-8">
+                  <div class="col-md-12" >
+                     <div class="col-md-12" style="text-align: right; width: 816px;">
                         <!--search Form-->
                         <form action=" " method="get" id="searchForm">
                            <input type="hidden" name="pageNum"
                               value="${pageDto.cri.pageNum }" > <input type="hidden"
                               name="amount" value="${pageDto.cri.amount }" > <select
                               name="type" id="" >
-                              <option value="">-----</option>
-                              <option value="T"
+                              <option value="" style="color: black;">-----</option>
+                              <option value="T" style="color: black;"
                                  <c:out value="${pageDto.cri.type=='T'?'selected':'' }"/>>제목</option>
-                              <option value="C"
+                              <option value="C" style="color: black;"
                                  <c:out value="${pageDto.cri.type=='C'?'selected':'' }"/>>내용</option>
-                              <option value="R"
+                              <option value="R" style="color: black;"
                                  <c:out value="${pageDto.cri.type=='R'?'selected':'' }"/>>사유</option>
-                              <option value="TC"
+                              <option value="TC" style="color: black;"
                                  <c:out value="${pageDto.cri.type=='TC'?'selected':'' }"/>>제목
-                                 or 내용</option>
-                              <option value="TR"
+                                 or 내용</option> 
+                              <option value="TR" style="color: black;"
                                  <c:out value="${pageDto.cri.type=='TR'?'selected':'' }"/>>제목
-                                 or 사유</option>
-                              <option value="TCR"
+                                 or 사유</option> 
+                              <option value="TCR" style="color: black;"
                                  <c:out value="${pageDto.cri.type=='TCR'?'selected':'' }"/>>제목
                                  or 내용 or 사유</option>
                            </select> <input type="text" name="keyword" id=""
@@ -262,7 +262,7 @@ input {
                      </div>
                      <div class="col-md-2 col-md-offset-2">
                         <!--페이지 목록 갯수 지정하는 폼-->
-                        <select name="" id="amount" class="form-control" style="border-radius: 16px;">
+                        <select name="" id="amount" class="form-control" style="border-radius: 16px; ">
                            <option value="10"
                               <c:out value="${pageDto.cri.amount==10?'selected':'' }"/>>10</option>
                            <option value="20"

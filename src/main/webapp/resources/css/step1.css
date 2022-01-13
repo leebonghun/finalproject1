@@ -1,0 +1,65 @@
+html,
+body {
+  	height: 100%;
+}
+
+body {
+	background-color: black;
+	padding-top: 40px;
+  	padding-bottom: 40px;
+}
+
+.w3layouts_logo a {
+    display: block;
+    text-decoration: none;
+}
+
+.h3 {
+	color: red;
+	font-size: 50px;
+	text-align: center;
+	text-decoration-color: #000
+}
+
+.container{
+	width: 460px;
+	height: 500px;
+}
+
+label{
+	color: white;
+	display: inline-block;
+    margin-bottom: -0.3rem;
+}
+
+/* input[type=checkbox] {
+    display:none;
+}
+
+input[type=checkbox] + label { 
+    cursor: pointer; 
+    padding-left: 23px; 
+    background-repeat: no-repeat;
+    background-image: url('../images/checker-off.svg');
+}
+input[type=checkbox]:checked + label {
+    background-image: url('../images/checker-on.svg');
+}
+input[type=checkbox]:disabled + label {
+    background-image: url('../images/checker-disabled.svg');
+} */
+
+input[type="checkbox"]+label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('/resources/images/checker-disabled.svg') no-repeat 0 0px / contain;
+}
+
+input[type='checkbox']:checked+label {
+    background: url('/resources/images/checker-on.svg') no-repeat 0 1px / contain;
+}
+
+input[type="checkbox"] {
+    display: none;
+}

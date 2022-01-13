@@ -7,23 +7,50 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-    .test_obj input[type="radio"] {
+ .test_obj input[type="radio"] {
         display: none;
-    }
+}
  
-    .test_obj input[type="radio"] + span {
+.test_obj input[type="radio"] + span {
         display: inline-block;
         padding: 15px 10px;
-        border: 1px solid #dfdfdf;
-        background-color: #ffffff;
+        border: 2px solid #dfdfdf;
+        background-color: #fff;
         text-align: center;
         cursor: pointer;
-    }
+        border-radius: 16px;
+	
+}
  
-    .test_obj input[type="radio"]:checked + span {
-        background-color: #113a6b;
-        color: #ffffff;
-    }
+.test_obj input[type="radio"]:checked + span {
+        background-color: black;
+        color: #fff;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.panel-body {
+    font-size: 14px;
+    color: #999;
+    width: 990px;
+    padding-right: 174px;
+    padding-left: 1px;   
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 23px;
+}
+
+.row {
+    margin: 0px auto;
+    width: 953px;
+}
+
 </style>
 </head>
 <body>
@@ -69,7 +96,7 @@
     		</c:if>
     </div>
 			<!-- /.panel-heading -->
-		
+		<div class="panel-body">
 				<div class="form-group">
 						<label style="font:sans-serif; color: black; padding: 3px;">글번호</label> <input class="form-control" name="CSC_BNO"
 							readonly="readonly" value="${readdto.CSC_BNO }">
@@ -100,7 +127,6 @@
 				</form>
 			</div>
 		</div>
-	</div>
 
 
 <%-- remove와 list를 위한 폼--%>
