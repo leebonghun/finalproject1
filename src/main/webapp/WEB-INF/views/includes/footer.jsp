@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
    
-  <div class="container" style="padding: 3px;" >
-  	<h4 class="latest-text w3_latest_text w3_home_popular" style="margin-left: 0px; padding: 3px;">이벤트</h4>
+  <div class="container" style="padding-top: 10px;">
+  	<h4 class="latest-text w3_latest_text w3_home_popular" style="margin-left: 0px; padding: 0px;">이벤트</h4>
   
 <div class="Latest-tv-series">
 		<ul>
-		<li id="indexevent" style="padding: 15px;">
+		<li id="indexevent" style="padding: 5px;">
 		<div style="">
 		<a href="eventread?EVENT_BNO=1" data-no="10808" data-netfunnel="N" class="eventBtn" style="text-align: center;" title="신년 맞이 달력 증정 행사">
 							<p class="img">
@@ -73,7 +73,7 @@
 	</script>
 <!-- //Latest-tv-series -->
 <!-- footer -->
-	<div class="footer">
+	<div class="footer" style="line-height: 1.5;">
 		<div class="container">
 			<div class="w3ls_footer_grid">
 				<div class="col-md-6 w3ls_footer_grid_left">
