@@ -4,55 +4,130 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"  %>
 <%@taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <!DOCTYPE html>
-<%@include file="../includes/header.jsp"%>
 <html>
+<%@include file="../includes/header.jsp"%>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
 <style>
-table. st {
+table {
    list-style: none;
-    padding-left: 10px;
+    padding-left: 0px;
 }
 
 table.st th, td {
    border: 1px solid #bcbcbc;
 }
 
+
+input[type="text"] {
+    border-radius: 16px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+tr{         
+   border: 2px solid #ddd;
+   border-radius: 30px;
+    background-color: #fff;
+    height: 34px;
+    font-size: 14px;
+}
+
+table table-hover {
+   border: 2px solid #ddd;
+   border-radius: 16px;
+    background-color: #fff;
+    height: 34px;
+    font-size: 14px;
+}
+
+
+.a1 {
+   border-radius: 16px;
+   border: 2px solid #ddd;
+    background-color: #fff;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+#cls{
+padding-left: auto;
+padding-right: auto;
+padding: 10px;
+}
+
+select {
+   border-radius: 16px;
+   border: 2px solid #ddd;
+    background-color: #fff;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+}
+.row {
+    margin: 0px auto;
+    width: 864px;
+    background-color: #fff;
+}
+
+.event-list p {
+    margin: 0;
+    text-align: center;
+}
 </style>
 </head>
 <body>
 
-   <div class="container">
-      <div><h3>내 예매 내역</h3></div>
-      
-      <table class="table" id=reservetbl>
-                  <thead>
-                     <tr style="background-color: black;">
-                        <th scope="col" style="color: white;">관람 영화</th>
-                        <th scope="col" style="color: white;">관람 일자</th>
-                        <th scope="col" style="color: white;">상영관</th>
-                        <th scope="col" style="color: white;">좌석</th>
-                        <th scope="col" style="color: white;">예약 번호</th>
-                     </tr>
-                  </thead>
-                   <tbody>
+<div class="container">
+   <div>
+      <h2 class="h2" style="color: black;">
+         <img src="/resources/images/mybbn.png" style="height: 60px;" /> 내 예매 내역
+      </h2>            
+   </div>   
+</div>
+
+      <!-- /.panel-heading -->
+        <div class="panel-body" > 
+           <div class="board_info">
+         <div class="row" >          
+               <table class="table table-hover" id="dtotbl" >
+                  <colgroup>
+                   <col class="col-md-3">
+                   <col class="col-md-3">
+                   <col class="col-md-2">
+                   <col class="col-md-2">
+                   <col class="col-md-2">
+               </colgroup>              
+                   <thead>
+                       <tr>
+                           <th style="background: black; font:sans-serif; color: white;">관람 영화</th>
+                           <th style="background: black; font:sans-serif; color: white;">관람BBM</th>
+                           <th style="background: black; font:sans-serif; color: white;">좌석 번호</th>
+                           <th style="background: black; font:sans-serif; color: white;">예매 번호</th>
+                           <th style="background: black; font:sans-serif; color: white;">결제 금액</th>
+                       </tr>                           
+                   </thead>
+            		<tbody>
                      <c:forEach var="list" items="${mylist}">
                         <tr class="table-active">
                            <th scope="row">${list.movieNM}</th>
-                           <td>${list.reserveDay} , ${list.reserveTime}</td>
-                           <td>${list.reservePlace}(${list.reserveGuan})</td>
+                           <td>${list.reserveDay} , ${list.reserveTime},${list.reservePlace}(${list.reserveGuan})</td>
                            <td>${list.reserveSeat}</td>
                            <td>${list.reserveNm}</td>
-                           
-                           
-                           
-                           
+                           <td></td>
                         </tr>
                      </c:forEach>
                   </tbody>
-                  <tbody>
+            		
+
+            <!-- 게시판 리스트 반복문 -->
+            <tbody>
                      <c:forEach var="cscDto" items="${list}">
                         <tr class="table-active">
                            <th scope="row">${cscDto.rn}</th>
@@ -72,82 +147,65 @@ table.st th, td {
                         </tr>
                      </c:forEach>
                   </tbody>
-        </table>
-               
-               
-               <div class="row">
-                  <!-- start search -->
-                  <div class="col-md-12">
-                     <div class="col-md-8">
-                        <!--search Form-->
-                        <form action=" " method="get" id="searchForm">
-                           <input type="hidden" name="pageNum"
-                              value="${pageDto.cri.pageNum }"> <input type="hidden"
-                              name="amount" value="${pageDto.cri.amount }"> <select
-                              name="type" id="">
-                              <option value="">-----</option>
-                              <option value="T"
-                                 <c:out value="${pageDto.cri.type=='T'?'selected':'' }"/>>제목</option>
-                              <option value="C"
-                                 <c:out value="${pageDto.cri.type=='C'?'selected':'' }"/>>내용</option>
-                              <option value="R"
-                                 <c:out value="${pageDto.cri.type=='R'?'selected':'' }"/>>사유</option>
-                              <option value="TC"
-                                 <c:out value="${pageDto.cri.type=='TC'?'selected':'' }"/>>제목
-                                 or 내용</option>
-                              <option value="TR"
-                                 <c:out value="${pageDto.cri.type=='TR'?'selected':'' }"/>>제목
-                                 or 사유</option>
-                              <option value="TCR"
-                                 <c:out value="${pageDto.cri.type=='TCR'?'selected':'' }"/>>제목
-                                 or 내용 or 사유</option>
-                           </select> <input type="text" name="keyword" id=""
-                              value='<c:out value="${pageDto.cri.keyword }"/>'>
-                           <button class="btn btn-default">검색</button>
-                        </form>
-                     </div>
-                     <div class="col-md-2 col-md-offset-2">
-                        <!--페이지 목록 갯수 지정하는 폼-->
-                        <select name="" id="amount" class="form-control">
-                           <option value="5"
-                              <c:out value="${pageDto.cri.amount==10?'selected':'' }"/>>5</option>
-                           <option value="10"
-                              <c:out value="${pageDto.cri.amount==20?'selected':'' }"/>>10</option>
-                        </select>
-                     </div>
-                     <input type="hidden" name="${_csrf.parameterName}"
-                        value="${_csrf.token}" />
-                  </div>
-               </div>
+           </table>
+        </div><!-- end search -->
+          <div class="text-center" style="text-align: center;">
+             <ul class="pagination">
+                <c:if test="${pageDto.prev}">
+                   <li class="paginate_button previous">
+                      <a href="${pageDto.startPage-10}" style="background-color: black; border-color: black;">Previous</a>
+                   </li>
+                </c:if>
+                
+                <c:forEach var="idx" begin="${pageDto.startPage}" end="${pageDto.endPage}">
+                   <li class="paginate_button ${pageDto.cri.pageNum==idx?'active':''}">
+                      <a href="${idx}" style="background-color: black; border-color: black;">${idx}</a>
+                   </li>
+                </c:forEach>
+                
+                <c:if test="${pageDto.next}">
+                 <li class="paginate_button next">
+                    <a href="${pageDto.endPage+1}" style="background-color: black; border-color: black;">Next</a>
+                 </li>
+              </c:if>
+             </ul>
+    <div class="row"> <!-- start search -->
+          <div class="col-md-12">
+            <div class="col-md-12" style="text-align: right; width: 830px;" ><!--search Form-->
+              <form action="" method="get" id="searchForm">
+                 <input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}" />
+                 <input type="hidden" name="amount" value="${pageDto.cri.amount}" />
+                 <select name="type" id="">
+                    <option value="" style="color: black;">---------</option>
+                    <option value="T" style="color: black;" <c:out value="${pageDto.cri.type == 'T'?'selected':''}"/>>제목</option>
+                    <option value="C" style="color: black;" <c:out value="${pageDto.cri.type == 'C'?'selected':''}"/>>내용</option>
+                    <option value="R" style="color: black;" <c:out value="${pageDto.cri.type == 'R'?'selected':''}"/>>사유</option>
+                    <option value="TC" style="color: black;" <c:out value="${pageDto.cri.type == 'TC'?'selected':''}"/>>제목 or 내용</option>
+                    <option value="TW" style="color: black;" <c:out value="${pageDto.cri.type == 'TW'?'selected':''}"/>>제목 or 사유</option>
+                    <option value="TCR" style="color: black;" <c:out value="${pageDto.cri.type == 'TCR'?'selected':''}"/>>제목 or 내용 or 사유</option>
+                 </select>                               
+                 
+                 <input type="text" name="keyword" id=""  value='<c:out value="${pageDto.cri.keyword}"/>'/>
+                 <button style="background-color: black; border-color: black; color: white;" class="btn btn-default">검색</button>
+              </form>
+          </div>
+         <!-- start Pagination -->
+              <!-- end Pagination -->
+             </div>
+            </div>                                 
+    
+
+      </div>
+      </div>
+    </div>
+
+
+         <!-- start Pagination -->
+              <!-- end Pagination -->
+                     
            
 
-         <div class="text-center">
-            <!-- //faq-banner -->
-            <div>
-               <!-- start Pagination -->
-               <div class="text-center">
-                  <ul class="pagination">
-                     <c:if test="${pageDto.prev }">
-                        <li class="paginate_button previous"><a
-                           href="${pageDto.startPage-10 }">Previous</a></li>
-                     </c:if>
-                     <c:forEach var="idx" begin="${pageDto.startPage }"
-                        end="${pageDto.endPage }">
-                        <li
-                           class="paginate_button ${pageDto.cri.pageNum==idx?'active':'' }">
-                           <a href="${idx }">${idx }</a>
-                        </li>
-                     </c:forEach>
-                     <c:if test="${pageDto.next }">
-                        <li class="paginate_button next"><a
-                           href="${pageDto.endPage+1 }">Next</a></li>
-                     </c:if>
-                  </ul>
-               </div>
-               <!-- end Pagination -->
-            </div>
-         </div>
-
+                   
 <!--  페이지 나누기를 위한 폼 -->
 <form action="" method="get" id="actionForm">
    <input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}">
@@ -161,21 +219,16 @@ table.st th, td {
 <input type="hidden" name="${_csrf.parameterName}"
   value="${_csrf.token}" />
 <input type="hidden" name="user_id" value="${readdto.user_id}" />
-<!-- 스크립트 -->
-<script>
-  let result = '${result}';
-</script>
-   </div>
-      <div class="userInfo">
-         <table class="st">
+      <div class="container" style="text-align: center; padding: 15px; ">
+         <table class="st" style="width: 860px;">
             <tbody>
               <tr>
-                <td>이용안내</td>
+                <td width="170px">이용안내</td>
                 <td>
                    <li>예매 변경은 불가능하며, 취소 후 재 예매를 하셔야만 합니다.</li>
-                   <li>영수증은 상영 시간 전까지 BBM 극장 카운터에서 출력하실 수 있습니다. 단, 신용카드로 예매하신 경우만 한합니다.</li>
+                   <li>영수증은 상영 시간 전까지 My BBM 에서 출력하실 수 있습니다. 단, 신용카드로 예매하신 경우만 한합니다.</li>
                    <li>상영 시간 이후 관람하신 영화의 영수증 출력을 원하실 경우, 0000-0000로 문의 주시기 바랍니다.</li>
-                   <li>궁금하신 사항이 있으시면, 고객센터로 문의해 주시기 바랍니다.</li>
+                   <li>취소하신 내역이 나타나지 않거나 궁금하신 사항이 있으시면, 고객센터로 문의해 주시기 바랍니다.</li>
                 </td>
               </tr>
               <tr>
@@ -229,11 +282,12 @@ table.st th, td {
                  </tr>
                </tbody>
              </table>
-          </div> 
-             
-             
-
-         
+        </div>
+   
+<!-- 스크립트 -->
+<script>
+  let result = '${result}';
+</script>
 </body>
 </html>
 <%@include file="../includes/footer.jsp"%>
