@@ -66,15 +66,16 @@
 
 </div>
 
-<form action="" method="post" id="noaction">
+<form action="/movie/mybbm" method="post" id="noaction">
 <div style="height: 30px"></div>
 <div class="container">
 
 		<div class="container" id="selectSeat1">
 	<div class="row">
 		<input type="hidden" name="movieNM" value="${movieDto.movieNM}"  />
-		
-		
+		<input type="hidden" name="movieCD" value="${movieDto.movieCD}"  />
+		<%-- <input type="hidden" name="reserveSeat" value="${list1.reserveSeat}"/> --%>
+				
 		<c:if test="${!empty list1}">
 		<select name="reserveDay" id="selectBox1">
 		<c:forEach var="item" items="${list1}" varStatus="i">
@@ -176,7 +177,9 @@
 	href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 <script src="/resources/js/reserve.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+<script>
+let reserveSeat = '${seatDto}';
+</script>
 
 
 

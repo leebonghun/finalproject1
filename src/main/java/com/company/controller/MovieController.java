@@ -87,8 +87,15 @@ public class MovieController {
 		movieDTO movieDto = service.read(movieCD);
 		
 		List<ReserveDTO> listDto = reservice.reserveRead(movieCD);
+		
+		List<String> seatDto = reservice.seat(movieCD);
+		
+		
 		model.addAttribute("movieDto", movieDto);
 		model.addAttribute("list1",listDto);
+		model.addAttribute("seatDto",seatDto);
+		
+		
 		
 	}
 
@@ -104,6 +111,10 @@ public class MovieController {
 	@PreAuthorize("isAuthenticated()")
 	@PostMapping("mybbm")
 	public String mybbmread(Model model,ticketDTO insertDto) {
+		
+		log.info("예매 좌석 "+insertDto);
+		
+		
 		
 		if(!reservice.insert(insertDto)) {
 			return "redirect:/movie/movieList";

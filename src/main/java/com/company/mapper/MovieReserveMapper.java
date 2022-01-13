@@ -14,4 +14,6 @@ public interface MovieReserveMapper {
 	
 	public int insert(ticketDTO ticketDto);
 	
+	
+	public List<String> seat(int movieCD);
 }

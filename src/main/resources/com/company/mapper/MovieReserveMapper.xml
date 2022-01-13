@@ -21,6 +21,9 @@
 		insert into ticket(user_id,movieCD,movieNM,reserveDay,reserveTime,reservePlace,reserveGuan,reserveSeat,reserveNm) 
 		values(#{user_id},#{movieCD},#{movieNM},#{reserveDay},#{reserveTime},#{reservePlace},#{reserveGuan},#{reserveSeat},#{reserveNm})
 	</insert>
-
+	
+	<select  id="seat" resultType="java.lang.String">
+		select reserveSeat from ticket where movieCD = #{movieCD}
+	</select>
 
 </mapper>

@@ -12,4 +12,7 @@ public interface MovieReserveService {
 	public List<ticketDTO> getmyList(Principal username);
 	
 	public boolean insert(ticketDTO insertDto);
+	
+	public List<String> seat(int movieCD);
+
 }
