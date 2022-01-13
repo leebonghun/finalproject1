@@ -6,6 +6,12 @@
 		select * from reservetbl where movieCD = #{movieCD} order by reserveNm asc
 	</select>
 
+	<select   id="reserveRead2" resultType="com.company.domain.ReserveDTO">
+					select * from reservetbl where reserveNm=1
+	</select>
+
+
+
 
 	<select id="myList" resultType="com.company.domain.ticketDTO">
 	
@@ -25,5 +31,6 @@
 	<select  id="seat" resultType="java.lang.String">
 		select reserveSeat from ticket where movieCD = #{movieCD}
 	</select>
+
 
 </mapper>

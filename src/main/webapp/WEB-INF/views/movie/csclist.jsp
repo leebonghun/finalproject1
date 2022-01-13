@@ -215,7 +215,7 @@ input {
                            <td id="tit"><a class="move" href="${cscDto.CSC_BNO}" style="color: black;">
                                  ${cscDto.CSC_TITLE} </a></td>
                            <c:if test="${cscDto.CSC_CHECK == '[답변 대기중]'}">
-                              <td>${cscDto.CSC_CHECK}</td>
+                              <td style="color: blue;">${cscDto.CSC_CHECK}</td>
                            </c:if>
                            
                            <c:if test="${cscDto.CSC_CHECK == '[답변완료]'}">

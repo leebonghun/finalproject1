@@ -331,18 +331,18 @@
    		</div>   
 			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs" >
 				<ul id="myTab" class="nav nav-tabs" role="tablist" >
-					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">상영중인 영화</a></li>
+					<li role="presentation" class="active"><a href="movieList" id="living">상영중인 영화</a></li>
 				</ul>
 				<div id="myTabContent" class="tab-content" style="width: 900px;">   
 					<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
 						<div class="w3_agile_featured_movies">
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m1.jpg" title="album-name" class="img-responsive" alt=" " />
+								<a href="movieRead?movieCD=20210028" class="hvr-shutter-out-horizontal"><img src="/resources/images/m1.jpg" title="album-name" class="img-responsive" alt=" " />
 									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="single.html">스파이더맨: 노 웨이 홈</a></h6>							
+										<h6><a href="movieRead?movieCD=20210028">스파이더맨: 노 웨이 홈</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>

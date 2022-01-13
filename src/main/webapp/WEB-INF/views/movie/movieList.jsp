@@ -305,7 +305,11 @@ strong{
     height: 60px;
     margin-top: 30px;
     border-bottom: 5px solid #241d1e;
+
+    width:900px;
+
     width: 900px;
+
 }
 #reservation{
    border-color: #ffffff;
@@ -368,7 +372,7 @@ strong{
                                        <div class="mid-2 agile_mid_2_home">
                                           <button type="submit" id="detailShow"
                                              onclick="location.href='movieRead?movieCD=${list.movieCD}'">상세보기</button>
-                                          <button type="submit" id="reservation">예매하기</button>
+                                          <button type="submit" id="reservation" onclick="location.href='reserve?movieCD=${list.movieCD}'">예매하기</button>
 
                                           <div class="clearfix"></div>
                                        </div>

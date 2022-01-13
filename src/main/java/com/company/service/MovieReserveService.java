@@ -8,6 +8,7 @@ import com.company.domain.ReserveDTO;
 import com.company.domain.ticketDTO;
 
 public interface MovieReserveService {
+
 	public List<ReserveDTO> reserveRead(int movieCD);
 	public List<ticketDTO> getmyList(Principal username);
 	
@@ -16,3 +17,4 @@ public interface MovieReserveService {
 	public List<String> seat(int movieCD);
 
 }
+

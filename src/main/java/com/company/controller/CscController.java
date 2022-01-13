@@ -4,9 +4,12 @@ package com.company.controller;
 import java.security.Principal;
 import java.util.List;
 
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
@@ -35,7 +39,11 @@ public class CscController {
 	private CscService cscService;
 	
 		
-	
+	@GetMapping("mailSender")
+	public void cscMailSender() {
+		log.info("메일전송으로 이동중입니다..");
+		
+	}
 	
 	
 	
@@ -128,10 +136,32 @@ public class CscController {
 		return"redirect:/movie/csclist";
 	}
 	
+	@Autowired
+	private JavaMailSender mailSender;
+	
+	/* @RequestMapping(value = "cscread", method = RequestMethod.POST) */
 	@PostMapping("cscread")
-	public String cscmodify2(CscDTO modifyDto2, Criteria cri, RedirectAttributes rttr) {
+	public String cscmodify2(CscDTO modifyDto2, Criteria cri, RedirectAttributes rttr,String user_id, String CSC_TITLE, String CSC_EMAIL,int CSC_BNO,
+			String message) {
 		log.info("답글 입력" + modifyDto2 );
+		
+		try {
+			MimeMessage mimeMessage = mailSender.createMimeMessage();
+			MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
 
+			
+			// 메일서버 사용하는 아이디를 작성하면됨
+			messageHelper.setTo(CSC_EMAIL); // 받는사람 이메일
+			messageHelper.setSubject(user_id +"님 안녕하세요~!  " +"MMB 고객센터글 : "+CSC_TITLE +"에 답변이 완료되었습니다.");// 메일제목
+			messageHelper.setText("안녕하세요MMB입니다. 현재 고객님의 고객센터글 번호:  "+CSC_BNO+"  제목:  "+CSC_TITLE+"에 대한 답변이 완료되었습니다."
+					+ "자세한 내용은  홈페이지의 -> 마이페이지 -> 내 문의 -> 내 고객센터 글 목록에서 확인부탁드립니다. "
+					+ "더욱 더 노력하는 BBM이 되도록 노력하겠습니다. 감사합니다."
+					+ "바로가기 주소:  http://localhost:8080/movie/index"); // 메일 내용 
+																									
+			mailSender.send(mimeMessage);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		
 		

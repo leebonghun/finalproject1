@@ -101,7 +101,6 @@
 						<label style="font:sans-serif; color: black; padding: 3px;">글번호</label> <input class="form-control" name="CSC_BNO"
 							readonly="readonly" value="${readdto.CSC_BNO }">
 					</div>
-				
 					<div class="form-group">
 						<label style="font:sans-serif; color: black; padding: 3px;">제목</label> <input class="form-control" name="CSC_TITLE" value="${readdto.CSC_TITLE }" >
 					</div>
@@ -109,9 +108,21 @@
 						<label style="font:sans-serif; color: black; padding: 3px;">유저 아이디</label> <input class="form-control" name="user_id" value="${readdto.user_id }" readonly="readonly" >
 					</div>
 					<div class="form-group">
+						<label>제목</label> <input class="form-control" name="CSC_TITLE" value="${readdto.CSC_TITLE }" >
+					</div>
+					
+					 <div class="form-group">
+                  <label>이메일</label> <input class="form-control" name="CSC_EMAIL"
+                    value="${readdto.CSC_EMAIL }" >
+               </div>
+					<div class="form-group">
+					
+
 						<label style="font:sans-serif; color: black; padding: 3px;">내용</label>
+
 						<textarea class="form-control" rows="3" name="CSC_CONTENT" >${readdto.CSC_CONTENT }</textarea>
 					</div>	
+					
 					<input type="hidden" name="CSC_CHECK" value=${readdto.CSC_CHECK }>				
 					 
 					<sec:authentication property="principal" var="info"/>
