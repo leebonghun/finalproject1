@@ -1,0 +1,41 @@
+html,
+body {
+  	height: 100%;
+}
+
+body {
+	background-color: black;
+	padding-top: 40px;
+  	padding-bottom: 40px;
+  	margin-bottom: 40px;
+}
+
+.w3layouts_logo a {
+    display: block;
+    text-decoration: none;
+}
+
+.container{
+	width: 700px;
+	height: 800px;
+}
+
+.container #register{
+	width: 480;
+}
+
+.h3 {
+	color: red;
+	font-size: 50px;
+	text-align: center;
+	text-decoration-color: #000
+}
+
+
+label{
+	color: white;
+}
+
+button{
+	width: 480;
+}

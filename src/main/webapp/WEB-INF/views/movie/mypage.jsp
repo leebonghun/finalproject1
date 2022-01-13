@@ -13,13 +13,6 @@
 <link href="https://fonts.googleapis.com/
     icon?family=Material+Icons|Material+Icons+Sharp|Material+Icons+Two+Tone|Material+Icons+Outlined"
     rel="stylesheet">
-
-<style type="text/css">
-
-
-
-</style>
-
 	<body bgcolor="black">
 		<div class="header">
 			<div class="btn-gate-container">
@@ -102,9 +95,6 @@
 				</div>
 			</div>
 		</div>
-
-	
-
    <!-- 스크립트 -->
 <script type="text/javascript">
 	function goBack(){
@@ -114,15 +104,9 @@
 		}
 	}
 </script>
-
 	</body>
+
 </html>
 
 
 
-
-   
-     
- 
-=======
-</html>

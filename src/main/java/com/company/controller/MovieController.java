@@ -204,4 +204,6 @@ public class MovieController {
 		return "redirect:/movie/pwdmodify";
 	}
 	
+	
+	
 }

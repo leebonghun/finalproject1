@@ -12,12 +12,18 @@ pageEncoding="UTF-8"%>
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link href="/resources/css/step2.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
     <!-- validation 사용자 작성 코드 삽입-->
     <script src="/resources/sign-js/register.js"></script>
   </head>
-  <body style="background-color:#F5F5F5;">
+  <body>
+  	<div class="w3layouts_logo" id="header" role="banner">
+		<a href="/movie/index" class="b_logo">
+			<h1 class="h3 mb-3 font-weight-bold">BBM</h1>
+		</a>
+	</div>
     <div class="container" style="margin-top:40px">
       <form id="regist" method="post" action="step3">
         <div class="form-group row justify-content-center">
@@ -102,10 +108,9 @@ pageEncoding="UTF-8"%>
             <small id="user_email" class="text-info"></small>
           </div>
         </div>
-        <div class="form-group text-center">
         
         <div class="form-group row justify-content-center">
-          <label for="tel" class="col-sm-2 col-form-label">휴대전화</label>
+          <label for="user_tel" class="col-sm-2 col-form-label">휴대전화</label>
           <div class="col-sm-6">
             <input
               type="text"
@@ -116,12 +121,15 @@ pageEncoding="UTF-8"%>
             />
 
             <small id=tel class="text-info"></small>
-
             <small id=user_tel class="text-info"></small>
           </div>
         </div>
-          <button type="submit" class="btn btn-primary">가입하기</button>
+          <button type="submit" class="btn btn-danger btn-block">가입하기</button>
           <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
+        </div>
+        <div>
+        <p>
+        </p>
         </div>
       </form>
     </div>
