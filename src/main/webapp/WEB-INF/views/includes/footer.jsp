@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
    
-  <div class="container">
-  	<h4 class="latest-text w3_latest_text w3_home_popular" style="margin-left: 0px">이벤트</h4>
+  <div class="container" style="padding: 3px;" >
+  	<h4 class="latest-text w3_latest_text w3_home_popular" style="margin-left: 0px; padding: 3px;">이벤트</h4>
   
 <div class="Latest-tv-series">
-		<ul >
+		<ul>
 		<li id="indexevent">
 		<div style="">
 		<a href="eventread?EVENT_BNO=1" data-no="10808" data-netfunnel="N" class="eventBtn" style="text-align: center;" title="신년 맞이 달력 증정 행사">

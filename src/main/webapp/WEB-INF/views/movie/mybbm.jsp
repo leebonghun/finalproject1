@@ -113,7 +113,7 @@ select {
                            <th style="background: black; font:sans-serif; color: white;">결제 금액</th>
                        </tr>                           
                    </thead>
-            		<tbody>
+        
                      <c:forEach var="list" items="${mylist}">
                         <tr class="table-active">
                            <th scope="row">${list.movieNM}</th>
@@ -121,11 +121,10 @@ select {
                            <td>${list.reserveSeat}</td>
                            <td>${list.reserveNm}</td>
                            <td></td>
+
                         </tr>
                      </c:forEach>
                   </tbody>
-            		
-
             <!-- 게시판 리스트 반복문 -->
             <tbody>
                      <c:forEach var="cscDto" items="${list}">
