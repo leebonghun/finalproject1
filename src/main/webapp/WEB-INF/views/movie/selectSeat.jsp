@@ -27,13 +27,13 @@
             <div class="sort-wrapper">
                 <div class="sort-rate sort-selected">영화정보</div>
             </div>
-             <p>상영시간:</p>
+            
           
-            <c:forEach var="item" items="${list1}">
-          <p>영화제목:</p>
-           <p>상영날짜:</p>
-           <p>상영시간:</p>
-          
+            <c:forEach var="reserveDto" items="${list1}">
+          <p>영화제목: ${reserveDto.movieNM }</p>
+           <p>상영날짜:${reserveDto.reserveDay }</p>
+           <p>상영시간:${reserveDto.reserveTime }</p>
+        
                 </c:forEach>
         </div>
       
@@ -43,7 +43,9 @@
             <div class="reserve-time">
              <label><input type="radio"  value="성인">성인</label>
           	<label><input type="radio"  value="아이">아이</label>
-                <div class="reserve-where">(총 49석) </div>
+          	 <c:forEach var="reserveDto" items="${list1}">
+                <div class="reserve-where">${reserveDto.reserveSeat } </div>
+                 </c:forEach>
                 <div class="reserve-time-wrapper">
                    
           

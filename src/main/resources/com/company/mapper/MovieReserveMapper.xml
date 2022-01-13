@@ -5,9 +5,9 @@
 	<select  id="reserveRead" resultType="com.company.domain.ReserveDTO">
 		select * from reservetbl
 	</select>
-
-
-
+	<select   id="reserveRead2" resultType="com.company.domain.ReserveDTO">
+					select * from reservetbl where reserveNm=1
+	</select>
 
 
 

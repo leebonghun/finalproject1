@@ -103,8 +103,14 @@ public class MovieController {
 	
 	
 	@GetMapping("selectSeat")
-	public void selectSeat() {
+	public void selectSeat(int reserveNm, Model model) {
 		log.info("좌석선택 중..");
+		
+	ReserveDTO reserveDto = reservice.reserveRead2(reserveNm);
+		
+		log.info("data"+reserveDto);
+		model.addAttribute("list1",reserveDto);
+		
 	}
 
 	

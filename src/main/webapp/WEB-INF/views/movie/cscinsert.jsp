@@ -60,6 +60,9 @@
 						<label>내용</label>
 						<textarea class="form-control" rows="3" name="CSC_CONTENT"></textarea>
 					</div>	
+					<div class="form-group">
+						<label>이메일(답변완료시 해당 이메일로 알람이 전송됩니다.)</label> <input type="text" class="form-control" name="CSC_EMAIL" >
+					</div>
 					<input type="hidden" name="CSC_CHECK" value="[답변 대기중]">				
 					 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 					<button type="submit" class="btn btn-info" id="insert" >작성완료</button>

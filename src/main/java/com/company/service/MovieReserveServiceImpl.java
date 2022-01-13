@@ -20,5 +20,12 @@ public class MovieReserveServiceImpl implements MovieReserveService{
 		// TODO Auto-generated method stub
 		return mapper.reserveRead();
 	}
+
+
+	@Override
+	public ReserveDTO reserveRead2(int reserveNm) {
+		
+		return mapper.reserveRead2(reserveNm);
+	}
 	
 }
