@@ -305,6 +305,7 @@ strong{
     height: 60px;
     margin-top: 30px;
     border-bottom: 5px solid #241d1e;
+    width: 900px;
 }
 #reservation{
    border-color: #ffffff;

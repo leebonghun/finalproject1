@@ -79,7 +79,7 @@ select {
 
 <div class="panel-body" >
    <div>
-      <div style="text-align: right;">
+      <div style="text-align: right; width: 880px;">
 
      
 
@@ -95,7 +95,7 @@ select {
       <!-- /.panel-heading -->
         <div class="panel-body" > 
            <div class="board_info">
-         <div class="row" >          
+         <div class="row" style="width: 880px">          
                <table class="table table-hover" id="dtotbl" >
                   <colgroup>
                    <col class="col-md-1">
@@ -129,7 +129,7 @@ select {
             </tbody>
            </table>
         </div><!-- end search -->
-          <div class="text-center" style="text-align: center;">
+          <div class="text-center" style="text-align: center; width: 880px;">
              <ul class="pagination">
                 <c:if test="${pageDto.prev}">
                    <li class="paginate_button previous">
@@ -149,9 +149,9 @@ select {
                  </li>
               </c:if>
              </ul>
-    <div class="row"> <!-- start search -->
+    <div class="row" > <!-- start search -->
           <div class="col-md-12">
-            <div class="col-md-12" style="text-align: right; width: 830px;" ><!--search Form-->
+            <div class="col-md-12" style="text-align: right; width: 850px;" ><!--search Form-->
               <form action="" method="get" id="searchForm">
                  <input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}" />
                  <input type="hidden" name="amount" value="${pageDto.cri.amount}" />

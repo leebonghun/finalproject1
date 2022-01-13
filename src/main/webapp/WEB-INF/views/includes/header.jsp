@@ -169,7 +169,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    </script>
 <!-- //bootstrap-pop-up -->
 <!-- nav -->
-   <div class="movies_nav">
+   <div class="movies_nav">   
       <div class="container">
          <nav class="navbar navbar-default">
             <div class="navbar-header navbar-left">
@@ -182,10 +182,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-               <nav>
-                  <ul class="nav navbar-nav">
-                     <li class="active"><a href="movieList">영화</a></li>
-                     <li><a href="reserve">예매</a></li>
+               <nav >
+                  <ul class="nav navbar-nav" >
+                     <li><a href="movieList" >영화</a></li>
                      <li><a href="store">스토어</a></li>
                      <li><a href="noticelist">공지사항</a></li>
                      <li><a href="eventlist">이벤트</a></li>

@@ -70,7 +70,7 @@ li {
 			</div>
 			<div class="event-list mt15" style="margin-top: 20px">
 				<ul>
-					<li>
+					<li style="padding: 15px;">
 						<a href="eventread?EVENT_BNO=1" data-no="10808" data-netfunnel="N" class="eventBtn"  title="신년 맞이 달력 증정 행사" >
 							<p class="img">
 								<img src="/resources/images/2022-calendar.jpg" alt="신년 달력 증정 행사" onerror="noImg(this);" style="border-radius: 16px;"  />
@@ -79,7 +79,7 @@ li {
 							<p class="date"> 2022.01.01 ~ 2022.01.31 </p>
 						</a>
 					</li>
-					<li>
+					<li style="padding: 15px;">
 						<a href="eventread2?EVENT_BNO=2" data-no="10808" data-netfunnel="N" class="eventBtn" title="카드 할인 행사">
 							<p class="img">
 								<img src="/resources/images/card1.jpg" alt="카드 할인 행사" onerror="noImg(this);"  style="border-radius: 16px;"/>
@@ -88,7 +88,7 @@ li {
 							<p class="date"> 2022.01.01 ~ 2022.12.31 </p>
 						</a>
 					</li>
-					<li style="border: black;">
+					<li style="border: black; padding: 15px;" >
 						<a href="eventread3?EVENT_BNO=3" data-no="10808" data-netfunnel="N" class="eventBtn" title="신규 회원 가입 이벤트" >
 							<p class="img">
 								<img src="/resources/images/signup.png" alt="신규 회원 가입 이벤트" onerror="noImg(this);" style="border-radius: 16px;"/>

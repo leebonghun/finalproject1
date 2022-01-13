@@ -70,9 +70,9 @@ img{
 			<div class="tit-util-mt70" >
 				<h3 class="tit">BBM Goods & Ticket</h3>
 			</div>
-			<div class="event-list mt15" style="margin-top: 20px" > 
+			<div class="event-list mt15" style="margin-top: 20px;" > 
 				<ul>
-					<li>
+					<li style="padding: 15px;">
 						<a data-no="10808" data-netfunnel="N" style="text-align: center;"  title="영화 티켓">
 							<p class="img">
 								<img src="/resources/images/ticket1.jpg" alt="영화 티켓" onerror="noImg(this);" style="border-radius: 16px;"/>
@@ -81,7 +81,7 @@ img{
 							<p style="color: black;"> ￦12000 </p>
 						</a>
 					</li>
-					<li>
+					<li style="padding: 15px;">
 						<a data-no="10808" data-netfunnel="N" style="text-align: center;" title="텀블러">
 							
 							<p class="img">
@@ -91,7 +91,7 @@ img{
 							<p style="color: black;"> ￦10000 </p>
 						</a>
 					</li>
-					<li>
+					<li style="padding: 15px;">
 						<a data-no="10808" data-netfunnel="N" style="text-align: center;" title="에코백">
 							<p class="img">
 								<img src="/resources/images/ecobag1.jpg" alt="에코백" onerror="noImg(this);" style="border-radius: 16px; size: 100px;"/>
@@ -112,7 +112,7 @@ img{
 			</div>
 			<div class="event-list mt15">
 				<ul>
-					<li>
+					<li style="padding: 15px;">
 						<a data-no="10808" data-netfunnel="N" style="text-align: center;" title="콜라 2 + 팝콘">
 							<p class="img">
 								<img src="/resources/images/popcorn1.jpg" alt="콜라 2 + 팝콘" onerror="noImg(this);" style="border-radius: 16px;" />
@@ -121,7 +121,7 @@ img{
 							<p style="color: black;"> ￦9000 </p>
 						</a>
 					</li>
-					<li>
+					<li style="padding: 15px;">
 						<a data-no="10808" data-netfunnel="N" style="text-align: center;" title="오징어 버터구이">
 							<p class="img">
 								<img src="/resources/images/cuttlefish1.jpg" alt="오징어 버터구이" onerror="noImg(this);" style="border-radius: 16px;"/>
@@ -130,7 +130,7 @@ img{
 							<p style="color: black;"> ￦3500 </p>
 						</a>
 					</li>
-					<li>
+					<li style="padding: 15px;">
 						<a data-no="10808" data-netfunnel="N" style="text-align: center;" title="나초">
 							<p class="img">
 								<img src="/resources/images/nacho.jpg" alt="나초" onerror="noImg(this);" style="border-radius: 16px;"/>
