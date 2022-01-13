@@ -1,37 +1,73 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@include file="../includes/header.jsp" %>     
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <style>
-    .test_obj input[type="radio"] {
+ .test_obj input[type="radio"] {
         display: none;
-    }
+}
  
-    .test_obj input[type="radio"] + span {
+.test_obj input[type="radio"] + span {
         display: inline-block;
         padding: 15px 10px;
-        border: 1px solid #dfdfdf;
-        background-color: #ffffff;
+        border: 2px solid #dfdfdf;
+        background-color: #fff;
         text-align: center;
         cursor: pointer;
-    }
+        border-radius: 16px;
+	
+}
  
-    .test_obj input[type="radio"]:checked + span {
-        background-color: #113a6b;
-        color: #ffffff;
-    }
+.test_obj input[type="radio"]:checked + span {
+        background-color: black;
+        color: #fff;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.panel-body {
+    font-size: 14px;
+    color: #999;
+    width: 990px;
+    padding-right: 174px;
+    padding-left: 1px;   
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 23px;
+}
+
+.row {
+    margin: 0px auto;
+    width: 953px;
+}
+
 </style>
-<div style="margin-left: 100px;">
-<h2  class="h1"   style=" color: black;"><img src="/resources/images/cscicon.png" style=" height:50px; " />고객 센터</h2>
-</div>
+</head>
+<body>
+<div class="container">
+	<div>
+		<h2  class="h2" style=" color: black;">
+			<img src="/resources/images/cscicon.png" style=" height:60px; " />고객 센터
+		</h2>
+	</div>
+</div>   
 <div style="margin-left: 100px; margin-right: 100px;">
 <div class="row">
-	<div class="col-lg-12">
-	<form action="" method="post" role="form">
-		<div class="panel panel-default">		
-		 <div class="form-group" style="margin-left: 25px; margin-top:25px  ">
+		<form action="" method="post" role="form">
+		<div class="panel panel-default">
+		<div class="form-group" style="margin-left: 0px; margin-top:25px  "> 
 			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
-			 <div class="form-group" style="margin-left: 25px; margin-top:25px  "> 
 			 
 			 
 			 <c:if test="${readdto.CSC_RFI == '기타'}">
@@ -60,13 +96,16 @@
     		</c:if>
     </div>
 			<!-- /.panel-heading -->
-		
+		<div class="panel-body">
 				<div class="form-group">
-						<label>글번호</label> <input class="form-control" name="CSC_BNO"
+						<label style="font:sans-serif; color: black; padding: 3px;">글번호</label> <input class="form-control" name="CSC_BNO"
 							readonly="readonly" value="${readdto.CSC_BNO }">
 					</div>
 					<div class="form-group">
-						<label>유저 아이디</label> <input class="form-control" name="user_id" value="${readdto.user_id }" readonly="readonly" >
+						<label style="font:sans-serif; color: black; padding: 3px;">제목</label> <input class="form-control" name="CSC_TITLE" value="${readdto.CSC_TITLE }" >
+					</div>
+					<div class="form-group">
+						<label style="font:sans-serif; color: black; padding: 3px;">유저 아이디</label> <input class="form-control" name="user_id" value="${readdto.user_id }" readonly="readonly" >
 					</div>
 					<div class="form-group">
 						<label>제목</label> <input class="form-control" name="CSC_TITLE" value="${readdto.CSC_TITLE }" >
@@ -77,7 +116,10 @@
                     value="${readdto.CSC_EMAIL }" >
                </div>
 					<div class="form-group">
-						<label>내용</label>
+					
+
+						<label style="font:sans-serif; color: black; padding: 3px;">내용</label>
+
 						<textarea class="form-control" rows="3" name="CSC_CONTENT" >${readdto.CSC_CONTENT }</textarea>
 					</div>	
 					
@@ -96,7 +138,6 @@
 				</form>
 			</div>
 		</div>
-	</div>
 
 
 <%-- remove와 list를 위한 폼--%>

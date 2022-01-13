@@ -36,7 +36,7 @@
 		<button type="submit" class="btn btn-info" style="background-color: black; border-color: black;">작성완료</button>
 		<button type="reset" class="btn btn-warning">초기화</button>
 		<button type="button" class="btn btn-default" onclick="location.href='/movie/noticelist'">뒤로가기</button>
-	</form>
+	</form>   
 	</div>
 
 		</div>

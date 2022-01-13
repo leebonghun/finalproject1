@@ -1,31 +1,46 @@
 package com.company.service;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.company.domain.ReserveDTO;
+import com.company.domain.ticketDTO;
 import com.company.mapper.MovieReserveMapper;
 
 @Service
 public class MovieReserveServiceImpl implements MovieReserveService{
-	
-	@Autowired
-	private MovieReserveMapper mapper;
-	
-	
-	@Override
-	public List<ReserveDTO> reserveRead() {
-		// TODO Auto-generated method stub
-		return mapper.reserveRead();
-	}
+   
+   @Autowired
+   private MovieReserveMapper mapper;
+   
+   
+   @Override
+   public List<ReserveDTO> reserveRead(int movieCD) {
+      // TODO Auto-generated method stub
+      return mapper.reserveRead(movieCD);
+   }
 
 
-	@Override
-	public ReserveDTO reserveRead2(int reserveNm) {
-		
-		return mapper.reserveRead2(reserveNm);
-	}
-	
+   
+
+
+   @Override
+   public boolean insert(ticketDTO insertDto) {
+      // TODO Auto-generated method stub
+      return mapper.insert(insertDto)>0?true:false;
+   }
+
+
+
+
+
+   @Override
+   public List<ticketDTO> getmyList(Principal username) {
+      // TODO Auto-generated method stub
+      return mapper.myList(username);
+   }
+   
 }

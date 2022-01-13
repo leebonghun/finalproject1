@@ -9,8 +9,9 @@ select * from user_tbl;
 
 
 
+select * from csc_tbl;
 
-
+select * from RESERVETBL
 /* Drop Tables */
 
 DROP TABLE ATTACH_EVENT_TBL CASCADE CONSTRAINTS;
@@ -138,15 +139,10 @@ CREATE TABLE GOODS_TBL
 );
 
 
-create table reservetbl(
-	movieNM varchar2(200),
-	reserveDay varchar2(200),
-	reserveTime varchar2(200),
-	reserveSeat number,
-	reserveNm number primary key
-);
 
 
+alter table reservetbl add(movieCD number)
+delete from reservetbl where movieNM = '엔칸토: 마법의 세계'
 
 
 
@@ -374,6 +370,8 @@ ALTER TABLE RESERVE_TBL
 	REFERENCES GUEST_TBL (GUEST_NUM)
 ;
 
+
+
 create table reserve(
 	movieNM varchar2(100),
 	movieRoom varchar2(100),
@@ -432,13 +430,14 @@ ALTER TABLE RESERVE_TBL
 	ADD FOREIGN KEY (USER_ID)
 	REFERENCES USER_TBL (USER_ID)
 ;
+alter table reservetbl add foreign key(movieCD) references movie_board(movieCD)
 
 alter table auth_tbl rename column authoriy to authority;
 
 ----------------------------------------밑은 사용하지마시오.. 안쓰는 코드..----------------------------
 
-
-
+alter table reservetbl drop column movieCD;
+SELECT * FROM RESERVETBL
 
 insert into user_tbl
 values('id1','name1','12345','1997/10/14','id1naver.com','010-1234-5678',sysdate,'1');
@@ -642,16 +641,106 @@ select rn,INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE
 from (select /*+INDEX_DESC(info_tbl SYS_C007695)*/ rownum rn,INFO_BNO,INFO_RFI,INFO_TITLE,INFO_CONTENT,INFO_REGDATE 
 from info_tbl where rownum <= (1 * 10)) where rn > (1-1) * 10;
 
+select * from movie_board;
+
+create table reservetbl(
+	movieCD number,
+	movieNM varchar2(200),
+	reserveDay varchar2(200),
+	reserveTime varchar2(200),
+	reservePlace varchar2(200),
+	reserveSeat number,
+	reserveNm number primary key
+);
+alter table reservetbl add(reserveGuan varchar2(200))
+
+alter table reservetbl add foreign key(movieCD) references movie_board (movieCD)
+drop table reservetbl;
+
+create table ticket(
+	user_id varchar2(200),
+	movieCD number,
+	movieNM varchar2(200),
+	reserveDay varchar2(200),
+	reserveTime varchar2(200),
+	reservePlace varchar2(200),
+	reserveGuan varchar2(200),
+	reserveSeat number,
+	reserveNm number
+);
+
+alter table information add(reserveGuan varchar2(200))
+
+select * from ticket
+
+create sequence ticket_seq;
+select * from movie_board;
+
+delete from ticket;
+
+alter table ticket modify (reserveSeat varchar2(200))
 
 
-insert into RESERVETBL values('스파이더맨 노웨이홈','1월 17일','12:20',49,1);
-insert into RESERVETBL values('스파이더맨 노웨이홈','1월 18일','13:00',49,2);
-insert into RESERVETBL values('스파이더맨 노웨이홈','1월 19일','14:20',49,3);
-insert into RESERVETBL values('스파이더맨 노웨이홈','1월 20일','15:10',49,4);
+alter table reservetbl add(movieCD number)
+drop table reservetbl;
+delete from reservetbl where reserveseat = 49
+insert into RESERVETBL values(20210028,'스파이더맨 노웨이홈','1월 17일','12:20','종각',49,1,'1관');
+insert into RESERVETBL values(20210028,'스파이더맨 노웨이홈','1월 18일','13:00','구로',49,2,'2관');
+insert into RESERVETBL values(20210028,'스파이더맨 노웨이홈','1월 19일','14:20','종로 3가',49,3,'3관');
+insert into RESERVETBL values(20210028,'스파이더맨 노웨이홈','1월 20일','15:10','을지로 입구',49,4,'4관');
+ALTER TABLE RESERVETBL DROP COLUMN MOVIECD;
+select * from reservetbl;
+insert into RESERVETBL values(20210864,'엔칸토: 마법의 세계','1월 17일','11:20','종각',49,5,'1관');
+insert into RESERVETBL values(20210864,'엔칸토: 마법의 세계','1월 18일','13:10','구로',49,6,'2관');
+insert into RESERVETBL values(20210864,'엔칸토: 마법의 세계','1월 19일','15:30','종로 3가',49,7,'3관');
+insert into RESERVETBL values(20210864,'엔칸토: 마법의 세계','1월 20일','17:40','을지로 입구',49,8,'4관');
 
+insert into RESERVETBL values(20205986,'연애 빠진 로맨스','1월 17일','10:20','종각',49,9,'1관');
+insert into RESERVETBL values(20205986,'연애 빠진 로맨스','1월 18일','12:10','구로',49,10,'2관');
+insert into RESERVETBL values(20205986,'연애 빠진 로맨스','1월 19일','14:30','종로 3가',49,11,'3관');
+insert into RESERVETBL values(20205986,'연애 빠진 로맨스','1월 20일','18:40','을지로 입구',49,12,'4관');
 
+insert into RESERVETBL values(20196264,'유체이탈자','1월 17일','09:20','종각',49,13,'1관');
+insert into RESERVETBL values(20196264,'유체이탈자','1월 18일','11:10','구로',49,14,'2관');
+insert into RESERVETBL values(20196264,'유체이탈자','1월 19일','16:30','종로 3가',49,15,'3관');
+insert into RESERVETBL values(20196264,'유체이탈자','1월 20일','19:40','을지로 입구',49,16,'4관');
 
-insert into RESERVETBL values('엔칸토: 마법의 세계','1월 17일','11:20',49,5);
-insert into RESERVETBL values('엔칸토: 마법의 세계','1월 18일','13:10',49,6);
-insert into RESERVETBL values('엔칸토: 마법의 세계','1월 19일','15:30',49,7);
-insert into RESERVETBL values('엔칸토: 마법의 세계','1월 20일','17:40',49,8);
+insert into RESERVETBL values(20211831,'소드 아트 온라인','1월 17일','08:20','종각',49,17,'1관');
+insert into RESERVETBL values(20211831,'소드 아트 온라인','1월 18일','11:10','구로',49,18,'2관');
+insert into RESERVETBL values(20211831,'소드 아트 온라인','1월 19일','19:30','종로 3가',49,19,'3관');
+insert into RESERVETBL values(20211831,'소드 아트 온라인','1월 20일','20:40','을지로 입구',49,20,'4관');
+
+insert into RESERVETBL values(20212015,'돈 룩 업','1월 17일','15:20','종각',49,21,'1관');
+insert into RESERVETBL values(20212015,'돈 룩 업','1월 18일','17:10','구로',49,22,'2관');
+insert into RESERVETBL values(20212015,'돈 룩 업','1월 19일','19:20','종로 3가',49,23,'3관');
+insert into RESERVETBL values(20212015,'돈 룩 업','1월 20일','21:40','을지로 입구',49,24,'4관');
+
+insert into RESERVETBL values(20212217,'라라와크리스마스요정','1월 17일','07:20','종각',49,25,'1관');
+insert into RESERVETBL values(20212217,'라라와크리스마스요정','1월 18일','10:10','구로',49,26,'2관');
+insert into RESERVETBL values(20212217,'라라와크리스마스요정','1월 19일','14:30','종로 3가',49,27,'3관');
+insert into RESERVETBL values(20212217,'라라와크리스마스요정','1월 20일','19:40','을지로 입구',49,28,'4관');
+
+insert into RESERVETBL values(20010264,'아멜리에','1월 17일','11:20','종각',49,29,'1관');
+insert into RESERVETBL values(20010264,'아멜리에','1월 18일','13:10','구로',49,30,'2관');
+insert into RESERVETBL values(20010264,'아멜리에','1월 19일','15:30','종로 3가',49,31,'3관');
+insert into RESERVETBL values(20010264,'아멜리에','1월 20일','17:40','을지로 입구',49,32,'4관');
+
+insert into RESERVETBL values(20210600,'프렌치 디스패치','1월 17일','11:20','종각',49,33,'1관');
+insert into RESERVETBL values(20210600,'프렌치 디스패치','1월 18일','13:10','구로',49,34,'2관');
+insert into RESERVETBL values(20210600,'프렌치 디스패치','1월 19일','15:30','종로 3가',49,35,'3관');
+insert into RESERVETBL values(20210600,'프렌치 디스패치','1월 20일','17:40','을지로 입구',49,36,'4관');
+
+insert into RESERVETBL values(20210752,'뱅드림!','1월 17일','11:20','종각',49,37,'1관');
+insert into RESERVETBL values(20210752,'뱅드림!','1월 18일','13:10','구로',49,38,'2관');
+insert into RESERVETBL values(20210752,'뱅드림!','1월 19일','15:30','종로 3가',49,39,'3관');
+insert into RESERVETBL values(20210752,'뱅드림!','1월 20일','17:40','을지로 입구',49,40,'4관');
+
+insert into RESERVETBL values(20211111,'티탄','1월 17일','11:20','종각',49,41,'1관');
+insert into RESERVETBL values(20211111,'티탄','1월 18일','13:10','구로',49,42,'2관');
+insert into RESERVETBL values(20211111,'티탄','1월 19일','15:30','종로 3가',49,43,'3관');
+insert into RESERVETBL values(20211111,'티탄','1월 20일','17:40','을지로 입구',49,44,'4관');
+
+insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 17일','11:20','종각',49,45,'1관');
+insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 18일','13:10','구로',49,46,'2관');
+insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 19일','15:30','종로 3가',49,47,'3관');
+insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 20일','17:40','을지로 입구',49,48,'4관');

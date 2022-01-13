@@ -22,7 +22,11 @@
   </head>
   <body class="text-center">
     <form class="form-signin" method="post" action="/movie/signin">
-      <h1 class="h3 mb-3 font-weight-normal">BBM</h1>
+      <div class="w3layouts_logo" id="header" role="banner">
+		<a href="/movie/index" class="b_logo">
+			<h1 class="h3 mb-3 font-weight-bold">BBM</h1>
+		</a>
+	</div>
       <label for="username" class="sr-only">아이디</label>
       <input
         type="text"
@@ -42,11 +46,7 @@
         placeholder="비밀번호"
         required
       />
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me" /> 로그인 정보 저장
-        </label>
-      </div>
+      
       <div>
         <p style="color: red;">${error}</p>
       </div>

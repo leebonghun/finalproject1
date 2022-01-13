@@ -14,11 +14,17 @@ pageEncoding="UTF-8"%>
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link href="/resources/css/step2.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
     <script src="/resources/js/pwd.js"></script>
   </head>
-  <body style="background-color:#F5F5F5;">
+  <body>
+  	 <div class="w3layouts_logo" id="header" role="banner">
+		<a href="/movie/index" class="b_logo">
+			<h1 class="h3 mb-3 font-weight-bold">BBM</h1>
+		</a>
+	</div>
     <div class="container" style="margin-top:40px">
     
       <form id="password" method="post" action="">
@@ -87,7 +93,7 @@ pageEncoding="UTF-8"%>
         </div>
         
         <div class="form-group text-center">
-          <button type="submit" class="btn btn-primary">비밀번호변경</button>
+          <button type="submit" class="btn btn-danger btn-block">비밀번호변경</button>
         </div>
         <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
       </form>

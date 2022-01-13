@@ -2,6 +2,14 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="../includes/header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+</style>
 <!-- //nav -->
 <!-- banner -->
     <script src="/resources/js/jquery.slidey.js"></script>
@@ -17,8 +25,13 @@
 		</script>
 <!-- //banner -->
 <!-- banner-bottom -->
-	<div class="banner-bottom">
-		<div class="container">
+	<div class="banner-bottom" >
+	<div class="container">
+	<div>
+      <h2 class="h2" style="color: black;">
+         <img src="/resources/images/chart1.png" style="height: 60px;" /> 무비차트
+      </h2>            
+   </div>   
 			<div class="w3_agile_banner_bottom_grid">
 				<div id="owl-demo" class="owl-carousel owl-theme">
 					<div class="item">
@@ -310,13 +323,17 @@
 
 <!-- general -->
 	<div class="general">
-		<h4 class="latest-text w3_latest_text">주간 박스 오피스</h4>
-		<div class="container">
-			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-				<ul id="myTab" class="nav nav-tabs" role="tablist">
+	<div class="container">
+		<div>
+	      <h2 class="h2" style="color: black;">
+	         <img src="/resources/images/boxes1.png" style="height: 60px;" /> 주간 박스 오피스
+	      </h2>            
+   		</div>   
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs" >
+				<ul id="myTab" class="nav nav-tabs" role="tablist" >
 					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">상영중인 영화</a></li>
 				</ul>
-				<div id="myTabContent" class="tab-content">
+				<div id="myTabContent" class="tab-content" style="width: 900px;">   
 					<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
 						<div class="w3_agile_featured_movies">
 							<div class="col-md-2 w3l-movie-gride-agile">
@@ -959,6 +976,8 @@
 			</div>
 		</div>
 	</div>
+	</body>
+</html>
 <%@include file="../includes/footer.jsp"%>
 <!-- //general -->
 <!-- Latest-tv-series -->

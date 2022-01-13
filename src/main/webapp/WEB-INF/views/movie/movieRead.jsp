@@ -61,8 +61,10 @@
        
         <tr>
           <td colspan="3" class="text-right">
-          	<button type="submit" id="goReserve">예매</button>
-            <button type="submit" id="goBack">목록</button>
+          	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
+          	<a href="reserve?movieCD=${movieDto.movieCD}"
+			class="hvr-shutter-out-horizontal">예매</a>
+            <a href="movieList">목록</a>
           </td>
         </tr>
       </table>
@@ -144,6 +146,8 @@
 	<input type="hidden" name="keyword" value="${cri.keyword}" />
 	<input type="hidden" name="movieCD" value="${movieDto.movieCD}" />
 </form>  
+ <input type="hidden" name="${_csrf.parameterName}"
+                        value="${_csrf.token}" />
 <script>
 	//현재 글번호 가져오기
 	let movieCD = ${movieDto.movieCD};	

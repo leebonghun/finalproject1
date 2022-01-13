@@ -7,23 +7,30 @@
 <title>약관동의</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="/resources/css/step1.css" rel="stylesheet" />
 <style>
 	#textarea1{
 		font-family: 'Noto Sans KR', sans-serif;
 		font-size:14px;
 	}
+
 </style>
 </head>
 <body>
 <div class="container">
 <form action="step2" method="post" >	
+	<div class="w3layouts_logo" id="header" role="banner">
+		<a href="/movie/index" class="b_logo">
+			<h1 class="h3 mb-3 font-weight-bold">BBM</h1>
+		</a>
+	</div>
 	<div class="form-group">
-	    <label for="textarea1" id="textarea1" style="font-size:18px;">회원가입약관</label>
 	    <textarea class="form-control" id="textarea1" rows="20">
 제 1 장 총칙
 
 제 1 조 (목적)
-본 약관은 ○○○이 운영하는 웹 사이트 (http://xxx.xxx.xxx)의 제반 서비스의 이용조건 및 절차에 관한 사항 및 기타 필요한 사항을 규정함을 목적으로 한다.
+본 약관은 BBM이 운영하는 웹 사이트 (http://xxx.xxx.xxx)의 제반 서비스의 이용조건 및 절차에 관한 사항 및 기타 필요한 사항을 규정함을 목적으로 한다.
 
 제 2 조 (용어의 정의)
 본 약관에서 사용하는 용어는 다음과 같이 정의한다.
@@ -146,14 +153,22 @@
 ② 제1항의 규정에도 불구하고 동 분쟁으로 인하여 소송이 제기될 경우 동 소송은 회사의 본사 소재지를 관할하는 법원의 관할로 본다.
 
 <부칙>
-본 약관은 2018년 10월 1일부터 적용한다.	    
+본 약관은 2022년 01월 18일부터 적용한다.	    
 </textarea>
 </div>
-<label id="textarea1" style="font-size:16px;">
-<input type="checkbox" name="agree" value="true"> 약관동의
+<div>
+	<p>
+		<!-- <input type="checkbox" name="agree" value="true" id="checkbox-c"> -->
+		<input type="checkbox" id="agree" name="agree">
+		<label for="agree"></label>	
+		<label for="label-c" >BBM 이용약관 동의</label>
+	</p>
+</div>
+<div>
 <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
-</label>
-<input type="submit" class="btn btn-primary btn-sm" value="다음단계">
+<input type="button" class="btn btn-secondary btn-block" id="cancel" value="취소">
+<input type="submit" class="btn btn-danger btn-block" id="confirm" value="확인">
+</div>
 </form>	
 </div>
 <script src="/resources/sign-js/jquery-3.3.1.js"></script>
@@ -163,11 +178,10 @@
 		//check 값이 false 이면 alert() 띄우기
 		var check = ${check};
 		if(!check){
-			alert("동의하세요");
+			alert("동의해주세요");
 			return;
 		}
 	})
 </script>
 </body>
 </html>
-
