@@ -11,21 +11,14 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-
-public class ReserveDTO {
-	/*
-	 * movieNM varchar2(200), reserveDay varchar2(200), reserveTime varchar2(200),
-	 * reserveSeat number, reserveNm number primary key
-	 */
+public class ticketDTO {
+	private String user_id;
 	private int movieCD;
 	private String movieNM;
 	private String reserveDay;
 	private String reserveTime;
 	private String reservePlace;
-	private int reserveSeat;
-	private int reserveNm;
 	private String reserveGuan;
-	
-
-	
+	private String reserveSeat;
+	private int reserveNm;
 }

@@ -2,8 +2,46 @@
 * {
     font-size: 11px;
 }
+.swal{
+	background-color: black;
+	color:white;
+}
 
-
+.swal-button{
+	background-color: red;
+	color:white;
+}
+#live{
+	font-size:36px;
+    font-weight: bold;
+    color: #fb4357;
+}
+#wrap1{
+	position: relative;
+   
+  
+    border-bottom: 5px solid #241d1e;
+	
+}
+#selectSeat1{
+	border: 3px solid black;
+	text-align: center;
+}
+input[type=checkbox] {
+    display:none;
+}
+input[type=checkbox] + label{ 
+    cursor: pointer; 
+    padding-left: 23px; 
+    background-repeat: no-repeat;
+    background-image: url('/resources/images/checker-off.svg');
+}
+input[type=checkbox]:checked + label{
+    background-image: url('/resources/images/checker-on.svg');
+}
+input[type=checkbox]:disabled + label{
+    background-image: url('/resources/images/checker-disabled.svg');
+}
 
 ul {
     display: block;

@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
@@ -37,6 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
    public AuthenticationSuccessHandler loginSuccessHandler() {
       return new CustomLoginSuccessHandler();
    }
+  
    @Bean
    public UserDetailsService customUserDetails() {
       return new CustomUserDetailsService();
@@ -47,6 +49,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
       resp.setDataSource(dataSource);
       return resp;
    }   
+   
+   
    
    //security-context.xml을 변경해서
    @Override
@@ -61,7 +65,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
       http.formLogin()
       	  .loginPage("/movie/signin")
       	  .successHandler(loginSuccessHandler())
-      	  .failureUrl("/movie/signin");
+      	  .failureUrl("/movie/login-error");
       
       http.logout()      	 
       	  .invalidateHttpSession(true)

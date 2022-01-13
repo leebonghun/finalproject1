@@ -1,6 +1,7 @@
 package com.company.controller;
 
 
+import java.security.Principal;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -26,6 +27,7 @@ import com.company.service.CscService;
 import com.company.service.MovieReplyService;
 import com.company.service.MovieReserveService;
 import com.company.domain.movieDTO;
+import com.company.domain.ticketDTO;
 import com.company.service.MovieService;
 
 import com.company.service.NoticeService;
@@ -81,14 +83,35 @@ public class MovieController {
 	}
 	@GetMapping("reserve")
 	public void reserve(Model model,int movieCD) {
+		log.info("영화 예매 페이지로 이동중입니다. "+movieCD);
 		movieDTO movieDto = service.read(movieCD);
 		
-		log.info("영화 예매 페이지로 이동중입니다.");
-		List<ReserveDTO> listDto = reservice.reserveRead();
+		List<ReserveDTO> listDto = reservice.reserveRead(movieCD);
 		model.addAttribute("movieDto", movieDto);
 		model.addAttribute("list1",listDto);
 		
 	}
+
+	@GetMapping("mybbm")
+	public void mybbm(Model model, Principal username) {
+		
+		List<ticketDTO> mylist = reservice.getmyList(username);
+		
+		log.info("나의 예매정보보러가기~"+mylist);
+		model.addAttribute("mylist",mylist);
+		
+	}
+	@PreAuthorize("isAuthenticated()")
+	@PostMapping("mybbm")
+	public String mybbmread(Model model,ticketDTO insertDto) {
+		
+		if(!reservice.insert(insertDto)) {
+			return "redirect:/movie/movieList";
+		}
+		return "redirect:/movie/mybbm";
+		
+	}
+	
 	@GetMapping("store")
 	public void store() {
 		log.info("상점으로 이동중입니다.");
@@ -115,6 +138,7 @@ public class MovieController {
 		
 		log.info("data"+movieDto);
 		
+		
 		model.addAttribute("movieDto", movieDto);
 		
 			
@@ -122,8 +146,16 @@ public class MovieController {
 	
 	//로그인
 	@GetMapping("/signin")
-	public void signin() {
-		log.info("로그인 페이지 요청");
+	public void signin(String error) {		
+//
+		log.info("로그인 페이지 요청"+error);
+	}
+	
+	
+	@GetMapping("/login-error")
+	public String loginError(Model model) {
+		model.addAttribute("error", "로그인 정보가 맞지 않습니다");
+		return "/movie/signin";
 	}
 	
 	//회원탈퇴

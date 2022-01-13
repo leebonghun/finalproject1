@@ -34,7 +34,7 @@
 						<ul class="choose-btn">
 							<li class="button">
 								<div>
-									<a class="btn-link" href="index" tabindex="0" data-uia="action-select-btn+primary">
+									<a class="btn-link" href="mybbm" tabindex="0" data-uia="action-select-btn+primary">
 										<div class="btn-wrapper">
 											<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/movie.png')">
 												
@@ -46,7 +46,7 @@
 							</li>
 							<li class="button">
 							 
-							
+								
 								<div>
 									<a class="btn-link" href= "mypagecsclist" tabindex="0" data-uia="action-select-btn+secondary">
 										<div class="btn-wrapper">
@@ -126,4 +126,3 @@
  
 =======
 </html>
->>>>>>> branch 'master' of https://github.com/leebonghun/finalproject1.git
