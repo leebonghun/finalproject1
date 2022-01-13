@@ -71,7 +71,7 @@
 					</div>	
 
 					<div class="form-group">
-						<label>이메일(답변완료시 해당 이메일로 알람이 전송됩니다.)</label> <input type="text" class="form-control" name="CSC_EMAIL" >
+						<label style="font:sans-serif; color: black; padding: 3px;">이메일(답변완료시 해당 이메일로 알람이 전송됩니다.)</label> <input type="text" class="form-control" name="CSC_EMAIL" >
 					</div>
 
 					
