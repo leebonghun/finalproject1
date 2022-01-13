@@ -94,7 +94,7 @@ select {
 
       <!-- /.panel-heading -->
         <div class="panel-body" > 
-           <div class="board_info">
+           <div class="board_info" style="width: 900px;">
          <div class="row" >          
                <table class="table table-hover" id="dtotbl" >
                   <colgroup>
@@ -170,7 +170,7 @@ select {
              </ul>
     <div class="row"> <!-- start search -->
           <div class="col-md-12">
-            <div class="col-md-12" style="text-align: right; width: 830px;" ><!--search Form-->
+            <div class="col-md-12" style="text-align: right; width: 850px;" ><!--search Form-->
               <form action="" method="get" id="searchForm">
                  <input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}" />
                  <input type="hidden" name="amount" value="${pageDto.cri.amount}" />
@@ -219,7 +219,7 @@ select {
   value="${_csrf.token}" />
 <input type="hidden" name="user_id" value="${readdto.user_id}" />
       <div class="container" style="text-align: center; padding: 15px; ">
-         <table class="st" style="width: 860px;">
+         <table class="st" style="width: 880px;">
             <tbody>
               <tr>
                 <td width="170px">이용안내</td>

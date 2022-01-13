@@ -329,11 +329,11 @@
 	         <img src="/resources/images/boxes1.png" style="height: 60px;" /> 주간 박스 오피스
 	      </h2>            
    		</div>   
-			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs" >
 				<ul id="myTab" class="nav nav-tabs" role="tablist" >
 					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">상영중인 영화</a></li>
 				</ul>
-				<div id="myTabContent" class="tab-content">
+				<div id="myTabContent" class="tab-content" style="width: 900px;">   
 					<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
 						<div class="w3_agile_featured_movies">
 							<div class="col-md-2 w3l-movie-gride-agile">
