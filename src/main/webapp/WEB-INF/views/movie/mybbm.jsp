@@ -12,12 +12,12 @@
 
 <style>
 table {
-	list-style: none;
+   list-style: none;
     padding-left: 0px;
 }
 
 table.st th, td {
-	border: 1px solid #bcbcbc;
+   border: 1px solid #bcbcbc;
 }
 
 
@@ -31,16 +31,16 @@ input[type="text"] {
 }
 
 tr{         
-	border: 2px solid #ddd;
-	border-radius: 30px;
+   border: 2px solid #ddd;
+   border-radius: 30px;
     background-color: #fff;
     height: 34px;
     font-size: 14px;
 }
 
 table table-hover {
-	border: 2px solid #ddd;
-	border-radius: 16px;
+   border: 2px solid #ddd;
+   border-radius: 16px;
     background-color: #fff;
     height: 34px;
     font-size: 14px;
@@ -48,8 +48,8 @@ table table-hover {
 
 
 .a1 {
-	border-radius: 16px;
-	border: 2px solid #ddd;
+   border-radius: 16px;
+   border: 2px solid #ddd;
     background-color: #fff;
     height: 32px;
     line-height: 32px;
@@ -63,8 +63,8 @@ padding: 10px;
 }
 
 select {
-	border-radius: 16px;
-	border: 2px solid #ddd;
+   border-radius: 16px;
+   border: 2px solid #ddd;
     background-color: #fff;
     height: 32px;
     line-height: 32px;
@@ -113,7 +113,18 @@ select {
                            <th style="background: black; font:sans-serif; color: white;">결제 금액</th>
                        </tr>                           
                    </thead>
-            
+                  <tbody>
+                     <c:forEach var="list" items="${mylist}">
+                        <tr class="table-active">
+                           <th scope="row">${list.movieNM}</th>
+                           <td>${list.reserveDay} , ${list.reserveTime}</td>
+                           <td>${list.reservePlace}(${list.reserveGuan})</td>
+                           <td>${list.reserveSeat}</td>
+                           <td>${list.reserveNm}</td>
+                        </tr>
+                     </c:forEach>
+                  </tbody>
+                  
 
             <!-- 게시판 리스트 반복문 -->
             <tbody>
@@ -208,71 +219,71 @@ select {
 <input type="hidden" name="${_csrf.parameterName}"
   value="${_csrf.token}" />
 <input type="hidden" name="user_id" value="${readdto.user_id}" />
-		<div class="container" style="text-align: center; padding: 15px; ">
-			<table class="st" style="width: 860px;">
-		      <tbody>
-		        <tr>
-		          <td width="170px">이용안내</td>
-		          <td>
-		          	<li>예매 변경은 불가능하며, 취소 후 재 예매를 하셔야만 합니다.</li>
-       				<li>영수증은 상영 시간 전까지 My BBM 에서 출력하실 수 있습니다. 단, 신용카드로 예매하신 경우만 한합니다.</li>
-       				<li>상영 시간 이후 관람하신 영화의 영수증 출력을 원하실 경우, 0000-0000로 문의 주시기 바랍니다.</li>
-       				<li>취소하신 내역이 나타나지 않거나 궁금하신 사항이 있으시면, 고객센터로 문의해 주시기 바랍니다.</li>
-		          </td>
-		        </tr>
-		        <tr>
-		          <td>티켓 교환방법</td>
-		          <td>
-		          	<li>
-      					<p><strong>티켓판매기(ATM)에서 발권하실 경우</strong><br />예매번호 또는 고객인증번호 (법정생년월일 6자리 + 휴대폰번호 뒷 7~8자리)를 입력하시면 티켓을 편하게 발권하실 수 있습니다.</p>
-      				</li>
-      				<li>
-      					<p><strong>매표소에서 발권하실 경우</strong><br />티켓교환권을 출력하여 매표소에 방문하시면 티켓으로 교환하실 수 있습니다.<br />
-       					(티켓교환권 출력이 어려운 경우, 예매번호와 신분증을 지참하시면 매표소에서 티켓을 수령하실 수 있습니다.)</p>
-      				</li>
-		          </td>
-		        </tr>
-		        <tr>
-		          <td>예매 취소 안내</td>
-		          <td>
-		          	<li>
+      <div class="container" style="text-align: center; padding: 15px; ">
+         <table class="st" style="width: 860px;">
+            <tbody>
+              <tr>
+                <td width="170px">이용안내</td>
+                <td>
+                   <li>예매 변경은 불가능하며, 취소 후 재 예매를 하셔야만 합니다.</li>
+                   <li>영수증은 상영 시간 전까지 My BBM 에서 출력하실 수 있습니다. 단, 신용카드로 예매하신 경우만 한합니다.</li>
+                   <li>상영 시간 이후 관람하신 영화의 영수증 출력을 원하실 경우, 0000-0000로 문의 주시기 바랍니다.</li>
+                   <li>취소하신 내역이 나타나지 않거나 궁금하신 사항이 있으시면, 고객센터로 문의해 주시기 바랍니다.</li>
+                </td>
+              </tr>
+              <tr>
+                <td>티켓 교환방법</td>
+                <td>
+                   <li>
+                     <p><strong>티켓판매기(ATM)에서 발권하실 경우</strong><br />예매번호 또는 고객인증번호 (법정생년월일 6자리 + 휴대폰번호 뒷 7~8자리)를 입력하시면 티켓을 편하게 발권하실 수 있습니다.</p>
+                  </li>
+                  <li>
+                     <p><strong>매표소에서 발권하실 경우</strong><br />티켓교환권을 출력하여 매표소에 방문하시면 티켓으로 교환하실 수 있습니다.<br />
+                      (티켓교환권 출력이 어려운 경우, 예매번호와 신분증을 지참하시면 매표소에서 티켓을 수령하실 수 있습니다.)</p>
+                  </li>
+                </td>
+              </tr>
+              <tr>
+                <td>예매 취소 안내</td>
+                <td>
+                   <li>
                        <p><strong>카카오페이</strong><br />
                            카카오페이머니나 카카오포인트를 사용하신 경우 각각의 잔액으로 원복되며, 카드 결제를 하신 경우는 카드사 정책에 따라 승인취소가 진행되며 3일 이후 매입 취소시 영업일 기준 3~10일 소요됩니다.</p>
                     </li>
-		        </tr>
-		        <tr>
-		          <td>환불 규정 안내</td>
-		          <td>
-		          	<li>
-	    				<p><strong>현장 취소를 하는 경우</strong><br />상영시간 이전까지만 가능하며, 상영시간 이후 취소나 환불은 되지 않습니다.</p>
-		            </li>
-		          	<li>
-		            	<p>
-	                    <strong>홈페이지에서 예매 취소할 경우</strong><br />
-	                    부분 취소는 불가능합니다. (ex. 4장을 인터넷으로 예매한 경우 4장 모두 취소만 가능)<br />
-	                    홈페이지 예매 취소는 상영시간 20분전까지 가능합니다.<br />
-	                    <em style="color:#0000FF";>(단, 씨네&포레관, 씨네&리빙룸, SUITE CINEMA 제외)</em><br />
-	                    상영시간 이후 취소나 환불은 되지 않습니다
-	                    </p>	            					
-		            </li>
-	                <li>
-	                  	<p>
-	                      <strong>모바일 앱/웹(m.cgv.co.kr)에서 예매 취소할 경우</strong><br />
-	                      부분 취소는 불가합니다.(ex. 4장을 인터넷으로 예매한 경우 4장 모두 취소만 가능)<br /> 
-	                      모바일 앱/웹 예매 취소는 상영시간 15분전까지 가능합니다.<br />
-	                      <em style="color:#0000FF";>(단, 씨네&포레관, 씨네&리빙룸, SUITE CINEMA 제외)</em><br /> 
-	                      상영시간 이후 취소나 환불은 되지 않습니다.
-	                  	</p>
-	                </li>
-	                <li>
-	                    <p><strong>단, 일부 행사의 경우 행사 당일 취소, 변경 불가 합니다.</strong></p>
-	                </li>
-			          </td>
-			        </tr>
-			      </tbody>
-			    </table>
-		  </div>
-	
+              </tr>
+              <tr>
+                <td>환불 규정 안내</td>
+                <td>
+                   <li>
+                   <p><strong>현장 취소를 하는 경우</strong><br />상영시간 이전까지만 가능하며, 상영시간 이후 취소나 환불은 되지 않습니다.</p>
+                  </li>
+                   <li>
+                     <p>
+                       <strong>홈페이지에서 예매 취소할 경우</strong><br />
+                       부분 취소는 불가능합니다. (ex. 4장을 인터넷으로 예매한 경우 4장 모두 취소만 가능)<br />
+                       홈페이지 예매 취소는 상영시간 20분전까지 가능합니다.<br />
+                       <em style="color:#0000FF";>(단, 씨네&포레관, 씨네&리빙룸, SUITE CINEMA 제외)</em><br />
+                       상영시간 이후 취소나 환불은 되지 않습니다
+                       </p>                              
+                  </li>
+                   <li>
+                        <p>
+                         <strong>모바일 앱/웹(m.cgv.co.kr)에서 예매 취소할 경우</strong><br />
+                         부분 취소는 불가합니다.(ex. 4장을 인터넷으로 예매한 경우 4장 모두 취소만 가능)<br /> 
+                         모바일 앱/웹 예매 취소는 상영시간 15분전까지 가능합니다.<br />
+                         <em style="color:#0000FF";>(단, 씨네&포레관, 씨네&리빙룸, SUITE CINEMA 제외)</em><br /> 
+                         상영시간 이후 취소나 환불은 되지 않습니다.
+                        </p>
+                   </li>
+                   <li>
+                       <p><strong>단, 일부 행사의 경우 행사 당일 취소, 변경 불가 합니다.</strong></p>
+                   </li>
+                   </td>
+                 </tr>
+               </tbody>
+             </table>
+        </div>
+   
 <!-- 스크립트 -->
 <script>
   let result = '${result}';
