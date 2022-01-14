@@ -28,6 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
    @Autowired
    private DataSource dataSource;
    
+   
    @Bean
    public PasswordEncoder passwordencoder() {
          return new BCryptPasswordEncoder();
@@ -61,7 +62,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
       http.formLogin()
       	  .loginPage("/movie/signin")
       	  .successHandler(loginSuccessHandler())
-      	  .failureUrl("/movie/signin");
+      	  .failureUrl("/movie/login-error");
       
       http.logout()      	 
       	  .invalidateHttpSession(true)

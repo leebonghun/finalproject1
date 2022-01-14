@@ -4,40 +4,35 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"  %>
 <%@taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <!DOCTYPE html>
-<html>
 <%@include file="../includes/header.jsp"%>
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
 <style>
-table {
+table. st {
 	list-style: none;
-    padding-left: 0px;
+    padding-left: 10px;
 }
 
 table.st th, td {
 	border: 1px solid #bcbcbc;
 }
 
-.container {
-	width: 67.265%;
-}
-
-
 </style>
 </head>
 <body>
 	<div class="container">
 		<div><h3>내 예매 내역</h3></div>
-		<table class="table" id=csctbl>
+		<table class="table" id=reservetbl>
                   <thead>
                      <tr style="background-color: black;">
                         <th scope="col" style="color: white;">관람 영화</th>
-                        <th scope="col" style="color: white;">관람BBM</th>
-                        <th scope="col" style="color: white;">관람 일시</th>
-                        <th scope="col" style="color: white;">결제일</th>
-                        <th scope="col" style="color: white;">결제 금액</th>
+                        <th scope="col" style="color: white;">관람 일자</th>
+                        <th scope="col" style="color: white;">관람 시간</th>
+                        <th scope="col" style="color: white;">좌석</th>
+                        <th scope="col" style="color: white;">예약 번호</th>
                      </tr>
                   </thead>
                   <tbody>
@@ -101,6 +96,7 @@ table.st th, td {
                               <c:out value="${pageDto.cri.amount==10?'selected':'' }"/>>5</option>
                            <option value="10"
                               <c:out value="${pageDto.cri.amount==20?'selected':'' }"/>>10</option>
+                        </select>
                      </div>
                      <input type="hidden" name="${_csrf.parameterName}"
                         value="${_csrf.token}" />
@@ -152,16 +148,17 @@ table.st th, td {
 <script>
   let result = '${result}';
 </script>
-			
+	</div>
+		<div class="userInfo">
 			<table class="st">
 		      <tbody>
 		        <tr>
-		          <td width="170px">이용안내</td>
+		          <td>이용안내</td>
 		          <td>
 		          	<li>예매 변경은 불가능하며, 취소 후 재 예매를 하셔야만 합니다.</li>
-       				<li>영수증은 상영 시간 전까지 My BBM 에서 출력하실 수 있습니다. 단, 신용카드로 예매하신 경우만 한합니다.</li>
+       				<li>영수증은 상영 시간 전까지 BBM 극장 카운터에서 출력하실 수 있습니다. 단, 신용카드로 예매하신 경우만 한합니다.</li>
        				<li>상영 시간 이후 관람하신 영화의 영수증 출력을 원하실 경우, 0000-0000로 문의 주시기 바랍니다.</li>
-       				<li>취소하신 내역이 나타나지 않거나 궁금하신 사항이 있으시면, 고객센터로 문의해 주시기 바랍니다.</li>
+       				<li>궁금하신 사항이 있으시면, 고객센터로 문의해 주시기 바랍니다.</li>
 		          </td>
 		        </tr>
 		        <tr>
@@ -215,8 +212,11 @@ table.st th, td {
 			        </tr>
 			      </tbody>
 			    </table>
+			 </div> 
+			    
+			    
+
 		   
-	</div>
 </body>
-<%@include file="../includes/footer.jsp"%>
 </html>
+<%@include file="../includes/footer.jsp"%>

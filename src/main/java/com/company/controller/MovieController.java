@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.company.domain.Criteria;
@@ -126,6 +127,12 @@ public class MovieController {
 		log.info("로그인 페이지 요청");
 	}
 	
+	@GetMapping("/login-error")
+	   public String loginError(Model model) {
+	      model.addAttribute("error", "로그인 정보가 맞지 않습니다");
+	      return "/movie/signin";
+	   }
+	
 	//회원탈퇴
 	@PreAuthorize("isAuthenticated()")
 	@GetMapping("/userleave")
@@ -144,6 +151,12 @@ public class MovieController {
 		} 
 		return "redirect:/movie/userleave"; //탈퇴가 실패시
 	}
+	
+	@GetMapping("/leave-error")
+	   public String leaveError(Model model) {
+	      model.addAttribute("error", "비밀번호를 확인해 주세요");
+	      return "/movie/userleave";
+	   }
 	
 	@PreAuthorize("isAuthenticated()")
 	@GetMapping("/mypage")

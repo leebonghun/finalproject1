@@ -389,11 +389,6 @@ strong{
    <script>
 let result = '${result}';
 
-   
-
-
-
-
 
 
 </script>
