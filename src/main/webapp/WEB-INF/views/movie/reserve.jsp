@@ -3,15 +3,7 @@
 <%@include file="../includes/header.jsp"%>
 <script>
 	$(document).ready(function(){
-		$("input[type='checkbox']").on("click",function(){
-			let count = $("input:checked[type='checkbox']").length;
-			
-			if(count>3){
-				swal("3개 까지의 좌석만 선택할 수 있습니다");
-				$(this).prop("checked",false);
-			}
-			
-		});
+		
 		
 		
 		
@@ -66,15 +58,16 @@
 
 </div>
 
-<form action="" method="post" id="noaction">
+<form action="/movie/mybbm" method="post" id="noaction">
 <div style="height: 30px"></div>
 <div class="container" style="width: 1020px; padding-left: 15px; padding-right: 174px; margin-right: auto; margin-left: auto;">
 
 		<div class="container" id="selectSeat1" style="padding-top: 10px; padding-bottom: 10px; width: 880px;">
 	<div class="row">
 		<input type="hidden" name="movieNM" value="${movieDto.movieNM}"  />
-		
-		
+		<input type="hidden" name="movieCD" value="${movieDto.movieCD}"  />
+		<%-- <input type="hidden" name="reserveSeat" value="${list1.reserveSeat}"/> --%>
+				
 		<c:if test="${!empty list1}">
 		<select name="reserveDay" id="selectBox1" style="border-radius: 16px; border: 2px solid black; ">
 		<c:forEach var="item" items="${list1}" varStatus="i">
@@ -109,6 +102,7 @@
 		<button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black;">예매하기</button>
 		</br>
 		</br>
+
 		<h4 style="padding-bottom: 10px;" >좌석 선택</h4>
 		<input type="checkbox" name="reserveSeat" id="checker1" value="A1"><label for="checker1" style="text-align: center;">A1</label>
 		<input type="checkbox" name="reserveSeat" id="checker2" value="A2"><label for="checker2">A2</label>
@@ -116,6 +110,10 @@
 		<input type="checkbox" name="reserveSeat" id="checker4" value="A4"><label for="checker4">A4</label>
 		<input type="checkbox" name="reserveSeat" id="checker21" value="A5"><label for="checker21">A5</label>
 		<input type="checkbox" name="reserveSeat" id="checker22" value="A6"><label for="checker22">A6</label>
+		<input type="checkbox" name="reserveSeat" id="checker31" value="A7"><label for="checker31">A7</label>
+		<input type="checkbox" name="reserveSeat" id="checker32" value="A8"><label for="checker32">A8</label>
+		<input type="checkbox" name="reserveSeat" id="checker33" value="A9"><label for="checker33">A9</label>
+		<input type="checkbox" name="reserveSeat" id="checker34" value="A10"><label for="checker34">A10</label>
 		</br>
 		</br>
 		</br>
@@ -125,6 +123,10 @@
 		<input type="checkbox" name="reserveSeat" id="checker20" value="B4"><label for="checker20">B4</label>
 		<input type="checkbox" name="reserveSeat" id="checker23" value="B5"><label for="checker23">B5</label>
 		<input type="checkbox" name="reserveSeat" id="checker24" value="B6"><label for="checker24">B6</label>
+		<input type="checkbox" name="reserveSeat" id="checker35" value="B7"><label for="checker35">B7</label>
+		<input type="checkbox" name="reserveSeat" id="checker36" value="B8"><label for="checker36">B8</label>
+		<input type="checkbox" name="reserveSeat" id="checker37" value="B9"><label for="checker37">B9</label>
+		<input type="checkbox" name="reserveSeat" id="checker38" value="B10"><label for="checker38">B10</label>
 		</br>
 		</br>
 		</br>
@@ -134,6 +136,10 @@
 		<input type="checkbox" name="reserveSeat" id="checker8" value="C4"><label for="checker8">C4</label>
 		<input type="checkbox" name="reserveSeat" id="checker25" value="C5"><label for="checker25">C5</label>
 		<input type="checkbox" name="reserveSeat" id="checker26" value="C6"><label for="checker26">C6</label>
+		<input type="checkbox" name="reserveSeat" id="checker39" value="C7"><label for="checker39">C7</label>
+		<input type="checkbox" name="reserveSeat" id="checker40" value="C8"><label for="checker40">C8</label>
+		<input type="checkbox" name="reserveSeat" id="checker41" value="C9"><label for="checker41">C9</label>
+		<input type="checkbox" name="reserveSeat" id="checker42" value="C10"><label for="checker42">C10</label>
 		</br>
 		</br>
 		</br>
@@ -143,6 +149,10 @@
 		<input type="checkbox" name="reserveSeat" id="checker12" value="D4"><label for="checker12">D4</label>
 		<input type="checkbox" name="reserveSeat" id="checker27" value="D5"><label for="checker27">D5</label>
 		<input type="checkbox" name="reserveSeat" id="checker28" value="D6"><label for="checker28">D6</label>
+		<input type="checkbox" name="reserveSeat" id="checker43" value="D7"><label for="checker43">D7</label>
+		<input type="checkbox" name="reserveSeat" id="checker44" value="D8"><label for="checker44">D8</label>
+		<input type="checkbox" name="reserveSeat" id="checker45" value="D9"><label for="checker45">D9</label>
+		<input type="checkbox" name="reserveSeat" id="checker46" value="D10"><label for="checker46">D10</label>
 		</br>
 		</br>
 		</br>
@@ -151,7 +161,13 @@
 		<input type="checkbox" name="reserveSeat" id="checker15" value="E3"><label for="checker15">E3</label>
 		<input type="checkbox" name="reserveSeat" id="checker16" value="E4"><label for="checker16">E4</label>
 		<input type="checkbox" name="reserveSeat" id="checker29" value="E5"><label for="checker29">E5</label>
-		<input type="checkbox" name="reserveSeat" id="checker30" value="E6"><label for="checker30" >E6</label>
+
+		<input type="checkbox" name="reserveSeat" id="checker30" value="E6"><label for="checker30">E6</label>
+		<input type="checkbox" name="reserveSeat" id="checker47" value="E7"><label for="checker47">E7</label>
+		<input type="checkbox" name="reserveSeat" id="checker48" value="E8"><label for="checker48">E8</label>
+		<input type="checkbox" name="reserveSeat" id="checker49" value="E9"><label for="checker49">E9</label>
+		<input type="checkbox" name="reserveSeat" id="checker50" value="E10"><label for="checker50">E10</label>
+
 		</div>
 		
 		</div>
@@ -176,7 +192,9 @@
 	href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 <script src="/resources/js/reserve.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+<script>
+let reserveSeat = '${seatDto}';
+</script>
 
 
 

@@ -19,7 +19,7 @@
         text-align: center;
         cursor: pointer;
         border-radius: 16px;
-	
+   
 }
  
 .test_obj input[type="radio"]:checked + span {
@@ -57,11 +57,11 @@
 </head>
 <body>
 <div class="container">
-	<div>
-		<h2 class="h2" style="color: black;">
-			<img src="/resources/images/cscicon.png" style=" height:60px; " />고객 센터
-		</h2>
-	</div>
+   <div>
+      <h2 class="h2" style="color: black;">
+         <img src="/resources/images/cscicon.png" style=" height:60px; " />고객 센터
+      </h2>
+   </div>
 </div>
 <div style="margin-left: 100px; margin-right: 100px; height: 100">
 <div class="row">
@@ -78,11 +78,11 @@
             
 
    <form action="" method="post" role="form">
-		<div class="panel panel-default">
-		 <div class="form-group" style="margin-left: -78px; margin-top:25px;"></div>
-			 
-			<div class="panel-body">
-				<div class="form-group">
+      <div class="panel panel-default">
+       <div class="form-group" style="margin-left: -78px; margin-top:25px;"></div>
+          
+         <div class="panel-body">
+            <div class="form-group">
                   <label style="font:sans-serif; color: black;">글번호</label> <input class="form-control" name="CSC_BNO"
 
                      readonly="readonly" value="${readdto.CSC_BNO }">
@@ -104,7 +104,7 @@
                   <label style="font:sans-serif; color: black;">이메일</label> <input class="form-control" name="CSC_EMAIL"
                      readonly="readonly"value="${readdto.CSC_EMAIL }" >
                </div>
-             		
+                   
                   
 
                   <label style="font:sans-serif; color: black;">내용</label>
@@ -148,7 +148,7 @@
                   <c:if test="${readdto.CSC_CHECK == '[답변완료]'}">
                       <label style="font:sans-serif; color: black;"><input type="checkbox" value="[답변완료]" name="CSC_CHECK" checked disabled="disabled">답변완료여부</label>
                   </c:if>     
-			 <c:if test="${readdto.CSC_CHECK != '[답변완료]'}">
+          <c:if test="${readdto.CSC_CHECK != '[답변완료]'}">
                            <button type="submit" data-oper='answer'  class="btn btn-info">답변완료</button>
                            </c:if>
                      </c:if>   

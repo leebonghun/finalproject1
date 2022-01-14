@@ -30,7 +30,7 @@ DROP TABLE REPLY_TBL CASCADE CONSTRAINTS;
 DROP TABLE MOVIE_TBL CASCADE CONSTRAINTS;
 DROP TABLE USER_TBL CASCADE CONSTRAINTS;
 
-
+delete from info_tbl;
 
 /* Drop Sequences */
 
@@ -546,6 +546,9 @@ UPDATE movie_board SET poster ='m10.jpg' where movieCD=20210752;
 UPDATE movie_board SET poster ='m11.jpg' where movieCD=20211111;
 UPDATE movie_board SET poster ='m12.jpg' where movieCD=20211112;
 
+select * from ticket;
+
+delete from ticket where moviecd = 0
 --에고편
 UPDATE movie_board SET key ='JfVOs4VSpmA' where movieCD=20210028;
 UPDATE movie_board SET key ='DJs_ihmMZfg' where movieCD=20210864;
@@ -680,7 +683,15 @@ delete from ticket;
 
 alter table ticket modify (reserveSeat varchar2(200))
 
+select * from user_tbl;
 
+delete from user_tbl where user_id = 'dlqhdgns613'
+
+select * from csc_tbl
+
+delete from csc_tbl where csc_bno = 586 or csc_bno = 587
+
+select * from user_tbl;
 alter table reservetbl add(movieCD number)
 drop table reservetbl;
 delete from reservetbl where reserveseat = 49
@@ -744,3 +755,8 @@ insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 17일','11:20',
 insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 18일','13:10','구로',49,46,'2관');
 insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 19일','15:30','종로 3가',49,47,'3관');
 insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 20일','17:40','을지로 입구',49,48,'4관');
+
+
+delete from ticket;
+
+

@@ -37,10 +37,22 @@ public class MovieReserveServiceImpl implements MovieReserveService{
 
 
 
-   @Override
-   public List<ticketDTO> getmyList(Principal username) {
-      // TODO Auto-generated method stub
-      return mapper.myList(username);
-   }
-   
+
+	@Override
+	public List<ticketDTO> getmyList(Principal username) {
+		// TODO Auto-generated method stub
+		return mapper.myList(username);
+	}
+
+
+
+
+
+	@Override
+	public List<String> seat(int movieCD) {
+		// TODO Auto-generated method stub
+		return mapper.seat(movieCD);
+	}
+	
 }
+
