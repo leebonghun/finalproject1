@@ -452,7 +452,7 @@ alter table info_tbl add(INFO_RFI varchar2(1000));
  from csc_tbl;
 ---
 
- delete from csc_tbl where user_id='id2';
+ delete from csc_tbl ;
  
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
 values(CSC_bno_seq.nextval,'고객센터1','고객센터내용1',sysdate,'기타','처리내용1','id1');
