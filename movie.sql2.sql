@@ -30,7 +30,7 @@ DROP TABLE REPLY_TBL CASCADE CONSTRAINTS;
 DROP TABLE MOVIE_TBL CASCADE CONSTRAINTS;
 DROP TABLE USER_TBL CASCADE CONSTRAINTS;
 
-
+delete from info_tbl;
 
 /* Drop Sequences */
 
@@ -683,7 +683,15 @@ delete from ticket;
 
 alter table ticket modify (reserveSeat varchar2(200))
 
+select * from user_tbl;
 
+delete from user_tbl where user_id = 'dlqhdgns613'
+
+select * from csc_tbl
+
+delete from csc_tbl where csc_bno = 586 or csc_bno = 587
+
+select * from user_tbl;
 alter table reservetbl add(movieCD number)
 drop table reservetbl;
 delete from reservetbl where reserveseat = 49
@@ -750,3 +758,5 @@ insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 20일','17:40',
 
 
 delete from ticket;
+
+

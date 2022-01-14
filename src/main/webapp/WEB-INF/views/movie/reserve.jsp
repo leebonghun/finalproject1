@@ -12,9 +12,9 @@
 
 
 </script>
-<div style="height: 30px"></div>
+<div style="height: 30px;"></div>
 <div class="container">
-	<div class="tit-heading-wrap" id="wrap1">
+	<div class="tit-heading-wrap" id="wrap1" style="width: 890px;">
 		<h3 id="live">영화 예매</h3>
 		</div>
 	<div class="row">
@@ -27,29 +27,29 @@
 
 			</tr>
 			<tr>
-				<td width=20% class="text-right">영화이름</td>
-				<td width=50% class="text-left" >${movieDto.movieNM}</td>
+				<td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;">영화이름</td>
+				<td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.movieNM}</td>
 			
 			</tr>
 			<tr>
-				<td width=20% class="text-right">출연</td>
-				<td width=50% class="text-left">${movieDto.actors }</td>
+				<td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;">출연</td>
+				<td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.actors }</td>
 			</tr>
 			<tr>
-				<td width=20% class="text-right">장르</td>
-				<td width=50% class="text-left">${movieDto.genres }</td>
+				<td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;">장르</td>
+				<td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.genres }</td>
 			</tr>
 			<tr>
-				<td width=20% class="text-right">등급</td>
-				<td width=50% class="text-left">${movieDto.watchGradeNm }</td>
+				<td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;">등급</td>
+				<td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.watchGradeNm }</td>
 			</tr>
 			<tr>
-				<td width=20% class="text-right">상영시간</td>
-				<td width=50% class="text-left">${movieDto.showTm}분</td>
+				<td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;">상영시간</td>
+				<td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.showTm}분</td>
 			</tr>
 			<tr>
-				<td width=20% class="text-right">개봉일</td>
-				<td width=50% class="text-left">${movieDto.openDt}</td>
+				<td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;" >개봉일</td>
+				<td width=50% class="text-left"  style="font:sans-serif; color: black; font-size: 15px;">${movieDto.openDt}</td>
 			</tr>
 
 		</table>
@@ -60,16 +60,16 @@
 
 <form action="/movie/mybbm" method="post" id="noaction">
 <div style="height: 30px"></div>
-<div class="container">
+<div class="container" style="width: 1020px; padding-left: 15px; padding-right: 174px; margin-right: auto; margin-left: auto;">
 
-		<div class="container" id="selectSeat1">
+		<div class="container" id="selectSeat1" style="padding-top: 10px; padding-bottom: 10px; width: 880px;">
 	<div class="row">
 		<input type="hidden" name="movieNM" value="${movieDto.movieNM}"  />
 		<input type="hidden" name="movieCD" value="${movieDto.movieCD}"  />
 		<%-- <input type="hidden" name="reserveSeat" value="${list1.reserveSeat}"/> --%>
 				
 		<c:if test="${!empty list1}">
-		<select name="reserveDay" id="selectBox1">
+		<select name="reserveDay" id="selectBox1" style="border-radius: 16px; border: 2px solid black; ">
 		<c:forEach var="item" items="${list1}" varStatus="i">
 			<option value="${item.reserveDay}">${item.reserveDay}</option>
 		</c:forEach>
@@ -77,7 +77,7 @@
 			</c:if>
 			
 		<c:if test="${!empty list1}">
-		<select name="reserveTime" id="selectBox2">
+		<select name="reserveTime" id="selectBox2" style="border-radius: 16px; border: 2px solid black;">
 		<c:forEach var="item" items="${list1}" varStatus="i">
 			<option value="${item.reserveTime}">${item.reserveTime}</option>
 		</c:forEach>
@@ -85,7 +85,7 @@
 			</c:if>
 			
 		<c:if test="${!empty list1}">
-		<select name="reservePlace" id="selectBox3">
+		<select name="reservePlace" id="selectBox3" style="border-radius: 16px; border: 2px solid black;">
 		<c:forEach var="item" items="${list1}" varStatus="i">
 			<option value="${item.reservePlace}">${item.reservePlace}</option>
 		</c:forEach>
@@ -93,18 +93,18 @@
 			</c:if>
 			
 		<c:if test="${!empty list1}">
-		<select name="reserveGuan" id="selectBox4">
+		<select name="reserveGuan" id="selectBox4" style="border-radius: 16px; border: 2px solid black;">
 		<c:forEach var="item" items="${list1}" varStatus="i">
 			<option value="${item.reserveGuan}">${item.reserveGuan}</option>
 		</c:forEach>
 		</select>
 			</c:if>
-		<button type="submit" id="myrev">예매하기</button>
+		<button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black;">예매하기</button>
 		</br>
 		</br>
-		<h3>좌석 선택</h3>
-		
-		<input type="checkbox" name="reserveSeat" id="checker1" value="A1"><label for="checker1">A1</label>
+
+		<h4 style="padding-bottom: 10px;" >좌석 선택</h4>
+		<input type="checkbox" name="reserveSeat" id="checker1" value="A1"><label for="checker1" style="text-align: center;">A1</label>
 		<input type="checkbox" name="reserveSeat" id="checker2" value="A2"><label for="checker2">A2</label>
 		<input type="checkbox" name="reserveSeat" id="checker3" value="A3"><label for="checker3">A3</label>
 		<input type="checkbox" name="reserveSeat" id="checker4" value="A4"><label for="checker4">A4</label>
@@ -161,16 +161,18 @@
 		<input type="checkbox" name="reserveSeat" id="checker15" value="E3"><label for="checker15">E3</label>
 		<input type="checkbox" name="reserveSeat" id="checker16" value="E4"><label for="checker16">E4</label>
 		<input type="checkbox" name="reserveSeat" id="checker29" value="E5"><label for="checker29">E5</label>
+
 		<input type="checkbox" name="reserveSeat" id="checker30" value="E6"><label for="checker30">E6</label>
 		<input type="checkbox" name="reserveSeat" id="checker47" value="E7"><label for="checker47">E7</label>
 		<input type="checkbox" name="reserveSeat" id="checker48" value="E8"><label for="checker48">E8</label>
 		<input type="checkbox" name="reserveSeat" id="checker49" value="E9"><label for="checker49">E9</label>
 		<input type="checkbox" name="reserveSeat" id="checker50" value="E10"><label for="checker50">E10</label>
+
 		</div>
 		
 		</div>
 		
-		</div>
+		</div >
 
 	
 	

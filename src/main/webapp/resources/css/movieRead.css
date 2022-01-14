@@ -1,0 +1,11 @@
+@charset "UTF-8";
+a {
+background-color: black;
+ border-color: black;
+}
+
+.pagination pull-right{
+	background-color: black;
+	color: white;
+	
+}
