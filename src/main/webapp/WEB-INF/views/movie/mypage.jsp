@@ -28,11 +28,11 @@
 							<li class="button">
 								<div>
 									<a class="btn-link" href="mybbm" tabindex="0" data-uia="action-select-btn+primary">
-										<div class="btn-wrapper">
-											<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/movie.png')">
-												
+										<!-- <div class="btn-wrapper"> -->
+											<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/booking.png')">
+											
 											</div>
-										</div>
+										<!-- </div> -->
 										<span class="btn-name">예매정보</span>						
 									</a>
 								</div>
@@ -43,7 +43,7 @@
 								<div>
 									<a class="btn-link" href= "mypagecsclist" tabindex="0" data-uia="action-select-btn+secondary">
 										<div class="btn-wrapper">
-											<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/support.png')">
+											<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/free-icon-conversation-942751.png')">
 											</div>
 										</div>
 										<span class="btn-name">내 문의</span>
@@ -70,7 +70,7 @@
 												<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
 											</form>
 											<div class="btn-wrapper">
-												<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/shutdown.png')">
+												<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/logout.png')">
 												</div>
 											</div>
 											<span class="btn-name">로그아웃</span>
@@ -82,7 +82,7 @@
 										<a class="btn-link" href="userleave" tabindex="0" data-uia="action-select-btn+secondary">
 											<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
 											<div class="btn-wrapper">
-												<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/logout.png')">
+												<div class="btn-icon" data-profile-guid="A3XZPIVXFFCMHMQZZSOY2DURVA" style="background-image: url('/resources/images/leave.png')">
 												</div>
 											</div>
 											<span class="btn-name">회원탈퇴</span>

@@ -17,11 +17,14 @@ $(function() {
 		if(oper=='answer'){
 			/*formObj.attr("action","/movie/read")
 			.attr("method","post");*/
+			
 			formObj =$("form[role='form']");		
 		}
 		if(oper=='modify'){
+			
 			formObj.attr("action", "/movie/noticemodify");				
 		} if(oper=='remove'){
+			
 			formObj.attr("action","/movie/remove")
 			.attr("method","post");
 		}if(oper =='list'){			

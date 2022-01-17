@@ -39,6 +39,7 @@ $(function() {
 		if(oper=='modify'){
 			formObj.attr("action", "/movie/cscmodify");				
 		} if(oper=='remove'){
+				swal('문의 삭제가 완료되었습니다');
 			formObj.attr("action","/movie/cscremove")
 			.attr("method","post");
 		}if(oper =='list'){			
@@ -73,6 +74,7 @@ $(function() {
 	$(". btn-danger").click(function() {
 		form.attr("action","/movie/remove")
 		.attr("method","post");
+	
 	})*/
 	
 	

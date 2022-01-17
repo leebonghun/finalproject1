@@ -11,7 +11,7 @@ delete from ticket;
 
 select * from ticket;
 
-
+delete from user_tbl where user_id = 'dlqhdgns613'
 select * from csc_tbl;
 
 select * from RESERVETBL

@@ -3,7 +3,13 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="../includes/header.jsp" %>   
 <link href="/resources/css/noticeinsert.css" rel='stylesheet' type='text/css' />
+ <script>
+ 	$(".btn-info").click(function(){
+ 		swal('공지사항 등록이 완료되었습니다');
+ 	})
  
+ 
+ </script>
 <div class="container">
 	<div>
 		<h2 class="h2" style="color: black;">
@@ -42,7 +48,7 @@
 		</div>
 	</div>
 </div>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 
