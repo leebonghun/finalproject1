@@ -60,3 +60,8 @@ body {
     display: block;
     text-decoration: none;
 }
+
+.error-message {
+	color: red;
+	list-style: none;
+}

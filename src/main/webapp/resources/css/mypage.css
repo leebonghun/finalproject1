@@ -22,11 +22,11 @@ body, html {
 }
 
 .btn-gate-container li a.focused .btn-icon::after, .btn-gate-container li a:focus,  .btn-gate-container li a:hover .btn-icon::after {
-    border-color: #e5e5e5;   
+    border-color: black;   
 }
 
 .btn-gate-container li a:hover span{
-	 color : #e5e5e5;
+	 color : red;
 }
 
 a {

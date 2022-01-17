@@ -93,7 +93,7 @@ pageEncoding="UTF-8"%>
         </div>
         
         <div class="form-group text-center">
-          <button type="submit" class="btn btn-danger btn-block">비밀번호변경</button>
+          <button type="submit" class="btn btn-block">비밀번호변경</button>
         </div>
         <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
       </form>
