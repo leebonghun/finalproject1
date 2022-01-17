@@ -7,8 +7,11 @@ DROP TRIGGER TRI_MOVIE_TBL_ MOVIE_NUM;
 select * from auth_tbl;
 select * from user_tbl;
 
+delete from ticket;
 
+select * from ticket;
 
+delete from user_tbl where user_id = 'dlqhdgns613'
 select * from csc_tbl;
 
 select * from RESERVETBL
@@ -563,6 +566,8 @@ UPDATE movie_board SET key ='rs8YZgpoYRM' where movieCD=20210752;
 UPDATE movie_board SET key ='vjnNkaFsdMA' where movieCD=20211111;
 UPDATE movie_board SET key ='tAhLvuK7hb0' where movieCD=20211112;
 
+select * from movie_board;
+
 select * from csc_tbl;
 
 --순위 
@@ -612,6 +617,7 @@ create table movie_reply(
    constraint fk_movie_board foreign key(user_id) references user_tbl(user_id)
 );
 
+select* from movie_reply
 
 create sequence seq_reply;
 
@@ -634,6 +640,8 @@ create table comment_reply(
 create sequence seq_reply;
 
 select * from REPLY_TBL;
+
+delete from reply_tbl
 
 select rank,poster,key,movieNM,actors,showTM,genres,watchGradeNm,nationNm,companyNm,openDt,movieCD from movie_board where movieCD = 20210028;
 

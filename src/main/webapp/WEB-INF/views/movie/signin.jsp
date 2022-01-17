@@ -55,5 +55,6 @@
         로그인
       </button>
     </form>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>

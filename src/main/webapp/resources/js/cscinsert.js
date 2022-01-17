@@ -15,14 +15,17 @@ $(function(){
       let content=$("textarea[name='CSC_CONTENT']").val();
       
       if(title===''){
-         alert('제목을 넣어주세요');
+         swal('제목을 넣어주세요');
          return;
       }else if(content===''){
-         alert('내용을 입력해주세요');
+         swal('내용을 입력해주세요');
          return;
       }
          
-      $("#insertForm").submit();
+      if($("#insertForm").submit()){
+      	swal('문의 등록이 완료되었습니다');
+      
+      }
    })
    
    

@@ -118,11 +118,11 @@ h1, h2, h3, h4, h5, h6, a {
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
 }
-h1, h2, h3, h4, h5, h6, a {
-    color: red;
+/* h1, h2, h3, h4, h5, h6, a {
+    color: black;
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
-}
+} */
 a {
     color: #337ab7;
     text-decoration: none;
@@ -134,7 +134,8 @@ a:-webkit-any-link {
 }
 #live{
 	font-weight: bold;	
-	color:#fb4357;
+	
+	
 }
 p, ul li, ol li {
     margin: 0;
@@ -286,8 +287,8 @@ strong{
 
 
 .clearfix  div:nth-child(-n+4) strong {
-	background-color: #fb4357;
-	
+	background-color:#CCE5FF;
+	color: black;
 	border-radius: 10px;
 }
 .rank{
@@ -298,7 +299,7 @@ strong{
     position: relative;
     height: 60px;
     margin-top: 30px;
-    border-bottom: 5px solid #241d1e;
+    border-bottom: 5px solid #CCE5FF;
 }
 #reservation{
 	border-color: #ffffff;

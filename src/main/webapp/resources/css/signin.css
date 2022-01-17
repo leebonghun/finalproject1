@@ -10,7 +10,7 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: black;
+  background-color:#CCE5FF;
 }
 
 .form-signin {
@@ -20,7 +20,7 @@ body {
   margin: auto;
 }
 .form-signin .h3 {
-  color: red;
+  color: black;
   font-size: 50px;
 }
 .form-signin .sr-only{
@@ -32,8 +32,8 @@ body {
   color: white; 
 }
 .form-signin .btn{
-	background: red;
-	border-color: red;
+	background: black;
+	border-color:black;
 }
 .form-signin .form-control {
   position: relative;

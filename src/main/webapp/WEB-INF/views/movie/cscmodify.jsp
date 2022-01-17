@@ -161,5 +161,6 @@
 	let csrfHeaderName = "${_csrf.headerName}";
 	let csrfTokenValue = "${_csrf.token}";
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="/resources/js/cscmodify.js"></script> 
  <%@include file="../includes/footer.jsp"%> 

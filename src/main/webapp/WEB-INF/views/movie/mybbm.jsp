@@ -106,20 +106,20 @@ select {
                </colgroup>              
                    <thead>
                        <tr>
-                           <th style="background: black; font:sans-serif; color: white;">관람 영화</th>
-                           <th style="background: black; font:sans-serif; color: white;">관람BBM</th>
-                           <th style="background: black; font:sans-serif; color: white;">좌석 번호</th>
-                           <th style="background: black; font:sans-serif; color: white;">예매 번호</th>
-                           <th style="background: black; font:sans-serif; color: white;">결제 금액</th>
+                           <th style="background: #CCE5FF; font:sans-serif; color: black;">관람 영화</th>
+                           <th style="background: #CCE5FF; font:sans-serif; color: black;">관람BBM</th>
+                           <th style="background: #CCE5FF; font:sans-serif; color: black;">좌석 번호</th>
+                           <th style="background: #CCE5FF; font:sans-serif; color: black;">예매 번호</th>
+                           <th style="background: #CCE5FF; font:sans-serif; color: black;">결제 금액</th>
                        </tr>                           
                    </thead>
         
                      <c:forEach var="list" items="${mylist}">
                         <tr class="table-active">
-                           <th scope="row">${list.movieNM}</th>
-                           <td>${list.reserveDay} , ${list.reserveTime},${list.reservePlace}(${list.reserveGuan})</td>
-                           <td>${list.reserveSeat}</td>
-                           <td>${list.reserveNm}</td>
+                           <th scope="row" style="color: black;">${list.movieNM}</th>
+                           <td style="color: black;">${list.reserveDay} , ${list.reserveTime},${list.reservePlace}(${list.reserveGuan})</td>
+                           <td style="color: black;">${list.reserveSeat}</td>
+                           <td style="color: black;">${list.reserveNm}</td>
                            <td></td>
 
                         </tr>
