@@ -149,12 +149,12 @@
 					</div>
 					<div class="item">
 						<div class="w3l-movie-gride-agile w3l-movie-gride-agile1">
-							<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m5.jpg" title="album-name" class="img-responsive" alt=" " />
+							<a href="movieRead?movieCD=20211831" class="hvr-shutter-out-horizontal"><img src="/resources/images/m5.jpg" title="album-name" class="img-responsive" alt=" " />
 								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="single.html">극장판 소드 아트 온라인-프로그레시브</a></h6>							
+									<h6><a href="movieRead?movieCD=20211831">극장판 소드 아트 온라인-프로그레시브</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -289,12 +289,12 @@
 					</div>
 					<div class="item">
 						<div class="w3l-movie-gride-agile w3l-movie-gride-agile1">
-							<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m10.jpg" title="album-name" class="img-responsive" alt=" " />
+							<a href="movieRead?movieCD=20210752" class="hvr-shutter-out-horizontal"><img src="/resources/images/m10.jpg" title="album-name" class="img-responsive" alt=" " />
 								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="single.html">뱅드림! 필름 라이브 세컨드 스테이지</a></h6>							
+									<h6><a href="movieRead?movieCD=20210752">뱅드림! 필름 라이브 세컨드 스테이지</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -363,12 +363,12 @@
 								</div>
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m2.jpg" title="album-name" class="img-responsive" alt=" "  />
+								<a href="movieRead?movieCD=20210864" class="hvr-shutter-out-horizontal"><img src="/resources/images/m2.jpg" title="album-name" class="img-responsive" alt=" "  />
 									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="single.html">엔칸토-마법의 세계</a></h6>							
+										<h6><a href="movieRead?movieCD=20210864">엔칸토-마법의 세계</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -389,12 +389,12 @@
 								</div>
 							</div>
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal"><img src="/resources/images/m3.jpg" title="album-name" class="img-responsive" alt=" " />
+								<a href="movieRead?movieCD=20205986" class="hvr-shutter-out-horizontal"><img src="/resources/images/m3.jpg" title="album-name" class="img-responsive" alt=" " />
 									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="single.html">연애의 빠진 로맨스</a></h6>							
+										<h6><a href="movieRead?movieCD=20205986">연애의 빠진 로맨스</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>

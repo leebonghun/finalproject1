@@ -118,11 +118,11 @@ h1, h2, h3, h4, h5, h6, a {
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
 }
-h1, h2, h3, h4, h5, h6, a {
-    color: red;
+/* h1, h2, h3, h4, h5, h6, a {
+    color: black;
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
-}
+} */
 a {
     color: #337ab7;
     text-decoration: none;
