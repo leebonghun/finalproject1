@@ -125,7 +125,7 @@
                </c:if>   
                      </sec:authorize>
                      <sec:authentication property="principal" var="info" />
-            <sec:authorize access="isAuthenticated()">
+            <sec:authorize access="isAuthenticated()"> 
                <c:if test="${info.username == 'admin97' }">
                   <c:if test="${readdto.CSC_CHECK == '[답변 대기중]'}">
                <div class="form-group">         
@@ -206,5 +206,5 @@
    
    </script>
    <script  src="/resources/js/cscread.js"></script>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <%@include file="../includes/footer.jsp"%>

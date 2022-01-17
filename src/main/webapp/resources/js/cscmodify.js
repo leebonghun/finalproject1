@@ -16,8 +16,10 @@ $(function(){
 		let oper =$(this).data("oper");
 		
 		if(oper=='modify'){
-			formObj =$("form[role='form']");			
+			swal('문의 수정이 완료되었습니다');		
+			formObj =$("form[role='form']");	
 		} if(oper=='remove'){
+			swal('문의 삭제가 완료되었습니다');
 			formObj.attr("action","/movie/cscremove")
 			.attr("method","post");
 		}if(oper =='list'){			

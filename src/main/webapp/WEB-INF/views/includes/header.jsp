@@ -105,8 +105,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   </sec:authorize>
                   <sec:authorize access="isAuthenticated()" >                           
                      <p><sec:authentication property="principal.username"/>님, 반갑습니다.</p>
-                     <button type="submit" id="logout" style="color:white; background-color: red;">로그아웃</button>
-                     <button type="submit" id="mypage" style="color:white; background-color: red;">마이페이지</button>
+                     <button type="submit" id="logout" style="color:white; background-color: black;">로그아웃</button>
+                     <button type="submit" id="mypage" style="color:white; background-color: black;">마이페이지</button>
                   </sec:authorize>
                     </li>
             </ul>

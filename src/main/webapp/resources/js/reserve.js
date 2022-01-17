@@ -55,6 +55,12 @@ $(function(){
 			$(this).prop("checked",false);
 		}			
 	});
+	$("#myrev").click(function(){
+		
+		
+		swal('예매가 정상적으로 되었습니다');
+		
+	})
 	
 	/*$("input[type='submit']").on("click",function(e){
 		e.preventDefault();	
