@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@include file="../includes/header.jsp" %>
-
+	
    <link rel="stylesheet" href="/resources/css/replyAll.css" />
 <div class="bg-bricks" id="container">
 		<div class="" id="contents">
@@ -174,7 +174,8 @@
     
   </div>
 		</div>
-<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />		
+<link href="/resources/css/movieList.css" rel="stylesheet" type="text/css" />	
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>	
 <script src="/resources/js/movieRead.js"></script>		
 <script src="/resources/js/movieReply.js"></script>		
 <%@include file="../includes/footer.jsp"%>

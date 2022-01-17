@@ -14,13 +14,13 @@
 #live{
 	font-size:36px;
     font-weight: bold;
-    color: #fb4357;
+    color: black;
 }
 #wrap1{
 	position: relative;
    
   
-    border-bottom: 5px solid #241d1e;
+    border-bottom: 5px solid #CCE5FF;
 	
 }
 #selectSeat1{

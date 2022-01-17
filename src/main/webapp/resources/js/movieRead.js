@@ -93,7 +93,7 @@ $(function(){
 		replyService.add(replyContent,function(result){
 			if(result){
 				if(result =='success'){
-					alert("댓글 등록 성공");
+					swal("댓글 등록 성공");
 				}
 				modal.find("input").val("");
 				modal.modal("hide");
@@ -112,7 +112,7 @@ $(function(){
 		modalRemoveBtn.click(function(){
 			//로그인 여부
 			if(!replyer){
-				alert('로그인 한 후 삭제가 가능합니다');
+				swal('로그인 한 후 삭제가 가능합니다');
 				modal.modal("hide");
 				return;
 			}
@@ -122,20 +122,20 @@ $(function(){
 			let oriReplyer = modalReplyer.val();
 			if(replyer != oriReplyer){
 				
-				alert("자신의 댓글만 삭제가 가능합니다");
+				swal("자신의 댓글만 삭제가 가능합니다");
 				modal.modal("hide");
 				return;
 			}
 			
 		replyService.remove(modal.data("replycd"),oriReplyer,function(result){
 			if(result=='success'){
-				alert("삭제 성공");
+				swal("삭제 성공");
 			}
 			modal.modal("hide");
 			showList(pageNum);
 		},
 		function(msg){
-			alert(msg);
+			swal(msg);
 		}
 	);//remove end
 			
@@ -145,7 +145,7 @@ $(function(){
 		modalModifyBtn.click(function(){
 			//로그인 여부
 			if(!replyer){
-				alert('로그인 한 후 수정이 가능합니다');
+				swal('로그인 한 후 수정이 가능합니다');
 				modal.modal("hide");
 				return;
 			}
@@ -154,7 +154,7 @@ $(function(){
 			//댓글 작성자 가져오기
 			let oriReplyer = modalReplyer.val();
 			if(replyer != oriReplyer){
-				alert("자신의 댓글만 수정이 가능합니다");
+				swal("자신의 댓글만 수정이 가능합니다");
 				modal.modal("hide");
 				return;
 			}
@@ -168,14 +168,14 @@ $(function(){
 		replyService.update(replyContent,function(data){
 			//alert(data);
 			if(data=='success'){
-				alert("수정성공");
+				swal("수정성공");
 				
 			}
 			modal.modal("hide");
 			showList(pageNum);
 		},
 		function(msg){
-			alert(msg);
+			swal(msg);
 		}
 	);//update end
 			

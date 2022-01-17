@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6, a {
     margin: 0;
 }
 h1, h2, h3, h4, h5, h6, a {
-    color: red;
+    color: black;
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
 }
@@ -146,7 +146,7 @@ a:-webkit-any-link {
 }
 #live{
    font-weight: bold;   
-   color:#fb4357;
+   color: black;
 }
 p, ul li, ol li {
     margin: 0;
@@ -292,8 +292,8 @@ strong{
 
 
 .clearfix  div:nth-child(-n+4) strong {
-   background-color: #fb4357;
-   
+   background-color: #CCE5FF;
+   color: black;
    border-radius: 10px;
 }
 .rank{
@@ -304,7 +304,7 @@ strong{
     position: relative;
     height: 60px;
     margin-top: 30px;
-    border-bottom: 5px solid #241d1e;
+    border-bottom: 5px solid #CCE5FF;
 
     width:900px;
 
@@ -314,8 +314,8 @@ strong{
 #reservation{
    border-color: #ffffff;
    font-weight: bold;
-   color:white;
-   background-color: red;
+   color:black;
+   background-color: #CCE5FF;
    
 }
 #detailShow{
@@ -372,8 +372,9 @@ strong{
                                        <div class="mid-2 agile_mid_2_home">
                                           <button type="submit" id="detailShow"
                                              onclick="location.href='movieRead?movieCD=${list.movieCD}'">상세보기</button>
+                                              <sec:authorize access="isAuthenticated()">
                                           <button type="submit" id="reservation" onclick="location.href='reserve?movieCD=${list.movieCD}'">예매하기</button>
-
+												</sec:authorize>  
                                           <div class="clearfix"></div>
                                        </div>
                                     </div>

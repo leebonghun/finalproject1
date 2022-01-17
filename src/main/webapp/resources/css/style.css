@@ -67,7 +67,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, a {
-	color: red;
+	color: black;
 	font-family: 'Roboto Condensed', sans-serif;
 	margin: 0;
 }
@@ -93,7 +93,7 @@ input[type="submit"], .agileinfo_chat a, .w3ls_footer_grid1_left p a,
 /*-- header --*/
 .header {
 	padding: 1em 0;
-	background-color: black;
+	background-color: #CCE5FF;
 	border-top: #212121;
 }
 
@@ -102,7 +102,7 @@ input[type="submit"], .agileinfo_chat a, .w3ls_footer_grid1_left p a,
 	display: inline-block;
 	text-transform: uppercase;
 	text-decoration: none;
-	background: red;
+	background: black;
 	text-align: center;
 	padding: 1px 12px;
 
@@ -114,7 +114,7 @@ color: white;
 	display: inline-block;
 	text-transform: uppercase;
 	text-decoration: none;
-	background: red;
+	background: black;
 	text-align: center;
 	padding: 1px 12px;
 	
@@ -130,7 +130,7 @@ color: white;
 
 .w3layouts_logo a h1 {
 	font-size: 2.8em;
-	color: red;
+	color: black;
 	text-transform: uppercase;
 	padding-right: 1.67em;
 	font-weight: 900;
@@ -250,11 +250,11 @@ color: white;
 }
 
 .movies_nav {
-	background: black;
+	background: #CCE5FF;
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #fff;
+	color: black;
 	text-transform: uppercase;
 
 }
@@ -536,7 +536,7 @@ p.fexi_header_para1 a i {
 	padding: 4em 0;
 }
 .footer{
-	background:#212121;
+	background:#CCE5FF;
 	padding:4em 0;
 	position: relative;
 	
