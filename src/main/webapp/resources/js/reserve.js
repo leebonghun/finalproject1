@@ -52,13 +52,22 @@ $(function(){
 		if(count>3){
 			swal("3개 까지의 좌석만 선택할 수 있습니다");
 			$(this).prop("checked",false);
-		}			
+		}	
+			
 	});
-	$("#myrev").click(function(){
+	$("#myrev").click(function(e){
 		
 		
+		if($("input:checkbox[name=reserveSeat]").is(":checked") == true){
+			
 		swal('예매가 정상적으로 되었습니다');
 		
+			
+		}else{
+			swal('한 개이상의 좌석을 선택해주세요');
+			e.preventDefault();
+			return;
+		}	
 	})
 	
 

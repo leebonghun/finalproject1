@@ -48,10 +48,18 @@
 	select s1.user_id, user_password, user_name, user_birth, user_email, user_tel, user_regdate, user_enable, authority from user_tbl s1 left outer join auth_tbl s2 on s1.user_id = s2.user_id where s1.user_id = #{user_id}
 </select>
 
+<delete id="cscDelete">
+	delete from csc_tbl where user_id = #{user_id}
+</delete>
+
+<delete id="revDelete">
+	delete from ticket where user_id = #{user_id}
+</delete>
 <delete id="delete" >
 	delete from user_tbl
 	where user_id=#{user_id}
 </delete>
+
 
 <delete id="authDelete" >
 	delete from auth_tbl

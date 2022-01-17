@@ -764,6 +764,8 @@ insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 18일','13:10',
 insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 19일','15:30','종로 3가',49,47,'3관');
 insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 20일','17:40','을지로 입구',49,48,'4관');
 
+select* from ticket
+select * from user_tbl;
 
 delete from ticket;
 
