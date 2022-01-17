@@ -18,7 +18,7 @@
 			<div>
 				<div>
 					<img src="/resources/images/내글목록.png" style="height: 50px;  " />
-			<h4 class="latest-text w3_faq_latest_text w3_latest_text"  style="margin-left: 0px;  display: inline; ">내 고객센터 글목록</h4>
+			<h4 class="latest-text w3_faq_latest_text w3_latest_text"  style="margin-left: 0px;  display: inline;">내 고객센터 글목록</h4>
 			
 				</div>
 			</div>
@@ -38,11 +38,11 @@
 							<th scope="row">${mycscDto.CSC_BNO}</th>
 							<td>${mycscDto.CSC_RFI}
 							</td>										
-							<td  id="tit"><a class="move" href="${mycscDto.CSC_BNO}">
-							${mycscDto.CSC_TITLE} 
+							<td  id="tit" ><a class="move" href="${mycscDto.CSC_BNO}" style="color: black;">
+							${mycscDto.CSC_TITLE}   
 							</a></td>	
 							<c:if test="${mycscDto.CSC_CHECK == '[답변 대기중]' }">						
-							<td>${mycscDto.CSC_CHECK}</td>
+							<td style=" color:blue;">${mycscDto.CSC_CHECK}</td>
 							</c:if>
 							<c:if test="${mycscDto.CSC_CHECK == '[답변완료]' }">
 								<td style=" color:red;">${mycscDto.CSC_CHECK}

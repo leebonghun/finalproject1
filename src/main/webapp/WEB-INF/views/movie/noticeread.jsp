@@ -18,7 +18,7 @@
 		</h2>            
 	</div>	
 </div>
-<div style="margin-left: 100px; margin-right: 100px;">
+<div style="margin-left: 100px; margin-right: 100px;  ">
 <div class="row">
 		<form action="" method="post" role="form">
 		<div class="panel panel-default">

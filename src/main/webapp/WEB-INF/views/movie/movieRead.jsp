@@ -6,7 +6,7 @@
 <div class="bg-bricks" id="container">
 		<div class="" id="contents">
 			<div class="wrap-movie-chart">
-				<div class="tit-heading-wrap">
+				<div class="tit-heading-wrap" style="width: 880px;">
 					<div class="sect-sorting">
 						<div class="nowshow"></div>
 					</div>
@@ -16,8 +16,8 @@
 			</div>
 
   <div style="height: 30px"></div>
-  <div class="container">
-    <div class="row">
+  <div class="container" style="padding-left: -20px;">
+    <div class="row" style="width: 888px;">
       <table class="table">
        <tr>
         <td>
@@ -34,38 +34,39 @@
         
         </tr>
         <tr>
-          <td width=20% class="text-right" >영화이름</td>
-          <td width=50% class="text-left">${movieDto.movieNM}</td>
+          <td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;" >영화이름</td>
+          <td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.movieNM}</td>
         </tr>
         <tr>
-          <td width=20% class="text-right">출연</td>
-          <td width=50% class="text-left">${movieDto.actors }</td>
+          <td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;">출연</td>
+          <td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.actors }</td>
         </tr>
         <tr>
-          <td width=20% class="text-right">장르</td>
-          <td width=50% class="text-left">${movieDto.genres }</td>
+          <td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;">장르</td>
+          <td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.genres }</td>
         </tr>
         <tr>
-          <td width=20% class="text-right">등급</td>
-          <td width=50% class="text-left">${movieDto.watchGradeNm }</td>
+          <td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;">등급</td>
+          <td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.watchGradeNm }</td>
+        </tr>
+        <tr> 
+          <td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;">상영시간</td>
+          <td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.showTm}분</td>
         </tr>
         <tr>
-          <td width=20% class="text-right">상영시간</td>
-          <td width=50% class="text-left">${movieDto.showTm}분</td>
-        </tr>
-        <tr>
-          <td width=20% class="text-right">개봉일</td>
-          <td width=50% class="text-left">${movieDto.openDt}</td>
+          <td width=20% class="text-right" style="font:sans-serif; color: black; font-size: 15px;">개봉일</td>
+          <td width=50% class="text-left" style="font:sans-serif; color: black; font-size: 15px;">${movieDto.openDt}</td>
         </tr>
         
        
         <tr>
           <td colspan="3" class="text-right">
+          	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
           	<a href="reserve?movieCD=${movieDto.movieCD}"
-			class="hvr-shutter-out-horizontal">예매</a>
-            <a href="movieList">목록</a>
+			 style="background-color: white; color: black; font-size: 20px;">예매</a>
+            <a href="movieList" style="background-color: white; color: black; font-size: 20px;">목록</a>
           </td>
-        </tr>
+        </tr>     
       </table>
     </div>
 <!-- 댓글 리스트  -->
@@ -73,13 +74,13 @@
 	<div class="col-lg-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<i class="fa fa-comments fa-fw"></i>
+				<i class="fa fa-comments fa-fw" style="font-size: 40px;"></i>
 				리뷰를 남겨주세요!!!
 					<sec:authorize access="isAuthenticated()"> 
-					<button id="addReplyBtn" class="btn btn-primary btn-xs pull-right">리뷰 작성</button>
+					<button id="addReplyBtn" class="btn btn-primary btn-xs pull-right" style="background-color: black; color: white; font-size: 20px;">리뷰 작성</button>
 		    		</sec:authorize>
 		    </div>
-			<div class="panel-body">
+			<div class="panel-body" >
 				<ul class="chat">
 					<li class="left clearfix" data-replyCd='1'>
 						<div>
@@ -92,7 +93,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="panel-footer">
+			<div class="panel-footer" >
 				
 			
 			</div><!-- 댓글 페이지 나누기 -->
@@ -145,6 +146,8 @@
 	<input type="hidden" name="keyword" value="${cri.keyword}" />
 	<input type="hidden" name="movieCD" value="${movieDto.movieCD}" />
 </form>  
+ <input type="hidden" name="${_csrf.parameterName}"
+                        value="${_csrf.token}" />
 <script>
 	//현재 글번호 가져오기
 	let movieCD = ${movieDto.movieCD};	

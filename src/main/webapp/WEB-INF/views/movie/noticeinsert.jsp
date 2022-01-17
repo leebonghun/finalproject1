@@ -13,7 +13,7 @@
 </div>
 <div class="panel-body">
 <div class="row">
-	<div class="col-lg-12">
+	<div class="col-lg-12" style="padding-left: 0px; width: 880px;">
 		<div class="panel panel-default">
 				<form action="" method="post" role="form">
 		<div class="form-group" style="margin-left: 0px; margin-top:0px  ">
@@ -36,7 +36,7 @@
 		<button type="submit" class="btn btn-info" style="background-color: black; border-color: black;">작성완료</button>
 		<button type="reset" class="btn btn-warning">초기화</button>
 		<button type="button" class="btn btn-default" onclick="location.href='/movie/noticelist'">뒤로가기</button>
-	</form>
+	</form>   
 	</div>
 
 		</div>
