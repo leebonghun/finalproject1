@@ -124,7 +124,7 @@ pageEncoding="UTF-8"%>
             <small id=user_tel class="text-info"></small>
           </div>
         </div>
-          <button type="submit" class="btn btn-danger btn-block">가입하기</button>
+          <button type="submit" class="btn btn-block">가입하기</button>
           <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
         </div>
         <div>
