@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6, a {
     margin: 0;
 }
 a {
-    color: #337ab7;
+    
     text-decoration: none;
 }
 user agent stylesheet
