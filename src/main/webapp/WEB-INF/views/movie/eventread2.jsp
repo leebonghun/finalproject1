@@ -21,7 +21,7 @@
 }	
 .contain {
 	margin-top: 30px;
-	width: 940px;
+	width: 850px;
     padding: 4px;
     border: 7px solid black;
     border-radius: 50px;

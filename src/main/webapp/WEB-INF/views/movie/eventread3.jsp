@@ -21,7 +21,7 @@
 }	
 .contain {
 	margin-top: 30px;
-	width: 940px;
+	width: 880px;
     padding: 4px;
     border: 7px solid black;
     border-radius: 50px;
@@ -44,7 +44,7 @@
 			</div>    
 			<div class="event-list mt15" >
 				<div class="img" style="text-align: center; width: 880px; padding: 20px;">
-					<img src="/resources/images/signup.png" alt="신규 회원 이벤트" onerror="noImg(this);"  />
+					<img src="/resources/images/signup.png" alt="신규 회원 이벤트" onerror="noImg(this);"  style="width: 870px;"/>
 				<div class="contain" style="text-align: left;">
 					<div class="tit"> [이벤트 제목 : 신규 회원 이벤트] </div>
 					<div class="con"> [이벤트 내용 : 신규 회원가입하신 고객분들 중에 선착순 100명에게 비타 500 1BOX를 증정합니다.] </div>
@@ -52,7 +52,7 @@
 					<div class="date"> [이벤트 기간 : 2022.01.01 ~ 2022.01.31] </div>
 				</div>
 				</div>
-			<div style="text-align: right; width: 965px; padding: 20px;" >
+			<div style="text-align: right; width: 900px; padding: 20px;" >
 			<button type="button" class="btn btn-info" onclick="location.href='/movie/eventlist'" 
 					style="background-color: black; border-color: black;">뒤로가기</button>
 			</div>

@@ -270,7 +270,7 @@ i.glyphicon.glyphicon-play-circle {
     top: 3%;
     left: 4%;
     padding: 20px 0 0 0;
-    background: #ff8d1b;
+    background:black;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -280,8 +280,16 @@ i.glyphicon.glyphicon-play-circle {
 }
 .ribben p {
     font-size:0.9em;
-    color: #fff;
+    font-weight:bold;
+    color:  red;
 	line-height: 0;
+}
+#living{
+	 background-color:black;
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+	color:red;
 }
 .ribben:after {
     content: '';

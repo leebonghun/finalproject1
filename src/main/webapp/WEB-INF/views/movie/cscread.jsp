@@ -36,7 +36,7 @@
     color: #999;
     width: 1040px;
     padding-right: 174px;
-    padding-left: 1px;   
+    padding-left: 0px;   
     margin-right: auto;
     margin-left: auto;
 }
@@ -63,7 +63,7 @@
       </h2>
    </div>
 </div>
-<div style="margin-left: 100px; margin-right: 100px;">
+<div style="margin-left: 100px; margin-right: 100px; height: 100">
 <div class="row">
 
    <div class="col-lg-12">
@@ -71,7 +71,7 @@
    <!-- /.col-lg-12 -->
 </div>
 <div class="row">
-   <div class="col-lg-12">
+   <div class="col-lg-12" style="padding-left: 0px; width: 1010px;">
       <div class="panel panel-default">
          <!-- /.panel-heading -->
          
@@ -79,7 +79,11 @@
 
    <form action="" method="post" role="form">
       <div class="panel panel-default">
+
        <div class="form-group" style="margin-left: -78px; margin-top:5px;"></div>
+
+       <div class="form-group" style="margin-left: -78px; margin-top:25px;"></div>
+
           
          <div class="panel-body">
             <div class="form-group">
@@ -195,6 +199,7 @@
    //헌재 글 번호 가져오기
    let CSC_BNO = ${readdto.CSC_BNO};
    let CSC_RFI = ${readdto.CSC_RFI};
+   
    
    let csrfHeaderName = "${_csrf.headerName}";
    let csrfTokenValue = "${_csrf.token}";
