@@ -81,6 +81,8 @@ public class UserContorller {
 		
 		return "redirect:/movie/index";
 	}
-	 
+	
+	
+	
 	 
 }

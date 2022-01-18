@@ -15,7 +15,7 @@
 
 	<select id="myList" resultType="com.company.domain.ticketDTO">
 	
- 		select movieNM,reserveDay,reserveTime,reservePlace,reserveGuan,reserveSeat,reserveNm,user_id
+ 		select movieNM,reserveDay,reserveTime,reservePlace,reserveGuan,reserveSeat,reserveNm,user_id,reserveMoney
  		from ticket where user_id=#{principal.username} order by reserveNm asc
  
 </select>
@@ -24,8 +24,8 @@
 			select ticket_seq.nextval from dual
 		
 		</selectKey>
-		insert into ticket(user_id,movieCD,movieNM,reserveDay,reserveTime,reservePlace,reserveGuan,reserveSeat,reserveNm) 
-		values(#{user_id},#{movieCD},#{movieNM},#{reserveDay},#{reserveTime},#{reservePlace},#{reserveGuan},#{reserveSeat},#{reserveNm})
+		insert into ticket(user_id,movieCD,movieNM,reserveDay,reserveTime,reservePlace,reserveGuan,reserveSeat,reserveNm,reserveMoney) 
+		values(#{user_id},#{movieCD},#{movieNM},#{reserveDay},#{reserveTime},#{reservePlace},#{reserveGuan},#{reserveSeat},#{reserveNm},#{reserveMoney})
 	</insert>
 	
 	<select  id="seat" resultType="java.lang.String">

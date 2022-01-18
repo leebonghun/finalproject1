@@ -93,7 +93,7 @@
 	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 	  <input type="hidden" name="writer" value="${dto.writer}" /> 
 </form>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html> 
 <%@include file="../includes/footer.jsp"%>

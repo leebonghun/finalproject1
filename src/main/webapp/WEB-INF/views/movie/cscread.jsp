@@ -202,5 +202,5 @@
    
    </script>
    <script  src="/resources/js/cscread.js"></script>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <%@include file="../includes/footer.jsp"%>

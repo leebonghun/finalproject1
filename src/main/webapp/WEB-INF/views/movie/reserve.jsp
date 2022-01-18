@@ -2,17 +2,48 @@
 	pageEncoding="UTF-8"%>
 <%@include file="../includes/header.jsp"%>
 <script>
-	$(document).ready(function(){
+	$(function(){
 		
-		
-		
-		
-	});
 	
-
-
+	$("#myrev").click(function(e){
+		let formObj = $("#noaction");
+		let movieNM = '${movieDto.movieNM}';
+		let money = $("input:checked[type='checkbox']").length*8000;
+		if($("input:checkbox[name=reserveSeat]").is(":checked") == true){
+		    	swal('좌석 선택이 완료되었습니다');
+				e.preventDefault();
+				IMP.init('imp46297553');
+		IMP.request_pay({
+		    pg : 'kcp',
+		    pay_method : 'card',
+		    merchant_uid : 'merchant_' + new Date().getTime(),
+		    name : '${movieDto.movieNM}', //결제창에서 보여질 이름
+		    amount : money, //실제 결제되는 가격
+		    buyer_name : '<sec:authentication property="principal.username"/>',
+		}, 
+		
+		function(rsp) {
+			console.log(rsp);
+		    if ( rsp.success ) {
+		    	var msg = '예매가 완료되었습니다.';
+				formObj.find("input[name='reserveMoney']").val(money);
+				formObj.submit();
+		    } else {
+		    	 var msg = '결제에 실패하였습니다.';
+		    }
+		    swal(msg);
+		});
+		}else{
+			swal('한 개이상의 좌석을 선택해주세요');
+			e.preventDefault();
+			return;
+		}	
+	})
+	})
 </script>
 <div style="height: 30px; "></div>
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+<div style="height: 30px;"></div>
 <div class="container">
 	<div class="tit-heading-wrap" id="wrap1" style="width: 890px;">
 		<h3 id="live">영화 예매</h3>
@@ -23,6 +54,7 @@
 				<td width=30% class="text-center" rowspan="7"><img
 					src="/resources/images/${movieDto.poster}" width=100%> <input
 					type="hidden" name="movieCD" value="${movieDto.movieCD}" />
+					<input type="hidden" name="movieCD" value="${movieDto.movieCD}" />
 					</td>
 
 			</tr>
@@ -58,7 +90,8 @@
 
 </div>
 
-<form action="/movie/mybbm" method="post" id="noaction">
+<form action="/movie/mybbm" method="post" id="noaction" >
+
 <div style="height: 30px"></div>
 <div class="container" style="width: 1020px; padding-left: 15px; padding-right: 174px; margin-right: auto; margin-left: auto;">
 
@@ -100,6 +133,8 @@
 		</select>
 			</c:if>
 		<button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black; font-weight: bold; color: black;">예매하기</button>
+		<input type="hidden" name="reserveMoney" value="" />
+		
 		</br>
 		</br>
 
@@ -179,7 +214,9 @@
 	   <input type="hidden" name="${_csrf.parameterName}"
       value="${_csrf.token}" />
       <input type="hidden" class="form-control" name="user_id" value='<sec:authentication property="principal.username"/>'>
+	
 </form>
+
 <link rel="stylesheet" href="/resources/css/reset.css">
 <link rel="stylesheet" href="/resources/css/header.css">
 <link rel="stylesheet" href="/resources/css/reserve.css">
@@ -190,6 +227,7 @@
 	src='//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'></script>
 <link rel="stylesheet"
 	href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
 <script src="/resources/js/reserve.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>

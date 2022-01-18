@@ -297,7 +297,7 @@ strong{
    border-radius: 10px;
 }
 .rank{
-   background-color: #CCE5FF;
+   background-color: gray;
    border-radius: 10px;
 }
 .tit-heading-wrap {
@@ -394,11 +394,6 @@ strong{
    </div>
    <script>
 let result = '${result}';
-
-   
-
-
-
 
 
 

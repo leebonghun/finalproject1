@@ -9,13 +9,17 @@ select * from user_tbl;
 
 delete from ticket;
 
+alter table ticket modify(reserveMoney varchar(200))
+
 select * from ticket;
 
-
+delete from user_tbl where user_id = 'dlqhdgns613'
 select * from csc_tbl;
 
 select * from RESERVETBL
 /* Drop Tables */
+
+
 
 DROP TABLE ATTACH_EVENT_TBL CASCADE CONSTRAINTS;
 DROP TABLE ATTACH_GOODS_TBL CASCADE CONSTRAINTS;
@@ -764,7 +768,11 @@ insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 18일','13:10',
 insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 19일','15:30','종로 3가',49,47,'3관');
 insert into RESERVETBL values(20211112,'해피 뉴 이어','1월 20일','17:40','을지로 입구',49,48,'4관');
 
+select* from ticket
+select * from user_tbl;
 
 delete from ticket;
+
+alter table ticket add(reserveMoney number);
 
 

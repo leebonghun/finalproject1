@@ -22,11 +22,11 @@ body, html {
 }
 
 .btn-gate-container li a.focused .btn-icon::after, .btn-gate-container li a:focus,  .btn-gate-container li a:hover .btn-icon::after {
-    border-color: #e5e5e5;   
+    border-color: black;   
 }
 
 .btn-gate-container li a:hover span{
-	 color : #e5e5e5;
+	 color : red;
 }
 
 a {
@@ -65,7 +65,7 @@ a {
     /* -webkit-background-size: cover; */
     -moz-background-size: cover;
     background-size: cover;
-    background-color: #333;
+  
     /* -webkit-border-radius: 4px; */
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -108,7 +108,7 @@ ul {
 .btn-gate-container .btn-name {
     line-height: 1.2em;
     min-height: 1.8em;
-    color: grey;
+  	color: black;
     display: block;
     /* text-align: center; */
     font-size: 1.3vw;
@@ -150,7 +150,7 @@ ul {
     right: 0;
     bottom: 0;
     text-align: center;
-    background: #141414;
+    background:#CCE5FF;
     z-index: 0;
 }
 
@@ -190,6 +190,7 @@ h1 {
 }
 
 h1 {
+	color:black;
     display: block;
     font-size: 50px;
     margin-block-start: 0.67em;

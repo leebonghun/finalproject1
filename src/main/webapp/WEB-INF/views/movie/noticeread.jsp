@@ -65,7 +65,7 @@
 		  <input type="hidden" name="writer" value="${dto.writer}" />  --%>
 </form>
 <script src="/resources/js/noticeread.js"></script>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html> 
 <%@include file="../includes/footer.jsp"%>

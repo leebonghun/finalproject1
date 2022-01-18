@@ -16,8 +16,10 @@ $(function(){
 		let oper =$(this).data("oper");
 		
 		if(oper=='modify'){
+			swal("공지사항 수정이 완료되었습니다");
 			formObj =$("form[role='form']");			
 		} if(oper=='remove'){
+			swal("공지사항 삭제 완료되었습니다");
 			formObj.attr("action","/movie/noticeremove")
 			.attr("method","post");
 		}if(oper =='list'){

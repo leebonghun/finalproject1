@@ -82,6 +82,9 @@ public class MovieController {
       model.addAttribute("list",listDto);
       
    }
+   
+   
+   
    @GetMapping("reserve")
    public void reserve(Model model,int movieCD) {
       log.info("영화 예매 페이지로 이동중입니다. "+movieCD);
@@ -99,8 +102,26 @@ public class MovieController {
       
       
    }
-
-   
+   /*
+    * @GetMapping("mailSender") public void payMentGet() { log.info("결제"); }
+    * 
+    * 
+    * 
+    * @PostMapping("mailSender") public void payMent(Model model,int movieCD) {
+    * log.info("결제 창으로 넘어가는중입니다");
+    * 
+    * movieDTO movieDto = service.read(movieCD);
+    * 
+    * List<ReserveDTO> listDto = reservice.reserveRead(movieCD);
+    * 
+    * List<String> seatDto = reservice.seat(movieCD);
+    * 
+    * 
+    * model.addAttribute("movieDto", movieDto);
+    * model.addAttribute("list1",listDto); model.addAttribute("seatDto",seatDto);
+    * 
+    * }
+    */
   
    
    

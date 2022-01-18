@@ -11,6 +11,8 @@ font-family: 'Roboto Condensed', sans-serif;
 	margin: 0;
 }
 p,ul li,ol li{
+	color:black;
+	font-weight:bold;
 	margin:0;
 	font-size:14px;
 }

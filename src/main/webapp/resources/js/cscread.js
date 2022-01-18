@@ -29,16 +29,23 @@ $(function() {
 		
 		//어느버튼에서 명령이 왔는가?		
 		//data-*
-		let oper =$(this).data("oper");
-		if(oper=='answer'){
-			/*formObj.attr("action","/movie/read")
-			.attr("method","post");*/
-			formObj =$("form[role='form']");
-					
-		}
+      let oper =$(this).data("oper");
+      if(oper=='answer'){
+		if($("input:checkbox[name=CSC_CHECK]").is(":checked") == true) {
+     		
+	         formObj =$("form[role='form']");
+         /*formObj.attr("action","/movie/read")
+         .attr("method","post");*/
+         
+      }else{
+		swal('답변완료 여부를 체크해주세요');
+		return;
+}
+}
 		if(oper=='modify'){
 			formObj.attr("action", "/movie/cscmodify");				
 		} if(oper=='remove'){
+				swal('문의 삭제가 완료되었습니다');
 			formObj.attr("action","/movie/cscremove")
 			.attr("method","post");
 		}if(oper =='list'){			
@@ -73,6 +80,7 @@ $(function() {
 	$(". btn-danger").click(function() {
 		form.attr("action","/movie/remove")
 		.attr("method","post");
+	
 	})*/
 	
 	

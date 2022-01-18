@@ -62,6 +62,8 @@ public class UserServiceImpl implements UserService {
 		if(encoder.matches(leaveDto.getUser_password(), mapper.findByPwd(leaveDto.getUser_id()))) {
 			//auth_tbl 과 user_tbl 이 join 되어 있어서 Transactional 을 이용하여 둘다 지움
 			mapper.authDelete(leaveDto.getUser_id());
+			mapper.revDelete(leaveDto.getUser_id());
+			mapper.cscDelete(leaveDto.getUser_id());
 			result = mapper.delete(leaveDto.getUser_id()) > 0 ? true : false;
 		}
 				
