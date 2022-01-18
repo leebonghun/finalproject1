@@ -120,7 +120,7 @@ select {
                            <td style="color: black;">${list.reserveDay} , ${list.reserveTime},${list.reservePlace}(${list.reserveGuan})</td>
                            <td style="color: black;">${list.reserveSeat}</td>
                            <td style="color: black;">${list.reserveNm}</td>
-                           <td></td>
+                           <td style="color: black;">${list.reserveMoney}원</td>
 
                         </tr>
                      </c:forEach>

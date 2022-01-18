@@ -21,4 +21,5 @@ public class ticketDTO {
 	private String reserveGuan;
 	private String reserveSeat;
 	private int reserveNm;
+	private String reserveMoney;
 }

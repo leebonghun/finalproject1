@@ -13,6 +13,8 @@ public interface UserMapper {
 	public UserDTO signin(String user_id);
 	public int auth(@Param("user_id") String user_id,@Param("authority") String authority);
 	public int delete(String user_id);
+	public int revDelete(String user_id);
+	public int cscDelete(String user_id);
 	public String findByPwd(String user_id);
 	public int authDelete(String user_id);
 	public int modify(@Param("user_id") String user_id,@Param("confirm_password") String confirm_password);

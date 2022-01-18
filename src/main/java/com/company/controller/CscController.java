@@ -39,12 +39,12 @@ public class CscController {
 	private CscService cscService;
 	
 		
-	@GetMapping("mailSender")
-	public void cscMailSender() {
-		log.info("메일전송으로 이동중입니다..");
-		
-	}
-	
+	/*
+	 * @GetMapping("mailSender") public void cscMailSender() {
+	 * log.info("메일전송으로 이동중입니다..");
+	 * 
+	 * }
+	 */
 	
 	
 	@GetMapping("csclist")
