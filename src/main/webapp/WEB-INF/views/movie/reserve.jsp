@@ -99,7 +99,7 @@
 		</c:forEach>
 		</select>
 			</c:if>
-		<button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black;">예매하기</button>
+		<button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black;" onclick="requestPay()">예매하기</button>
 		</br>
 		</br>
 

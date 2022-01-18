@@ -167,7 +167,7 @@
 <div>
 <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
 <input type="button" class="btn btn-secondary btn-block" id="cancel" value="취소">
-<input type="submit" class="btn btn-danger btn-block" id="confirm" value="확인">
+<input type="submit" class="btn btn-block" id="confirm" value="확인">
 </div>
 </form>	
 </div>

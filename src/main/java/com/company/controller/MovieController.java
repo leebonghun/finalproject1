@@ -63,42 +63,42 @@ public class MovieController {
    
 
 
-	
-	@GetMapping("index")
-	public void index() {
-		log.info("메인 홈페이지 입니다");
-		
-	}
-	
-	@GetMapping("movieList")
-	public void movieList(Model model,Criteria cri) {
-		log.info("영화 리스트 페이지로 이동중입니다.");
-		
-		List<movieDTO> listDto = service.list();
-		
-		
-	
-		
-		model.addAttribute("list",listDto);
-		
-	}
-	@GetMapping("reserve")
-	public void reserve(Model model,int movieCD) {
-		log.info("영화 예매 페이지로 이동중입니다. "+movieCD);
-		movieDTO movieDto = service.read(movieCD);
-		
-		List<ReserveDTO> listDto = reservice.reserveRead(movieCD);
-		
-		List<String> seatDto = reservice.seat(movieCD);
-		
-		
-		model.addAttribute("movieDto", movieDto);
-		model.addAttribute("list1",listDto);
-		model.addAttribute("seatDto",seatDto);
-		
-		
-		
-	}
+   
+   @GetMapping("index")
+   public void index() {
+      log.info("메인 홈페이지 입니다");
+      
+   }
+   
+   @GetMapping("movieList")
+   public void movieList(Model model,Criteria cri) {
+      log.info("영화 리스트 페이지로 이동중입니다.");
+      
+      List<movieDTO> listDto = service.list();
+      
+      
+   
+      
+      model.addAttribute("list",listDto);
+      
+   }
+   @GetMapping("reserve")
+   public void reserve(Model model,int movieCD) {
+      log.info("영화 예매 페이지로 이동중입니다. "+movieCD);
+      movieDTO movieDto = service.read(movieCD);
+      
+      List<ReserveDTO> listDto = reservice.reserveRead(movieCD);
+      
+      List<String> seatDto = reservice.seat(movieCD);
+      
+      
+      model.addAttribute("movieDto", movieDto);
+      model.addAttribute("list1",listDto);
+      model.addAttribute("seatDto",seatDto);
+      
+      
+      
+   }
 
    
   
@@ -106,48 +106,46 @@ public class MovieController {
    
    
 
-	@GetMapping("mybbm")
-	public void mybbm(Model model, Principal username) {
-		
-		List<ticketDTO> mylist = reservice.getmyList(username);
-		
-		log.info("나의 예매정보보러가기~"+mylist);
-		model.addAttribute("mylist",mylist);
-		
-	}
-	@PreAuthorize("isAuthenticated()")
-	@PostMapping("mybbm")
-	public String mybbmread(Model model,ticketDTO insertDto) {
-		
-		log.info("예매 좌석 "+insertDto);
-		
-		
-		
-		
-		
-		if(!reservice.insert(insertDto)) {
-			return "redirect:/movie/movieList";
-		}
-		return "redirect:/movie/mybbm";
-		
-	}
-	
-	@GetMapping("store")
-	public void store() {
-		log.info("상점으로 이동중입니다.");
-	}
-	
-	
-	@GetMapping("eventlist")
-	public void event() {
-		log.info("이벤트로 이동중입니다.");
-	}
-	
-	
-	@GetMapping("selectSeat")
-	public void selectSeat() {
-		log.info("좌석선택 중..");
-	}
+   @GetMapping("mybbm")
+   public void mybbm(Model model, Principal username) {
+      
+      List<ticketDTO> mylist = reservice.getmyList(username);
+      
+      log.info("나의 예매정보보러가기~"+mylist);
+      model.addAttribute("mylist",mylist);
+      
+   }
+   @PreAuthorize("isAuthenticated()")
+   @PostMapping("mybbm")
+   public String mybbmread(Model model,ticketDTO insertDto) {
+      
+      log.info("예매 좌석 "+insertDto);
+      
+      
+      
+      if(!reservice.insert(insertDto)) {
+         return "redirect:/movie/movieList";
+      }
+      return "redirect:/movie/mybbm";
+      
+   }
+   
+   @GetMapping("store")
+   public void store() {
+      log.info("상점으로 이동중입니다.");
+   }
+   
+   
+   @GetMapping("eventlist")
+   public void event() {
+      log.info("이벤트로 이동중입니다.");
+   }
+   
+   
+   @GetMapping("selectSeat")
+   public void selectSeat() {
+      log.info("좌석선택 중..");
+   }
 
   
   
