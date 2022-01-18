@@ -132,9 +132,9 @@
 		</c:forEach>
 		</select>
 			</c:if>
-		
+		<sec:authorize access="isAuthenticated()" >	
 		<button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black; font-weight: bold; color: black;">예매하기</button>
-		
+		</sec:authorize>
 		
 		<input type="hidden" name="reserveMoney" value="" />
 		
