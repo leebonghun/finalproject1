@@ -55,20 +55,40 @@ $(function(){
 		}	
 			
 	});
-	$("#myrev").click(function(e){
-		
-		
+	/*$("#myrev").click(function(e){
+		let formObj = $("#noaction");
+		let movieNM = '${movieDto.movieNM}';
+		let money = $("input:checked[type='checkbox']").length*8000;
 		if($("input:checkbox[name=reserveSeat]").is(":checked") == true){
-			
-		swal('예매가 정상적으로 되었습니다');
+		    	swal('좌석 선택이 완료되었습니다');
+				e.preventDefault();
+				IMP.init('imp46297553');
+		IMP.request_pay({
+		    pg : 'kcp',
+		    pay_method : 'card',
+		    merchant_uid : 'merchant_' + new Date().getTime(),
+		    name : '${movieDto.movieNM}', //결제창에서 보여질 이름
+		    amount : money, //실제 결제되는 가격
+		    buyer_name : '<sec:authentication property="principal.username"/>',
+		}, 
 		
-			
+		function(rsp) {
+			console.log(rsp);
+		    if ( rsp.success ) {
+		    	var msg = '예매가 완료되었습니다.';
+				formObj.find("input[name='reserveMoney']").val(money);
+				formObj.submit();
+		    } else {
+		    	 var msg = '결제에 실패하였습니다.';
+		    }
+		    swal(msg);
+		});
 		}else{
 			swal('한 개이상의 좌석을 선택해주세요');
 			e.preventDefault();
 			return;
 		}	
-	})
+	})*/
 	
 
 	

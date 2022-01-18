@@ -9,6 +9,8 @@ select * from user_tbl;
 
 delete from ticket;
 
+alter table ticket modify(reserveMoney varchar(200))
+
 select * from ticket;
 
 delete from user_tbl where user_id = 'dlqhdgns613'
@@ -16,6 +18,8 @@ select * from csc_tbl;
 
 select * from RESERVETBL
 /* Drop Tables */
+
+
 
 DROP TABLE ATTACH_EVENT_TBL CASCADE CONSTRAINTS;
 DROP TABLE ATTACH_GOODS_TBL CASCADE CONSTRAINTS;
@@ -768,5 +772,7 @@ select* from ticket
 select * from user_tbl;
 
 delete from ticket;
+
+alter table ticket add(reserveMoney number);
 
 
