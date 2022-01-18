@@ -2,35 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.company.mapper.MovieReserveMapper">
 
-	<select id="reserveRead" resultType="com.company.domain.ReserveDTO">
-		select * from reservetbl where movieCD = #{movieCD} order by reserveNm asc
-	</select>
+   <select id="reserveRead" resultType="com.company.domain.ReserveDTO">
+      select * from reservetbl where movieCD = #{movieCD} order by reserveNm asc
+   </select>
 
-	<select   id="reserveRead2" resultType="com.company.domain.ReserveDTO">
-					select * from reservetbl where reserveNm=1
-	</select>
-
-
+   <select   id="reserveRead2" resultType="com.company.domain.ReserveDTO">
+               select * from reservetbl where reserveNm=1
+   </select>
 
 
-	<select id="myList" resultType="com.company.domain.ticketDTO">
-	
- 		select movieNM,reserveDay,reserveTime,reservePlace,reserveGuan,reserveSeat,reserveNm,user_id,reserveMoney
- 		from ticket where user_id=#{principal.username} order by reserveNm asc
+
+
+   <select id="myList" resultType="com.company.domain.ticketDTO">
+   
+       select movieNM,reserveDay,reserveTime,reservePlace,reserveGuan,reserveSeat,reserveNm,user_id,reserveMoney
+       from ticket where user_id=#{principal.username} order by reserveNm asc
  
 </select>
-	<insert id="insert">
-		<selectKey resultType="int" keyProperty="reserveNm" order="BEFORE">
-			select ticket_seq.nextval from dual
-		
-		</selectKey>
-		insert into ticket(user_id,movieCD,movieNM,reserveDay,reserveTime,reservePlace,reserveGuan,reserveSeat,reserveNm,reserveMoney) 
-		values(#{user_id},#{movieCD},#{movieNM},#{reserveDay},#{reserveTime},#{reservePlace},#{reserveGuan},#{reserveSeat},#{reserveNm},#{reserveMoney})
-	</insert>
-	
-	<select  id="seat" resultType="java.lang.String">
-		select reserveSeat from ticket where movieCD = #{movieCD}
-	</select>
+   <insert id="insert">
+      <selectKey resultType="int" keyProperty="reserveNm" order="BEFORE">
+         select ticket_seq.nextval from dual
+      
+      </selectKey>
+      insert into ticket(user_id,movieCD,movieNM,reserveDay,reserveTime,reservePlace,reserveGuan,reserveSeat,reserveNm,reserveMoney) 
+      values(#{user_id},#{movieCD},#{movieNM},#{reserveDay},#{reserveTime},#{reservePlace},#{reserveGuan},#{reserveSeat},#{reserveNm},#{reserveMoney})
+   </insert>
+   
+   <select  id="seat" resultType="java.lang.String">
+      select reserveSeat from ticket where movieCD = #{movieCD}
+   </select>
 
 
 </mapper>

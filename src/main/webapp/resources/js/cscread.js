@@ -29,6 +29,27 @@ $(function() {
 		
 		//어느버튼에서 명령이 왔는가?		
 		//data-*
+
+		
+		let oper =$(this).data("oper");
+		if(oper=='answer'){
+			
+			 if($("input:checkbox[name=CSC_CHECK]").is(":checked") == true) {
+				formObj =$("form[role='form']");
+					
+			formObj.submit();
+				
+			} else{
+				swal("답변완료 여부를 체크해주세요.");
+				return;
+				
+			}
+			
+			/*formObj.attr("action","/movie/read")
+			.attr("method","post");*/
+			
+		}
+
       let oper =$(this).data("oper");
       if(oper=='answer'){
 		if($("input:checkbox[name=CSC_CHECK]").is(":checked") == true) {
@@ -42,6 +63,7 @@ $(function() {
 		return;
 }
 }
+
 		if(oper=='modify'){
 			formObj.attr("action", "/movie/cscmodify");				
 		} if(oper=='remove'){

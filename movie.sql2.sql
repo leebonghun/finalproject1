@@ -50,7 +50,9 @@ DROP SEQUENCE SEQ_GOODS_TBL_GOODS_NUM;
 
 CREATE SEQUENCE SEQ_GOODS_TBL_GOODS_NUM INCREMENT BY 1 START WITH 1;
 
-
+select *
+ 		from ticket  ;
+ 
 
 /* Create Tables */
 
@@ -342,6 +344,15 @@ CREATE TABLE USER_TBL
 	USER_ENABLE char(10) DEFAULT '1',
 	PRIMARY KEY (USER_ID)
 );
+select * from user_tbl;
+
+delete from user_tbl where user_id ='qhdgns1111'
+
+
+
+delete from ticket where user_id ='qhdgns1111'
+
+alter table user_tbl modify(user_email varchar2(60))
 
 select replyCd,movieCD,replyContent,replyer,replyDate ,updateDate
 from(select /*+INDEX(reply_tbl idx_replys)*/rownum rn,replyCd,movieCD,replyContent,replyer,replyDate ,updateDate from reply_tbl where movieCD =20210028 and replyCd>0 and rownum<=10)
@@ -459,7 +470,7 @@ alter table info_tbl add(INFO_RFI varchar2(1000));
  from csc_tbl;
 ---
 
- delete from csc_tbl where user_id='id2';
+ delete from csc_tbl ;
  
 insert into csc_TBL (csc_bno,csc_title,csc_content,csc_regdate,csc_RFI,csc_answer,user_id)
 values(CSC_bno_seq.nextval,'고객센터1','고객센터내용1',sysdate,'기타','처리내용1','id1');

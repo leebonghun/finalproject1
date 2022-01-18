@@ -3,6 +3,7 @@ pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
+  
     <meta charset="UTF-8" />
     <title>회원가입</title>
     <!-- resources 앞에 / 를 붙일때는 context path가 없는 경우일 때 -->
@@ -104,11 +105,30 @@ pageEncoding="UTF-8"%>
               id="user_email"
               class="form-control"
               placeholder="ex) example@gmail.com"
-            />
-            <small id="user_email" class="text-info"></small>
-          </div>
+            />   
+            <small id="user_email" class="text-info"></small>          
+          </div>  
+          <input type="button" value="인증번호 전송"  id="mail_check_button" style="height:30px; ">  
         </div>
         
+        <div class="form-group row justify-content-center">
+          <label for="email" class="col-sm-2 col-form-label">인증번호</label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              name="user_emailcheck"
+              id="user_emailcheck"
+              class="form-control"
+              placeholder="ex) 1234"
+            />   
+            <small id="user_emailcheck" class="text-info"></small>          
+          </div>  
+          <input type="button" value="인증번호 확인"  id="mail_check_button2"    style="height:30px; ">  
+        </div>
+        
+        
+        
+    	<div>
         <div class="form-group row justify-content-center">
           <label for="user_tel" class="col-sm-2 col-form-label">휴대전화</label>
           <div class="col-sm-6">
@@ -124,7 +144,7 @@ pageEncoding="UTF-8"%>
             <small id=user_tel class="text-info"></small>
           </div>
         </div>
-          <button type="submit" class="btn btn-block">가입하기</button>
+          <button type="submit" class="btn btn-block" id="submit2">가입하기</button>
           <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
         </div>
         <div>
@@ -138,5 +158,6 @@ pageEncoding="UTF-8"%>
 let csrfHeaderName = "${_csrf.headerName}";
 let csrfTokenValue = "${_csrf.token}";
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>

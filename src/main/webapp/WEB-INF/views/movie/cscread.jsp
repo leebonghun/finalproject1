@@ -34,7 +34,7 @@
 .panel-body {
     font-size: 14px;
     color: #999;
-    width: 990px;
+    width: 1040px;
     padding-right: 174px;
     padding-left: 0px;   
     margin-right: auto;
@@ -79,7 +79,11 @@
 
    <form action="" method="post" role="form">
       <div class="panel panel-default">
+
+       <div class="form-group" style="margin-left: -78px; margin-top:5px;"></div>
+
        <div class="form-group" style="margin-left: -78px; margin-top:25px;"></div>
+
           
          <div class="panel-body">
             <div class="form-group">
