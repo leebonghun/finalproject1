@@ -61,7 +61,6 @@ $(function() {
 		var email  = $("#user_emailcheck").val();
 		var formObj = $("#regist");
 		if(email ==code){
-			swal('회원가입이 완료되었습니다');
 			formObj.attr("action","step3");
 		}else{
 			e.preventDefault();

@@ -25,6 +25,7 @@ pageEncoding="UTF-8"%>
 			<h1 class="h3 mb-3 font-weight-bold">BBM</h1>
 		</a>
 	</div>
+	<div class="justify-content-center">
     <div class="container" style="margin-top:40px">
       <form id="regist" method="post" action="step3">
         <div class="form-group row justify-content-center">
@@ -107,8 +108,8 @@ pageEncoding="UTF-8"%>
               placeholder="ex) example@gmail.com"
             />   
             <small id="user_email" class="text-info"></small>          
+          <input type="button" value="인증번호 전송"  id="mail_check_button" style="height:30px; color:black; background-color: lightgray; border-color:lightgray; border-radius:16px; margin-top: 10px; ">  
           </div>  
-          <input type="button" value="인증번호 전송"  id="mail_check_button" style="height:30px; ">  
         </div>
         
         <div class="form-group row justify-content-center">
@@ -122,8 +123,8 @@ pageEncoding="UTF-8"%>
               placeholder="ex) 1234"
             />   
             <small id="user_emailcheck" class="text-info"></small>          
+          <input type="button" value="인증번호 확인"  id="mail_check_button2"    style="height:30px; color:black; background-color: lightgray; border-color:lightgray; border-radius:16px; margin-top: 10px;">  
           </div>  
-          <input type="button" value="인증번호 확인"  id="mail_check_button2"    style="height:30px; ">  
         </div>
         
         
@@ -153,6 +154,7 @@ pageEncoding="UTF-8"%>
         </div>
       </form>
     </div>
+   </div>
 <script>
 //ajax 동작시 헤더 값에 포함해서 보낼 csrf 토큰 값 설정
 let csrfHeaderName = "${_csrf.headerName}";
