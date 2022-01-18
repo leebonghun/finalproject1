@@ -18,37 +18,37 @@
 			<div>
 				<div>
 					<img src="/resources/images/내글목록.png" style="height: 50px;  " />
-			<h4 class="latest-text w3_faq_latest_text w3_latest_text"  style="margin-left: 0px;  display: inline;">내 고객센터 글목록</h4>
+			<h4 class="latest-text w3_faq_latest_text w3_latest_text"  style="margin-left: 0px;  display: inline; color: black; font-weight: bold;">내 고객센터 글목록</h4>
 			
 				</div>
 			</div>
 			<table class="table" id=csctbl>
 				<thead >
-					<tr style="background-color: black;" >
-						<th scope="col"  style="color: white;">글번호</th>
-						<th scope="col"style="color: white;">사유</th>
-						<th scope="col"style="color: white;">제목</th>
-						<th scope="col"style="color: white;">접수상태</th>
-						<th scope="col"style="color: white;">등록일</th>
+					<tr style="background-color: black; " >
+						<th scope="col"  style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 15px;">글번호</th>
+						<th scope="col" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 15px;">사유</th>
+						<th scope="col" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 15px;">제목</th>
+						<th scope="col" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 15px;">접수상태</th>
+						<th scope="col" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 15px;">등록일</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="mycscDto" items="${mylist}">
 						<tr class="table-active">
-							<th scope="row">${mycscDto.CSC_BNO}</th>
-							<td>${mycscDto.CSC_RFI}
+							<th scope="row" style="font:sans-serif; color: black; font-weight: bold; font-size: 14px;">${mycscDto.CSC_BNO}</th>
+							<td style="font:sans-serif; color: black; font-weight: bold; font-size: 14px;">${mycscDto.CSC_RFI}
 							</td>										
-							<td  id="tit" ><a class="move" href="${mycscDto.CSC_BNO}" style="color: black;">
+							<td  id="tit" ><a class="move" href="${mycscDto.CSC_BNO}" style="font:sans-serif; color: black; font-weight: bold; font-size: 14px;">
 							${mycscDto.CSC_TITLE}   
 							</a></td>	
 							<c:if test="${mycscDto.CSC_CHECK == '[답변 대기중]' }">						
-							<td style=" color:blue;">${mycscDto.CSC_CHECK}</td>
+							<td style=" color:blue; font-size: 14px;">${mycscDto.CSC_CHECK}</td>
 							</c:if>
 							<c:if test="${mycscDto.CSC_CHECK == '[답변완료]' }">
-								<td style=" color:red;">${mycscDto.CSC_CHECK}
+								<td style=" color:red; font-size: 14px;">${mycscDto.CSC_CHECK}
 									</td>	
 								</c:if>
-							<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${mycscDto.CSC_REGDATE}"/></td>
+							<td style="font:sans-serif; color: black; font-weight: bold; font-size: 14px;"><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${mycscDto.CSC_REGDATE}"/></td>
 						</tr>
 					</c:forEach>
 				</tbody>

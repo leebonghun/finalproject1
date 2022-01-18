@@ -102,26 +102,26 @@ public class MovieController {
       
       
    }
-	/*
-	 * @GetMapping("mailSender") public void payMentGet() { log.info("결제"); }
-	 * 
-	 * 
-	 * 
-	 * @PostMapping("mailSender") public void payMent(Model model,int movieCD) {
-	 * log.info("결제 창으로 넘어가는중입니다");
-	 * 
-	 * movieDTO movieDto = service.read(movieCD);
-	 * 
-	 * List<ReserveDTO> listDto = reservice.reserveRead(movieCD);
-	 * 
-	 * List<String> seatDto = reservice.seat(movieCD);
-	 * 
-	 * 
-	 * model.addAttribute("movieDto", movieDto);
-	 * model.addAttribute("list1",listDto); model.addAttribute("seatDto",seatDto);
-	 * 
-	 * }
-	 */
+   /*
+    * @GetMapping("mailSender") public void payMentGet() { log.info("결제"); }
+    * 
+    * 
+    * 
+    * @PostMapping("mailSender") public void payMent(Model model,int movieCD) {
+    * log.info("결제 창으로 넘어가는중입니다");
+    * 
+    * movieDTO movieDto = service.read(movieCD);
+    * 
+    * List<ReserveDTO> listDto = reservice.reserveRead(movieCD);
+    * 
+    * List<String> seatDto = reservice.seat(movieCD);
+    * 
+    * 
+    * model.addAttribute("movieDto", movieDto);
+    * model.addAttribute("list1",listDto); model.addAttribute("seatDto",seatDto);
+    * 
+    * }
+    */
   
    
    

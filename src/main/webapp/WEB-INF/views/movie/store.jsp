@@ -60,15 +60,15 @@ img{
 <!-- 스토어 굿즈 -->
 <div class="container">
 	<div>
-		<h2 class="h2" style="color: black;">
-			<img src="/resources/images/store1.png" style="height: 60px;" /> 스토어
+		<h2 class="h2" style="color: black; font-weight: bold;">
+			<img src="/resources/images/store1.png" style="height: 60px; " /> 스토어
 		</h2> 
 	</div>
 </div>
-<div class="container" style="margin-top: 50px">
+<div class="container" style="margin-top: 50px; ">
 		<div id="event-list-wrap">
 			<div class="tit-util-mt70" >
-				<h3 class="tit">BBM Goods & Ticket</h3>
+				<h3 class="tit" style="font-weight: bold;">BBM Goods & Ticket</h3>
 			</div>
 			<div class="event-list mt15" style="margin-top: 20px;" > 
 				<ul>
@@ -77,8 +77,8 @@ img{
 							<p class="img">
 								<img src="/resources/images/ticket1.jpg" alt="영화 티켓" onerror="noImg(this);" style="border-radius: 16px;"/>
 							</p>
-							<p class="tit"> 영화 티켓 </p>
-							<p style="color: black;"> ￦12000 </p>
+							<p class="tit" style="font-weight: bold; color: black; font-size: 17px;"> 영화 티켓 </p>
+							<p style="font-weight: bold; color: black; font-size: 17px;"> ￦12000 </p>
 						</a>
 					</li>
 					<li style="padding: 15px;">
@@ -87,8 +87,8 @@ img{
 							<p class="img">
 								<img src="/resources/images/tumbler1.jpg" alt="텀블러" onerror="noImg(this);" style="border-radius: 16px;"/>
 							</p>
-							<p class="tit"> 텀블러 </p>
-							<p style="color: black;"> ￦10000 </p>
+							<p class="tit" style="font-weight: bold; color: black; font-size: 17px;"> 텀블러 </p>
+							<p style="font-weight: bold; color: black; font-size: 17px;"> ￦10000 </p>
 						</a>
 					</li>
 					<li style="padding: 15px;">
@@ -96,8 +96,8 @@ img{
 							<p class="img">
 								<img src="/resources/images/ecobag1.jpg" alt="에코백" onerror="noImg(this);" style="border-radius: 16px; size: 100px;"/>
 							</p>
-							<p class="tit"> 에코백 </p>
-							<p style="color: black;"> ￦5000 </p>
+							<p class="tit" style="font-weight: bold; color: black; font-size: 17px;"> 에코백 </p>
+							<p style="font-weight: bold; color: black; font-size: 17px;"> ￦5000 </p>
 						</a>
 					</li>
 				</ul>
@@ -108,7 +108,7 @@ img{
 <div class="container" style="margin-top: 50px">
 		<div id="event-list-wrap">
 			<div class="tit-util-mt70">
-				<h3 class="tit">BBM Food</h3>
+				<h3 class="tit" style="font-weight: bold;">BBM Food</h3>
 			</div>
 			<div class="event-list mt15">
 				<ul>
@@ -117,8 +117,8 @@ img{
 							<p class="img">
 								<img src="/resources/images/popcorn1.jpg" alt="콜라 2 + 팝콘" onerror="noImg(this);" style="border-radius: 16px;" />
 							</p>
-							<p class="tit"> 콜라 2 + 팝콘 </p>
-							<p style="color: black;"> ￦9000 </p>
+							<p class="tit" style="font-weight: bold; color: black; font-size: 17px;"> 콜라 2 + 팝콘 </p>
+							<p style="font-weight: bold; color: black; font-size: 17px;"> ￦9000 </p>
 						</a>
 					</li>
 					<li style="padding: 15px;">
@@ -126,8 +126,8 @@ img{
 							<p class="img">
 								<img src="/resources/images/cuttlefish1.jpg" alt="오징어 버터구이" onerror="noImg(this);" style="border-radius: 16px;"/>
 							</p>
-							<p class="tit"> 오징어 버터구이 </p>
-							<p style="color: black;"> ￦3500 </p>
+							<p class="tit" style="font-weight: bold; color: black; font-size: 17px;"> 오징어 버터구이 </p>
+							<p style="font-weight: bold; color: black; font-size: 17px;"> ￦3500 </p>
 						</a>
 					</li>
 					<li style="padding: 15px;">
@@ -135,8 +135,8 @@ img{
 							<p class="img">
 								<img src="/resources/images/nacho.jpg" alt="나초" onerror="noImg(this);" style="border-radius: 16px;"/>
 							</p>
-							<p class="tit"> 나초 </p>
-							<p style="color: black;"> ￦4900 </p>
+							<p class="tit" style="font-weight: bold; color: black; font-size: 17px;"> 나초 </p>
+							<p style="font-weight: bold; color: black; font-size: 17px;"> ￦4900 </p>
 						</a>
 					</li>
 				</ul>

@@ -354,7 +354,7 @@ strong{
                            <div class="clearfix">
                               <c:forEach var="list" items="${list}">
                                  <div class="col-md-2 w3l-movie-gride-agile-list movieListBody">
-                                    <strong class="rank">${list.rank}</strong>
+                                    <strong class="rank" style="color: black; font-weight: bold; font-size: 20px; font:sans-serif;">${list.rank}</strong>
                                     
                                     <a href="movieRead?movieCD=${list.movieCD}"
                                        class="hvr-shutter-out-horizontal"><img
@@ -365,7 +365,7 @@ strong{
                                        </div> </a>
                                     <div class="mid-1 agileits_w3layouts_mid_1_home">
                                        <div class="w3l-movie-text">
-                                          <h6>
+                                          <h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;">
                                              <a href="movieRead?movieCD=${list.movieCD}">${list.movieNM}</a>
                                           </h6>
                                        </div>

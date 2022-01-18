@@ -56,7 +56,7 @@
 <body>
 <div class="container">
 	<div>
-		<h2  class="h2" style=" color: black;">
+		<h2  class="h2" style=" color: black; font-weight: bold;">
 			<img src="/resources/images/cscicon.png" style=" height:60px; " />고객 센터
 		</h2>
 	</div>
@@ -65,7 +65,7 @@
 <div class="row">
 		<form action="" method="post" role="form">
 		<div class="panel panel-default">
-		<div class="form-group" style="margin-left: 0px; margin-top:25px  "> 
+		<div class="form-group" style="margin-left: 0px; margin-top:25px; font-weight: bold; font-size: 17px;  "> 
 			<label>사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
 			 
@@ -107,14 +107,10 @@
 					<div class="form-group">
 						<label style="font:sans-serif; color: black; padding: 3px;">유저 아이디</label> <input class="form-control" name="user_id" value="${readdto.user_id }" readonly="readonly" >
 					</div>
-					<div class="form-group">
-						<label>제목</label> <input class="form-control" name="CSC_TITLE" value="${readdto.CSC_TITLE }" >
-					</div>
-					
+						
 					 <div class="form-group">
-                  <label>이메일</label> <input class="form-control" name="CSC_EMAIL"
-                    value="${readdto.CSC_EMAIL }" >
-               </div>
+                  		<label style="font:sans-serif; color: black; padding: 3px;">이메일</label> <input class="form-control" name="CSC_EMAIL" value="${readdto.CSC_EMAIL }" >
+               		 </div>
 					<div class="form-group">
 					
 

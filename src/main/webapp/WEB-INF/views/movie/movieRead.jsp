@@ -62,8 +62,10 @@
         <tr>
           <td colspan="3" class="text-right">
           	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
+          	<sec:authorize access="isAuthenticated()" >	
           	<a href="reserve?movieCD=${movieDto.movieCD}"
 			 style="background-color: white; color: black; font-size: 20px;">예매</a>
+			 </sec:authorize>
             <a href="movieList" style="background-color: white; color: black; font-size: 20px;">목록</a>
           </td>
         </tr>     
@@ -71,10 +73,10 @@
     </div>
 <!-- 댓글 리스트  -->
 <div class="row">
-	<div class="col-lg-12">
+	<div class="col-lg-12" style="color: black; font-weight: bold; font-size: 20px;">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<i class="fa fa-comments fa-fw" style="font-size: 40px;"></i>
+				<i class="fa fa-comments fa-fw" style="font-size: 40px; color: black; font-weight: bold;"></i>
 				리뷰를 남겨주세요!!!
 					<sec:authorize access="isAuthenticated()"> 
 					<button id="addReplyBtn" class="btn btn-primary btn-xs pull-right" style="background-color: black; color: white; font-size: 20px;">리뷰 작성</button>
@@ -84,10 +86,10 @@
 				<ul class="chat">
 					<li class="left clearfix" data-replyCd='1'>
 						<div>
-							<div class="replyAll" id="replyAll">
-								<strong class="primary-font">user00</strong> <!-- 댓글 작성자 -->
-								<small class="pull-right text-muted">2021-06-15 14:25</small> <!-- 댓글 작성 시간 -->
-								<p>Good Job!!</p><!-- 댓글 작성 내용 -->
+							<div class="replyAll" id="replyAll" >
+								<strong class="primary-font" style="color: black; font-weight: bold; font-size: 40px;">user00</strong> <!-- 댓글 작성자 -->
+								<small class="pull-right text-muted" style="color: black; font-weight: bold; font-size: 30px;">2021-06-15 14:25</small> <!-- 댓글 작성 시간 -->
+								<p style="color: black; font-weight: bold; font-size: 20px;">Good Job!!</p><!-- 댓글 작성 내용 -->
 							</div>
 						</div>
 					</li>
@@ -112,15 +114,15 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-        	<label for="" id="editor">댓글 내용</label>
+        	<label for="" id="editor" style="color: white; font-weight: bold; font-size: 20px; padding: 3px;">댓글 내용</label>
         	<input type="text" name="replyContent" class="form-control" value="댓글내용"/>
         </div>
         <div class="form-group">
-        	<label for="" id="editor">작성자</label>
+        	<label for="" id="editor" style="color: white; font-weight: bold; font-size: 20px; padding: 3px;">작성자</label>
         	<input type="text" name="replyer" class="form-control" value="작성자"/>"/>
         </div>
         <div class="form-group">
-        	<label for="" id="editor">작성일</label>
+        	<label for="" id="editor" style="color: white; font-weight: bold; font-size: 20px; padding: 3px;">작성일</label>
         	<input type="text" name="replyDate" class="form-control" value="작성일"/>
         </div>        
       </div>

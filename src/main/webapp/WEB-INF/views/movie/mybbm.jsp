@@ -23,7 +23,7 @@ table.st th, td {
 
 input[type="text"] {
     border-radius: 16px;
-    border: 2px solid #ddd;
+    border: 2px solid black;
     background-color: #fff;
     height: 32px;
     line-height: 32px;
@@ -64,7 +64,7 @@ padding: 10px;
 
 select {
    border-radius: 16px;
-   border: 2px solid #ddd;
+   border: 2px solid black;
     background-color: #fff;
     height: 32px;
     line-height: 32px;
@@ -152,40 +152,40 @@ select {
              <ul class="pagination">
                 <c:if test="${pageDto.prev}">
                    <li class="paginate_button previous">
-                      <a href="${pageDto.startPage-10}" style="background-color: black; border-color: black;">Previous</a>
+                      <a href="${pageDto.startPage-10}" style="background-color: #CCE5FF; border-color: #CCE5FF;">Previous</a>
                    </li>
                 </c:if>
                 
                 <c:forEach var="idx" begin="${pageDto.startPage}" end="${pageDto.endPage}">
                    <li class="paginate_button ${pageDto.cri.pageNum==idx?'active':''}">
-                      <a href="${idx}" style="background-color: black; border-color: black;">${idx}</a>
+                      <a href="${idx}" style="background-color: #CCE5FF; border-color: #CCE5FF;">${idx}</a>
                    </li>
                 </c:forEach>
                 
                 <c:if test="${pageDto.next}">
                  <li class="paginate_button next">
-                    <a href="${pageDto.endPage+1}" style="background-color: black; border-color: black;">Next</a>
+                    <a href="${pageDto.endPage+1}" style="background-color: #CCE5FF; border-color: #CCE5FF;">Next</a>
                  </li>
               </c:if>
              </ul>
     <div class="row"> <!-- start search -->
           <div class="col-md-12">
-            <div class="col-md-12" style="text-align: right; width: 850px;" ><!--search Form-->
+            <div class="col-md-12" style="text-align: right; width: 850px; " ><!--search Form-->
               <form action="" method="get" id="searchForm">
                  <input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}" />
                  <input type="hidden" name="amount" value="${pageDto.cri.amount}" />
-                 <select name="type" id="">
-                    <option value="" style="color: black;">---------</option>
-                    <option value="T" style="color: black;" <c:out value="${pageDto.cri.type == 'T'?'selected':''}"/>>제목</option>
-                    <option value="C" style="color: black;" <c:out value="${pageDto.cri.type == 'C'?'selected':''}"/>>내용</option>
-                    <option value="R" style="color: black;" <c:out value="${pageDto.cri.type == 'R'?'selected':''}"/>>사유</option>
-                    <option value="TC" style="color: black;" <c:out value="${pageDto.cri.type == 'TC'?'selected':''}"/>>제목 or 내용</option>
-                    <option value="TW" style="color: black;" <c:out value="${pageDto.cri.type == 'TW'?'selected':''}"/>>제목 or 사유</option>
-                    <option value="TCR" style="color: black;" <c:out value="${pageDto.cri.type == 'TCR'?'selected':''}"/>>제목 or 내용 or 사유</option>
+                 <select name="type" id="" style="color: black;">
+                    <option value="" style="color: black; font-weight: bold;">---------</option>
+                    <option value="T" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'T'?'selected':''}"/>>제목</option>
+                    <option value="C" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'C'?'selected':''}"/>>내용</option>
+                    <option value="R" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'R'?'selected':''}"/>>사유</option>
+                    <option value="TC" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'TC'?'selected':''}"/>>제목 or 내용</option>
+                    <option value="TW" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'TW'?'selected':''}"/>>제목 or 사유</option>
+                    <option value="TCR" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'TCR'?'selected':''}"/>>제목 or 내용 or 사유</option>
                  </select>                               
                  
                  <input type="text" name="keyword" id=""  value='<c:out value="${pageDto.cri.keyword}"/>'/>
-                 <button style="background-color: black; border-color: black; color: white;" class="btn btn-default">검색</button>
+                 <button style="background-color: #CCE5FF; border-color: #CCE5FF; color: black;" class="btn btn-default">검색</button>
               </form>
           </div>
          <!-- start Pagination -->
