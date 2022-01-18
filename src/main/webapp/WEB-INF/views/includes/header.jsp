@@ -184,11 +184,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                <nav >
                   <ul class="nav navbar-nav" >
-                     <li><a href="movieList" >영화</a></li>
-                     <li><a href="store">스토어</a></li>
-                     <li><a href="noticelist">공지사항</a></li>
-                     <li><a href="eventlist">이벤트</a></li>
-                     <li><a href="csclist">고객센터</a></li>
+                     <li style="font-weight: bold; font-size: 20px;"><a href="movieList" >영화</a></li>
+                     <li style="font-weight: bold; font-size: 20px;"><a href="store">스토어</a></li>
+                     <li style="font-weight: bold; font-size: 20px;"><a href="noticelist">공지사항</a></li>
+                     <li style="font-weight: bold; font-size: 20px;"><a href="eventlist">이벤트</a></li>
+                     <li style="font-weight: bold; font-size: 20px;"><a href="csclist">고객센터</a></li>
                   </ul>
                </nav>
             </div>

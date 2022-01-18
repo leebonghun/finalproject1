@@ -28,7 +28,7 @@
 	<div class="banner-bottom" >
 	<div class="container">
 	<div>
-      <h2 class="h2" style="color: black;">
+      <h2 class="h2" style="color: black; font-weight: bold;">
          <img src="/resources/images/chart1.png" style="height: 60px;" /> 무비차트
       </h2>            
    </div>   
@@ -41,8 +41,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-
-									<h6><a href=movieRead?movieCD=20210028">스파이더맨: 노 웨이 홈</a></h6>													
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href=movieRead?movieCD=20210028>스파이더맨: 노 웨이 홈</a></h6>													
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -70,7 +69,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20210864">엔칸토: 마법의 세계</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20210864">엔칸토: 마법의 세계</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -98,7 +97,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20205986">연애 빠진 로맨스</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20205986">연애 빠진 로맨스</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -126,7 +125,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20196264">유체이탈자</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20196264">유체이탈자</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -154,7 +153,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20211831">극장판 소드 아트 온라인-프로그레시브</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20211831">극장판 소드 아트 온라인-프로그레시브</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -182,7 +181,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20212015">돈룩업</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20212015">돈룩업</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -210,7 +209,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20212217">라라와 크리스마스 요정</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20212217">라라와 크리스마스 요정</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -238,7 +237,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20010264">아멜리아</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20010264">아멜리아</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -266,7 +265,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20210600">프렌치 디스패치</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20210600">프렌치 디스패치</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -294,7 +293,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20210752">뱅드림! 필름 라이브 세컨드 스테이지</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20210752">뱅드림! 필름 라이브 세컨드 스테이지</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -325,7 +324,7 @@
 	<div class="general">
 	<div class="container">
 		<div>
-	      <h2 class="h2" style="color: black;">
+	      <h2 class="h2" style="color: black; font-weight: bold;">
 	         <img src="/resources/images/boxes1.png" style="height: 60px;" /> 주간 박스 오피스
 	      </h2>            
    		</div>   
@@ -342,7 +341,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20210028">스파이더맨: 노 웨이 홈</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20210028">스파이더맨: 노 웨이 홈</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -368,7 +367,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20210864">엔칸토-마법의 세계</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20210864">엔칸토-마법의 세계</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -394,7 +393,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20205986">연애의 빠진 로맨스</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20205986">연애의 빠진 로맨스</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -420,7 +419,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20196264">유체이탈자</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20196264">유체이탈자</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -446,7 +445,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20211831">극장판 소드 아트 온라인-프로그레시브</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20211831">극장판 소드 아트 온라인-프로그레시브</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -472,7 +471,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20212015">돈 룩 업</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20212015">돈 룩 업</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -499,7 +498,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20212217">라라와 크리스마스 요정</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20212217">라라와 크리스마스 요정</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -524,7 +523,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20010264">아멜리에</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20010264">아멜리에</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -550,7 +549,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20210600">프렌치 디스패치</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20210600">프렌치 디스패치</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -576,7 +575,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20210752">뱅드림! 필름 라이브 세컨드 스테이지</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20210752">뱅드림! 필름 라이브 세컨드 스테이지</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -602,7 +601,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20211111">티탄</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20211111">티탄</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -628,7 +627,7 @@
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="movieRead?movieCD=20211112">해피 뉴 이어</a></h6>							
+										<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20211112">해피 뉴 이어</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>2021</p>
@@ -658,7 +657,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20210028">스파이더맨: 노 웨이 홈</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20210028">스파이더맨: 노 웨이 홈</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -684,7 +683,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20210864">엔칸토: 마법의 세계</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20210864">엔칸토: 마법의 세계</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -710,7 +709,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20205986">연애 빠진 로맨스</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20205986">연애 빠진 로맨스</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -739,7 +738,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20196264">유체이탈자</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20196264">유체이탈자</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -765,7 +764,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20211831">극장판 소드 아트 온라인-프로그레시브</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20211831">극장판 소드 아트 온라인-프로그레시브</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -791,7 +790,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20212015">돈룩업</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20212015">돈룩업</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -817,7 +816,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="single.html">라라와 크리스마스 요정</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="single.html">라라와 크리스마스 요정</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -846,7 +845,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="single.html">아멜리아</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="single.html">아멜리아</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -872,7 +871,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="single.html">프렌치 디스패치</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="single.html">프렌치 디스패치</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -898,7 +897,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20210752">뱅드림! 필름 라이브 세컨드 스테이지</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20210752">뱅드림! 필름 라이브 세컨드 스테이지</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -924,7 +923,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20211111">티탄</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20211111">티탄</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>
@@ -950,7 +949,7 @@
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="movieRead?movieCD=20211112">해피 뉴 이어</a></h6>							
+									<h6 style="color: black; font-weight: bold; font-size: 14px; font:sans-serif;"><a href="movieRead?movieCD=20211112">해피 뉴 이어</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2021</p>

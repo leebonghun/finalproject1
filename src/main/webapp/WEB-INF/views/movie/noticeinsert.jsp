@@ -6,7 +6,7 @@
  
 <div class="container">
 	<div>
-		<h2 class="h2" style="color: black;">
+		<h2 class="h2" style="color: black; font-weight: bold;">
 			<img src="/resources/images/notice1.png" style="height: 60px;" /> 공지사항
 		</h2>            
 	</div>	
@@ -17,19 +17,19 @@
 		<div class="panel panel-default">
 				<form action="" method="post" role="form">
 		<div class="form-group" style="margin-left: 0px; margin-top:0px  ">
-			<label style="font:sans-serif; color: black; padding: 3px">사유를 선택해주세요.(기본값은 기타입니다.)</label>
+			<label style="font:sans-serif; color: black; padding: 3px; font-size: 16px;">사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
-			 <div class="form-group" style="margin-left: 0px; margin-top:0px" >
+			 <div class="form-group" style="margin-left: 0px; margin-top:0px; font-size: 17px; font-weight: bold; color: black;">
 		 	<label class="test_obj"><input type="radio" name="INFO_RFI" checked="checked" value="전체 공지"><span>전체 공지</span></label>
 			<label class="test_obj"><input type="radio" name="INFO_RFI" value="영화 관련 공지"><span>영화 관련 공지</span></label>
 			<label class="test_obj"><input type="radio" name="INFO_RFI" value="코로나 19 관련 공지"><span>코로나 19 관련 공지</span></label>
 			<label class="test_obj"><input type="radio" name="INFO_RFI" value="기타"><span>기타</span></label> 			
     </div>
 		<div class="form-group">
-			<label style="font:sans-serif; color: black; padding: 3px">제목</label> <input class="form-control" name="INFO_TITLE">
+			<label style="font:sans-serif; color: black; padding: 3px; font-size: 16px; font-weight: bold; ">제목</label> <input class="form-control" name="INFO_TITLE">
 		</div>
 		<div class="form-group">
-			<label style="font:sans-serif; color: black; padding: 3px">내용</label>
+			<label style="font:sans-serif; color: black; padding: 3px; font-size: 16px; font-weight: bold;">내용</label>
 			<textarea class="form-control" rows="3" name="INFO_CONTENT"></textarea>
 		</div>					
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 

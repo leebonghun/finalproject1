@@ -13,7 +13,7 @@
 <style>
 input[type="text"] {
     border-radius: 16px;
-    border: 2px solid #ddd;
+    border: 2px solid black;
     background-color: #fff;
     height: 32px;
     line-height: 32px;
@@ -49,7 +49,7 @@ table table-hover {
 
 select {
 	border-radius: 16px;
-	border: 2px solid #ddd;
+	border: 2px solid black;
     background-color: #fff;
     height: 32px;
     line-height: 32px;
@@ -71,7 +71,7 @@ select {
 <body>
 <div class="container">
    <div>
-      <h2 class="h2" style="color: black;">
+      <h2 class="h2" style="color: black; font-weight: bold;">
          <img src="/resources/images/notice1.png" style="height: 60px;" /> 공지사항
       </h2>            
    </div>   
@@ -86,7 +86,7 @@ select {
 	  <!-- 글작성한 관리자에게만 권한을 부여하여 아무나 수정, 삭제 한거 불가하게 기능 설정  -->
 		<sec:authorize access="hasRole('ROLE_ADMIN')" >
        		<button type="button" class="btn btn-info" onclick="location.href='/movie/noticeinsert'"
-   		    	     style="background-color: black; border-color: black;">글쓰기</button>
+   		    	     style="background-color: #CCE5FF; border-color: #CCE5FF; color: black; font-weight: bold;">글쓰기</button>
         </sec:authorize>
 
       </div>
@@ -106,11 +106,11 @@ select {
                </colgroup>              
                    <thead>
                        <tr>
-                           <th style="background: black; font:sans-serif; color: white;">번 호</th>
-                           <th style="background: black; font:sans-serif; color: white;">분 류</th>
-                           <th style="background: black; font:sans-serif; color: white;">제 목</th>
-                           <th style="background: black; font:sans-serif; color: white;">내 용</th>
-                           <th style="background: black; font:sans-serif; color: white;">작성일</th>
+                           <th style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">번 호</th>
+                           <th style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">분 류</th>
+                           <th style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">제 목</th>
+                           <th style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">내 용</th>
+                           <th style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">작성일</th>
                        </tr>                           
                    </thead>
             
@@ -119,11 +119,11 @@ select {
             <tbody >
                <c:forEach var="infodto" items="${list}">             
                   <tr class="table-active" >            
-                     <th scope="row" style="font:sans-serif; color: black;">${infodto.rn}</th>
-                     <td style="font:sans-serif; color: black;">${infodto.INFO_RFI}</td>
-                     <td style="font:sans-serif; color: black;"><a class="move" href="${infodto.INFO_BNO}">${infodto.INFO_TITLE}</a></td>            
-                     <td style="font:sans-serif; color: black;">${infodto.INFO_CONTENT}</td>
-                     <td style="font:sans-serif; color: black;"><fmt:formatDate pattern="yyyy-MM-dd HH:mm"  value="${infodto.INFO_REGDATE}"/></td>
+                     <th scope="row" style="font:sans-serif; color: black; font-weight: bold; font-size: 16px;">${infodto.rn}</th>
+                     <td style="font:sans-serif; color: black; font-weight: bold; font-size: 16px;">${infodto.INFO_RFI}</td>
+                     <td style="font:sans-serif; color: black; font-weight: bold; font-size: 16px;"><a class="move" href="${infodto.INFO_BNO}">${infodto.INFO_TITLE}</a></td>            
+                     <td style="font:sans-serif; color: black; font-weight: bold; font-size: 16px;">${infodto.INFO_CONTENT}</td>
+                     <td style="font:sans-serif; color: black; font-weight: bold; font-size: 15px;"><fmt:formatDate pattern="yyyy-MM-dd HH:mm"  value="${infodto.INFO_REGDATE}"/></td>
                   </tr>                        
                </c:forEach>               
             </tbody>
@@ -133,40 +133,40 @@ select {
              <ul class="pagination">
                 <c:if test="${pageDto.prev}">
                    <li class="paginate_button previous">
-                      <a href="${pageDto.startPage-10}" style="background-color: black; border-color: black;">Previous</a>
+                      <a href="${pageDto.startPage-10}" style="background-color: #CCE5FF; border-color: #CCE5FF; font-weight: bold;">Previous</a>
                    </li>
                 </c:if>
                 
                 <c:forEach var="idx" begin="${pageDto.startPage}" end="${pageDto.endPage}">
                    <li class="paginate_button ${pageDto.cri.pageNum==idx?'active':''}">
-                      <a href="${idx}" style="background-color: black; border-color: black;">${idx}</a>
+                      <a href="${idx}" style="background-color: #CCE5FF; border-color: #CCE5FF; color: black; font-weight: bold;">${idx}</a>
                    </li>
                 </c:forEach>
                 
                 <c:if test="${pageDto.next}">
                  <li class="paginate_button next">
-                    <a href="${pageDto.endPage+1}" style="background-color: black; border-color: black;">Next</a>
+                    <a href="${pageDto.endPage+1}" style="background-color: #CCE5FF; border-color: #CCE5FF; font-weight: bold;">Next</a>
                  </li>
               </c:if>
              </ul>
     <div class="row" > <!-- start search -->
           <div class="col-md-12">
-            <div class="col-md-12" style="text-align: right; width: 850px;" ><!--search Form-->
+            <div class="col-md-12" style="text-align: right; width: 850px; " ><!--search Form-->
               <form action="" method="get" id="searchForm">
                  <input type="hidden" name="pageNum" value="${pageDto.cri.pageNum}" />
                  <input type="hidden" name="amount" value="${pageDto.cri.amount}" />
-                 <select name="type" id="">
-                    <option value="" style="color: black;">---------</option>
-                    <option value="T" style="color: black;" <c:out value="${pageDto.cri.type == 'T'?'selected':''}"/>>제목</option>
-                    <option value="C" style="color: black;" <c:out value="${pageDto.cri.type == 'C'?'selected':''}"/>>내용</option>
-                    <option value="R" style="color: black;" <c:out value="${pageDto.cri.type == 'R'?'selected':''}"/>>분류</option>
-                    <option value="TC" style="color: black;" <c:out value="${pageDto.cri.type == 'TC'?'selected':''}"/>>제목 or 내용</option>
-                    <option value="TW" style="color: black;" <c:out value="${pageDto.cri.type == 'TW'?'selected':''}"/>>제목 or 분류</option>
-                    <option value="TCR" style="color: black;" <c:out value="${pageDto.cri.type == 'TCR'?'selected':''}"/>>제목 or 내용 or 분류</option>
+                 <select name="type" id="" style="color: black; font-weight: bold;">
+                    <option value="" style="color: black; font-weight: bold;">---------</option>
+                    <option value="T" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'T'?'selected':''}"/>>제목</option>
+                    <option value="C" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'C'?'selected':''}"/>>내용</option>
+                    <option value="R" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'R'?'selected':''}"/>>분류</option>
+                    <option value="TC" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'TC'?'selected':''}"/>>제목 or 내용</option>
+                    <option value="TW" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'TW'?'selected':''}"/>>제목 or 분류</option>
+                    <option value="TCR" style="color: black; font-weight: bold;" <c:out value="${pageDto.cri.type == 'TCR'?'selected':''}"/>>제목 or 내용 or 분류</option>
                  </select>                               
                  
                  <input type="text" name="keyword" id=""  value='<c:out value="${pageDto.cri.keyword}"/>'/>
-                 <button style="background-color: black; border-color: black; color: white;" class="btn btn-default">검색</button>
+                 <button style="background-color: #CCE5FF; border-color: #CCE5FF; color: black; font-weight: bold;" class="btn btn-default">검색</button>
               </form>
           </div>
          <!-- start Pagination -->

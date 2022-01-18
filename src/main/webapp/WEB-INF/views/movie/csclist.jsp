@@ -13,12 +13,19 @@
 <style>
 select {
 	border-radius: 16px;
-	border: 2px solid #ddd;
+	border: 2px solid black;
 }
 
 input {
 	border-radius: 16px;
-	border: 2px solid #ddd;
+	border: 2px solid black;
+}
+
+.col-md-offset-2{
+ margin-left: -100px;
+ color: black; 
+ font-weight: bold; 
+ font-size: 18px;
 }
 </style>
 </head>
@@ -27,7 +34,7 @@ input {
    <div style="margin-left: 100px; margin-right: 100px;">
    <div class="container">
    <div>
-      <h2 class="h1" style="color: black;">
+      <h2 class="h1" style="color: black; font-weight: bold;">
          <img src="/resources/images/cscicon.png" style="height: 50px;" /> 고객
          센터
       </h2>
@@ -36,26 +43,26 @@ input {
 </div>
  <div class="panel-body" > 
       <div class="faq">
-         <h4 class="latest-text w3_faq_latest_text w3_latest_text" style="margin-left: 0px">FAQ</h4>
+         <h4 class="latest-text w3_faq_latest_text w3_latest_text" style="margin-left: 0px; color: black; font-weight: bold;">FAQ</h4>
 
          <div class="container">
             <div class="panel-group w3l_panel_group_faq" id="accordion"
                role="tablist" aria-multiselectable="true">
                <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingOne">
-                     <h4 class="panel-title asd">
-                        <a class="pa_italic" role="button" data-toggle="collapse"
+                     <h4 class="panel-title asd" style="color: black; font-weight: bold; font-size: 18px;">
+                        <a class="pa_italic collapsed" role="button" data-toggle="collapse"
                            data-parent="#accordion" href="#collapseOne"
                            aria-expanded="false" aria-controls="collapseOne"> <span
                            class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
                            class="glyphicon glyphicon-minus" aria-hidden="true"></i><img
-                           src="/resources/images/분실물.png" style="height: 30px;" />분실물
+                           src="/resources/images/분실물.png" style="height: 30px; " /> 분실물
                         </a>
                      </h4>
                   </div>
-                  <div id="collapseOne" class="panel-collapse collapse in"
+                  <div id="collapseOne" class="panel-collapse collapse"
                      role="tabpanel" aria-labelledby="headingOne">
-                     <div class="panel-body panel_text">분실물은 본점의 안내데스크에서도 문의가
+                     <div class="panel-body panel_text" style="color: black; font-weight: bold; font-size: 14px;">분실물은 본점의 안내데스크에서도 문의가
                         가능하며 또한 해당 게시판을 통하여 문의하실 수 있습니다. 분실물은 최대 7일동안 보관하며 아무 문의가 없는 경우
                         7일후 파기되며 본사는 이에 아무 책임이 없음을 알려드립니다.</div>
 
@@ -63,36 +70,36 @@ input {
                </div>
                <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingTwo">
-                     <h4 class="panel-title asd">
+                     <h4 class="panel-title asd" style="color: black; font-weight: bold; font-size: 18px;">
                         <a class="pa_italic collapsed" role="button"
                            data-toggle="collapse" data-parent="#accordion"
                            href="#collapseTwo" aria-expanded="false"
                            aria-controls="collapseTwo"> <span
                            class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
                            class="glyphicon glyphicon-minus" aria-hidden="true"></i><img
-                           src="/resources/images/사람들.png" style="height: 30px;" />대관 및
+                           src="/resources/images/사람들.png" style="height: 30px;" /> 대관 및
                            단체관람
                         </a>
                      </h4>
                   </div>
                   <div id="collapseTwo" class="panel-collapse collapse"
                      role="tabpanel" aria-labelledby="headingTwo">
-                     <div class="panel-body panel_text">
+                     <div class="panel-body panel_text" style="color: black; font-weight: bold; font-size: 14px;">
                         대관안내
                         <hr>
-                        <ol style="list-style-type: decimal" start="1">
+                        <ol style="list-style-type: decimal; color: black; font-weight: bold;" start="1">
                            <li>1회 대관은 2시간을 최소 기준으로 합니다.</li>
                            <li>대관관람료의 금액은 부가세 10% 포함하기 전 금액입니다.</li>
                         </ol>
                         단체관람 안내
                         <hr>
-                        <ol style="list-style-type: decimal" start="1">
+                        <ol style="list-style-type: decimal; color: black; font-weight: bold;" start="1">
                            <li>단체관람은 관람인원이 15인 이상시 적용 가능합니다.</li>
                            <li>현재 상영관에서 상영중인 영화를 기준으로 신청 가능합니다.</li>
                         </ol>
                         안내사항
                         <hr>
-                        <ol style="list-style-type: decimal" start="1">
+                        <ol style="list-style-type: decimal; color: black; font-weight: bold;" start="1">
                            <li>사전에 전화나 고겍센터 게시글로 일정과 대관 가능 여부를 확인하시기 바랍니다.</li>
                            <li>사전에 협의 및 허가되지 않은 시설 사용은 진행할 수 없습니다.</li>
                            <li>행사장 내부 구조변경(책상/의자 등) 시 원상복구를 원칙으로 합니다.</li>
@@ -109,24 +116,24 @@ input {
                </div>
                <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingThree">
-                     <h4 class="panel-title asd">
+                     <h4 class="panel-title asd" style="color: black; font-weight: bold; font-size: 18px;">
                         <a class="pa_italic collapsed" role="button"
                            data-toggle="collapse" data-parent="#accordion"
                            href="#collapseThree" aria-expanded="false"
                            aria-controls="collapseThree"> <span
                            class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
                            class="glyphicon glyphicon-minus" aria-hidden="true"></i><img
-                           src="/resources/images/환불.png" style="height: 30px;" />예매/환불
+                           src="/resources/images/환불.png" style="height: 30px;" /> 예매/환불
                            /취소
                         </a>
                      </h4>
                   </div>
                   <div id="collapseThree" class="panel-collapse collapse"
                      role="tabpanel" aria-labelledby="headingThree">
-                     <div class="panel-body panel_text">
+                     <div class="panel-body panel_text" style="color: black; font-weight: bold; font-size: 14px;">
                         예매안내
                         <hr>
-                        <ol style="list-style-type: decimal" start="1">
+                        <ol style="list-style-type: decimal; color: black; font-weight: bold;" start="1">
                            <li>BBM 홈페이지 해당 영화을 선택하고 예매하기를 클릭합니다.</li>
                            <li>로그인 후 이용가능 합니다.</li>
                            <li>해당영화 날짜 및 상영관선택, 좌석지정 및 매수를 선택합니다.</li>
@@ -135,7 +142,7 @@ input {
                         </ol>
                         예매취소 및 환불안내
                         <hr>
-                        <ol style="list-style-type: decimal" start="1">
+                        <ol style="list-style-type: decimal; color: black; font-weight: bold;" start="1">
                            <li>온라인 예매 취소 및 취소수수료, 환불은 각 해당 사이트 운영 관리 지침에 따른 취소수수료를 공제
                               후 환급합니다.</li>
                            <li>방문 및 전화예매는 소비자분쟁해결기준에 따라 환불됩니다.</li>
@@ -146,82 +153,84 @@ input {
                </div>
                <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingFour">
-                     <h4 class="panel-title asd">
+                     <h4 class="panel-title asd" style="color: black; font-weight: bold; font-size: 18px;">
                         <a class="pa_italic collapsed" role="button"
                            data-toggle="collapse" data-parent="#accordion"
                            href="#collapseFour" aria-expanded="false"
                            aria-controls="collapseFour"> <span
                            class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
                            class="glyphicon glyphicon-minus" aria-hidden="true"></i><img
-                           src="/resources/images/아이디비번찾기.png" style="height: 30px;" />아이디
+                           src="/resources/images/아이디비번찾기.png" style="height: 30px;" /> 아이디
                            및 비밀번호 찾기
                         </a>
                      </h4>
                   </div>
                   <div id="collapseFour" class="panel-collapse collapse"
                      role="tabpanel" aria-labelledby="headingFour">
-                     <div class="panel-body panel_text">아이디 및 비밀번호 분실의 경우 로그인창의
+                     <div class="panel-body panel_text" style="color: black; font-weight: bold; font-size: 14px;">아이디 및 비밀번호 분실의 경우 로그인창의
                         아이디 및 비밀번호 찾기를 이용하여 찾으실수 있습니다. 원활하게 찾지 못하실경우 고겍센터에 글을 남겨주시길바랍니다.
                      </div>
                   </div>
                </div>
                <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingFive">
-                     <h4 class="panel-title asd">
+                     <h4 class="panel-title asd" style="color: black; font-weight: bold; font-size: 18px;">
                         <a class="pa_italic collapsed" role="button"
                            data-toggle="collapse" data-parent="#accordion"
                            href="#collapseFive" aria-expanded="false"
                            aria-controls="collapseFive"> <span
                            class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
                            class="glyphicon glyphicon-minus" aria-hidden="true"></i><img
-                           src="/resources/images/기타.png" style="height: 30px;" />기타
+                           src="/resources/images/기타.png" style="height: 30px;" /> 기타
                         </a>
                      </h4>
                   </div>
                   <div id="collapseFive" class="panel-collapse collapse"
-                     role="tabpanel" aria-labelledby="headingFive">
-                     <div class="panel-body panel_text">만약 기타의 문의사항이나 궁금한점이
+                     role="tabpanel" aria-labelledby="headingFive" >
+                     <div class="panel-body panel_text" style="list-style-type: decimal; color: black; font-weight: bold;">만약 기타의 문의사항이나 궁금한점이
                         있으시다면 하단의 게시판에 글을 남겨주세요.</div>
                   </div>
                </div>
             </div>
-
-            고객센터 상담전화:02-1234-5678 상담가능시간 : 09:00~18:30
+			<div style="color: black; font-weight: bold; font-size: 14px;">
+            고객센터 상담전화: 02-1234-5678 상담가능시간 : 09:00~18:30
+			</div>
             <div class="panel-body">
                <div>
                   <form action=" " method="get" id="regForm">
                   <div style="text-align: right;">
                      <button type="button" class="btn btn-info"   id="CscRegisterBtn"          
                         onclick="location.href='/movie/cscinsert'"
-                        style="margin-bottom: 10px; background-color: black; border-color: black;">글쓰기</button>
+                        style="background-color: #CCE5FF; border-color: #CCE5FF; color: black; font-weight: bold;">글쓰기</button>
                   </div>
                   </form>
                </div>
-               <table class="table" id=csctbl>
+               </div>
+               <table class="table" id=csctbl style="width: 850px;" >
                   <thead>
                      <tr style="background-color: black;">
-                        <th scope="col" style="color: white;">글번호</th>
-                        <th scope="col" style="color: white;">사유</th>
-                        <th scope="col" style="color: white;">제목</th>
-                        <th scope="col" style="color: white;">접수상태</th>
-                        <th scope="col" style="color: white;">등록일</th>
+                        <th scope="col" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">글번호</th>
+                        <th scope="col" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">사유</th>
+                        <th scope="col" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">제목</th>
+                        <th scope="col" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">접수상태</th>
+                        <th scope="col" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">등록일</th>
                      </tr>
                   </thead>
                   <tbody>
                      <c:forEach var="cscDto" items="${list}">
                         <tr class="table-active">
-                           <th scope="row">${cscDto.rn}</th>
-                           <td>${cscDto.CSC_RFI}</td>
-                           <td id="tit"><a class="move" href="${cscDto.CSC_BNO}" style="color: black;">
+                           <th scope="row" style="font:sans-serif; color: black; font-weight: bold; font-size: 16px;">${cscDto.rn}</th>
+                           <td style="font:sans-serif; color: black; font-weight: bold; font-size: 16px;">${cscDto.CSC_RFI}</td>
+                           <td id="tit" style="font:sans-serif; color: black; font-weight: bold; font-size: 16px;"><a class="move" href="${cscDto.CSC_BNO}" style="color: black;">
                                  ${cscDto.CSC_TITLE} </a></td>
                            <c:if test="${cscDto.CSC_CHECK == '[답변 대기중]'}">
-                              <td style="color: blue;">${cscDto.CSC_CHECK}</td>
+                              <td style="font:sans-serif; color: blue; font-weight: bold; font-size: 16px;">${cscDto.CSC_CHECK}</td>
                            </c:if>
                            
                            <c:if test="${cscDto.CSC_CHECK == '[답변완료]'}">
-                              <td style="color: red;">${cscDto.CSC_CHECK}</td>
+                              <td style="font:sans-serif; color: red; font-weight: bold; font-size: 16px;">${cscDto.CSC_CHECK}</td>
                            </c:if>
-                           <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+                           <td style="font:sans-serif; color: black; font-weight: bold; font-size: 16px;"><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
                                  value="${cscDto.CSC_REGDATE}" /></td>
 
 
@@ -232,37 +241,37 @@ input {
                <div class="row">
                   <!-- start search -->
                   <div class="col-md-12" >
-                     <div class="col-md-12" style="text-align: right; width: 816px;">
+                     <div class="col-md-12" style="text-align: right; width: 750px;">
                         <!--search Form-->
-                        <form action=" " method="get" id="searchForm">
+                        <form action=" " method="get" id="searchForm" >
                            <input type="hidden" name="pageNum"
                               value="${pageDto.cri.pageNum }" > <input type="hidden"
                               name="amount" value="${pageDto.cri.amount }" > <select
-                              name="type" id="" >
-                              <option value="" style="color: black;">-----</option>
-                              <option value="T" style="color: black;"
+                              name="type" id="" style="font:sans-serif; color: black; font-size: 16px; font-weight: bold; padding: 3px">
+                              <option value="" style="color: black; font-weight: bold; font-size: 18px;">-----</option>
+                              <option value="T" style="color: black; font-weight: bold;"
                                  <c:out value="${pageDto.cri.type=='T'?'selected':'' }"/>>제목</option>
-                              <option value="C" style="color: black;"
+                              <option value="C" style="color: black; font-weight: bold;"
                                  <c:out value="${pageDto.cri.type=='C'?'selected':'' }"/>>내용</option>
-                              <option value="R" style="color: black;"
+                              <option value="R" style="color: black; font-weight: bold;"
                                  <c:out value="${pageDto.cri.type=='R'?'selected':'' }"/>>사유</option>
-                              <option value="TC" style="color: black;"
+                              <option value="TC" style="color: black; font-weight: bold;"
                                  <c:out value="${pageDto.cri.type=='TC'?'selected':'' }"/>>제목
                                  or 내용</option> 
-                              <option value="TR" style="color: black;"
+                              <option value="TR" style="color: black; font-weight: bold;"
                                  <c:out value="${pageDto.cri.type=='TR'?'selected':'' }"/>>제목
                                  or 사유</option> 
-                              <option value="TCR" style="color: black;"
+                              <option value="TCR" style="color: black; font-weight: bold;"
                                  <c:out value="${pageDto.cri.type=='TCR'?'selected':'' }"/>>제목
                                  or 내용 or 사유</option>
                            </select> <input type="text" name="keyword" id=""
                               value='<c:out value="${pageDto.cri.keyword }"/>'>
-                           <button class="btn btn-default" style="background-color: black; border-color: black; color: white; ">검색</button>
+                           <button class="btn btn-default" style=" background-color: #CCE5FF; border-color: #CCE5FF; color: black; font-weight: bold;">검색</button>
                         </form>
                      </div>
                      <div class="col-md-2 col-md-offset-2">
                         <!--페이지 목록 갯수 지정하는 폼-->
-                        <select name="" id="amount" class="form-control" style="border-radius: 16px; ">
+                        <select name="" id="amount" class="form-control" style="border-radius: 16px; border: 2px solid black; font-weight: bold;">
                            <option value="10"
                               <c:out value="${pageDto.cri.amount==10?'selected':'' }"/>>10</option>
                            <option value="20"
@@ -292,18 +301,18 @@ input {
                   <ul class="pagination">
                      <c:if test="${pageDto.prev }">
                         <li class="paginate_button previous"><a
-                           href="${pageDto.startPage-10 }">Previous</a></li>
+                           href="${pageDto.startPage-10 }" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">Previous</a></li>
                      </c:if>
                      <c:forEach var="idx" begin="${pageDto.startPage }"
                         end="${pageDto.endPage }">
                         <li
                            class="paginate_button ${pageDto.cri.pageNum==idx?'active':'' }">
-                           <a href="${idx }" style="background-color: black; border-color: black; color: white">${idx }</a>
+                           <a href="${idx }" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">${idx }</a>
                         </li>
                      </c:forEach>
                      <c:if test="${pageDto.next }">
                         <li class="paginate_button next"><a
-                           href="${pageDto.endPage+1 }">Next</a></li>
+                           href="${pageDto.endPage+1 }" style="background: #CCE5FF; font:sans-serif; color: black; font-weight: bold; font-size: 16px;">Next</a></li>
                      </c:if>
                   </ul>
                </div>
@@ -313,7 +322,6 @@ input {
          </div>
       </div>
       </div>	 
-   </div>
 
    <!--  페이지 나누기를 위한 폼 -->
    <form action="" method="get" id="actionForm">

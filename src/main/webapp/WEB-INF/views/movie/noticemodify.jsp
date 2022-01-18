@@ -13,7 +13,7 @@
 <body>
 <div class="container">
 	<div>
-		<h2  class="h2" style=" color: black;">
+		<h2  class="h2" style=" color: black; font-weight: bold;">
 			<img src="/resources/images/notice1.png" style=" height: 60px; " />공지사항
 		</h2>
 	</div>
@@ -22,7 +22,7 @@
 <div class="row">
 		<form action="" method="post" role="form">
 		<div class="panel panel-default">
-		<div class="form-group" style="margin-left: 0px; margin-top:25px  "> 
+		<div class="form-group" style="margin-left: 0px; margin-top:25px; font-weight: bold; font-size: 17px;"> 
 			 
 			 <c:if test="${readdto.INFO_RFI == '전체 공지'}">
 			<label class="test_obj"><input type="radio" name="INFO_RFI" checked value="전체 공지"><span>전체 공지</span></label>
@@ -51,15 +51,15 @@
 			<!-- /.panel-heading -->
 			<div class="panel-body">
 				<div class="form-group">
-						<label style="font:sans-serif; color: black; padding: 3px">글번호</label> <input class="form-control" name="INFO_BNO" 
+						<label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">글번호</label> <input class="form-control" name="INFO_BNO" 
 						readonly="readonly" value="${readdto.INFO_BNO }">
 					</div>
 				
 					<div class="form-group">
-						<label style="font:sans-serif; color: black; padding: 3px">제목</label> <input class="form-control" name="INFO_TITLE" value="${readdto.INFO_TITLE }" >
+						<label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">제목</label> <input class="form-control" name="INFO_TITLE" value="${readdto.INFO_TITLE }" >
 					</div>
 					<div class="form-group">
-						<label style="font:sans-serif; color: black; padding: 3px">내용</label>
+						<label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">내용</label>
 						<textarea class="form-control" rows="3" name="INFO_CONTENT" >${readdto.INFO_CONTENT }</textarea>
 					</div>				
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 

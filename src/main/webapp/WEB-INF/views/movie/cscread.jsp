@@ -58,7 +58,7 @@
 <body>
 <div class="container">
    <div>
-      <h2 class="h2" style="color: black;">
+      <h2 class="h2" style="color: black; font-weight: bold;">
          <img src="/resources/images/cscicon.png" style=" height:60px; " />고객 센터
       </h2>
    </div>
@@ -83,38 +83,38 @@
           
          <div class="panel-body">
             <div class="form-group">
-                  <label style="font:sans-serif; color: black;">글번호</label> <input class="form-control" name="CSC_BNO"
+                  <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">글번호</label> <input class="form-control" name="CSC_BNO"
 
                      readonly="readonly" value="${readdto.CSC_BNO }">
                </div>
                <div class="form-group">
-                  <label style="font:sans-serif; color: black;">작성자</label> <input class="form-control" name="user_id"
+                  <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">작성자</label> <input class="form-control" name="user_id"
                      readonly="readonly"  value="${readdto.user_id }">
                </div>
                <div class="form-group">
-                  <label style="font:sans-serif; color: black;">사유</label> <input class="form-control" name="CSC_RFI"
+                  <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">사유</label> <input class="form-control" name="CSC_RFI"
                      readonly="readonly"value="${readdto.CSC_RFI }" >
                </div>
                <div class="form-group">
-                  <label style="font:sans-serif; color: black;">제목</label> <input class="form-control" name="CSC_TITLE"
+                  <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">제목</label> <input class="form-control" name="CSC_TITLE"
                      readonly="readonly"value="${readdto.CSC_TITLE }" >
                </div>
                <div class="form-group">
 
-                  <label style="font:sans-serif; color: black;">이메일</label> <input class="form-control" name="CSC_EMAIL"
+                  <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">이메일</label> <input class="form-control" name="CSC_EMAIL"
                      readonly="readonly"value="${readdto.CSC_EMAIL }" >
                </div>
                    
                   
 
-                  <label style="font:sans-serif; color: black;">내용</label>
+                  <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">내용</label>
                   <textarea class="form-control" rows="3" name="CSC_CONTENT"
                      readonly="readonly" style="resize: none;">${readdto.CSC_CONTENT }</textarea>
                      <sec:authentication property="principal" var="info" />
             <sec:authorize access="isAuthenticated()">
                <c:if test="${info.username != 'admin97' }">
                <div class="form-group">         
-                  <label style="font:sans-serif; color: black;">답변 내용</label>
+                  <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">답변 내용</label>
                   <textarea class="form-control" rows="3" name="CSC_ANSWER" id="dab"
                       placeholder="답변대기중..." style="resize: none;"  readonly="readonly">${readdto.CSC_ANSWER}</textarea>                  
                </div>
@@ -125,14 +125,14 @@
                <c:if test="${info.username == 'admin97' }">
                   <c:if test="${readdto.CSC_CHECK == '[답변 대기중]'}">
                <div class="form-group">         
-                  <label style="font:sans-serif; color: black;">답변 내용</label>
+                  <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">답변 내용</label>
                   <textarea class="form-control" rows="3" name="CSC_ANSWER"
                       placeholder="답변대기중..." style="resize: none;"  >${readdto.CSC_ANSWER}</textarea>                  
                </div>
                </c:if>
                <c:if test="${readdto.CSC_CHECK == '[답변완료]'}">
                <div class="form-group">         
-                  <label style="font:sans-serif; color: black;">답변 내용</label>
+                  <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;">답변 내용</label>
                   <textarea class="form-control" rows="3" name="CSC_ANSWER"
                       placeholder="답변대기중..." style="resize: none;" readonly="readonly"  >${readdto.CSC_ANSWER}</textarea>                  
                </div>
@@ -143,10 +143,10 @@
             <sec:authorize access="isAuthenticated()">
                <c:if test="${info.username == 'admin97' }">
                   <c:if test="${readdto.CSC_CHECK == '[답변 대기중]'}">
-                      <label style="font:sans-serif; color: black;"><input type="checkbox" value="[답변완료]" name="CSC_CHECK">답변완료여부</label>
+                      <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;"><input type="checkbox" value="[답변완료]" name="CSC_CHECK">답변완료여부</label>
                   </c:if>
                   <c:if test="${readdto.CSC_CHECK == '[답변완료]'}">
-                      <label style="font:sans-serif; color: black;"><input type="checkbox" value="[답변완료]" name="CSC_CHECK" checked disabled="disabled">답변완료여부</label>
+                      <label style="font:sans-serif; color: black; padding: 3px; font-size: 17px; font-weight: bold;"><input type="checkbox" value="[답변완료]" name="CSC_CHECK" checked disabled="disabled">답변완료여부</label>
                   </c:if>     
           <c:if test="${readdto.CSC_CHECK != '[답변완료]'}">
                            <button type="submit" data-oper='answer'  class="btn btn-info">답변완료</button>
@@ -157,7 +157,7 @@
                <sec:authentication property="principal" var="info" />
                <sec:authorize access="isAuthenticated()">
                <c:if test="${info.username == readdto.user_id }">
-               <button type="submit" data-oper='modify' class="btn btn-info" style="background-color: black; border-color: black;">수정</button>
+               <button type="submit" data-oper='modify' class="btn btn-info" style="background-color: black; border-color: black; ">수정</button>
                   <!-- <button type="button" class="btn btn-warning" >수정</button>    -->
                   </c:if>
                   </sec:authorize>

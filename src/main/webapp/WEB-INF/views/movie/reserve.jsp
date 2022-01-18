@@ -12,7 +12,7 @@
 
 
 </script>
-<div style="height: 30px;"></div>
+<div style="height: 30px; "></div>
 <div class="container">
 	<div class="tit-heading-wrap" id="wrap1" style="width: 890px;">
 		<h3 id="live">영화 예매</h3>
@@ -69,7 +69,7 @@
 		<%-- <input type="hidden" name="reserveSeat" value="${list1.reserveSeat}"/> --%>
 				
 		<c:if test="${!empty list1}">
-		<select name="reserveDay" id="selectBox1" style="border-radius: 16px; border: 2px solid black; ">
+		<select name="reserveDay" id="selectBox1" style="border-radius: 16px; border: 2px solid black; font-weight: bold; color: black;">
 		<c:forEach var="item" items="${list1}" varStatus="i">
 			<option value="${item.reserveDay}">${item.reserveDay}</option>
 		</c:forEach>
@@ -77,7 +77,7 @@
 			</c:if>
 			
 		<c:if test="${!empty list1}">
-		<select name="reserveTime" id="selectBox2" style="border-radius: 16px; border: 2px solid black;">
+		<select name="reserveTime" id="selectBox2" style="border-radius: 16px; border: 2px solid black; font-weight: bold; color: black;">
 		<c:forEach var="item" items="${list1}" varStatus="i">
 			<option value="${item.reserveTime}">${item.reserveTime}</option>
 		</c:forEach>
@@ -85,7 +85,7 @@
 			</c:if>
 			
 		<c:if test="${!empty list1}">
-		<select name="reservePlace" id="selectBox3" style="border-radius: 16px; border: 2px solid black;">
+		<select name="reservePlace" id="selectBox3" style="border-radius: 16px; border: 2px solid black; font-weight: bold; color: black;">
 		<c:forEach var="item" items="${list1}" varStatus="i">
 			<option value="${item.reservePlace}">${item.reservePlace}</option>
 		</c:forEach>
@@ -93,17 +93,17 @@
 			</c:if>
 			
 		<c:if test="${!empty list1}">
-		<select name="reserveGuan" id="selectBox4" style="border-radius: 16px; border: 2px solid black;">
+		<select name="reserveGuan" id="selectBox4" style="border-radius: 16px; border: 2px solid black; font-weight: bold; color: black;">
 		<c:forEach var="item" items="${list1}" varStatus="i">
 			<option value="${item.reserveGuan}">${item.reserveGuan}</option>
 		</c:forEach>
 		</select>
 			</c:if>
-		<button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black;">예매하기</button>
+		<button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black; font-weight: bold; color: black;">예매하기</button>
 		</br>
 		</br>
 
-		<h4 style="padding-bottom: 10px;" >좌석 선택</h4>
+		<h4 style="padding-bottom: 10px; color: black; font-weight: bold;">좌석 선택</h4>
 		<input type="checkbox" name="reserveSeat" id="checker1" value="A1"><label for="checker1" style="text-align: center;">A1</label>
 		<input type="checkbox" name="reserveSeat" id="checker2" value="A2"><label for="checker2">A2</label>
 		<input type="checkbox" name="reserveSeat" id="checker3" value="A3"><label for="checker3">A3</label>

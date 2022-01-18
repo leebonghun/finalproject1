@@ -37,7 +37,7 @@
 <body>
 <div class="container">
 	<div>
-		<h2  class="h2" style=" color: black;">
+		<h2  class="h2" style=" color: black; font-weight: bold;">
 			<img src="/resources/images/cscicon.png" style=" height: 60px; " />고객 센터
 		</h2>
 	</div>
@@ -48,9 +48,9 @@
 		<div class="panel panel-default">
 			<form action="" method="post" role="form" id="insertForm">
 		<div class="form-group" style="margin-left: 0px; margin-top:0px  ">
-			<label style="font:sans-serif; color: black; padding: 3px">사유를 선택해주세요.(기본값은 기타입니다.)</label>
+			<label style="font:sans-serif; color: black; padding: 3px; font-size: 16px;">사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
-			 <div class="form-group" style="margin-left: 0px; margin-top:0px  ">
+			 <div class="form-group" style="margin-left: 0px; margin-top:0px; font-size: 17px; font-weight: bold; color: black;">
 		 	<label class="test_obj"><input type="radio" name="CSC_RFI" checked="checked" value="기타"><span>기타</span></label>
 			<label class="test_obj"><input type="radio" name="CSC_RFI" value="예매 환불 및 취소"><span>예매 환불 및 취소</span></label>
 			<label class="test_obj"><input type="radio" name="CSC_RFI" value="계정관련 문의"><span>계정관련 문의</span></label>
@@ -60,18 +60,18 @@
 			
 			
 					<div class="form-group">
-						<label style="font:sans-serif; color: black; padding: 3px">제목</label> <input type="text" class="form-control" name="CSC_TITLE">
+						<label style="font:sans-serif; color: black; padding: 3px; font-size: 16px; font-weight: bold; ">제목</label> <input type="text" class="form-control" name="CSC_TITLE">
 					</div>
 					<div class="form-group">
-						<label style="font:sans-serif; color: black; padding: 3px">작성자</label> <input class="form-control" name="user_id" value='<sec:authentication property="principal.username"/>' readonly  >
+						<label style="font:sans-serif; color: black; padding: 3px; font-size: 16px; font-weight: bold; ">작성자</label> <input class="form-control" name="user_id" value='<sec:authentication property="principal.username"/>' readonly  >
 					</div>
 					<div class="form-group">
-						<label style="font:sans-serif; color: black; padding: 3px">내용</label>
+						<label style="font:sans-serif; color: black; padding: 3px; font-size: 16px; font-weight: bold; ">내용</label>
 						<textarea class="form-control" rows="3" name="CSC_CONTENT"></textarea>
 					</div>	
 
 					<div class="form-group">
-						<label style="font:sans-serif; color: black; padding: 3px;">이메일(답변완료시 해당 이메일로 알람이 전송됩니다.)</label> <input type="text" class="form-control" name="CSC_EMAIL" >
+						<label style="font:sans-serif; color: black; padding: 3px; font-size: 16px; font-weight: bold; ">이메일(답변완료시 해당 이메일로 알람이 전송됩니다.)</label> <input type="text" class="form-control" name="CSC_EMAIL" >
 					</div>
 
 					
