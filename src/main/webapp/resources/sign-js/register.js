@@ -1,6 +1,9 @@
 /**
  * step2.jsp 검증하기
  */
+
+ var code = ""; 
+  
 $(function() {
 	
 /*	$(".btn-primary").click(function(){
@@ -8,6 +11,49 @@ $(function() {
 		
 		
 	})*/
+	
+	
+	/* 인증번호 이메일 전송 */
+$("#mail_check_button").click(function(){
+    var email = $("#user_email").val(); 
+	  	
+	 $.ajax({
+	          
+	          type:"GET",
+	          url:"mailCheck?email=" + email,
+	          success:function(data){
+	              console.log("data : " + data);
+	  			   code = data;
+
+	         },
+	  		error:function(data){ 
+	   					console.log("왜안됨? : " );
+	  							}
+	      });
+
+
+});
+	
+$("#mail_check_button2").click(function(){
+	
+	var inputCode = $("#user_emailcheck").val();        // 입력코드    
+	       
+	      
+	      if(inputCode == code){                            // 일치할 경우
+	          alert("인증번호가 일치합니다.");
+	      } else {                                            // 일치하지 않을 경우
+	          alert("인증번호가 일치하지않습니다.");
+	      } 
+
+	
+	
+	
+	});
+
+
+	 
+    
+	
 	
   $("#regist").validate({
     errorPlacement: function(error, element) {
@@ -21,17 +67,17 @@ $(function() {
         required: true,
         validId: true,
         remote:{
-					url:"/signup/checkId",
-					type:"post",
-					beforeSend:function(xhr){
-						xhr.setRequestHeader(csrfHeaderName,csrfTokenValue);
-					 },
-					data:{
-						userid:function(){
-							return $('#userid').val();
-						}
-					}
-				}		
+               url:"/signup/checkId",
+               type:"post",
+               beforeSend:function(xhr){
+                  xhr.setRequestHeader(csrfHeaderName,csrfTokenValue);
+                },
+               data:{
+                  userid:function(){
+                     return $('#userid').val();
+                  }
+               }
+            }      
       },
       user_password: {
         required: true,
@@ -46,16 +92,16 @@ $(function() {
         required: true,
         minlength: 2
       },
-	  user_birth: {
-		required: true
-	  },
+     user_birth: {
+      required: true
+     },
       user_email: {
         required: true,
         email: true
       },
-	  user_tel: {
-		required: true
-	  }
+     user_tel: {
+      required: true
+     }
     },
     messages: {
       user_id: {
@@ -73,15 +119,15 @@ $(function() {
         required: "이름은 필수 입력 요소입니다.",
         minlength: "이름은 최소 2자리는 입력해야 합니다."
       },
-	  user_birth: {
-		required: "생년월일은 필수 요소입니다."
-	  },
+     user_birth: {
+      required: "생년월일은 필수 요소입니다."
+     },
       user_email: {
         required: "이메일은 필수 입력 요소입니다."
       },
-	  user_tel: {
-		required: "전화번호는 필수 입력 요소입니다."
-	  } 
+     user_tel: {
+      required: "전화번호는 필수 입력 요소입니다."
+     } 
     }
   });
 });
