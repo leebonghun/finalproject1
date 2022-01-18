@@ -178,10 +178,11 @@
 		//check 값이 false 이면 alert() 띄우기
 		var check = ${check};
 		if(!check){
-			alert("동의해주세요");
+			swal("동의해주세요");
 			return;
 		}
 	})
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
