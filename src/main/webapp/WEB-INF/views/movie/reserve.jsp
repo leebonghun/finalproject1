@@ -132,7 +132,10 @@
 		</c:forEach>
 		</select>
 			</c:if>
+		
 		<button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black; font-weight: bold; color: black;">예매하기</button>
+		
+		
 		<input type="hidden" name="reserveMoney" value="" />
 		
 		</br>

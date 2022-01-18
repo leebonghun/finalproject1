@@ -62,8 +62,10 @@
         <tr>
           <td colspan="3" class="text-right">
           	<input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}"/>
+          	<sec:authorize access="isAuthenticated()" >	
           	<a href="reserve?movieCD=${movieDto.movieCD}"
 			 style="background-color: white; color: black; font-size: 20px;">예매</a>
+			 </sec:authorize>
             <a href="movieList" style="background-color: white; color: black; font-size: 20px;">목록</a>
           </td>
         </tr>     
