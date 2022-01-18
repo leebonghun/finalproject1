@@ -267,8 +267,6 @@ input {
                            </select> <input type="text" name="keyword" id=""
                               value='<c:out value="${pageDto.cri.keyword }"/>'>
                            <button class="btn btn-default" style=" background-color: #CCE5FF; border-color: #CCE5FF; color: black; font-weight: bold;">검색</button>
-                        </form>
-                     </div>
                      <div class="col-md-2 col-md-offset-2">
                         <!--페이지 목록 갯수 지정하는 폼-->
                         <select name="" id="amount" class="form-control" style="border-radius: 16px; border: 2px solid black; font-weight: bold;">
@@ -284,6 +282,8 @@ input {
                      </div>
                      <input type="hidden" name="${_csrf.parameterName}"
                         value="${_csrf.token}" />
+                        </form>
+                     </div>
                   </div>
                </div>
             </div>

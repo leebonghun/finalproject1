@@ -4660,6 +4660,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   margin-left: 0;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  background-color: #CCE5FF;
+  border-color: #CCE5FF;
+  color: black;
 }
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
