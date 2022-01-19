@@ -26,7 +26,7 @@
          console.log(rsp);
           if ( rsp.success ) {
              var msg = '예매가 완료되었습니다.';
-            formObj.find("input[name='reserveMoney']").val(돈);
+            formObj.find("input[name='reserveMoney']").val(money);
             formObj.submit();
           } else {
               var msg = '결제에 실패하였습니다.';
@@ -136,14 +136,7 @@
 		<button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black; font-weight: bold; color: black;">예매하기</button>
 		</sec:authorize>
 		
-		<input type="hidden" name="reserveMoney" value="" />
 		
-		</br>
-		</br>
-     
-      
-      <button type="submit" id="myrev" style="border-radius: 16px; border: 2px solid black; font-weight: bold; color: black;">예매하기</button>
-      
       
       <input type="hidden" name="reserveMoney" value="" />
       
