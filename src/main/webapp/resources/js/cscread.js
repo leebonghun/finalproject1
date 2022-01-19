@@ -30,11 +30,16 @@ $(function() {
       //어느버튼에서 명령이 왔는가?      
       //data-*
 
-      
+      let dab=$("textarea[name='CSC_ANSWER']").val();
       let oper =$(this).data("oper");
       if(oper=='answer'){
          
           if($("input:checkbox[name=CSC_CHECK]").is(":checked") == true) {
+				if(dab===''){
+					swal('답변 내용을 작성해주세요');
+					e.preventDefault(); //submit 막기
+					return;
+				}
             formObj =$("form[role='form']");
                
          formObj.submit();
