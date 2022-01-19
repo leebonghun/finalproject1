@@ -21,7 +21,7 @@
 <div class="row">
 	<div class="col-lg-12" style="padding-left: 0px; width: 880px;">
 		<div class="panel panel-default">
-				<form action="" method="post" role="form">
+				<form action="" method="post" role="form" id="insertForm">
 		<div class="form-group" style="margin-left: 0px; margin-top:0px  ">
 			<label style="font:sans-serif; color: black; padding: 3px; font-size: 16px;">사유를 선택해주세요.(기본값은 기타입니다.)</label>
 			</div>
@@ -39,7 +39,7 @@
 			<textarea class="form-control" rows="3" name="INFO_CONTENT"></textarea>
 		</div>					
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
-		<button type="submit" class="btn btn-info" style="background-color: black; border-color: black;">작성완료</button>
+		<button type="submit" class="btn btn-info" id="insert" style="background-color: black; border-color: black;">작성완료</button>
 		<button type="reset" class="btn btn-warning">초기화</button>
 		<button type="button" class="btn btn-default" onclick="location.href='/movie/noticelist'">뒤로가기</button>
 	</form>   
