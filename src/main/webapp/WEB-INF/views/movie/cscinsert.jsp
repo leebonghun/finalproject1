@@ -92,6 +92,6 @@
 <script type="text/javascript">
 
 </script>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="/resources/js/cscinsert.js"></script> 
 <%@include file="../includes/footer.jsp"%>

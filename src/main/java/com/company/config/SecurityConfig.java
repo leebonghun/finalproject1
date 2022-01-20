@@ -66,6 +66,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
       http.formLogin()
       	  .loginPage("/movie/signin")
       	  .successHandler(loginSuccessHandler())
+      	  
       	  .failureUrl("/movie/login-error");
       
       http.logout()      	 
