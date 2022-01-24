@@ -53,7 +53,7 @@ CREATE SEQUENCE SEQ_GOODS_TBL_GOODS_NUM INCREMENT BY 1 START WITH 1;
 select *
  		from ticket  ;
  
-
+select * from user_tbl
 /* Create Tables */
 
 CREATE TABLE ATTACH_EVENT_TBL

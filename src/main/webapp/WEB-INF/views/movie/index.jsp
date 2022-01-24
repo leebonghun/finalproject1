@@ -27,6 +27,7 @@
 <!-- banner-bottom -->
 	<div class="banner-bottom" >
 	<div class="container">
+<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	<div>
       <h2 class="h2" style="color: black; font-weight: bold;">
          <img src="/resources/images/chart1.png" style="height: 60px;" /> 무비차트
